@@ -40,14 +40,14 @@
             <form action="assessment-status" method="post">
 
                     {{ govukTextarea({
-                        name: "currentmedication",
-                        id: "currentmedication",
+                        name: "observations",
+                        id: "observations",
                         label: {
-                          text: "Current medication and/or treatment",
+                          text: "Observations",
                           classes: "govuk-label--xl",
                           isPageHeading: true
                         },
-                        value: data['currentmedication']
+                        value: data['observations']
                       }) }}
 
                       {{ govukButton({
@@ -58,19 +58,22 @@
 
 
             <h2 class="govuk-heading-m govuk-!-margin-top-7">Guidance</h2>
-            <p>Please give a full list of all medication and dosage, including:</p>
-            <ul class="govuk-list govuk-list--bullet">
-              <li>List all medication and what conditions/symptoms they relate to.</li>
-              <li>References to all current medication listed on the PIP2, PIPCS and the AR1.</li>
-              <li>Effectiveness of taken medication.</li>
-              <li>How long in cases of new medication/medication changes.</li>
-              <li>Probe any inconsistencies in medications taken.</li>
-              <li>Whether the claimant is compliant with taking the medication.</li>
-              <li>Details of any other side effects which affect their functioning.</li>
-              <li>Any ‘over the counter’ medication</li>          
-            </ul>
-              
+            <p>List details of general appearance and informal observations, but specifically consider:</p>
 
+            <ul class="govuk-list govuk-list--bullet">
+              <li>What distance the claimant was observed walking either around the house or to the assessment room, containing details of gait, time taken, breathlessness and number stops taken, including length of time taken for stops.</li>
+              <li>Whether the claimant used any walking aids e.g. walking sticks, crutches or wheelchair, leaned on companion, used furniture.</li>
+              <li>Whether they were seen with any other aids such as a neck support or wrist support etc.</li>
+              <li>Is the claimant wearing hearing aids</li>
+              <li>Whether the claimant was seen to do any movements at the assessment e.g. bending down, picking papers up, getting things out of bags, reaching for papers/documents from a bag on the floor, handling papers/documents, drinking from water bottles and, if relevant, which hand/arm was used</li>
+              <li>Whether there were any signs of pain or difficulties – describe these.</li>
+              <li>Whether they were looking to companion/partner for prompting or support.</li>
+              <li>Relevant observations of weight.</li>
+              <li>Consider any physical limitations which need to be linked to the MSO and Informal Observations regarding appearance.</li>
+              <li>Whether they were seen to read from letters/medications etc.</li>
+            </ul>
+            
+            
             </div>
         </div>
 
