@@ -18,3 +18,24 @@ $govuk-assets-path: '/govuk/assets/';
 @import "components/cookie-banner";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+// Remove Crown
+
+.govuk-header__logo { display:none; }
+.govuk-header__content { padding-left:0; }
+
+// Assessments Header
+
+#assess-head { background-color: #1d70b8; color:#FFF; padding:15px 0; }
+.govuk-header__container { border-bottom:0; margin-bottom:0; }
+.govuk-header { border-bottom:0; }
+
+#assess-head .assessment-status { text-transform: uppercase; font-weight: bold; padding:5px 10px; color:#1d70b8; background-color:#FFF; float:right; margin-top:16px; margin-bottom:0; }
+#assess-head .claimant-name {display: inline-block; margin-bottom:0; }
+#assess-head .claimant-ni {display: inline-block; font-weight: normal; padding-left:15px; margin-bottom:0; }
+
+#assess-head hr { height:0; border-bottom:0; border-top:1px solid #FFF; }
+
+#assess-head .top-border { border-top:1px solid #FFF; }
+
+.white { color:#fff; }
