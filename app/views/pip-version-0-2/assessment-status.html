@@ -150,11 +150,21 @@
                       <ul class="app-task-list__items govuk-!-padding-left-0">
                         <li class="app-task-list__item">
                           <span class="app-task-list__task-name">
-                            <a href="#" aria-describedby="company-information-status">
+                            <a href="preparingfood" aria-describedby="company-information-status">
                               Preparing food
                             </a>
                           </span>
-                          <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="company-information-status">Not started</strong>
+                          <script type="text/javascript">
+                            var preparingfood = {{data.preparingfood|dump|safe}}
+                            console.log(preparingfood)
+                            if (preparingfood) {
+                              var progress = "1";
+                              document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
+                              }
+                            else {
+                              document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>');
+                            }
+                          </script>
                         </li>
                         <li class="app-task-list__item">
                           <span class="app-task-list__task-name">
