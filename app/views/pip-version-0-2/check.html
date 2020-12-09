@@ -1,0 +1,130 @@
+{% extends "layout.html" %}
+{% set bodyAttributes = { id: "assess" } %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block main %}
+
+{% include "includes/assessment-in-progress.html" %}
+
+  <div class="govuk-width-container {{ containerClasses }}">
+    <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
+        <div class="govuk-grid-row">
+
+            <div class="govuk-grid-column-two-thirds">
+
+                {{ govukBackLink({
+                  text: "Back",
+                  href: "assessment-status"
+                }) }}
+
+              <h1 class="govuk-heading-xl">Check and complete the assessment</h1>
+              
+              <h2 class="govuk-heading-m">Assessment details</h2>
+
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Date and time
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      21st April 2021, 14:00
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                        Assessor
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                        Dr A. Jones
+                      </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                          Assessment centre
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                          Tresco
+                        </dd>
+                    </div>
+                </dl>
+
+
+              <h2 class="govuk-heading-m">Current condition</h2>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <script type="text/javascript">
+              var currentmedication = {{data.currentmedication|dump|safe}}
+              console.log(currentmedication)
+              if (currentmedication) {
+                document.write(' <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Current medication</dt><dd class="govuk-summary-list__value">{{ data['currentmedication'] }}</dd><dd class="govuk-summary-list__actions"><a class="govuk-link" href="current-medication">Change<span class="govuk-visually-hidden"> name</span></a></dd></div>');
+                }
+            </script>
+          <script type="text/javascript">
+            var musculoskeletal = {{data.musculoskeletal|dump|safe}}
+            console.log(musculoskeletal)
+            if (musculoskeletal) {
+              document.write(' <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Musculoskeletal and mental state</dt><dd class="govuk-summary-list__value">{{ data['musculoskeletal'] }}</dd><dd class="govuk-summary-list__actions"><a class="govuk-link" href="musculoskeletal">Change<span class="govuk-visually-hidden"> name</span></a></dd></div>');
+              }
+          </script>
+          <script type="text/javascript">
+            var observations = {{data.observations|dump|safe}}
+            console.log(observations)
+            if (observations) {
+              document.write(' <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Observations</dt><dd class="govuk-summary-list__value">{{ data['observations'] }}</dd><dd class="govuk-summary-list__actions"><a class="govuk-link" href="observations">Change<span class="govuk-visually-hidden"> name</span></a></dd></div>');
+              }
+          </script>
+          <script type="text/javascript">
+            var variability = {{data.variability|dump|safe}}
+            console.log(variability)
+            if (variability) {
+              document.write(' <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Variability</dt><dd class="govuk-summary-list__value">{{ data['variability'] }}</dd><dd class="govuk-summary-list__actions"><a class="govuk-link" href="variability">Change<span class="govuk-visually-hidden"> name</span></a></dd></div>');
+              }
+          </script>
+         </dl>
+
+         <h2 class="govuk-heading-m">History</h2>
+         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <script type="text/javascript">
+              var historyofcondition = {{data.historyofcondition|dump|safe}}
+              console.log(historyofcondition)
+              if (historyofcondition) {
+                document.write(' <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">History of condition</dt><dd class="govuk-summary-list__value">{{ data['historyofcondition'] }}</dd><dd class="govuk-summary-list__actions"><a class="govuk-link" href="historyofcondition">Change<span class="govuk-visually-hidden"> name</span></a></dd></div>');
+                }
+            </script>
+            <script type="text/javascript">
+              var socialoccupational = {{data.socialoccupational|dump|safe}}
+              console.log(socialoccupational)
+              if (socialoccupational) {
+                document.write(' <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Social and occupational history</dt><dd class="govuk-summary-list__value">{{ data['socialoccupational'] }}</dd><dd class="govuk-summary-list__actions"><a class="govuk-link" href="socialoccupational">Change<span class="govuk-visually-hidden"> name</span></a></dd></div>');
+                }
+            </script>
+          </dl>
+
+          <h2 class="govuk-heading-m">Day to day life</h2>
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+              <script type="text/javascript">
+                var preparingfood = {{data.preparingfood|dump|safe}}
+                console.log(preparingfood)
+                if (preparingfood) {
+                  document.write(' <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Preparing food</dt><dd class="govuk-summary-list__value">{{ data['preparingfood'] }}</dd><dd class="govuk-summary-list__actions"><a class="govuk-link" href="preparingfood-a">Change<span class="govuk-visually-hidden"> name</span></a></dd></div>');
+                  }
+              </script>
+            </dl>
+
+          <h2 class="govuk-heading-m">Mobility and getting around</h2>
+
+
+
+
+         <a href="review" class="govuk-button">Complete assessment</a>
+
+        </div>
+</div>
+
+
+    </main>
+  </div>
+{% endblock %}

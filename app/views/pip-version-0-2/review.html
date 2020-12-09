@@ -7,7 +7,7 @@
 
 {% block main %}
 
-{% include "includes/assessment-in-progress.html" %}
+{% include "includes/assessment-complete.html" %}
 
   <div class="govuk-width-container {{ containerClasses }}">
     <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
@@ -15,101 +15,156 @@
 
             <div class="govuk-grid-column-two-thirds">
 
-                {{ govukBackLink({
-                  text: "Back",
-                  href: "assessment-status"
-                }) }}
-
-              <h1 class="govuk-heading-xl">Review assessment</h1>
+              <h1 class="govuk-heading-xl">Assessment review</h1>
               
-              <h2 class="govuk-heading-m">Assessment details</h2>
+              <ul class="app-task-list">
+                 
+                  <li>
+                      <h2 class="app-task-list__section">
+                        Day to day life
+                      </h2>
+                      <ul class="app-task-list__items govuk-!-padding-left-0">
+                        <li class="app-task-list__item">
+                          <span class="app-task-list__task-name">
+                            <a href="preparingfood-b" aria-describedby="company-information-status">
+                              Preparing food
+                            </a>
+                          </span>
+                          <script type="text/javascript">
+                            var preparingfoodSelect = {{data.preparingfoodSelect|dump|safe}}
+                            console.log(preparingfoodSelect)
+                            if (preparingfoodSelect) {
+                              var progress = "1";
+                              document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
+                              }
+                            else {
+                              document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>');
+                            }
+                          </script>
+                        </li>
+                        <li class="app-task-list__item">
+                          <span class="app-task-list__task-name">
+                            <a href="#" aria-describedby="contact-details-status">
+                              Taking nutrition
+                            </a>
+                          </span>
+                          <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="contact-details-status">Not started</strong>
+                        </li>
+                        <li class="app-task-list__item">
+                            <span class="app-task-list__task-name">
+                              <a href="#" aria-describedby="contact-details-status">
+                                Managing therapy
+                              </a>
+                            </span>
+                            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="contact-details-status">Not started</strong>
+                          </li>
+                          <li class="app-task-list__item">
+                              <span class="app-task-list__task-name">
+                                <a href="#" aria-describedby="contact-details-status">
+                                  Washing and bathing
+                                </a>
+                              </span>
+                              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="contact-details-status">Not started</strong>
+                            </li>
+                            <li class="app-task-list__item">
+                                <span class="app-task-list__task-name">
+                                  <a href="#" aria-describedby="contact-details-status">
+                                    Managing toilet needs
+                                  </a>
+                                </span>
+                                <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="contact-details-status">Not started</strong>
+                              </li>
+                              <li class="app-task-list__item">
+                                  <span class="app-task-list__task-name">
+                                    <a href="#" aria-describedby="contact-details-status">
+                                      Dressing and undressing
+                                    </a>
+                                  </span>
+                                  <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="contact-details-status">Not started</strong>
+                                </li>
+                                <li class="app-task-list__item">
+                                    <span class="app-task-list__task-name">
+                                      <a href="#" aria-describedby="contact-details-status">
+                                        Communicating verbally
+                                      </a>
+                                    </span>
+                                    <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="contact-details-status">Not started</strong>
+                                  </li>
+                                  <li class="app-task-list__item">
+                                      <span class="app-task-list__task-name">
+                                        <a href="#" aria-describedby="contact-details-status">
+                                          Reading and understanding signs, symbols and words
+                                        </a>
+                                      </span>
+                                      <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="contact-details-status">Not started</strong>
+                                    </li>
+                                    <li class="app-task-list__item">
+                                        <span class="app-task-list__task-name">
+                                          <a href="#" aria-describedby="contact-details-status">
+                                            Engaging face to face
+                                          </a>
+                                        </span>
+                                        <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="contact-details-status">Not started</strong>
+                                      </li>
+                                      <li class="app-task-list__item">
+                                          <span class="app-task-list__task-name">
+                                            <a href="#" aria-describedby="contact-details-status">
+                                              Budgeting
+                                            </a>
+                                          </span>
+                                          <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="contact-details-status">Not started</strong>
+                                        </li>
+                                      </ul>
+                                    </li>
 
-              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-                  <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key">
-                      Date and time
-                    </dt>
-                    <dd class="govuk-summary-list__value">
-                      21st April 2021, 11:37am
-                    </dd>
-                  </div>
-                  <div class="govuk-summary-list__row">
-                      <dt class="govuk-summary-list__key">
-                        Assessor
-                      </dt>
-                      <dd class="govuk-summary-list__value">
-                        Dr A. Jones
-                      </dd>
-                    </div>
-                    <div class="govuk-summary-list__row">
-                        <dt class="govuk-summary-list__key">
-                          Assessment centre
-                        </dt>
-                        <dd class="govuk-summary-list__value">
-                          Tresco
-                        </dd>
-                    </div>
-                </dl>
+                                    <h2 class="app-task-list__section">
+                                        Mobility and getting around
+                                      </h2>
+                                      <ul class="app-task-list__items govuk-!-padding-left-0">
+                                        <li class="app-task-list__item">
+                                            <span class="app-task-list__task-name">
+                                              <a href="#" aria-describedby="contact-details-status">
+                                                Planning and following journeys
+                                              </a>
+                                            </span>
+                                            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="contact-details-status">Not started</strong>
+                                          </li>
+                                          <li class="app-task-list__item">
+                                              <span class="app-task-list__task-name">
+                                                <a href="#" aria-describedby="contact-details-status">
+                                                 Moving around
+                                                </a>
+                                              </span>
+                                              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="contact-details-status">Not started</strong>
+                                            </li>
 
+                      </ul>
+                    </li>
+          
+                  <li>
+                    <h2 class="app-task-list__section">
+                      Next steps
+                    </h2>
+                    <ul class="app-task-list__items govuk-!-padding-left-0">
+                      <li class="app-task-list__item">
+                          <script type="text/javascript">
+                            if (progress) {
+                              document.write('<span class="app-task-list__task-name"><a href="recommend">Make your recommendation</a></span><strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">Not started</strong>');
+                              }
+                            else {
+                              document.write('<span class="app-task-list__task-name">Make your recommendation</span><strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">Cannot start yet</strong>');
+                            }
+                          </script>
+                        
+                      </li>
+                    
+                    </ul>
+                  </li>
+                </ul>
+              
 
-              <h2 class="govuk-heading-m">Current condition</h2>
-
-        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-            <script type="text/javascript">
-              var currentmedication = {{data.currentmedication|dump|safe}}
-              console.log(currentmedication)
-              if (currentmedication) {
-                document.write(' <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Current medication</dt><dd class="govuk-summary-list__value">{{ data['currentmedication'] }}</dd><dd class="govuk-summary-list__actions"><a class="govuk-link" href="current-medication">Change<span class="govuk-visually-hidden"> name</span></a></dd></div>');
-                }
-            </script>
-          <script type="text/javascript">
-            var musculoskeletal = {{data.musculoskeletal|dump|safe}}
-            console.log(musculoskeletal)
-            if (musculoskeletal) {
-              document.write(' <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Musculoskeletal and mental state</dt><dd class="govuk-summary-list__value">{{ data['musculoskeletal'] }}</dd><dd class="govuk-summary-list__actions"><a class="govuk-link" href="musculoskeletal">Change<span class="govuk-visually-hidden"> name</span></a></dd></div>');
-              }
-          </script>
-          <script type="text/javascript">
-            var observations = {{data.observations|dump|safe}}
-            console.log(observations)
-            if (observations) {
-              document.write(' <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Observations</dt><dd class="govuk-summary-list__value">{{ data['observations'] }}</dd><dd class="govuk-summary-list__actions"><a class="govuk-link" href="observations">Change<span class="govuk-visually-hidden"> name</span></a></dd></div>');
-              }
-          </script>
-          <script type="text/javascript">
-            var variability = {{data.variability|dump|safe}}
-            console.log(variability)
-            if (variability) {
-              document.write(' <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Variability</dt><dd class="govuk-summary-list__value">{{ data['variability'] }}</dd><dd class="govuk-summary-list__actions"><a class="govuk-link" href="variability">Change<span class="govuk-visually-hidden"> name</span></a></dd></div>');
-              }
-          </script>
-         </dl>
-
-         <h2 class="govuk-heading-m">History</h2>
-         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-            <script type="text/javascript">
-              var historyofcondition = {{data.historyofcondition|dump|safe}}
-              console.log(historyofcondition)
-              if (historyofcondition) {
-                document.write(' <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">History of condition</dt><dd class="govuk-summary-list__value">{{ data['historyofcondition'] }}</dd><dd class="govuk-summary-list__actions"><a class="govuk-link" href="historyofcondition">Change<span class="govuk-visually-hidden"> name</span></a></dd></div>');
-                }
-            </script>
-            <script type="text/javascript">
-              var socialoccupational = {{data.socialoccupational|dump|safe}}
-              console.log(socialoccupational)
-              if (socialoccupational) {
-                document.write(' <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Social and occupational history</dt><dd class="govuk-summary-list__value">{{ data['socialoccupational'] }}</dd><dd class="govuk-summary-list__actions"><a class="govuk-link" href="socialoccupational">Change<span class="govuk-visually-hidden"> name</span></a></dd></div>');
-                }
-            </script>
-          </dl>
-
-
-
-         <a href="#" class="govuk-button">Make your recommendation</a>
-
+            </div>
         </div>
-</div>
-
 
     </main>
   </div>
