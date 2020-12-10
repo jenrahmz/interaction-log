@@ -116,43 +116,93 @@
                               </li>
                               <li class="app-task-list__item">
                                   <span class="app-task-list__task-name">
-                                    <a href="#" aria-describedby="contact-details-status">
+                                    <a href="dressing-b" aria-describedby="contact-details-status">
                                       Dressing and undressing
                                     </a>
                                   </span>
-                                  <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="contact-details-status">Not started</strong>
+                                  <script type="text/javascript">
+                                    var dressingSelect = {{data.dressingSelect|dump|safe}}
+                                    console.log(dressingSelect)
+                                    if (dressingSelect) {
+                                      var progress = "1";
+                                      document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
+                                      }
+                                    else {
+                                      document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>');
+                                    }
+                                  </script>
                                 </li>
                                 <li class="app-task-list__item">
                                     <span class="app-task-list__task-name">
-                                      <a href="#" aria-describedby="contact-details-status">
+                                      <a href="communicatingverbally-b" aria-describedby="contact-details-status">
                                         Communicating verbally
                                       </a>
                                     </span>
-                                    <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="contact-details-status">Not started</strong>
+                                    <script type="text/javascript">
+                                      var communicatingverballySelect = {{data.communicatingverballySelect|dump|safe}}
+                                      console.log(communicatingverballySelect)
+                                      if (communicatingverballySelect) {
+                                        var progress = "1";
+                                        document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
+                                        }
+                                      else {
+                                        document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>');
+                                      }
+                                    </script>
                                   </li>
                                   <li class="app-task-list__item">
                                       <span class="app-task-list__task-name">
-                                        <a href="#" aria-describedby="contact-details-status">
+                                        <a href="readingunderstanding-b" aria-describedby="contact-details-status">
                                           Reading and understanding signs, symbols and words
                                         </a>
                                       </span>
-                                      <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="contact-details-status">Not started</strong>
+                                      <script type="text/javascript">
+                                      var readingunderstandingSelect = {{data.readingunderstandingSelect|dump|safe}}
+                                      console.log(readingunderstandingSelect)
+                                      if (readingunderstandingSelect) {
+                                        var progress = "1";
+                                        document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
+                                        }
+                                      else {
+                                        document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>');
+                                      }
+                                    </script>
                                     </li>
                                     <li class="app-task-list__item">
                                         <span class="app-task-list__task-name">
-                                          <a href="#" aria-describedby="contact-details-status">
+                                          <a href="facetoface-b" aria-describedby="contact-details-status">
                                             Engaging face to face
                                           </a>
                                         </span>
-                                        <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="contact-details-status">Not started</strong>
+                                        <script type="text/javascript">
+                                          var facetofaceSelect = {{data.facetofaceSelect|dump|safe}}
+                                          console.log(facetofaceSelect)
+                                          if (facetofaceSelect) {
+                                            var progress = "1";
+                                            document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
+                                            }
+                                          else {
+                                            document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>');
+                                          }
+                                        </script>
                                       </li>
                                       <li class="app-task-list__item">
                                           <span class="app-task-list__task-name">
-                                            <a href="#" aria-describedby="contact-details-status">
+                                            <a href="budgeting-b" aria-describedby="contact-details-status">
                                               Budgeting
                                             </a>
                                           </span>
-                                          <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="contact-details-status">Not started</strong>
+                                          <script type="text/javascript">
+                                            var budgetingSelect = {{data.budgetingSelect|dump|safe}}
+                                            console.log(budgetingSelect)
+                                            if (budgetingSelect) {
+                                              var progress = "1";
+                                              document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
+                                              }
+                                            else {
+                                              document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>');
+                                            }
+                                          </script>
                                         </li>
                                       </ul>
                                     </li>
