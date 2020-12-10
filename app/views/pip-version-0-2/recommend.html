@@ -125,6 +125,23 @@
                     </script>
                   </dl>
 
+                  <h2 class="govuk-heading-m">Mobility and getting around</h2>
+                <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                    <script type="text/javascript">
+                      var journeysSelect = {{data.journeysSelect|dump|safe}}
+                      console.log(journeysSelect)
+                      if (journeysSelect) {
+                        document.write(' <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Planning and following journeys</dt><dd class="govuk-summary-list__value"><p>{{ data['journeysSelect'] }}</p><p class="govuk-body-s">{{ data['journeysReason'] }}</p></dd><dd class="govuk-summary-list__actions"><a class="govuk-link" href="journeys-b">Change<span class="govuk-visually-hidden"> name</span></a></dd></div>');
+                        }
+                    </script>
+                    <script type="text/javascript">
+                      var movingaroundSelect = {{data.movingaroundSelect|dump|safe}}
+                      console.log(movingaroundSelect)
+                      if (movingaroundSelect) {
+                        document.write(' <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Moving around</dt><dd class="govuk-summary-list__value"><p>{{ data['movingaroundSelect'] }}</p><p class="govuk-body-s">{{ data['movingaroundReason'] }}</p></dd><dd class="govuk-summary-list__actions"><a class="govuk-link" href="movingaround-b">Change<span class="govuk-visually-hidden"> name</span></a></dd></div>');
+                        }
+                    </script>
+                  </dl>
             
 
 
