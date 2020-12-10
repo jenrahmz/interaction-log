@@ -44,35 +44,75 @@
                         </li>
                         <li class="app-task-list__item">
                           <span class="app-task-list__task-name">
-                            <a href="#" aria-describedby="contact-details-status">
+                            <a href="takingnutrition-b" aria-describedby="contact-details-status">
                               Taking nutrition
                             </a>
                           </span>
-                          <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="contact-details-status">Not started</strong>
+                          <script type="text/javascript">
+                            var takingnutritionSelect = {{data.takingnutritionSelect|dump|safe}}
+                            console.log(takingnutritionSelect)
+                            if (takingnutritionSelect) {
+                              var progress = "1";
+                              document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
+                              }
+                            else {
+                              document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>');
+                            }
+                          </script>
                         </li>
                         <li class="app-task-list__item">
                             <span class="app-task-list__task-name">
-                              <a href="#" aria-describedby="contact-details-status">
+                              <a href="managingtherapy-b" aria-describedby="contact-details-status">
                                 Managing therapy
                               </a>
                             </span>
-                            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="contact-details-status">Not started</strong>
+                            <script type="text/javascript">
+                              var managingtherapySelect = {{data.managingtherapySelect|dump|safe}}
+                              console.log(managingtherapySelect)
+                              if (managingtherapySelect) {
+                                var progress = "1";
+                                document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
+                                }
+                              else {
+                                document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>');
+                              }
+                            </script>
                           </li>
                           <li class="app-task-list__item">
                               <span class="app-task-list__task-name">
-                                <a href="#" aria-describedby="contact-details-status">
+                                <a href="washingbathing-b" aria-describedby="contact-details-status">
                                   Washing and bathing
                                 </a>
                               </span>
-                              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="contact-details-status">Not started</strong>
+                              <script type="text/javascript">
+                                var washingbathingSelect = {{data.washingbathingSelect|dump|safe}}
+                                console.log(washingbathingSelect)
+                                if (washingbathingSelect) {
+                                  var progress = "1";
+                                  document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
+                                  }
+                                else {
+                                  document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>');
+                                }
+                              </script>
                             </li>
                             <li class="app-task-list__item">
                                 <span class="app-task-list__task-name">
-                                  <a href="#" aria-describedby="contact-details-status">
+                                  <a href="toiletneeds-b" aria-describedby="contact-details-status">
                                     Managing toilet needs
                                   </a>
                                 </span>
-                                <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="contact-details-status">Not started</strong>
+                                <script type="text/javascript">
+                                  var toiletneedsSelect = {{data.toiletneedsSelect|dump|safe}}
+                                  console.log(toiletneedsSelect)
+                                  if (toiletneedsSelect) {
+                                    var progress = "1";
+                                    document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
+                                    }
+                                  else {
+                                    document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>');
+                                  }
+                                </script>
                               </li>
                               <li class="app-task-list__item">
                                   <span class="app-task-list__task-name">

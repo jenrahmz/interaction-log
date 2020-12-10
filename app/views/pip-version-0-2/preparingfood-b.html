@@ -46,24 +46,24 @@
                           text: "Can prepare and cook a simple meal unaided"
                         },
                         {
-                          value: "b",
-                          text: "Needs to use an aid or appliance to be able to either prepare or cook a simple meal."
+                          value: "Needs to use an aid or appliance to be able to either prepare or cook a simple meal",
+                          text: "Needs to use an aid or appliance to be able to either prepare or cook a simple meal"
                         },
                         {
-                          value: "c",
-                          text: "Cannot cook a simple meal using a conventional cooker but is able to do so using a microwave."
+                          value: "Cannot cook a simple meal using a conventional cooker but is able to do so using a microwave",
+                          text: "Cannot cook a simple meal using a conventional cooker but is able to do so using a microwave"
                         },
                         {
-                          value: "d",
-                          text: "Needs prompting to be able to either prepare or cook a simple meal."
+                          value: "Needs prompting to be able to either prepare or cook a simple meal",
+                          text: "Needs prompting to be able to either prepare or cook a simple meal"
                         },
                         {
-                          value: "e",
-                          text: "Needs supervision or assistance to either prepare or cook a simple meal."
+                          value: "Needs supervision or assistance to either prepare or cook a simple meal",
+                          text: "Needs supervision or assistance to either prepare or cook a simple meal"
                         },
                         {
-                          value: "f",
-                          text: "Cannot prepare and cook food."
+                          value: "Cannot prepare and cook food",
+                          text: "Cannot prepare and cook food"
                         }
                       ]
                     }) }} 
@@ -75,7 +75,8 @@
                         text: "What is the reason for this answer?",
                         classes: "govuk-label--m",
                         isPageHeading: false
-                      }
+                      },
+                      value: data['preparingfoodReason']
                     }) }}  
 
                     {{ govukButton({

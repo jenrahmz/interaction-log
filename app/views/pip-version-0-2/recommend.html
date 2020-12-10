@@ -60,6 +60,34 @@
                         document.write(' <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Preparing food</dt><dd class="govuk-summary-list__value"><p>{{ data['preparingfoodSelect'] }}</p><p class="govuk-body-s">{{ data['preparingfoodReason'] }}</p></dd><dd class="govuk-summary-list__actions"><a class="govuk-link" href="preparingfood-b">Change<span class="govuk-visually-hidden"> name</span></a></dd></div>');
                         }
                     </script>
+                    <script type="text/javascript">
+                      var takingnutritionSelect = {{data.takingnutritionSelect|dump|safe}}
+                      console.log(takingnutritionSelect)
+                      if (takingnutritionSelect) {
+                        document.write(' <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Taking nutrition</dt><dd class="govuk-summary-list__value"><p>{{ data['takingnutritionSelect'] }}</p><p class="govuk-body-s">{{ data['takingnutritionReason'] }}</p></dd><dd class="govuk-summary-list__actions"><a class="govuk-link" href="takingnutrition-b">Change<span class="govuk-visually-hidden"> name</span></a></dd></div>');
+                        }
+                    </script>
+                    <script type="text/javascript">
+                      var managingtherapySelect = {{data.managingtherapySelect|dump|safe}}
+                      console.log(managingtherapySelect)
+                      if (managingtherapySelect) {
+                        document.write(' <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Taking nutrition</dt><dd class="govuk-summary-list__value"><p>{{ data['managingtherapySelect'] }}</p><p class="govuk-body-s">{{ data['managingtherapyReason'] }}</p></dd><dd class="govuk-summary-list__actions"><a class="govuk-link" href="managingtherapy-b">Change<span class="govuk-visually-hidden"> name</span></a></dd></div>');
+                        }
+                    </script>
+                    <script type="text/javascript">
+                      var washingbathingSelect = {{data.washingbathingSelect|dump|safe}}
+                      console.log(washingbathingSelect)
+                      if (washingbathingSelect) {
+                        document.write(' <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Washing and bathing</dt><dd class="govuk-summary-list__value"><p>{{ data['washingbathingSelect'] }}</p><p class="govuk-body-s">{{ data['washingbathingReason'] }}</p></dd><dd class="govuk-summary-list__actions"><a class="govuk-link" href="washingbathing-b">Change<span class="govuk-visually-hidden"> name</span></a></dd></div>');
+                        }
+                    </script>
+                    <script type="text/javascript">
+                      var toiletneedsSelect = {{data.toiletneedsSelect|dump|safe}}
+                      console.log(toiletneedsSelect)
+                      if (toiletneedsSelect) {
+                        document.write(' <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Managing toilet needs</dt><dd class="govuk-summary-list__value"><p>{{ data['toiletneedsSelect'] }}</p><p class="govuk-body-s">{{ data['toiletneedsReason'] }}</p></dd><dd class="govuk-summary-list__actions"><a class="govuk-link" href="toiletneeds-b">Change<span class="govuk-visually-hidden"> name</span></a></dd></div>');
+                        }
+                    </script>
                   </dl>
 
             
