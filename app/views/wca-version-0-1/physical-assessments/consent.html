@@ -21,7 +21,7 @@
 
             <div class="govuk-grid-column-two-thirds">
 
-  <form action="physical-assessment" method="post" novalidate>
+  <form action="physical-assessment" method="post" id="question-form" novalidate>
 
 
 
@@ -35,38 +35,31 @@
 
        <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
          <div class="govuk-radios__item">
-           <input class="govuk-radios__input" id="consent-y" name="consent" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
-           <label class="govuk-label govuk-radios__label" for="consent-y">
+           <input class="govuk-radios__input" id="consent" name="consent" type="radio" value="consent" aria-describedby="sign-in-2-item-hint">
+           <label class="govuk-label govuk-radios__label" for="consent">
              Yes
            </label>
          </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="noconsent" name="consent" type="radio" value="noconsent" data-aria-controls="conditional-how-contacted-conditional">
+          <label class="govuk-label govuk-radios__label" for="how-contacted-conditional">
+            No
+          </label>
+        </div>
+        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional">
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="contact-by-email">
+              Why consent wasn't given
+            </label>
+            <textarea class="govuk-textarea" id="contact-by-email" name="contact-by-email" rows="5" type="email" spellcheck="false"></textarea>
+          </div>
 
-  <div class="govuk-radios__item">
-    <input class="govuk-radios__input" id="consent-n" name="consent" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional">
-    <label class="govuk-label govuk-radios__label" for="how-contacted-conditional">
-      No
-    </label>
-  </div>
-  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional">
-    <div class="govuk-form-group">
-      <label class="govuk-label" for="contact-by-email">
-        Why consent wasn't given
-      </label>
-      <textarea class="govuk-textarea" id="contact-by-email" name="contact-by-email" rows="5" type="email" spellcheck="false"></textarea>
-    </div>
-
-  </div>
-
+        </div>
 
       </div>
     </fieldset>
 
-
-
   </div>
-
-
-
 
 </div>
 </div>
@@ -77,6 +70,18 @@
 
 </main>
 </div>
+
+<script type="text/javascript">
+          document.getElementById("consent").onclick = function() {
+                var link = "physical-assessment";
+            document.getElementById("question-form").action=link;
+          }
+
+          document.getElementById("noconsent").onclick = function() {
+                var link = "../assessment-overview";
+            document.getElementById("question-form").action=link;
+          }
+</script>
 
 
 
