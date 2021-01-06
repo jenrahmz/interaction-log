@@ -10,6 +10,12 @@
 {% include "includes/wca-assessment-in-progress.html" %}
 
   <div class="govuk-width-container {{ containerClasses }}">
+
+      {{ govukBackLink({
+        text: "Back to assessment overview",
+        href: "../assessment-overview"
+      }) }}
+
     <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
         <div class="govuk-grid-row">
 
@@ -25,7 +31,7 @@
                   <ul class="app-task-list__items  govuk-!-padding-left-0">
                     <li class="app-task-list__item">
                       <span class="app-task-list__task-name">
-                        <a href="physical-assessments/General-health/GeneralHealth" aria-describedby="read-declaration-status">
+                        <a href="General-health/GeneralHealth" aria-describedby="read-declaration-status">
                           General health
                         </a>
                       </span>
@@ -45,7 +51,7 @@
                 <ul class="app-task-list__items govuk-!-padding-left-0">
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
-                      <a href="physical-assessments/Lower-back-and-legs/lowerback" aria-describedby="read-declaration-status">
+                      <a href="Lower-back-and-legs/lowerback" aria-describedby="read-declaration-status">
                         Lower back
                       </a>
                     </span>
@@ -57,7 +63,7 @@
                   </li>
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
-                      <a href="physical-assessments/Lower-back-and-legs/left-leg" aria-describedby="read-declaration-status">
+                      <a href="Lower-back-and-legs/left-leg" aria-describedby="read-declaration-status">
                         Left leg
                       </a>
                     </span>
@@ -69,7 +75,7 @@
                   </li>
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
-                      <a href="physical-assessments/Lower-back-and-legs/right-leg" aria-describedby="read-declaration-status">
+                      <a href="Lower-back-and-legs/right-leg" aria-describedby="read-declaration-status">
                         Right leg
                       </a>
                     </span>
@@ -90,7 +96,7 @@
                 <ul class="app-task-list__items govuk-!-padding-left-0">
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
-                      <a href="physical-assessments/Neck-and-arms/neck" aria-describedby="read-declaration-status">
+                      <a href="Neck-and-arms/neck" aria-describedby="read-declaration-status">
                         Neck
                       </a>
                     </span>
@@ -102,7 +108,7 @@
                   </li>
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
-                      <a href="physical-assessments/Neck-and-arms/right-upper-arm" aria-describedby="read-declaration-status">
+                      <a href="Neck-and-arms/right-upper-arm" aria-describedby="read-declaration-status">
                         Left upper arm
                       </a>
                     </span>
@@ -114,7 +120,7 @@
                   </li>
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
-                      <a href="physical-assessments/Neck-and-arms/right-upper-arm" aria-describedby="read-declaration-status">
+                      <a href="Neck-and-arms/right-upper-arm" aria-describedby="read-declaration-status">
                         Right upper arm
                       </a>
                     </span>
@@ -126,7 +132,7 @@
                   </li>
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
-                      <a href="physical-assessments/Neck-and-arms/left-forearm" aria-describedby="read-declaration-status">
+                      <a href="Neck-and-arms/left-forearm" aria-describedby="read-declaration-status">
                         Left forearm
                       </a>
                     </span>
@@ -138,7 +144,7 @@
                   </li>
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
-                      <a href="physical-assessments/Neck-and-arms/right-forearm" aria-describedby="read-declaration-status">
+                      <a href="Neck-and-arms/right-forearm" aria-describedby="read-declaration-status">
                         Right forearm
                       </a>
                     </span>
@@ -159,7 +165,7 @@
                 <ul class="app-task-list__items govuk-!-padding-left-0">
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
-                      <a href="physical-assessments/Cardiovascular-and-respiratory/radial-pulse" aria-describedby="read-declaration-status">
+                      <a href="Cardiovascular-and-respiratory/radial-pulse" aria-describedby="read-declaration-status">
                         Radial pulse
                       </a>
                     </span>
@@ -171,7 +177,7 @@
                   </li>
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
-                      <a href="physical-assessments/Cardiovascular-and-respiratory/LeftlegPerip" aria-describedby="read-declaration-status">
+                      <a href="Cardiovascular-and-respiratory/LeftlegPerip" aria-describedby="read-declaration-status">
                         Left leg peripheral circulation
                       </a>
                     </span>
@@ -183,7 +189,7 @@
                   </li>
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
-                      <a href="physical-assessments/Cardiovascular-and-respiratory/RightlegPerip" aria-describedby="read-declaration-status">
+                      <a href="Cardiovascular-and-respiratory/RightlegPerip" aria-describedby="read-declaration-status">
                         Right leg peripheral circulation
                       </a>
                     </span>
@@ -195,7 +201,7 @@
                   </li>
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
-                      <a href="physical-assessments/Cardiovascular-and-respiratory/blood-pressue" aria-describedby="read-declaration-status">
+                      <a href="Cardiovascular-and-respiratory/blood-pressue" aria-describedby="read-declaration-status">
                         Blood pressure
                       </a>
                     </span>
@@ -207,7 +213,7 @@
                   </li>
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
-                      <a href="physical-assessments/Cardiovascular-and-respiratory/cardiac" aria-describedby="read-declaration-status">
+                      <a href="Cardiovascular-and-respiratory/cardiac" aria-describedby="read-declaration-status">
                         Cardiac
                       </a>
                     </span>
@@ -219,7 +225,7 @@
                   </li>
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
-                      <a href="physical-assessments/Cardiovascular-and-respiratory/peakexpiration" aria-describedby="read-declaration-status">
+                      <a href="Cardiovascular-and-respiratory/peakexpiration" aria-describedby="read-declaration-status">
                         Peak expiration flow rate
                       </a>
                     </span>
@@ -231,7 +237,7 @@
                   </li>
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
-                      <a href="physical-assessments/Cardiovascular-and-respiratory/breathlessness" aria-describedby="read-declaration-status">
+                      <a href="Cardiovascular-and-respiratory/breathlessness" aria-describedby="read-declaration-status">
                         Breathlessness
                       </a>
                     </span>
@@ -243,7 +249,7 @@
                   </li>
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
-                      <a href="physical-assessments/Cardiovascular-and-respiratory/other-chest-sound-wheeze" aria-describedby="read-declaration-status">
+                      <a href="Cardiovascular-and-respiratory/other-chest-sound-wheeze" aria-describedby="read-declaration-status">
                         Other: chest sounds, wheeze
           
                       </a>
@@ -263,7 +269,7 @@
                 <ul class="app-task-list__items govuk-!-padding-left-0">
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
-                      <a href="physical-assessments/vision-speech-hearing/vision-speech-hearing" aria-describedby="read-declaration-status">
+                      <a href="vision-speech-hearing/vision-speech-hearing" aria-describedby="read-declaration-status">
                         Vision, speech and hearing
                       </a>
                     </span>
@@ -281,7 +287,7 @@
                 <ul class="app-task-list__items govuk-!-padding-left-0">
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
-                      <a href="physical-assessments/central-nervous-system/central-nervous-system" aria-describedby="read-declaration-status">
+                      <a href="central-nervous-system/central-nervous-system" aria-describedby="read-declaration-status">
                         Central nervous system
                       </a>
                     </span>

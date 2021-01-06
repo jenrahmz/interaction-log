@@ -1,46 +1,48 @@
-{% extends "layout-key-detail-bar.html" %}
+{% extends "layout.html" %}
+{% set bodyAttributes = { id: "assess" } %}
 
 {% block pageTitle %}
-  TextArea component
+  GOV.UK Prototype Kit
 {% endblock %}
 
+{% block main %}
 
-{% block beforeContent %}
+{% include "includes/wca-assessment-in-progress.html" %}
 
-<a href="javascript:window.history.back();" class="govuk-back-link">Back</a>
-{% endblock %}
+  <div class="govuk-width-container {{ containerClasses }}">
 
+      {{ govukBackLink({
+        text: "Back",
+        href: "../assessment-overview"
+      }) }}
+      
+    <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
+        <div class="govuk-grid-row">
 
-{% block content %}
+            <div class="govuk-grid-column-two-thirds">
 
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-three-quarters">
-  <!-- <span class="govuk-caption-l">Eating and drinking</span> -->
-
-  <form action="/corecomponents/Research/4Navigation/WCA-tasklist/TaskList-PA" method="post" novalidate>
+  <form action="physical-assessment" method="post" novalidate>
 
 
 
   <div class="govuk-form-group">
     <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
         <h1 class="govuk-fieldset__heading">
-        Has consent been given for this physical assessment
+        Has consent been given for this physical assessment?
         </h1>
       </legend>
-      <!-- <div id="sign-in-hint" class="govuk-hint">
-        Select which one best matches
-      </div> -->
+
        <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
          <div class="govuk-radios__item">
-           <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
-           <label class="govuk-label govuk-radios__label" for="sign-in-2">
+           <input class="govuk-radios__input" id="consent-y" name="consent" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
+           <label class="govuk-label govuk-radios__label" for="consent-y">
              Yes
            </label>
          </div>
 
   <div class="govuk-radios__item">
-    <input class="govuk-radios__input" id="how-contacted-conditional" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional">
+    <input class="govuk-radios__input" id="consent-n" name="consent" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional">
     <label class="govuk-label govuk-radios__label" for="how-contacted-conditional">
       No
     </label>
@@ -72,6 +74,9 @@
 <button class="govuk-button" data-module="govuk-button">
   Save and continue
 </button>
+
+</main>
+</div>
 
 
 

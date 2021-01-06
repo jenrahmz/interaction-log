@@ -10,6 +10,12 @@
 {% include "includes/wca-assessment-in-progress.html" %}
 
   <div class="govuk-width-container {{ containerClasses }}">
+
+      {{ govukBackLink({
+        text: "Back to physical assessment",
+        href: "../physical-assessment"
+      }) }}
+      
     <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
 
     <div class="govuk-grid-row">

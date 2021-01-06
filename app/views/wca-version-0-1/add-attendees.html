@@ -10,15 +10,18 @@
 {% include "includes/wca-assessment-in-progress.html" %}
 
   <div class="govuk-width-container {{ containerClasses }}">
+
+      {{ govukBackLink({
+        text: "Back",
+        href: "assessment-overview"
+      }) }}
+      
     <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
         <div class="govuk-grid-row">
 
             <div class="govuk-grid-column-two-thirds">
 
-                {{ govukBackLink({
-                  text: "Back",
-                  href: "assessment-overview"
-                }) }}
+                
 
             <form action="assessment-overview" method="post">
 
