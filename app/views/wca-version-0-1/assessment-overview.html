@@ -125,7 +125,17 @@
                                    Mental health assessment
                                   </a>
                                 </span>
-                                <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>
+                                <script type="text/javascript">
+                                  var appearance = {{data.appearance|dump|safe}}
+                                  console.log(appearance)
+                                  if (appearance) {
+                                    var progress = "1";
+                                    document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
+                                    }
+                                  else {
+                                    document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>');
+                                  }
+                                </script>
                               </li>
                     </ul>
                   </li>
@@ -140,12 +150,15 @@
                         <li class="app-task-list__item">
                             <script type="text/javascript">
                               if (progress) {
-                                document.write('<span class="app-task-list__task-name"><a href="check">Finish face to face assessment</a></span><strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">Not started</strong>');
+                                document.write('<span class="app-task-list__task-name"><a href="finish-face-to-face">Finish face to face assessment</a></span><strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">Not started</strong>');
                                 }
                               else {
                                 document.write('<span class="app-task-list__task-name">Finish face to face assessment</span><strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">Cannot start yet</strong>');
                               }
                             </script>
+                        </li>
+                        <li class="app-task-list__item">
+                              <span class="app-task-list__task-name"><a href="curtail">Curtail assessment</a></span><strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">Optional</strong>
                         </li>
                         </ul>
                       </li>
