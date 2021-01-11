@@ -13,7 +13,7 @@
 
       {{ govukBackLink({
         text: "Back",
-        href: "assessment-overview"
+        href: "scoring"
       }) }}
 
     <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
@@ -21,53 +21,49 @@
 
             <div class="govuk-grid-column-two-thirds">
 
-              <h1 class="govuk-heading-xl">Mobilising and using steps</h1>
+              <h1 class="govuk-heading-xl">Making self understood</h1>
 
             <form action="lcwra" method="post">
 
                 {{ govukRadios({
-                  idPrefix: "mobilisingSelect",
-                  name: "mobilisingSelect",
+                  idPrefix: "makingselfunderstoodSelect",
+                  name: "makingselfunderstoodSelect",
                   fieldset: {
                     legend: {
-                      text: "Choose the descriptor that's most appropriate to Jayne",
+                      text: "Which of these options describes how Jayne can communicate simple messages to people by speaking, writing or typing?",
                       isPageHeading: false,
                       classes: "govuk-fieldset__legend--s"
                     }
                   },
                   items: [
                     {
-                      value: "mobilising-one",
-                      text: "Cannot mobilise more than 50 metres, or 50 metres repeatedly"
+                      value: "makingselfunderstood-one",
+                      text: "Cannot communicate a simple message"
                     },
                     {
-                      value: "mobilising-two",
-                      text: "Cannot go up or down 2 steps, even if using a handrail"
+                      value: "makingselfunderstood-two",
+                      text: "Has significant difficulty communicating a simple message to strangers"
                     },
                     {
-                      value: "mobilising-three",
-                      text: "Cannot mobilise more than 100 metres, or 100 metres repeatedly"
+                      value: "makingselfunderstood-three",
+                      text: "Has some difficulty communicating a simple message to strangers"
                     },
                     {
-                      value: "mobilising-four",
-                      text: "Cannot mobilise more than 200 metres, or 200 metres repeatedly"
-                    },
-                    {
-                      value: "mobilising-five",
+                      value: "makingselfunderstood-four",
                       text: "None of the above"
                     }
                   ]
                 }) }}
               
                     {{ govukTextarea({
-                        name: "mobilisingdetails",
-                        id: "mobilisingdetails",
+                        name: "makingselfunderstooddetails",
+                        id: "makingselfunderstooddetails",
                         label: {
                           text: "Give details",
                           classes: "govuk-label--s",
                           isPageHeading: true
                         },
-                        value: data['mobilisingdetails']
+                        value: data['makingselfunderstooddetails']
                       }) }}
 
                       {{ govukButton({

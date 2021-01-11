@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+{% set bodyAttributes = { id: "assess" } %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block main %}
+
+{% include "includes/wca-assessment-in-progress.html" %}
+
+  <div class="govuk-width-container {{ containerClasses }}">
+
+      {{ govukBackLink({
+        text: "Back",
+        href: "scoring"
+      }) }}
+
+    <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
+        <div class="govuk-grid-row">
+
+            <div class="govuk-grid-column-two-thirds">
+
+              <h1 class="govuk-heading-xl">Manual dexterity</h1>
+
+            <form action="lcwra" method="post">
+
+                {{ govukRadios({
+                  idPrefix: "dexteritySelect",
+                  name: "dexteritySelect",
+                  fieldset: {
+                    legend: {
+                      text: "Select the highest scoring task that R cannot do with either hand",
+                      isPageHeading: false,
+                      classes: "govuk-fieldset__legend--s"
+                    }
+                  },
+                  items: [
+                    {
+                      value: "dexterity-one",
+                      text: "Cannot press a button, like a phone keyboard"
+                    },
+                    {
+                      value: "dexterity-two",
+                      text: "Cannot turn the pages of a book"
+                    },
+                    {
+                      value: "dexterity-three",
+                      text: "Cannot pick up a £1 coin"
+                    },
+                    {
+                      value: "dexterity-four",
+                      text: "Cannot use a pen or pencil to make a meaningful mark, like a cross or tick"
+                    },
+                    {
+                      value: "dexterity-five",
+                      text: "Cannot use either a keyboard or mouse"
+                    },
+                    {
+                      value: "dexterity-six",
+                      text: "None of the above"
+                    }
+                  ]
+                }) }}
+              
+                    {{ govukTextarea({
+                        name: "dexteritydetails",
+                        id: "dexteritydetails",
+                        label: {
+                          text: "Give details",
+                          classes: "govuk-label--s",
+                          isPageHeading: true
+                        },
+                        value: data['dexteritydetails']
+                      }) }}
+
+                      {{ govukButton({
+                        text: "Save"
+                      }) }}
+
+            </form>
+
+
+            </div>
+        </div>
+
+    </main>
+  </div>
+{% endblock %}
