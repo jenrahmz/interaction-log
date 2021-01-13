@@ -31,9 +31,9 @@
                             </a>
                           </span>
                           <script type="text/javascript">
-                            var mobilisingSelect = {{data.mobilisingSelect|dump|safe}}
-                            console.log(mobilisingSelect)
-                            if (mobilisingSelect) {
+                            var mobilisingdetails = {{data.mobilisingdetails|dump|safe}}
+                            console.log(mobilisingdetails)
+                            if (mobilisingdetails) {
                               var progress = "1";
                               document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
                               }
@@ -49,9 +49,9 @@
                               </a>
                             </span>
                             <script type="text/javascript">
-                              var standingsittingSelect = {{data.standingsittingSelect|dump|safe}}
-                              console.log(standingsittingSelect)
-                              if (standingsittingSelect) {
+                              var standingsittingdetails = {{data.standingsittingdetails|dump|safe}}
+                              console.log(standingsittingdetails)
+                              if (standingsittingdetails) {
                                 var progress = "1";
                                 document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
                                 }
@@ -67,9 +67,9 @@
                             </a>
                           </span>
                           <script type="text/javascript">
-                            var reachingSelect = {{data.reachingSelect|dump|safe}}
-                            console.log(reachingSelect)
-                            if (reachingSelect) {
+                            var reachingdetails = {{data.reachingdetails|dump|safe}}
+                            console.log(reachingdetails)
+                            if (reachingdetails) {
                               var progress = "1";
                               document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
                               }
@@ -85,9 +85,9 @@
                               </a>
                             </span>
                             <script type="text/javascript">
-                              var pickingupSelect = {{data.pickingupSelect|dump|safe}}
-                              console.log(pickingupSelect)
-                              if (pickingupSelect) {
+                              var pickingupdetails = {{data.pickingupdetails|dump|safe}}
+                              console.log(pickingupdetails)
+                              if (pickingupdetails) {
                                 var progress = "1";
                                 document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
                                 }
@@ -103,9 +103,9 @@
                                 </a>
                               </span>
                               <script type="text/javascript">
-                                var dexteritySelect = {{data.dexteritySelect|dump|safe}}
-                                console.log(dexteritySelect)
-                                if (dexteritySelect) {
+                                var dexteritydetails = {{data.dexteritydetails|dump|safe}}
+                                console.log(dexteritydetails)
+                                if (dexteritydetails) {
                                   var progress = "1";
                                   document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
                                   }
@@ -121,9 +121,9 @@
                                   </a>
                                 </span>
                                 <script type="text/javascript">
-                                  var makingselfunderstoodSelect = {{data.makingselfunderstoodSelect|dump|safe}}
-                                  console.log(makingselfunderstoodSelect)
-                                  if (makingselfunderstoodSelect) {
+                                  var makingselfunderstooddetails = {{data.makingselfunderstooddetails|dump|safe}}
+                                  console.log(makingselfunderstooddetails)
+                                  if (makingselfunderstooddetails) {
                                     var progress = "1";
                                     document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
                                     }
@@ -139,9 +139,9 @@
                                     </a>
                                   </span>
                                   <script type="text/javascript">
-                                    var understandingcommunicationSelect = {{data.understandingcommunicationSelect|dump|safe}}
-                                    console.log(understandingcommunicationSelect)
-                                    if (understandingcommunicationSelect) {
+                                    var understandingcommunicationdetails = {{data.understandingcommunicationdetails|dump|safe}}
+                                    console.log(understandingcommunicationdetails)
+                                    if (understandingcommunicationdetails) {
                                       var progress = "1";
                                       document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
                                       }
@@ -150,24 +150,7 @@
                                     }
                                   </script>
                                 </li>
-                                <li class="app-task-list__item">
-                                    <span class="app-task-list__task-name">
-                                      <a href="navigation" aria-describedby="company-information-status">
-                                          Navigation
-                                      </a>
-                                    </span>
-                                    <script type="text/javascript">
-                                      var navigationSelect = {{data.navigationSelect|dump|safe}}
-                                      console.log(navigationSelect)
-                                      if (navigationSelect) {
-                                        var progress = "1";
-                                        document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
-                                        }
-                                      else {
-                                        document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Optional</strong>');
-                                      }
-                                    </script>
-                                  </li>
+                                
                                   <li class="app-task-list__item">
                                       <span class="app-task-list__task-name">
                                         <a href="mobilising-using-steps" aria-describedby="company-information-status">
@@ -175,9 +158,9 @@
                                         </a>
                                       </span>
                                       <script type="text/javascript">
-                                        var continenceSelect = {{data.continenceSelect|dump|safe}}
-                                        console.log(continenceSelect)
-                                        if (continenceSelect) {
+                                        var continencedetails = {{data.continencedetails|dump|safe}}
+                                        console.log(continencedetails)
+                                        if (continencedetails) {
                                           var progress = "1";
                                           document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
                                           }
@@ -186,24 +169,7 @@
                                         }
                                       </script>
                                     </li>
-                                    <li class="app-task-list__item">
-                                        <span class="app-task-list__task-name">
-                                          <a href="mobilising-using-steps" aria-describedby="company-information-status">
-                                              Staying conscious when awake
-                                          </a>
-                                        </span>
-                                        <script type="text/javascript">
-                                          var stayingconsciousSelect = {{data.stayingconsciousSelect|dump|safe}}
-                                          console.log(stayingconsciousSelect)
-                                          if (stayingconsciousSelect) {
-                                            var progress = "1";
-                                            document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
-                                            }
-                                          else {
-                                            document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Optional</strong>');
-                                          }
-                                        </script>
-                                      </li>
+                                   
                                       </ul>
                                     </li>
 
@@ -218,9 +184,9 @@
                                               </a>
                                             </span>
                                             <script type="text/javascript">
-                                              var learningtasksSelect = {{data.learningtasksSelect|dump|safe}}
-                                              console.log(learningtasksSelect)
-                                              if (learningtasksSelect) {
+                                              var learningtasksdetails = {{data.learningtasksdetails|dump|safe}}
+                                              console.log(learningtasksdetails)
+                                              if (learningtasksdetails) {
                                                 var progress = "1";
                                                 document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
                                                 }
@@ -236,9 +202,9 @@
                                                 </a>
                                               </span>
                                               <script type="text/javascript">
-                                                var hazardsdangerSelect = {{data.hazardsdangerSelect|dump|safe}}
-                                                console.log(hazardsdangerSelect)
-                                                if (hazardsdangerSelect) {
+                                                var hazardsdangerdetails = {{data.hazardsdangerdetails|dump|safe}}
+                                                console.log(hazardsdangerdetails)
+                                                if (hazardsdangerdetails) {
                                                   var progress = "1";
                                                   document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
                                                   }
@@ -254,9 +220,9 @@
                                                   </a>
                                                 </span>
                                                 <script type="text/javascript">
-                                                  var everydaytasksSelect = {{data.everydaytasksSelect|dump|safe}}
-                                                  console.log(everydaytasksSelect)
-                                                  if (everydaytasksSelect) {
+                                                  var everydaytasksdetails = {{data.everydaytasksdetails|dump|safe}}
+                                                  console.log(everydaytasksdetails)
+                                                  if (everydaytasksdetails) {
                                                     var progress = "1";
                                                     document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
                                                     }
@@ -272,9 +238,9 @@
                                                     </a>
                                                   </span>
                                                   <script type="text/javascript">
-                                                    var copingSelect = {{data.copingSelect|dump|safe}}
-                                                    console.log(copingSelect)
-                                                    if (copingSelect) {
+                                                    var copingdetails = {{data.copingdetails|dump|safe}}
+                                                    console.log(copingdetails)
+                                                    if (copingdetails) {
                                                       var progress = "1";
                                                       document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
                                                       }
@@ -283,24 +249,7 @@
                                                     }
                                                   </script>
                                                 </li>
-                                                <li class="app-task-list__item">
-                                                    <span class="app-task-list__task-name">
-                                                      <a href="getting-about" aria-describedby="contact-details-status">
-                                                        Getting about [No content]
-                                                      </a>
-                                                    </span>
-                                                    <script type="text/javascript">
-                                                      var gettingaboutSelect = {{data.gettingaboutSelect|dump|safe}}
-                                                      console.log(gettingaboutSelect)
-                                                      if (gettingaboutSelect) {
-                                                        var progress = "1";
-                                                        document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
-                                                        }
-                                                      else {
-                                                        document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Optional</strong>');
-                                                      }
-                                                    </script>
-                                                  </li>
+                                                
                                                   <li class="app-task-list__item">
                                                       <span class="app-task-list__task-name">
                                                         <a href="social-situations" aria-describedby="contact-details-status">
@@ -308,9 +257,9 @@
                                                         </a>
                                                       </span>
                                                       <script type="text/javascript">
-                                                        var socialsituSelect = {{data.socialsituSelect|dump|safe}}
-                                                        console.log(socialsituSelect)
-                                                        if (socialsituSelect) {
+                                                        var socialsitudetails = {{data.socialsitudetails|dump|safe}}
+                                                        console.log(socialsitudetails)
+                                                        if (socialsitudetails) {
                                                           var progress = "1";
                                                           document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
                                                           }
@@ -326,9 +275,9 @@
                                                           </a>
                                                         </span>
                                                         <script type="text/javascript">
-                                                          var behaviourSelect = {{data.behaviourSelect|dump|safe}}
-                                                          console.log(behaviourSelect)
-                                                          if (behaviourSelect) {
+                                                          var behaviourdetails = {{data.behaviourdetails|dump|safe}}
+                                                          console.log(behaviourdetails)
+                                                          if (behaviourdetails) {
                                                             var progress = "1";
                                                             document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
                                                             }
@@ -353,9 +302,9 @@
                               </a>
                             </span>
                             <script type="text/javascript">
-                              var eatingSelect = {{data.eatingSelect|dump|safe}}
-                              console.log(eatingSelect)
-                              if (eatingSelect) {
+                              var eatingdetails = {{data.eatingdetails|dump|safe}}
+                              console.log(eatingdetails)
+                              if (eatingdetails) {
                                 var progress = "1";
                                 document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
                                 }

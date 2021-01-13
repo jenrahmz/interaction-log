@@ -21,53 +21,49 @@
 
             <div class="govuk-grid-column-two-thirds">
 
-              <h1 class="govuk-heading-xl">Mobilising and using steps</h1>
+              <h1 class="govuk-heading-xl">Continence</h1>
 
-            <form action="scoring" method="post">
+              <form action="scoring" method="post">
 
                 {{ govukRadios({
-                  idPrefix: "mobilisingSelect",
-                  name: "mobilisingSelect",
+                  idPrefix: "continenceSelect",
+                  name: "continenceSelect",
                   fieldset: {
                     legend: {
-                      text: "Choose the descriptor that's most appropriate to Jayne",
+                      text: "Which of these options describes how well Jayne can control their bladder and bowels",
                       isPageHeading: false,
                       classes: "govuk-fieldset__legend--s"
                     }
                   },
                   items: [
                     {
-                      value: "mobilising-one",
-                      text: "Cannot mobilise more than 50 metres before they have to stop, or 50 metres repeatedly"
+                      value: "continence-one",
+                      text: "At least once a week Jayne needs to wash or change their clothes because of difficulty controlling their bladder, bowels or collecting device"
                     },
                     {
-                      value: "mobilising-two",
-                      text: "Cannot go up or down 2 steps, even if using a handrail"
+                      value: "continence-two",
+                      text: "At least once a month Jayne needs to wash or change their clothes because of difficulty controlling their bladder, bowels or collecting device"
                     },
                     {
-                      value: "mobilising-three",
-                      text: "Cannot mobilise more than 100 metres, or 100 metres repeatedly"
+                      value: "continence-three",
+                      text: "Most of the time there is a risk that Jayne cannot control their bowels, and would need to get changed if they cannot reach a toilet quickly"
                     },
                     {
-                      value: "mobilising-four",
-                      text: "Cannot mobilise more than 200 metres, or 200 metres repeatedly"
-                    },
-                    {
-                      value: "mobilising-five",
+                      value: "continence-four",
                       text: "None of the above"
                     }
                   ]
                 }) }}
               
                     {{ govukTextarea({
-                        name: "mobilisingdetails",
-                        id: "mobilisingdetails",
+                        name: "continencedetails",
+                        id: "continencedetails",
                         label: {
                           text: "Give details",
                           classes: "govuk-label--s",
                           isPageHeading: true
                         },
-                        value: data['mobilisingdetails']
+                        value: data['continencedetails']
                       }) }}
 
                       {{ govukButton({
