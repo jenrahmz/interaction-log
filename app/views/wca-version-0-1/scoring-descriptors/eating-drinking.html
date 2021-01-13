@@ -21,57 +21,50 @@
 
             <div class="govuk-grid-column-two-thirds">
 
-              <h1 class="govuk-heading-xl">Manual dexterity</h1>
+              <h1 class="govuk-heading-xl">Eating and drinking</h1>
 
-            <form action="scoring" method="post">
+              <form action="scoring" method="post">
 
                 {{ govukRadios({
-                  idPrefix: "dexteritySelect",
-                  name: "dexteritySelect",
+                  idPrefix: "eatingSelect",
+                  name: "eatingSelect",
                   fieldset: {
                     legend: {
-                      text: "Select the highest scoring task that R cannot do with either hand",
+                      text: "Choose the descriptor that’s most appropriate",
                       isPageHeading: false,
                       classes: "govuk-fieldset__legend--s"
                     }
                   },
+                  hint: { text: "They might repeatedly stop, experience breathlessness or severe discomfort, or need help or prompting from another person. It could be due to their physical or mental health." },
                   items: [
                     {
-                      value: "dexterity-one",
-                      text: "Cannot press a button, like a phone keyboard"
+                      value: "eating-one",
+                      text: "Every day"
                     },
                     {
-                      value: "dexterity-two",
-                      text: "Cannot turn the pages of a book"
+                      value: "eating-two",
+                      text: "Often"
                     },
                     {
-                      value: "dexterity-three",
-                      text: "Cannot pick up a £1 coin"
+                      value: "eating-three",
+                      text: "Occasionally"
                     },
                     {
-                      value: "dexterity-four",
-                      text: "Cannot use a pen or pencil to make a meaningful mark, like a cross or tick"
-                    },
-                    {
-                      value: "dexterity-five",
-                      text: "Cannot use either a keyboard or mouse"
-                    },
-                    {
-                      value: "dexterity-six",
+                      value: "eating-four",
                       text: "None of the above"
                     }
                   ]
                 }) }}
               
                     {{ govukTextarea({
-                        name: "dexteritydetails",
-                        id: "dexteritydetails",
+                        name: "eatingdetails",
+                        id: "eatingdetails",
                         label: {
                           text: "Give details",
                           classes: "govuk-label--s",
                           isPageHeading: true
                         },
-                        value: data['dexteritydetails']
+                        value: data['eatingdetails']
                       }) }}
 
                       {{ govukButton({

@@ -21,57 +21,49 @@
 
             <div class="govuk-grid-column-two-thirds">
 
-              <h1 class="govuk-heading-xl">Manual dexterity</h1>
+              <h1 class="govuk-heading-xl">Behaving appropriately around other people</h1>
 
-            <form action="scoring" method="post">
+              <form action="scoring" method="post">
 
                 {{ govukRadios({
-                  idPrefix: "dexteritySelect",
-                  name: "dexteritySelect",
+                  idPrefix: "behaviourSelect",
+                  name: "behaviourSelect",
                   fieldset: {
                     legend: {
-                      text: "Select the highest scoring task that R cannot do with either hand",
+                      text: "How often does Jayne behave in a way which upsets other people?",
                       isPageHeading: false,
                       classes: "govuk-fieldset__legend--s"
                     }
                   },
                   items: [
                     {
-                      value: "dexterity-one",
-                      text: "Cannot press a button, like a phone keyboard"
+                      value: "behaviour-one",
+                      text: "Every day"
                     },
                     {
-                      value: "dexterity-two",
-                      text: "Cannot turn the pages of a book"
+                      value: "behaviour-two",
+                      text: "Often"
                     },
                     {
-                      value: "dexterity-three",
-                      text: "Cannot pick up a £1 coin"
+                      value: "behaviour-three",
+                      text: "Occasionally"
                     },
                     {
-                      value: "dexterity-four",
-                      text: "Cannot use a pen or pencil to make a meaningful mark, like a cross or tick"
-                    },
-                    {
-                      value: "dexterity-five",
-                      text: "Cannot use either a keyboard or mouse"
-                    },
-                    {
-                      value: "dexterity-six",
+                      value: "behaviour-four",
                       text: "None of the above"
                     }
                   ]
                 }) }}
               
                     {{ govukTextarea({
-                        name: "dexteritydetails",
-                        id: "dexteritydetails",
+                        name: "behaviourdetails",
+                        id: "behaviourdetails",
                         label: {
                           text: "Give details",
                           classes: "govuk-label--s",
                           isPageHeading: true
                         },
-                        value: data['dexteritydetails']
+                        value: data['behaviourdetails']
                       }) }}
 
                       {{ govukButton({
