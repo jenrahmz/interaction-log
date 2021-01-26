@@ -104,20 +104,23 @@
                             </script>
                           </li>
                           <li class="app-task-list__item">
-                              
-                              <script type="text/javascript">
-                                var consent = {{data.consent|dump|safe}}
-                                console.log(consent)
-                                if (consent == 'noconsent') {
-                                  document.write('<span class="app-task-list__task-name"><a href="physical-assessments/consent" aria-describedby="read-declaration-status">Physical assessment</a></span><strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Consent not given</strong>');
-                                  }
-                                  else if (consent == 'consent') {
-                                  document.write('<span class="app-task-list__task-name"><a href="physical-assessments/physical-assessment" aria-describedby="read-declaration-status">Physical assessment</a></span><strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">In progress</strong>');
-                                  }
-                                else {
-                                  document.write('<span class="app-task-list__task-name"><a href="physical-assessments/consent" aria-describedby="read-declaration-status">Physical assessment</a></span><strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>');
+                            <span class="app-task-list__task-name">
+                              <a href="physical-assessments/physical-assessment" aria-describedby="read-declaration-status">
+                                Physical assessment
+                              </a>
+                            </span>
+                            <script type="text/javascript">
+                              var consent = {{data.consent|dump|safe}}
+                              console.log(consent)
+                              if (consent == 'consent') {
+                                var progress = "1";
+                                document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">In progress</strong>');
                                 }
-                              </script>
+                              else {
+                                document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>');
+                              }
+                            </script>
+                                 
                             </li>
                             <li class="app-task-list__item">
                                 <span class="app-task-list__task-name">
@@ -152,7 +155,7 @@
                         </li>
                         <li class="app-task-list__item">
                             <span class="app-task-list__task-name"><a href="curtail">Curtail assessment</a></span><strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">Optional</strong>
-                      </li>
+                      </li> 
                         <li class="app-task-list__item">
                             <span class="app-task-list__task-name"><a href="finish-face-to-face">Finish face to face assessment</a></span><strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">Not started</strong>
                         </li>
