@@ -25,9 +25,15 @@
                     <ul class="app-task-list__items govuk-!-padding-left-0">
                         <li class="app-task-list__item">
                             <span class="app-task-list__task-name">
+                                {% if data['attendeename'] %}
+                              <a href="add-attendees-two" aria-describedby="read-declaration-status">
+                                  Additional attendees
+                              </a>
+                              {% else %}
                               <a href="add-attendees" aria-describedby="read-declaration-status">
                                   Additional attendees
                               </a>
+                              {% endif %}
                             </span>
                             <script type="text/javascript">
                               var attendeename = {{data.attendeename|dump|safe}}
