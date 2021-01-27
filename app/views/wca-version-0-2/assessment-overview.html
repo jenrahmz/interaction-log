@@ -29,7 +29,17 @@
                                   Additional attendees
                               </a>
                             </span>
-                            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>
+                            <script type="text/javascript">
+                              var attendeename = {{data.attendeename|dump|safe}}
+                              console.log(attendeename)
+                              if (attendeename) {
+                                var progress = "1";
+                                document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
+                                }
+                              else {
+                                document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>');
+                              }
+                            </script>
                           </li>
                       <li class="app-task-list__item">
                         <span class="app-task-list__task-name">

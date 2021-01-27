@@ -60,11 +60,16 @@
                           General health
                         </a>
                       </span>
-                      {% if session['general-health'] %}
-                      <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-                      {% else %}
-                      <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
-                      {% endif %}
+                      <script type="text/javascript">
+                        var height = {{data.height|dump|safe}}
+                        console.log(height)
+                        if (height) {
+                          document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
+                          }
+                        else {
+                          document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>');
+                        }
+                      </script>
                     </li>
                   </ul>
                    
@@ -80,11 +85,16 @@
                         Lower back
                       </a>
                     </span>
-                    {% if session['general-health'] %}
-                    <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-                    {% else %}
-                    <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
-                    {% endif %}
+                    <script type="text/javascript">
+                      var lowerback = {{data.lowerback|dump|safe}}
+                      console.log(lowerback)
+                      if (lowerback) {
+                        document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
+                        }
+                      else {
+                        document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>');
+                      }
+                    </script>
                   </li>
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
@@ -92,11 +102,16 @@
                         Left leg
                       </a>
                     </span>
-                    {% if session['leg-back'] %}
-                    <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-                    {% else %}
-                    <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
-                    {% endif %}
+                    <script type="text/javascript">
+                      var leftleg = {{data.leftleg|dump|safe}}
+                      console.log(leftleg)
+                      if (leftleg) {
+                        document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
+                        }
+                      else {
+                        document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>');
+                      }
+                    </script>
                   </li>
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
@@ -104,11 +119,16 @@
                         Right leg
                       </a>
                     </span>
-                    {% if session['neck-arms'] %}
-                    <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-                    {% else %}
-                    <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
-                    {% endif %}
+                    <script type="text/javascript">
+                      var rightleg = {{data.rightleg|dump|safe}}
+                      console.log(rightleg)
+                      if (rightleg) {
+                        document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
+                        }
+                      else {
+                        document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>');
+                      }
+                    </script>
                   </li>
                 
                 </ul>
@@ -125,23 +145,33 @@
                         Neck
                       </a>
                     </span>
-                    {% if session['general-health'] %}
-                    <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-                    {% else %}
-                    <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
-                    {% endif %}
+                    <script type="text/javascript">
+                      var neck = {{data.neck|dump|safe}}
+                      console.log(neck)
+                      if (neck) {
+                        document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
+                        }
+                      else {
+                        document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>');
+                      }
+                    </script>
                   </li>
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
-                      <a href="Neck-and-arms/right-upper-arm" aria-describedby="read-declaration-status">
+                      <a href="Neck-and-arms/left-upper-arm" aria-describedby="read-declaration-status">
                         Left upper arm
                       </a>
                     </span>
-                    {% if session['leg-back'] %}
-                    <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-                    {% else %}
-                    <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
-                    {% endif %}
+                    <script type="text/javascript">
+                      var leftupperarm = {{data.leftupperarm|dump|safe}}
+                      console.log(leftupperarm)
+                      if (leftupperarm) {
+                        document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
+                        }
+                      else {
+                        document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>');
+                      }
+                    </script>
                   </li>
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
@@ -149,11 +179,16 @@
                         Right upper arm
                       </a>
                     </span>
-                    {% if session['neck-arms'] %}
-                    <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-                    {% else %}
-                    <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
-                    {% endif %}
+                    <script type="text/javascript">
+                      var rightupperarm = {{data.rightupperarm|dump|safe}}
+                      console.log(rightupperarm)
+                      if (rightupperarm) {
+                        document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
+                        }
+                      else {
+                        document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>');
+                      }
+                    </script>
                   </li>
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
@@ -161,11 +196,16 @@
                         Left forearm
                       </a>
                     </span>
-                    {% if session['neck-arms'] %}
-                    <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-                    {% else %}
-                    <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
-                    {% endif %}
+                    <script type="text/javascript">
+                      var leftforearm = {{data.leftforearm|dump|safe}}
+                      console.log(leftforearm)
+                      if (leftforearm) {
+                        document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
+                        }
+                      else {
+                        document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>');
+                      }
+                    </script>
                   </li>
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
@@ -173,11 +213,16 @@
                         Right forearm
                       </a>
                     </span>
-                    {% if session['neck-arms'] %}
-                    <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-                    {% else %}
-                    <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
-                    {% endif %}
+                    <script type="text/javascript">
+                      var rightforearm = {{data.rightforearm|dump|safe}}
+                      console.log(rightforearm)
+                      if (rightforearm) {
+                        document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
+                        }
+                      else {
+                        document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>');
+                      }
+                    </script>
                   </li>
                 
                 </ul>
@@ -194,11 +239,16 @@
                         Radial pulse
                       </a>
                     </span>
-                    {% if session['general-health'] %}
-                    <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-                    {% else %}
-                    <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
-                    {% endif %}
+                    <script type="text/javascript">
+                      var radialpulse = {{data.radialpulse|dump|safe}}
+                      console.log(radialpulse)
+                      if (radialpulse) {
+                        document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
+                        }
+                      else {
+                        document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>');
+                      }
+                    </script>
                   </li>
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
@@ -206,11 +256,16 @@
                         Left leg peripheral circulation
                       </a>
                     </span>
-                    {% if session['leg-back'] %}
-                    <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-                    {% else %}
-                    <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
-                    {% endif %}
+                    <script type="text/javascript">
+                      var leftlegperip = {{data.leftlegperip|dump|safe}}
+                      console.log(leftlegperip)
+                      if (leftlegperip) {
+                        document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
+                        }
+                      else {
+                        document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>');
+                      }
+                    </script>
                   </li>
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
@@ -218,11 +273,16 @@
                         Right leg peripheral circulation
                       </a>
                     </span>
-                    {% if session['neck-arms'] %}
-                    <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-                    {% else %}
-                    <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
-                    {% endif %}
+                    <script type="text/javascript">
+                      var rightlegperip = {{data.rightlegperip|dump|safe}}
+                      console.log(rightlegperip)
+                      if (rightlegperip) {
+                        document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
+                        }
+                      else {
+                        document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>');
+                      }
+                    </script>
                   </li>
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
@@ -230,11 +290,16 @@
                         Blood pressure
                       </a>
                     </span>
-                    {% if session['neck-arms'] %}
-                    <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-                    {% else %}
-                    <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
-                    {% endif %}
+                    <script type="text/javascript">
+                      var bp = {{data.bp|dump|safe}}
+                      console.log(bp)
+                      if (bp) {
+                        document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
+                        }
+                      else {
+                        document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>');
+                      }
+                    </script>
                   </li>
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
@@ -242,11 +307,16 @@
                         Cardiac
                       </a>
                     </span>
-                    {% if session['neck-arms'] %}
-                    <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-                    {% else %}
-                    <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
-                    {% endif %}
+                    <script type="text/javascript">
+                      var cardiac = {{data.cardiac|dump|safe}}
+                      console.log(cardiac)
+                      if (cardiac) {
+                        document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
+                        }
+                      else {
+                        document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>');
+                      }
+                    </script>
                   </li>
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
@@ -254,11 +324,16 @@
                         Peak expiration flow rate
                       </a>
                     </span>
-                    {% if session['neck-arms'] %}
-                    <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-                    {% else %}
-                    <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
-                    {% endif %}
+                    <script type="text/javascript">
+                      var pefr = {{data.pefr|dump|safe}}
+                      console.log(pefr)
+                      if (pefr) {
+                        document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
+                        }
+                      else {
+                        document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>');
+                      }
+                    </script>
                   </li>
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
@@ -266,11 +341,16 @@
                         Breathlessness
                       </a>
                     </span>
-                    {% if session['neck-arms'] %}
-                    <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-                    {% else %}
-                    <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
-                    {% endif %}
+                    <script type="text/javascript">
+                      var breathlessness = {{data.breathlessness|dump|safe}}
+                      console.log(breathlessness)
+                      if (breathlessness) {
+                        document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
+                        }
+                      else {
+                        document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>');
+                      }
+                    </script>
                   </li>
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
@@ -279,11 +359,16 @@
           
                       </a>
                     </span>
-                    {% if session['neck-arms'] %}
-                    <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-                    {% else %}
-                    <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
-                    {% endif %}
+                    <script type="text/javascript">
+                      var ocsw = {{data.ocsw|dump|safe}}
+                      console.log(ocsw)
+                      if (ocsw) {
+                        document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
+                        }
+                      else {
+                        document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>');
+                      }
+                    </script>
                   </li>
                 </ul>
           
@@ -298,11 +383,16 @@
                         Vision, speech and hearing
                       </a>
                     </span>
-                    {% if session['general-health'] %}
-                    <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-                    {% else %}
-                    <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
-                    {% endif %}
+                    <script type="text/javascript">
+                      var vsh = {{data.vsh|dump|safe}}
+                      console.log(vsh)
+                      if (vsh) {
+                        document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
+                        }
+                      else {
+                        document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>');
+                      }
+                    </script>
                   </li>
                 </ul>
           
@@ -316,11 +406,16 @@
                         Central nervous system
                       </a>
                     </span>
-                    {% if session['general-health'] %}
-                    <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-                    {% else %}
-                    <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
-                    {% endif %}
+                    <script type="text/javascript">
+                      var cns = {{data.cns|dump|safe}}
+                      console.log(cns)
+                      if (cns) {
+                        document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
+                        }
+                      else {
+                        document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>');
+                      }
+                    </script>
                   </li>
                 </ul>
           

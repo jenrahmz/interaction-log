@@ -27,6 +27,7 @@
                 <h2 class="govuk-heading-m">Physical functions</h2>
                 <dl class="govuk-summary-list govuk-!-margin-bottom-9">
                     
+                  {% if session['mobilisingSelect'] %}
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key no-bottom-border">Mobilising and using steps</dt>
                         <dd class="govuk-summary-list__value no-bottom-border"></dd>
@@ -41,6 +42,7 @@
                         <dd class="govuk-summary-list__value">{{ data['mobilisingdetails'] }}</dd>
                         <dd class="govuk-summary-list__actions"></dd>
                     </div>
+                    {% endif %}
 
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key no-bottom-border">Standing and sitting</dt>
@@ -183,16 +185,14 @@
 
 
               
-                <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-                    <div class="govuk-summary-list__row">
-                        <dt class="govuk-summary-list__key no-bottom-border">When does this claim need to be reviewed?</dt><dd class="govuk-summary-list__value no-bottom-border"></dd><dd class="govuk-summary-list__actions no-bottom-border"><a class="govuk-link" href="scoring-time-review#whenreview">Change<span class="govuk-visually-hidden"> name</span></a></dd>
+                <h3 class="govuk-heading-s">When does this claim need to be reviewed?</h2>
+                  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                      <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key no-bottom-border">When should the next review be?</dt><dd class="govuk-summary-list__value no-bottom-border"><p>{{ data['whenreview'] }}</p></dd><dd class="govuk-summary-list__actions no-bottom-border"><a class="govuk-link" href="treat-as-lcwra-time-review">Change<span class="govuk-visually-hidden"> name</span></a></dd>
                         </div>
-                    <div class="govuk-summary-list__row">
-                      <dt class="govuk-summary-list__key no-bottom-border">When should the next review be?</dt><dd class="govuk-summary-list__value no-bottom-border"><p>{{ data['whenreview'] }}</p></dd><dd class="govuk-summary-list__actions no-bottom-border"></dd>
-                      </div>
-                    <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">What are the reasons for this?</dt><dd class="govuk-summary-list__value"><p class="govuk-body">{{ data['reviewtimereasons'] }}</p></dd><dd class="govuk-summary-list__actions"></dd>
-                      </div>
-                    </dl>
+                      <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">What are the reasons for this?</dt><dd class="govuk-summary-list__value"><p class="govuk-body">{{ data['reviewtimereasons'] }}</p></dd><dd class="govuk-summary-list__actions"></dd>
+                        </div>
+                      </dl>
 
                   <a href="complete" class="govuk-button">Make recommendation</a>
 
