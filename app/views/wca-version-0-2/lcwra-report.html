@@ -37,128 +37,177 @@
                           <h2 class="govuk-heading-m">Physical functions</h2>
                 <dl class="govuk-summary-list govuk-!-margin-bottom-9">
                     
+
+
+                  {% if data['mobilisingSelect'] %}
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key no-bottom-border">Mobilising and using steps</dt>
                         <dd class="govuk-summary-list__value no-bottom-border"></dd>
-                        <dd class="govuk-summary-list__actions no-bottom-border"><a class="govuk-link" href="lcwra/mobilising-using-steps">Change<span class="govuk-visually-hidden"> name</span></a></dd>
+                        <dd class="govuk-summary-list__actions no-bottom-border"><a class="govuk-link" href="scoring-descriptors/mobilising-using-steps">Change<span class="govuk-visually-hidden"> name</span></a></dd>
                       </div>
                     <div class="govuk-summary-list__row">
                       <dt class="govuk-summary-list__key no-bottom-border">Choose the descriptor that's most appropriate to Jayne</dt>
-                      <dd class="govuk-summary-list__value no-bottom-border">Cannot mobilise more than 50 metres before they have to stop, or 50 metres repeatedly.</dd>
+                      <dd class="govuk-summary-list__value no-bottom-border">{{ data['mobilisingSelect'] }}</dd>
                     </div>
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key">Give details</dt>
                         <dd class="govuk-summary-list__value">{{ data['mobilisingdetails'] }}</dd>
                         <dd class="govuk-summary-list__actions"></dd>
                     </div>
-
+                    {% endif %}
+                    
+                    {% if data['standingsittingSelect'] %}
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key no-bottom-border">Standing and sitting</dt>
                         <dd class="govuk-summary-list__value no-bottom-border"></dd>
-                        <dd class="govuk-summary-list__actions no-bottom-border"><a class="govuk-link" href="lcwra/standing-and-sitting">Change<span class="govuk-visually-hidden"> name</span></a></dd>
+                        <dd class="govuk-summary-list__actions no-bottom-border"><a class="govuk-link" href="scoring-descriptors/standing-and-sitting">Change<span class="govuk-visually-hidden"> name</span></a></dd>
                       </div>
                     <div class="govuk-summary-list__row">
                       <dt class="govuk-summary-list__key no-bottom-border">Choose the descriptor that's most appropriate to Jayne</dt>
-                      <dd class="govuk-summary-list__value no-bottom-border">Cannot transfer from one seat to another right next to it without someone’s help.</dd>
+                      <dd class="govuk-summary-list__value no-bottom-border">{{ data['standingsittingSelect'] }}</dd>
                     </div>
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key">Give details</dt>
                         <dd class="govuk-summary-list__value">{{ data['standingsittingdetails'] }}</dd>
                         <dd class="govuk-summary-list__actions"></dd>
                     </div>
+                    {% endif %}
 
+                    {% if data['reachingSelect'] %}
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key no-bottom-border">Reaching</dt>
                         <dd class="govuk-summary-list__value no-bottom-border"></dd>
-                        <dd class="govuk-summary-list__actions no-bottom-border"><a class="govuk-link" href="lcwra/reaching">Change<span class="govuk-visually-hidden"> name</span></a></dd>
+                        <dd class="govuk-summary-list__actions no-bottom-border"><a class="govuk-link" href="scoring-descriptors/reaching">Change<span class="govuk-visually-hidden"> name</span></a></dd>
                       </div>
                     <div class="govuk-summary-list__row">
                       <dt class="govuk-summary-list__key no-bottom-border">Choose the descriptor that's most appropriate to Jayne</dt>
-                      <dd class="govuk-summary-list__value no-bottom-border">Cannot raise one arm to their upper chest as if to put something in their top pocket.</dd>
+                      <dd class="govuk-summary-list__value no-bottom-border">{{ data['reachingSelect'] }}</dd>
                     </div>
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key">Give details</dt>
                         <dd class="govuk-summary-list__value">{{ data['reachingdetails'] }}</dd>
                         <dd class="govuk-summary-list__actions"></dd>
                     </div>
+                    {% endif %}
 
+                    {% if data['pickingupSelect'] %}
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key no-bottom-border">Picking up and moving things</dt>
                         <dd class="govuk-summary-list__value no-bottom-border"></dd>
-                        <dd class="govuk-summary-list__actions no-bottom-border"><a class="govuk-link" href="lcwra/pickingup">Change<span class="govuk-visually-hidden"> name</span></a></dd>
+                        <dd class="govuk-summary-list__actions no-bottom-border"><a class="govuk-link" href="scoring-descriptors/pickingup">Change<span class="govuk-visually-hidden"> name</span></a></dd>
                       </div>
                     <div class="govuk-summary-list__row">
                       <dt class="govuk-summary-list__key no-bottom-border">Choose the descriptor that's most appropriate to Jayne</dt>
-                      <dd class="govuk-summary-list__value no-bottom-border">Cannot pick up and move a 0.5 litre (1 pint) carton full of liquid.</dd>
+                      <dd class="govuk-summary-list__value no-bottom-border">{{ data['pickingupSelect'] }}</dd>
                     </div>
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key">Give details</dt>
                         <dd class="govuk-summary-list__value">{{ data['pickingupdetails'] }}</dd>
                         <dd class="govuk-summary-list__actions"></dd>
                     </div>
+                    {% endif %}
 
+                    {% if data['dexteritySelect'] %}
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key no-bottom-border">Manual dexterity</dt>
                         <dd class="govuk-summary-list__value no-bottom-border"></dd>
-                        <dd class="govuk-summary-list__actions no-bottom-border"><a class="govuk-link" href="lcwra/manual-dexterity">Change<span class="govuk-visually-hidden"> name</span></a></dd>
+                        <dd class="govuk-summary-list__actions no-bottom-border"><a class="govuk-link" href="scoring-descriptors/manual-dexterity">Change<span class="govuk-visually-hidden"> name</span></a></dd>
                       </div>
                     <div class="govuk-summary-list__row">
                       <dt class="govuk-summary-list__key no-bottom-border">Choose the descriptor that's most appropriate to Jayne</dt>
-                      <dd class="govuk-summary-list__value no-bottom-border">Cannot press a button ot turn the pages of a book.</dd>
+                      <dd class="govuk-summary-list__value no-bottom-border">{{ data['dexteritySelect'] }}</dd>
                     </div>
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key">Give details</dt>
                         <dd class="govuk-summary-list__value">{{ data['dexteritydetails'] }}</dd>
                         <dd class="govuk-summary-list__actions"></dd>
                     </div>
+                    {% endif %}
 
+                    {% if data['makingselfunderstoodSelect'] %}
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key no-bottom-border">Making self understood</dt>
                         <dd class="govuk-summary-list__value no-bottom-border"></dd>
-                        <dd class="govuk-summary-list__actions no-bottom-border"><a class="govuk-link" href="lcwra/making-self-understood">Change<span class="govuk-visually-hidden"> name</span></a></dd>
+                        <dd class="govuk-summary-list__actions no-bottom-border"><a class="govuk-link" href="scoring-descriptors/making-self-understood">Change<span class="govuk-visually-hidden"> name</span></a></dd>
                       </div>
                     <div class="govuk-summary-list__row">
                       <dt class="govuk-summary-list__key no-bottom-border">Choose the descriptor that's most appropriate to Jayne</dt>
-                      <dd class="govuk-summary-list__value no-bottom-border">Cannot communicate a simple message, like the presence of a hazard.</dd>
+                      <dd class="govuk-summary-list__value no-bottom-border">{{ data['makingselfunderstoodSelect'] }}</dd>
                     </div>
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key">Give details</dt>
                         <dd class="govuk-summary-list__value">{{ data['makingselfunderstooddetails'] }}</dd>
                         <dd class="govuk-summary-list__actions"></dd>
                     </div>
+                    {% endif %}
 
+                    {% if data['understandingcommunicationSelect'] %}
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key no-bottom-border">Understanding communication</dt>
                         <dd class="govuk-summary-list__value no-bottom-border"></dd>
-                        <dd class="govuk-summary-list__actions no-bottom-border"><a class="govuk-link" href="lcwra/understanding-communication">Change<span class="govuk-visually-hidden"> name</span></a></dd>
+                        <dd class="govuk-summary-list__actions no-bottom-border"><a class="govuk-link" href="scoring-descriptors/understanding-communication">Change<span class="govuk-visually-hidden"> name</span></a></dd>
                       </div>
                     <div class="govuk-summary-list__row">
                       <dt class="govuk-summary-list__key no-bottom-border">Choose the descriptor that's most appropriate to Jayne</dt>
-                      <dd class="govuk-summary-list__value no-bottom-border">Cannot understand simple message, like the location of a fire escape.</dd>
+                      <dd class="govuk-summary-list__value no-bottom-border">{{ data['understandingcommunicationSelect'] }}</dd>
                     </div>
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key">Give details</dt>
                         <dd class="govuk-summary-list__value">{{ data['understandingcommunicationdetails'] }}</dd>
                         <dd class="govuk-summary-list__actions"></dd>
                     </div>
+                    {% endif %}
 
-                   
-
+                    {% if data['navigationSelect'] %}
                     <div class="govuk-summary-list__row">
-                        <dt class="govuk-summary-list__key no-bottom-border">Continence</dt>
+                        <dt class="govuk-summary-list__key no-bottom-border">Navigation</dt>
                         <dd class="govuk-summary-list__value no-bottom-border"></dd>
-                        <dd class="govuk-summary-list__actions no-bottom-border"><a class="govuk-link" href="lcwra/understanding-communication">Change<span class="govuk-visually-hidden"> name</span></a></dd>
+                        <dd class="govuk-summary-list__actions no-bottom-border"><a class="govuk-link" href="scoring-descriptors/understanding-communication">Change<span class="govuk-visually-hidden"> name</span></a></dd>
                       </div>
                     <div class="govuk-summary-list__row">
                       <dt class="govuk-summary-list__key no-bottom-border">Choose the descriptor that's most appropriate to Jayne</dt>
-                      <dd class="govuk-summary-list__value no-bottom-border">Cannot mobilise more than 50 metres before they have to stop, or 50 metres repeatedly.</dd>
+                      <dd class="govuk-summary-list__value no-bottom-border">{{ data['navigationSelect'] }}</dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Give details</dt>
+                        <dd class="govuk-summary-list__value">{{ data['navigationdetails'] }}</dd>
+                        <dd class="govuk-summary-list__actions"></dd>
+                    </div>
+                    {% endif %}
+
+                    {% if data['continenceSelect'] %}
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key no-bottom-border">Continence</dt>
+                        <dd class="govuk-summary-list__value no-bottom-border"></dd>
+                        <dd class="govuk-summary-list__actions no-bottom-border"><a class="govuk-link" href="scoring-descriptors/understanding-communication">Change<span class="govuk-visually-hidden"> name</span></a></dd>
+                      </div>
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key no-bottom-border">Choose the descriptor that's most appropriate to Jayne</dt>
+                      <dd class="govuk-summary-list__value no-bottom-border">{{ data['continenceSelect'] }}</dd>
                     </div>
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key">Give details</dt>
                         <dd class="govuk-summary-list__value">{{ data['continencedetails'] }}</dd>
                         <dd class="govuk-summary-list__actions"></dd>
                     </div>
+                    {% endif %}
 
+                    {% if data['stayingconsciousSelect'] %}
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key no-bottom-border">Staying conscious when awake</dt>
+                        <dd class="govuk-summary-list__value no-bottom-border"></dd>
+                        <dd class="govuk-summary-list__actions no-bottom-border"><a class="govuk-link" href="scoring-descriptors/understanding-communication">Change<span class="govuk-visually-hidden"> name</span></a></dd>
+                      </div>
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key no-bottom-border">Choose the descriptor that's most appropriate to Jayne</dt>
+                      <dd class="govuk-summary-list__value no-bottom-border">{{ data['stayingconsciousSelect'] }}</dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Give details</dt>
+                        <dd class="govuk-summary-list__value">{{ data['stayingconsciousdetails'] }}</dd>
+                        <dd class="govuk-summary-list__actions"></dd>
+                    </div>
+                    {% endif %}
                 </dl>
               
 
