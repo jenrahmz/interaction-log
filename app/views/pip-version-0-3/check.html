@@ -66,7 +66,14 @@
             var musculoskeletal = {{data.musculoskeletal|dump|safe}}
             console.log(musculoskeletal)
             if (musculoskeletal) {
-              document.write(' <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Musculoskeletal and mental state</dt><dd class="govuk-summary-list__value">{{ data['musculoskeletal'] }}</dd><dd class="govuk-summary-list__actions"><a class="govuk-link" href="musculoskeletal">Change<span class="govuk-visually-hidden"> name</span></a></dd></div>');
+              document.write(' <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Musculoskeletal</dt><dd class="govuk-summary-list__value">{{ data['musculoskeletal'] }}</dd><dd class="govuk-summary-list__actions"><a class="govuk-link" href="musculoskeletal">Change<span class="govuk-visually-hidden"> name</span></a></dd></div>');
+              }
+          </script>
+          <script type="text/javascript">
+            var mentalstate = {{data.mentalstate|dump|safe}}
+            console.log(mentalstate)
+            if (mentalstate) {
+              document.write(' <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Mental state</dt><dd class="govuk-summary-list__value">{{ data['mentalstate'] }}</dd><dd class="govuk-summary-list__actions"><a class="govuk-link" href="mentalstate">Change<span class="govuk-visually-hidden"> name</span></a></dd></div>');
               }
           </script>
           <script type="text/javascript">

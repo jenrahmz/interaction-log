@@ -44,7 +44,7 @@
                       <li class="app-task-list__item">
                         <span class="app-task-list__task-name">
                           <a href="musculoskeletal" aria-describedby="read-declaration-status">
-                            Musculoskeletal and mental state
+                            Musculoskeletal
                           </a>
                         </span>
                         <script type="text/javascript">
@@ -59,6 +59,24 @@
                           }
                         </script>
                       </li>
+                      <li class="app-task-list__item">
+                          <span class="app-task-list__task-name">
+                            <a href="mentalstate" aria-describedby="read-declaration-status">
+                              Mental state
+                            </a>
+                          </span>
+                          <script type="text/javascript">
+                            var mentalstate = {{data.mentalstate|dump|safe}}
+                            console.log(mentalstate)
+                            if (mentalstate) {
+                              var progress = "1";
+                              document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
+                              }
+                            else {
+                              document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>');
+                            }
+                          </script>
+                        </li>
                       <li class="app-task-list__item">
                           <span class="app-task-list__task-name">
                             <a href="observations" aria-describedby="read-declaration-status">
