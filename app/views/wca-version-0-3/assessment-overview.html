@@ -119,6 +119,8 @@
                               }
                             </script>
                           </li>
+
+                          {% if data['assessmenttype'] == "inperson" %}
                           <li class="app-task-list__item">
                             <span class="app-task-list__task-name">
                               <a href="physical-assessments/physical-assessment" aria-describedby="read-declaration-status">
@@ -135,9 +137,10 @@
                               else {
                                 document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>');
                               }
-                            </script>
-                                 
+                            </script>    
                             </li>
+                            {% endif %}
+
                             <li class="app-task-list__item">
                                 <span class="app-task-list__task-name">
                                   <a href="mental-assessment" aria-describedby="read-declaration-status">
