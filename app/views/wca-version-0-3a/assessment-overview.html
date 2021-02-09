@@ -124,21 +124,14 @@
                     
                         {% if data['assessmenttype'] == "inperson" %}
                             <h2 class="app-task-list__section">
-                              Physical and mental health
+                              Detailed physical examination
                             </h2>
-                            {% else %}
-                            <h2 class="app-task-list__section">
-                             Mental health
-                            </h2>
-                            {% endif %}
-
+  
                             <ul class="app-task-list__items govuk-!-padding-left-0">
-
-                              {% if data['assessmenttype'] == "inperson" %}
                               <li class="app-task-list__item">
                                 <span class="app-task-list__task-name">
                                   <a href="physical-assessments/physical-assessment" aria-describedby="read-declaration-status">
-                                    Physical assessment
+                                    Physical examination
                                   </a>
                                 </span>
                                 <script type="text/javascript">
@@ -152,32 +145,12 @@
                                     document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>');
                                   }
                                 </script>    
-                                </li>
-                                {% endif %}
-
-                            <li class="app-task-list__item">
-                                <span class="app-task-list__task-name">
-                                  <a href="mental-assessment" aria-describedby="read-declaration-status">
-                                   Mental health assessment
-                                  </a>
-                                </span>
-                                <script type="text/javascript">
-                                  var appearance = {{data.appearance|dump|safe}}
-                                  console.log(appearance)
-                                  if (appearance) {
-                                    var progress = "1";
-                                    document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
-                                    }
-                                  else {
-                                    document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>');
-                                  }
-                                </script>
-                              </li>
+                                </li>         
                     </ul>
-
+                    {% endif %}
 
                     <h2 class="app-task-list__section">
-                      Your recommendations
+                      Functions and capabilities
                     </h2>
                     <ul class="app-task-list__items govuk-!-padding-left-0">
 
