@@ -15,7 +15,7 @@
         text: "Back",
         href: "end-assessment"
       }) }}
-      
+
     <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
         <div class="govuk-grid-row">
 
@@ -37,15 +37,39 @@
          <div class="govuk-radios__item">
            <input class="govuk-radios__input" id="abandon" name="abandon" type="radio" value="abandon" aria-describedby="sign-in-2-item-hint">
            <label class="govuk-label govuk-radios__label" for="abandon">
-             Jayne is unfit to be examined
+            Technical problem
            </label>
          </div>
          <div class="govuk-radios__item">
             <input class="govuk-radios__input" id="abandon2" name="abandon" type="radio" value="abandon" aria-describedby="sign-in-2-item-hint">
             <label class="govuk-label govuk-radios__label" for="abandon">
-              Jayne has a special need they've not previously disclosed
+              Abusive behaviour
             </label>
           </div>
+          <div class="govuk-radios__item">
+             <input class="govuk-radios__input" id="abandon2" name="abandon" type="radio" value="abandon" aria-describedby="sign-in-2-item-hint">
+             <label class="govuk-label govuk-radios__label" for="abandon">
+               Potentially violent
+             </label>
+           </div>
+           <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="abandon2" name="abandon" type="radio" value="abandon" aria-describedby="sign-in-2-item-hint">
+              <label class="govuk-label govuk-radios__label" for="abandon">
+                Affected by alcohol or drugs
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+               <input class="govuk-radios__input" id="abandon2" name="abandon" type="radio" value="abandon" aria-describedby="sign-in-2-item-hint">
+               <label class="govuk-label govuk-radios__label" for="abandon">
+                 No interpreter
+               </label>
+             </div>
+             <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="abandon2" name="abandon" type="radio" value="abandon" aria-describedby="sign-in-2-item-hint">
+                <label class="govuk-label govuk-radios__label" for="abandon">
+                  No appointee
+                </label>
+              </div>
         <div class="govuk-radios__item">
           <input class="govuk-radios__input" id="noabandon" name="abandon" type="radio" value="noabandon" data-aria-controls="conditional-how-contacted-conditional">
           <label class="govuk-label govuk-radios__label" for="how-contacted-conditional">
