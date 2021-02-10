@@ -15,7 +15,7 @@
         text: "Back",
         href: "assessment-overview"
       }) }}
-      
+
     <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
         <div class="govuk-grid-row">
 
@@ -29,38 +29,34 @@
     <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
       <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
         <h1 class="govuk-fieldset__heading">
-            Why do you want to finish the face to face assessment?</h1>
+            Why do you want to end the assessment?</h1>
       </legend>
-
-       <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-         <div class="govuk-radios__item">
-           <input class="govuk-radios__input" id="finish-one" name="finish" type="radio" value="lcwra" aria-describedby="sign-in-2-item-hint" >
-           <label class="govuk-label govuk-radios__label" for="finish-one">
-             The claimant needs to abandon the assessment
-           </label>
-         </div>
-
+ <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="finish-four" name="finish" type="radio" value="nolcwra">
+        <label class="govuk-label govuk-radios__label" for="finish-four">
+          Assessment complete
+        </label>
+      </div>
         <div class="govuk-radios__item">
           <input class="govuk-radios__input" id="finish-two" name="finish" type="radio" value="nolcwra">
           <label class="govuk-label govuk-radios__label" for="finish-two">
-            I've found evidence of functional LCWRA
+            Functional limited capability for work-related activity (LCWRA)
           </label>
         </div>
 
         <div class="govuk-radios__item">
           <input class="govuk-radios__input" id="finish-three" name="finish" type="radio" value="nolcwra">
           <label class="govuk-label govuk-radios__label" for="finish-three">
-            The claimant should be treated as having LCWRA
+            Treat as limited capability for work-related activity (LCWRA)
           </label>
         </div>
-
         <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="finish-four" name="finish" type="radio" value="nolcwra">
-          <label class="govuk-label govuk-radios__label" for="finish-four">
-            I've completed the assessment and need to fill out the report
+          <input class="govuk-radios__input" id="finish-one" name="finish" type="radio" value="lcwra" aria-describedby="sign-in-2-item-hint" >
+          <label class="govuk-label govuk-radios__label" for="finish-one">
+            Abandon assessment
           </label>
         </div>
-
       </div>
     </fieldset>
 
