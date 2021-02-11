@@ -127,16 +127,7 @@
                                 Physical assessment
                               </a>
                             </span>
-                            <script type="text/javascript">
-                              var consent = {{data.consent|dump|safe}}
-                              console.log(consent)
-                              if (consent == 'consent') {
-                                var progress = "1";
-                                document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">In progress</strong>');
-                                }
-                              else {
-                                document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>');
-                              }
+                            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>
                             </script>    
                             </li>
 
@@ -146,16 +137,7 @@
                                  Mental health assessment
                                 </a>
                               </span>
-                              <script type="text/javascript">
-                                var appearance = {{data.appearance|dump|safe}}
-                                console.log(appearance)
-                                if (appearance) {
-                                  var progress = "1";
-                                  document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
-                                  }
-                                else {
-                                  document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>');
-                                }
+                             <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>
                               </script>
                             </li>
 
