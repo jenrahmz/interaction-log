@@ -13,7 +13,7 @@
 
       {{ govukBackLink({
         text: "Back",
-        href: "scoring"
+        href: "mental-capabilities"
       }) }}
 
     <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
@@ -23,7 +23,7 @@
 
               <h1 class="govuk-heading-xl">Planning, starting and finishing everyday tasks</h1>
 
-              <form action="scoring" method="post">
+              <form action="mental-capabilities" method="post">
 
                 {{ govukRadios({
                   idPrefix: "everydaytasksSelect",
