@@ -160,8 +160,11 @@
                         Physical functions
                       </a>
                     </span>
+                    {% if data['mobilisingSelect'] %}
+                    <strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                    {% else %}
                       <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>
-                    </script>
+                    {% endif %}   
                     </li>
 
                     <li class="app-task-list__item">
@@ -170,8 +173,11 @@
                           Mental, cognitive and intellectual capabilities
                         </a>
                       </span>
+                      {% if data['learningtasksSelect'] %}
+                      <strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                      {% else %}
                         <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>
-                      </script>
+                      {% endif %}   
                       </li>
 
                       <li class="app-task-list__item">
@@ -180,8 +186,11 @@
                             Eating and drinking
                           </a>
                         </span>
+                        {% if data['eatingSelect'] %}
+                        <strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                        {% else %}
                           <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>
-                        </script>
+                        {% endif %}   
                         </li>
             </ul>
 
