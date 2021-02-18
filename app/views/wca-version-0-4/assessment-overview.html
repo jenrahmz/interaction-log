@@ -200,7 +200,50 @@
 
                 </ul>
               
-                <a href="end-assessment" class="govuk-button">End assessment</a>
+                <h2 class="app-task-list__section">
+                  Ending the assessment
+                </h2>
+                <ul class="app-task-list__items govuk-!-padding-left-0">
+
+              <li class="app-task-list__item">
+                <span class="app-task-list__task-name">
+                  <a href="abandon" aria-describedby="read-declaration-status">
+                    The claimant needs to abandon the assessment
+                  </a>
+                </span>
+                {% if data['mobilisingSelect'] %}
+                <strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                {% else %}
+                  <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>
+                {% endif %}   
+                </li>
+
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="treat-as-lcwra" aria-describedby="read-declaration-status">
+                      The claimant should be treated as having LCWRA
+                    </a>
+                  </span>
+                  {% if data['learningtasksSelect'] %}
+                  <strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                  {% else %}
+                    <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>
+                  {% endif %}   
+                  </li>
+
+                  <li class="app-task-list__item">
+                    <span class="app-task-list__task-name">
+                      <a href="scoring-report" aria-describedby="read-declaration-status">
+                        The assessment is complete
+                      </a>
+                    </span>
+                    {% if data['eatingSelect'] %}
+                    <strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                    {% else %}
+                      <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>
+                    {% endif %}   
+                    </li>
+        </ul>
 
             </div>
         </div>
