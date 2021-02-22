@@ -23,14 +23,14 @@
 
               <h1 class="govuk-heading-xl">Manual dexterity</h1>
 
-            <form action="physical-functions" method="post"> 
+            <form action="physical-functions" method="post">
 
                 {{ govukRadios({
                   idPrefix: "dexteritySelect",
                   name: "dexteritySelect",
                   fieldset: {
                     legend: {
-                      text: "Select the highest scoring task that R cannot do with either hand",
+                      text: "Select the highest scoring task that the claimant cannot do with either hand",
                       isPageHeading: false,
                       classes: "govuk-fieldset__legend--s"
                     }
@@ -62,7 +62,7 @@
                     }
                   ]
                 }) }}
-              
+
                     {{ govukTextarea({
                         name: "dexteritydetails",
                         id: "dexteritydetails",
