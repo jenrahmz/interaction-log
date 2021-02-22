@@ -23,14 +23,14 @@
 
               <h1 class="govuk-heading-xl">Making self understood</h1>
 
-            <form action="physical-functions" method="post"> 
+            <form action="physical-functions" method="post">
 
                 {{ govukRadios({
                   idPrefix: "makingselfunderstoodSelect",
                   name: "makingselfunderstoodSelect",
                   fieldset: {
                     legend: {
-                      text: "Which of these options describes how Jayne can communicate simple messages to people by speaking, writing or typing?",
+                      text: "Which of these options describes how claimant can communicate simple messages to people by speaking, writing or typing?",
                       isPageHeading: false,
                       classes: "govuk-fieldset__legend--s"
                     }
@@ -54,7 +54,7 @@
                     }
                   ]
                 }) }}
-              
+
                     {{ govukTextarea({
                         name: "makingselfunderstooddetails",
                         id: "makingselfunderstooddetails",
