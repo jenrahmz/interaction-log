@@ -22,64 +22,32 @@
 
               <h1 class="govuk-heading-xl">Check and complete the assessment</h1>
 
+              <h2 class="govuk-heading-m">History</h2>
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                {% if data['historyofcondition'] %}
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">History of condition</dt>
+                    <dd class="govuk-summary-list__value">{{ data['historyofcondition'] }}</dd>
+                    <dd class="govuk-summary-list__actions"><a class="govuk-link" href="historyofcondition">Change<span class="govuk-visually-hidden"> name</span></a></dd>
+                  </div> 
+                {% endif %}
+                {% if data['currentmedication'] %}
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">Current medication or treatment</dt>
+                    <dd class="govuk-summary-list__value">{{ data['currentmedication'] }}</dd>
+                    <dd class="govuk-summary-list__actions"><a class="govuk-link" href="current-medication">Change<span class="govuk-visually-hidden"> name</span></a></dd>
+                  </div> 
+                {% endif %}
+                {% if data['socialoccupational'] %}
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">Social and occupational history</dt>
+                    <dd class="govuk-summary-list__value">{{ data['socialoccupational'] }}</dd>
+                    <dd class="govuk-summary-list__actions"><a class="govuk-link" href="socialoccupational">Change<span class="govuk-visually-hidden"> name</span></a></dd>
+                  </div> 
+                {% endif %}
+                 
+               </dl>
 
-              <h2 class="govuk-heading-m">Current condition</h2>
-
-        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-            <script type="text/javascript">
-              var currentmedication = {{data.currentmedication|dump|safe}}
-              console.log(currentmedication)
-              if (currentmedication) {
-                document.write(' <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Current medication</dt><dd class="govuk-summary-list__value">{{ data['currentmedication'] }}</dd><dd class="govuk-summary-list__actions"><a class="govuk-link" href="current-medication">Change<span class="govuk-visually-hidden"> name</span></a></dd></div>');
-                }
-            </script>
-          <script type="text/javascript">
-            var physicalhealth = {{data.physicalhealth|dump|safe}}
-            console.log(physicalhealth)
-            if (physicalhealth) {
-              document.write(' <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Physical Health</dt><dd class="govuk-summary-list__value">{{ data['physicalhealth'] }}</dd><dd class="govuk-summary-list__actions"><a class="govuk-link" href="musculoskeletal">Change<span class="govuk-visually-hidden"> name</span></a></dd></div>');
-              }
-          </script>
-          <script type="text/javascript">
-            var mentalstate = {{data.mentalstate|dump|safe}}
-            console.log(mentalstate)
-            if (mentalstate) {
-              document.write(' <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Mental state</dt><dd class="govuk-summary-list__value">{{ data['mentalstate'] }}</dd><dd class="govuk-summary-list__actions"><a class="govuk-link" href="mentalstate">Change<span class="govuk-visually-hidden"> name</span></a></dd></div>');
-              }
-          </script>
-          <script type="text/javascript">
-            var observations = {{data.observations|dump|safe}}
-            console.log(observations)
-            if (observations) {
-              document.write(' <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Observations</dt><dd class="govuk-summary-list__value">{{ data['observations'] }}</dd><dd class="govuk-summary-list__actions"><a class="govuk-link" href="observations">Change<span class="govuk-visually-hidden"> name</span></a></dd></div>');
-              }
-          </script>
-          <script type="text/javascript">
-            var variability = {{data.variability|dump|safe}}
-            console.log(variability)
-            if (variability) {
-              document.write(' <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Variability</dt><dd class="govuk-summary-list__value">{{ data['variability'] }}</dd><dd class="govuk-summary-list__actions"><a class="govuk-link" href="variability">Change<span class="govuk-visually-hidden"> name</span></a></dd></div>');
-              }
-          </script>
-         </dl>
-
-         <h2 class="govuk-heading-m">History</h2>
-         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-            <script type="text/javascript">
-              var historyofcondition = {{data.historyofcondition|dump|safe}}
-              console.log(historyofcondition)
-              if (historyofcondition) {
-                document.write(' <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">History of condition</dt><dd class="govuk-summary-list__value">{{ data['historyofcondition'] }}</dd><dd class="govuk-summary-list__actions"><a class="govuk-link" href="historyofcondition">Change<span class="govuk-visually-hidden"> name</span></a></dd></div>');
-                }
-            </script>
-            <script type="text/javascript">
-              var socialoccupational = {{data.socialoccupational|dump|safe}}
-              console.log(socialoccupational)
-              if (socialoccupational) {
-                document.write(' <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Social and occupational history</dt><dd class="govuk-summary-list__value">{{ data['socialoccupational'] }}</dd><dd class="govuk-summary-list__actions"><a class="govuk-link" href="socialoccupational">Change<span class="govuk-visually-hidden"> name</span></a></dd></div>');
-                }
-            </script>
-          </dl>
 
           <h2 class="govuk-heading-m">Day to day life</h2>
                 <dl class="govuk-summary-list govuk-!-margin-bottom-9">
@@ -347,6 +315,41 @@
                   {% endif %}
 
                   </dl>
+
+                  <h2 class="govuk-heading-m">Current condition</h2>
+
+                  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                    {% if data['physicalhealth'] %}
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">Physical health</dt>
+                    <dd class="govuk-summary-list__value">{{ data['physicalhealth'] }}</dd>
+                    <dd class="govuk-summary-list__actions"><a class="govuk-link" href="physicalhealth">Change<span class="govuk-visually-hidden"> name</span></a></dd>
+                  </div> 
+                {% endif %}
+                {% if data['mentalstate'] %}
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">Mental state</dt>
+                    <dd class="govuk-summary-list__value">{{ data['mentalstate'] }}</dd>
+                    <dd class="govuk-summary-list__actions"><a class="govuk-link" href="mentalstate">Change<span class="govuk-visually-hidden"> name</span></a></dd>
+                  </div> 
+                {% endif %}
+                {% if data['observations'] %}
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">Observations</dt>
+                    <dd class="govuk-summary-list__value">{{ data['observations'] }}</dd>
+                    <dd class="govuk-summary-list__actions"><a class="govuk-link" href="observations">Change<span class="govuk-visually-hidden"> name</span></a></dd>
+                  </div> 
+                {% endif %}
+                {% if data['variability'] %}
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">Variability</dt>
+                    <dd class="govuk-summary-list__value">{{ data['variability'] }}</dd>
+                    <dd class="govuk-summary-list__actions"><a class="govuk-link" href="variability">Change<span class="govuk-visually-hidden"> name</span></a></dd>
+                  </div> 
+                {% endif %}
+                     
+       
+                   </dl>
 
 
 
