@@ -41,23 +41,13 @@
                     <div class="govuk-radios__item">
                       <input class="govuk-radios__input" id="managingtherapySelect" name="managingtherapySelect" type="radio" value="Either – (i) does not receive medication or therapy or need to monitor a health condition; or can manage medication or therapy or monitor a health condition unaided.">
                       <label class="govuk-label govuk-radios__label" for="managingtherapySelect">
-                        Either –
-                        <ol>
-                          <li>does not receive medication or therapy or need to monitor a health condition; or</li>
-                          <li>can manage medication or therapy or monitor a health condition unaided.</li>
-                        </ol>
-
+                        Either does not receive medication or therapy or need to monitor a health condition, or can manage medication or therapy or monitor a health condition unaided
                       </label>
                     </div>
                     <div class="govuk-radios__item">
                       <input class="govuk-radios__input" id="managingtherapySelect-2" name="managingtherapySelect" type="radio" value="Needs any one or more of the following - to use an aid or appliance to be able to manage medication; supervision, prompting or assistance to be able to manage medication supervision, prompting or assistance to be able to monitor a health condition.">
                       <label class="govuk-label govuk-radios__label" for="managingtherapySelect-2">
-                        Needs any one or more of the following –
-                        <ol>
-                          <li>to use an aid or appliance to be able to manage medication;</li>
-                          <li>supervision, prompting or assistance to be able to manage medication;</li>
-                          <li>supervision, prompting or assistance to be able to monitor a health condition.</li>
-                        </ol>
+                        Needs to use an aid or appliance to be able to manage medication, or needs supervision, prompting or assistance to be able to manage medication, or needs supervision, prompting or assistance to be able to monitor a health condition
                       </label>
                     </div>
                     <div class="govuk-radios__item">
@@ -85,10 +75,10 @@
                       </label>
                     </div>
                   </div>
-              
+
                 </fieldset>
               </div>
-              
+
 
                     {{ govukTextarea({
                       name: "managingtherapyReason",
@@ -99,18 +89,18 @@
                         isPageHeading: false
                       },
                       value: data['managingtherapyReason']
-                    }) }}  
+                    }) }}
 
                     {{ govukButton({
                       text: "Save"
                     }) }}
                 </ul>
-    
+
 
 
             </form>
 
-              
+
 
             </div>
 
