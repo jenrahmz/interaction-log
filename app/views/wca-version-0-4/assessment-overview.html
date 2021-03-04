@@ -210,28 +210,30 @@
               <li class="app-task-list__item">
                 <span class="app-task-list__task-name">
                   <a href="abandon" aria-describedby="read-declaration-status">
-                    The claimant needs to abandon the assessment
+                    Abandon the assessment
                   </a>
                 </span>
-                {% if data['mobilisingSelect'] %}
-                <strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-                {% else %}
-                  <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>
-                {% endif %}   
+                <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Optional</strong>
                 </li>
 
                 <li class="app-task-list__item">
                   <span class="app-task-list__task-name">
-                    <a href="treat-as-lcwra" aria-describedby="read-declaration-status">
-                      The claimant should be treated as having LCWRA
+                    <a href="treat-as-lcw" aria-describedby="read-declaration-status">
+                      Treat as having low capability for work (LCW)
                     </a>
                   </span>
-                  {% if data['learningtasksSelect'] %}
-                  <strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-                  {% else %}
-                    <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>
-                  {% endif %}   
+                  <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Optional</strong> 
                   </li>
+
+                  <li class="app-task-list__item">
+                    <span class="app-task-list__task-name">
+                      <a href="treat-as-lcwra" aria-describedby="read-declaration-status">
+                        Treat as having low capability for work related activities (LCWRA)
+                      </a>
+                    </span>
+                      
+                      <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Optional</strong>
+                    </li>
 
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
