@@ -22,7 +22,7 @@
 
               <h1 class="govuk-heading-xl govuk-!-margin-bottom-3">Your recommendation</h1>
               
-              <p class="govuk-!-margin-bottom-9">I have considered the possible WCA outcomes and my advice is that the following apply:</p>
+              <p class="govuk-!-margin-bottom-9">I have considered the possible WCA outcomes and my advice is that the following apply.</p>
 
                 <h2 class="govuk-heading-m">Physical functions</h2>
                 <dl class="govuk-summary-list govuk-!-margin-bottom-9">
@@ -324,9 +324,9 @@
                     {% endif %}
                 </dl>
 
+                {% if data['eatingSelect'] %}
                 <h3 class="govuk-heading-m">Eating and drinking</h2>
                   <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-                      {% if data['eatingSelect'] %}
                       <div class="govuk-summary-list__row">
                           <dt class="govuk-summary-list__key no-bottom-border">Eating and drinking</dt>
                           <dd class="govuk-summary-list__value no-bottom-border"></dd>
@@ -341,18 +341,71 @@
                           <dd class="govuk-summary-list__value">{{ data['eatingdetails'] }}</dd>
                           <dd class="govuk-summary-list__actions"></dd>
                       </div>
-                      {% endif %}
                   </dl>
+                  {% endif %}
 
+                  {% if data['treataslcw'] %}
+                  <h3 class="govuk-heading-m">Treat as LCW</h2>
+                    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key no-bottom-border">Treat as LCW</dt>
+                            <dd class="govuk-summary-list__value no-bottom-border"></dd>
+                            <dd class="govuk-summary-list__actions no-bottom-border"><a class="govuk-link" href="treat-as-lcw">Change<span class="govuk-visually-hidden"> name</span></a></dd>
+                          </div>
+                        <div class="govuk-summary-list__row">
+                          <dt class="govuk-summary-list__key no-bottom-border">Why does the claimant have limited capability for work (LCW)?</dt>
+                          <dd class="govuk-summary-list__value no-bottom-border">{{ data['treataslcw'] }}</dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">What are the reasons for this?</dt>
+                            <dd class="govuk-summary-list__value">{{ data['treataslcwreasons'] }}</dd>
+                            <dd class="govuk-summary-list__actions"></dd>
+                        </div>
+                    </dl>
+                    {% endif %}
+
+                  {% if data['treataslcwra'] %}
+                <h3 class="govuk-heading-m">Treat as LCWRA</h2>
+                  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                      <div class="govuk-summary-list__row">
+                          <dt class="govuk-summary-list__key no-bottom-border">Treat as LCWRA</dt>
+                          <dd class="govuk-summary-list__value no-bottom-border"></dd>
+                          <dd class="govuk-summary-list__actions no-bottom-border"><a class="govuk-link" href="treat-as-lcwra">Change<span class="govuk-visually-hidden"> name</span></a></dd>
+                        </div>
+                      <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key no-bottom-border">Why does the claimant have limited capability for work-related activity (LCWRA)?</dt>
+                        <dd class="govuk-summary-list__value no-bottom-border">{{ data['treataslcwra'] }}</dd>
+                      </div>
+                      <div class="govuk-summary-list__row">
+                          <dt class="govuk-summary-list__key">What are the reasons for this?</dt>
+                          <dd class="govuk-summary-list__value">{{ data['treataslcwrareasons'] }}</dd>
+                          <dd class="govuk-summary-list__actions"></dd>
+                      </div>
+                  </dl>
+                  {% endif %}
               
                 <h3 class="govuk-heading-m">When does this claim need to be reviewed?</h2>
                   <dl class="govuk-summary-list govuk-!-margin-bottom-9">
                       <div class="govuk-summary-list__row">
-                        <dt class="govuk-summary-list__key no-bottom-border">When should the next review be?</dt><dd class="govuk-summary-list__value no-bottom-border"><p>{{ data['whenreview'] }}</p></dd><dd class="govuk-summary-list__actions no-bottom-border"><a class="govuk-link" href="treat-as-lcwra-time-review">Change<span class="govuk-visually-hidden"> name</span></a></dd>
+                        <dt class="govuk-summary-list__key no-bottom-border">When should the next review be?</dt><dd class="govuk-summary-list__value no-bottom-border"><p>{{ data['whenreview'] }}</p></dd><dd class="govuk-summary-list__actions no-bottom-border"><a class="govuk-link" href="time-review">Change<span class="govuk-visually-hidden"> name</span></a></dd>
                         </div>
                       <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">What are the reasons for this?</dt><dd class="govuk-summary-list__value"><p class="govuk-body">{{ data['reviewtimereasons'] }}</p></dd><dd class="govuk-summary-list__actions"></dd>
                         </div>
                       </dl>
+
+                      <h3 class="govuk-heading-m">Has the customer service desk (CSD) approved this?</h2>
+                        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                            <div class="govuk-summary-list__row">
+                              <dt class="govuk-summary-list__key no-bottom-border">Has the customer service desk (CSD) approved this?</dt><dd class="govuk-summary-list__value no-bottom-border"><p>{{ data['csd'] }}</p></dd><dd class="govuk-summary-list__actions no-bottom-border"><a class="govuk-link" href="csd-consulted">Change<span class="govuk-visually-hidden"> name</span></a></dd>
+                              </div>
+                            <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">What was the practitioner's name?</dt><dd class="govuk-summary-list__value"><p class="govuk-body">{{ data['csdname'] }}</p></dd><dd class="govuk-summary-list__actions"></dd>
+                              </div>
+                            </dl>
+
+
+
+
+
 
                   <a href="complete" class="govuk-button">Make recommendation</a>
 
