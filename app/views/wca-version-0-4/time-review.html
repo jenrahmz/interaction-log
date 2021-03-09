@@ -13,9 +13,9 @@
 
       {{ govukBackLink({
         text: "Back",
-        href: "assessment-overview"
+        href: "check"
       }) }}
-      
+
     <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
         <div class="govuk-grid-row">
 
@@ -28,7 +28,7 @@
         name: "when-review",
         fieldset: {
           legend: {
-            text: "When does this claim need to be reviewed?",
+            text: "When should this claim be reviewed?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--xl"
           }
@@ -72,7 +72,7 @@
         name: "review-time-reasons",
         id: "review-time-reasons",
         label: {
-          text: "What are the reasons for this?",
+          text: "Why should the claim be reviewed then?",
           classes: "govuk-label--s",
           isPageHeading: false
         }

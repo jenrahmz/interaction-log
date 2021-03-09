@@ -15,13 +15,11 @@
         text: "Back",
         href: "check"
       }) }}
-      
+
     <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
         <div class="govuk-grid-row">
 
             <div class="govuk-grid-column-two-thirds">
-
-              <h1 class="govuk-heading-xl">When does this claim need to be reviewed?</h1>
 
   <form action="complete" method="post" id="question-form" novalidate>
 
@@ -30,7 +28,7 @@
         name: "when-review",
         fieldset: {
           legend: {
-            text: "When does this claim need to be reviewed?",
+            text: "When should this claim be reviewed?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--xl"
           }
@@ -74,7 +72,7 @@
         name: "review-time-reasons",
         id: "review-time-reasons",
         label: {
-          text: "What are the reasons for this?",
+          text: "Why should the claim be reviewed then?",
           classes: "govuk-label--s",
           isPageHeading: false
         }
