@@ -10,6 +10,12 @@
 {% include "includes/assessment-status-neutral.html" %}
 
   <div class="govuk-width-container {{ containerClasses }}">
+
+    {{ govukBackLink({
+      text: "Back",
+      href: "review"
+    }) }}
+
     <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
         <div class="govuk-grid-row">
 
@@ -17,7 +23,7 @@
 
                 
                     <h1 class="govuk-heading-xl">
-                      Recommendation completed
+                      Submit report?
                     </h1>
 
                   <a href="https://health-referral-status.herokuapp.com/state-model-mvp/v1/update-status" class="govuk-button">Submit</a>
