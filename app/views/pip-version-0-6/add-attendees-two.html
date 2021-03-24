@@ -23,16 +23,16 @@
 
 
 
-            <form action="assessment-overview" method="post">
+            <form action="assessment-status" method="post">
 
 
-              <h1 class="govuk-heading-xl">Additional attendees</h1>
+              <h1 class="govuk-heading-xl">Who else is at the assessment?</h1>
 
-              <h2 class="govuk-heading-m">Attendee 1 <a href="#" class="govuk-link govuk-!-font-size-19 app-task-list__tag govuk-!-font-weight-regular" id="list-convictions-status">Remove</a></h2>
+              <a href="#" class="govuk-link govuk-!-font-size-19 app-task-list__tag govuk-!-font-weight-regular" id="list-convictions-status">Remove</a></h2>
 
               {{ govukInput({
                 label: {
-                  text: "Name"
+                  text: "Full name"
                 },
                 id: "attendeename",
                 name: "attendeename",
@@ -50,11 +50,11 @@
 
               <hr class="govuk-!-margin-bottom-5">
 
-              <h2 class="govuk-heading-m">Attendee 2 <a href="#" class="govuk-link govuk-!-font-size-19 app-task-list__tag govuk-!-font-weight-regular" id="list-convictions-status">Remove</a></h2>
+              <a href="#" class="govuk-link govuk-!-font-size-19 app-task-list__tag govuk-!-font-weight-regular" id="list-convictions-status">Remove</a></h2>
 
               {{ govukInput({
                 label: {
-                  text: "Name"
+                  text: "Full name"
                 },
                 id: "attendeename-2",
                 name: "attendeename-2"
@@ -70,7 +70,7 @@
 
               <hr class="govuk-!-margin-bottom-5">
 
-              <p><a class="govuk-link" href="#">Add another attendee</a></p>
+              <p><a class="govuk-link" href="#">Add another person</a></p>
 
 
               {{ govukButton({
