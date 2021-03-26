@@ -13,7 +13,7 @@
 
       {{ govukBackLink({
         text: "Back",
-        href: "time-review"
+        href: "assessment-overview"
       }) }}
 
     <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
@@ -21,15 +21,17 @@
 
             <div class="govuk-grid-column-two-thirds">
 
+              <h1 class="govuk-heading-xl">Fit for work</h1>
+
   <form action="submit" method="post" id="question-form" novalidate>
 
 
 
   <div class="govuk-form-group">
     <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-        <h1 class="govuk-fieldset__heading">
-           Has the customer service desk (CSD) approved this?</h1>
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+        <h2 class="govuk-fieldset__heading">
+           Has the customer service desk (CSD) approved this?</h2>
       </legend>
 
        <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
