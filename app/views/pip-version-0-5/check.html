@@ -16,34 +16,29 @@
               <h1 class="govuk-heading-xl">Report content</h1>
 
               <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-                {% if data['assessmenttype'] %}
                   <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">Assessment type</dt>
                     <dd class="govuk-summary-list__value">{{ data['assessmenttype'] }}</dd>
                   </div> 
-                {% endif %}
                 </dl>
 
               <h2 class="govuk-heading-m">History</h2>
               <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-                {% if data['historyofcondition'] %}
+
                   <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">History of condition</dt>
                     <dd class="govuk-summary-list__value">{{ data['historyofcondition'] }}</dd>
                   </div> 
-                {% endif %}
-                {% if data['currentmedication'] %}
+
                   <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">Current medication or treatment</dt>
                     <dd class="govuk-summary-list__value">{{ data['currentmedication'] }}</dd>
                  </div> 
-                {% endif %}
-                {% if data['socialoccupational'] %}
+
                   <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">Social and occupational history</dt>
                     <dd class="govuk-summary-list__value">{{ data['socialoccupational'] }}</dd>
                  </div> 
-                {% endif %}
                  
                </dl>
 
@@ -148,8 +143,7 @@
                   <div class="govuk-summary-list__row">
                       <dt class="govuk-summary-list__key no-bottom-border">Dressing and undressing</dt>
                       <dd class="govuk-summary-list__value no-bottom-border"></dd>
-                      <dd class="govuk-summary-list__actions no-bottom-border"><a class="govuk-link" href="dressing">Change<span class="govuk-visually-hidden"> name</span></a></dd>
-                    </div>
+                   </div>
                     <div class="govuk-summary-list__row">
                       <dt class="govuk-summary-list__key no-bottom-border">Notes on dressing and undressing</dt>
                       <dd class="govuk-summary-list__value no-bottom-border">{{ data['dressingNotes'] }}</dd>
