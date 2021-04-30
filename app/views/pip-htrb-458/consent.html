@@ -13,15 +13,15 @@
 
       {{ govukBackLink({
         text: "Back",
-        href: "assessment-type"
+        href: "assessment-status"
       }) }}
-
+      
     <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
         <div class="govuk-grid-row">
 
             <div class="govuk-grid-column-two-thirds">
 
-  <form action="assessment-overview" method="post" id="question-form" novalidate>
+  <form action="assessment-status" method="post" id="question-form" novalidate>
 
 
 
@@ -29,25 +29,31 @@
     <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
       <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
         <h1 class="govuk-fieldset__heading">
-          Is anyone else at the assessment?</h1>
+        Has consent been given for a physical examination?
+        </h1>
       </legend>
-      <div id="event-name-hint" class="govuk-hint">
-  This could include the claimant’s partner, friend or interpreter.
-</div>
 
        <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
          <div class="govuk-radios__item">
-           <input class="govuk-radios__input" id="addattendees-one" name="addattendees" value="Yes"  type="radio" aria-describedby="sign-in-2-item-hint" >
-           <label class="govuk-label govuk-radios__label" for="addattendees-one">
+           <input class="govuk-radios__input" id="consent" name="consent" type="radio" value="consent" aria-describedby="sign-in-2-item-hint">
+           <label class="govuk-label govuk-radios__label" for="consent">
              Yes
            </label>
          </div>
-
         <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="addattendees-two" name="addattendees"   type="radio" value="No">
-          <label class="govuk-label govuk-radios__label" for="addattendees-two">
+          <input class="govuk-radios__input" id="noconsent" name="consent" type="radio" value="noconsent" data-aria-controls="conditional-how-contacted-conditional">
+          <label class="govuk-label govuk-radios__label" for="how-contacted-conditional">
             No
           </label>
+        </div>
+        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional">
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="contact-by-email">
+              Why consent wasn't given
+            </label>
+            <textarea class="govuk-textarea" id="contact-by-email" name="contact-by-email" rows="5" type="email" spellcheck="false"></textarea>
+          </div>
+
         </div>
 
       </div>
@@ -66,16 +72,6 @@
 </div>
 
 
-<script type="text/javascript">
-  document.getElementById("addattendees-one").onclick = function() {
-        var link = "add-attendees";
-    document.getElementById("question-form").action=link;
-  }
 
-  document.getElementById("addattendees-three").onclick = function() {
-        var link = "assessment-overview";
-    document.getElementById("question-form").action=link;
-  }
-</script>
 
 {% endblock %}

@@ -30,7 +30,17 @@
                             Condition history
                           </a>
                         </span>
-                        <strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                        <script type="text/javascript">
+                          var conditionhistory = {{data.conditionhistory|dump|safe}}
+                          console.log(conditionhistory)
+                          if (conditionhistory) {
+                            var progress = "1";
+                            document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
+                            }
+                          else {
+                            document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>');
+                          }
+                        </script>
                       </li>
                       <li class="app-task-list__item">
                         <span class="app-task-list__task-name">
@@ -38,7 +48,17 @@
                             Medication and side effects
                           </a>
                         </span>
-                        <strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                        <script type="text/javascript">
+                          var medication = {{data.medication|dump|safe}}
+                          console.log(medication)
+                          if (medication) {
+                            var progress = "1";
+                            document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
+                            }
+                          else {
+                            document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>');
+                          }
+                        </script>
                       </li>
                       <li class="app-task-list__item">
                           <span class="app-task-list__task-name">
@@ -46,7 +66,17 @@
                               Social and work history
                             </a>
                           </span>
-                          <strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                          <script type="text/javascript">
+                            var socialandwork = {{data.socialandwork|dump|safe}}
+                            console.log(socialandwork)
+                            if (socialandwork) {
+                              var progress = "1";
+                              document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
+                              }
+                            else {
+                              document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>');
+                            }
+                          </script>
                         </li>
                         <li class="app-task-list__item">
                             <span class="app-task-list__task-name">
@@ -54,11 +84,49 @@
                                 Typical day
                               </a>
                             </span>
-                            <strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                            <script type="text/javascript">
+                              var typicalday = {{data.typicalday|dump|safe}}
+                              console.log(typicalday)
+                              if (typicalday) {
+                                var progress = "1";
+                                document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>');
+                                }
+                              else {
+                                document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>');
+                              }
+                            </script>
                           </li>
                         </ul>
 
-                   
+                    <!---
+                        {% if data['assessmenttype'] == "inperson" %}
+                            <h2 class="app-task-list__section">
+                              Detailed physical examination
+                            </h2>
+
+                            <ul class="app-task-list__items govuk-!-padding-left-0">
+                              <li class="app-task-list__item">
+                                <span class="app-task-list__task-name">
+                                  <a href="physical-assessments/physical-assessment" aria-describedby="read-declaration-status">
+                                    Physical examination
+                                  </a>
+                                </span>
+                                <script type="text/javascript">
+                                  var consent = {{data.consent|dump|safe}}
+                                  console.log(consent)
+                                  if (consent == 'consent') {
+                                    var progress = "1";
+                                    document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">In progress</strong>');
+                                    }
+                                  else {
+                                    document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>');
+                                  }
+                                </script>
+                                </li>
+                    </ul>
+                    {% endif %}
+
+                  -->
 
                     <h2 class="app-task-list__section">
                       Functions and capabilities

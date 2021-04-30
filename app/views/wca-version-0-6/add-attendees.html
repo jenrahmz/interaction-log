@@ -26,10 +26,12 @@
             <form action="assessment-overview" method="post">
 
 
-              <h1 class="govuk-heading-xl">Who else is at the assessment? </h1>
+              <h1 class="govuk-heading-xl">Additional attendees</h1>
+
+              <h2 class="govuk-heading-m">Attendee 1</h2>
               {{ govukInput({
                 label: {
-                  text: "Full name"
+                  text: "Name"
                 },
                 id: "attendeename",
                 name: "attendeename"
@@ -45,7 +47,7 @@
 
               <hr class="govuk-!-margin-bottom-5">
 
-              <p><a class="govuk-link" href="add-attendees-two">Add another person</a></p>
+              <p><a class="govuk-link" href="add-attendees-two">Add another attendee</a></p>
 
 
               {{ govukButton({
