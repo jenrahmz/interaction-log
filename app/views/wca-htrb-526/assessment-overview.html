@@ -124,7 +124,7 @@
                     
                         
                             <h2 class="app-task-list__section">
-                              Physical examination
+                              Physical and mental examination
                             </h2>
 
                             <ul class="app-task-list__items govuk-!-padding-left-0">
@@ -146,6 +146,24 @@
                                   }
                                 </script>
                                 </li>
+                                <li class="app-task-list__item">
+                                  <span class="app-task-list__task-name">
+                                    <a href="mental-assessment" aria-describedby="read-declaration-status">
+                                     Mental health assessment
+                                    </a>
+                                  </span>
+                                  <script type="text/javascript">
+                                    var appearance = {{data.appearance|dump|safe}}
+                                    appearance.log(appearance)
+                                    if (appearance == 'appearance') {
+                                      var progress = "1";
+                                      document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">In progress</strong>');
+                                      }
+                                    else {
+                                      document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>');
+                                    }
+                                  </script>
+                                  </li>
                     </ul>
 
 
