@@ -152,17 +152,11 @@
                                      Mental health assessment
                                     </a>
                                   </span>
-                                  <script type="text/javascript">
-                                    var appearance = {{data.appearance|dump|safe}}
-                                    appearance.log(appearance)
-                                    if (appearance == 'appearance') {
-                                      var progress = "1";
-                                      document.write('<strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">In progress</strong>');
-                                      }
-                                    else {
-                                      document.write('<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>');
-                                    }
-                                  </script>
+                                  {% if data['mentalassessment'] %}
+                    <strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                    {% else %}
+                      <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>
+                    {% endif %}
                                   </li>
                     </ul>
 
