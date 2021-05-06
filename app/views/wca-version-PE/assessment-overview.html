@@ -121,10 +121,10 @@
                           </li>
                         </ul>
 
-                    
-                        
+                    <!---
+                        {% if data['assessmenttype'] == "inperson" %}
                             <h2 class="app-task-list__section">
-                              Physical and mental examination
+                              Detailed physical examination
                             </h2>
 
                             <ul class="app-task-list__items govuk-!-padding-left-0">
@@ -146,21 +146,10 @@
                                   }
                                 </script>
                                 </li>
-                                <li class="app-task-list__item">
-                                  <span class="app-task-list__task-name">
-                                    <a href="mental-assessment" aria-describedby="read-declaration-status">
-                                     Mental health assessment
-                                    </a>
-                                  </span>
-                                  {% if data['mentalassessment'] %}
-                    <strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-                    {% else %}
-                      <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Not started</strong>
-                    {% endif %}
-                                  </li>
                     </ul>
+                    {% endif %}
 
-
+                  -->
 
                     <h2 class="app-task-list__section">
                       Functions and capabilities
