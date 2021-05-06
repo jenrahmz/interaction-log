@@ -25,6 +25,19 @@
 
             <form action="physical-functions" method="post">
 
+              {{ govukTextarea({
+                name: "dexterityNotes",
+                id: "dexterityNotes",
+                rows: "8",
+                classes: "govuk-!-margin-bottom-9",
+                label: {
+                  text: "Notes on manual dexterity",
+                  classes: "govuk-label--m",
+                  isPageHeading: false
+                },
+                value: data['dexterityNotes']
+              }) }}  
+
                 {{ govukRadios({
                   idPrefix: "dexteritySelect",
                   name: "dexteritySelect",

@@ -25,6 +25,19 @@
 
             <form action="physical-functions" method="post">
 
+              {{ govukTextarea({
+                name: "pickingupNotes",
+                id: "pickingupNotes",
+                rows: "8",
+                classes: "govuk-!-margin-bottom-9",
+                label: {
+                  text: "Notes on picking up and moving things",
+                  classes: "govuk-label--m",
+                  isPageHeading: false
+                },
+                value: data['pickingupNotes']
+              }) }}  
+
 
                 {{ govukRadios({
                   idPrefix: "pickingupSelect",

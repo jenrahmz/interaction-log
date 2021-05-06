@@ -25,6 +25,19 @@
 
               <form action="mental-capabilities" method="post">
 
+                {{ govukTextarea({
+                  name: "socialsituNotes",
+                  id: "socialsituNotes",
+                  rows: "8",
+                  classes: "govuk-!-margin-bottom-9",
+                  label: {
+                    text: "Notes on coping with social situations",
+                    classes: "govuk-label--m",
+                    isPageHeading: false
+                  },
+                  value: data['socialsituNotes']
+                }) }}  
+
                 {{ govukRadios({
                   idPrefix: "socialsituSelect",
                   name: "socialsituSelect",

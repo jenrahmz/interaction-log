@@ -25,6 +25,19 @@
 
             <form action="physical-functions" method="post">
 
+              {{ govukTextarea({
+                name: "makingselfunderstoodNotes",
+                id: "makingselfunderstoodNotes",
+                rows: "8",
+                classes: "govuk-!-margin-bottom-9",
+                label: {
+                  text: "Notes on making self understood",
+                  classes: "govuk-label--m",
+                  isPageHeading: false
+                },
+                value: data['makingselfunderstoodNotes']
+              }) }}  
+
                 {{ govukRadios({
                   idPrefix: "makingselfunderstoodSelect",
                   name: "makingselfunderstoodSelect",

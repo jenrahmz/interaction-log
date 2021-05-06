@@ -27,6 +27,19 @@
 
               <form action="physical-functions" method="post">
 
+                {{ govukTextarea({
+                  name: "stayingconsciousNotes",
+                  id: "stayingconsciousNotes",
+                  rows: "8",
+                  classes: "govuk-!-margin-bottom-9",
+                  label: {
+                    text: "Notes on staying conscious when awake",
+                    classes: "govuk-label--m",
+                    isPageHeading: false
+                  },
+                  value: data['stayingconsciousNotes']
+                }) }}  
+
                 {{ govukRadios({
                   idPrefix: "stayingconsciousSelect",
                   name: "stayingconsciousSelect",

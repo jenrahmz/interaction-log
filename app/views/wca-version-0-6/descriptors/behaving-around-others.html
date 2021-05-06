@@ -25,6 +25,19 @@
 
               <form action="mental-capabilities" method="post">
 
+                {{ govukTextarea({
+                  name: "behaviourNotes",
+                  id: "behaviourNotes",
+                  rows: "8",
+                  classes: "govuk-!-margin-bottom-9",
+                  label: {
+                    text: "Notes on behaving appropriately around other people",
+                    classes: "govuk-label--m",
+                    isPageHeading: false
+                  },
+                  value: data['behaviourNotes']
+                }) }}  
+
                 {{ govukRadios({
                   idPrefix: "behaviourSelect",
                   name: "behaviourSelect",

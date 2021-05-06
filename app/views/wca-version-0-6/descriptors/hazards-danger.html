@@ -25,6 +25,19 @@
 
               <form action="mental-capabilities" method="post">
 
+                {{ govukTextarea({
+                  name: "hazardsdangerNotes",
+                  id: "hazardsdangerNotes",
+                  rows: "8",
+                  classes: "govuk-!-margin-bottom-9",
+                  label: {
+                    text: "Notes on awareness of hazards and danger",
+                    classes: "govuk-label--m",
+                    isPageHeading: false
+                  },
+                  value: data['hazardsdangerNotes']
+                }) }}  
+
                 {{ govukRadios({
                   idPrefix: "hazardsdangerSelect",
                   name: "hazardsdangerSelect",

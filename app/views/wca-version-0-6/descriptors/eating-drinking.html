@@ -25,6 +25,19 @@
 
               <form action="../assessment-overview" method="post">
 
+                {{ govukTextarea({
+                  name: "eatingNotes",
+                  id: "eatingNotes",
+                  rows: "8",
+                  classes: "govuk-!-margin-bottom-9",
+                  label: {
+                    text: "Notes on eating and drinking",
+                    classes: "govuk-label--m",
+                    isPageHeading: false
+                  },
+                  value: data['eatingNotes']
+                }) }}  
+
                 {{ govukRadios({
                   idPrefix: "eatingSelect",
                   name: "eatingSelect",

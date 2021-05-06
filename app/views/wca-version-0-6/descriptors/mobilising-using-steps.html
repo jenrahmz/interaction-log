@@ -25,6 +25,19 @@
 
             <form action="physical-functions" method="post">
 
+              {{ govukTextarea({
+                name: "mobilisingNotes",
+                id: "mobilisingNotes",
+                rows: "8",
+                classes: "govuk-!-margin-bottom-9",
+                label: {
+                  text: "Notes on mobilising and using steps",
+                  classes: "govuk-label--m",
+                  isPageHeading: false
+                },
+                value: data['mobilisingNotes']
+              }) }}  
+
                 {{ govukRadios({
                   idPrefix: "mobilisingSelect",
                   name: "mobilisingSelect",

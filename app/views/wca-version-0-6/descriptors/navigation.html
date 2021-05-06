@@ -25,6 +25,19 @@
 
               <form action="physical-functions" method="post">
 
+                {{ govukTextarea({
+                  name: "navigationNotes",
+                  id: "navigationNotes",
+                  rows: "8",
+                  classes: "govuk-!-margin-bottom-9",
+                  label: {
+                    text: "Notes on navigation",
+                    classes: "govuk-label--m",
+                    isPageHeading: false
+                  },
+                  value: data['navigationNotes']
+                }) }}  
+
                 {{ govukRadios({
                   idPrefix: "navigationSelect",
                   name: "navigationSelect",

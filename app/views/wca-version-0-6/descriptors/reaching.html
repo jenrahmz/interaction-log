@@ -25,6 +25,19 @@
 
             <form action="physical-functions" method="post">
 
+              {{ govukTextarea({
+                name: "reachingNotes",
+                id: "reachingNotes",
+                rows: "8",
+                classes: "govuk-!-margin-bottom-9",
+                label: {
+                  text: "Notes on reaching",
+                  classes: "govuk-label--m",
+                  isPageHeading: false
+                },
+                value: data['reachingNotes']
+              }) }}  
+
                 {{ govukRadios({
                   idPrefix: "reachingSelect",
                   name: "reachingSelect",

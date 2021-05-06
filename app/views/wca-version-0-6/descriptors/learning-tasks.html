@@ -25,6 +25,19 @@
 
               <form action="mental-capabilities" method="post">
 
+                {{ govukTextarea({
+                  name: "learningtasksNotes",
+                  id: "learningtasksNotes",
+                  rows: "8",
+                  classes: "govuk-!-margin-bottom-9",
+                  label: {
+                    text: "Notes on learning to do new tasks",
+                    classes: "govuk-label--m",
+                    isPageHeading: false
+                  },
+                  value: data['learningtasksNotes']
+                }) }}  
+
                 {{ govukRadios({
                   idPrefix: "learningtasksSelect",
                   name: "learningtasksSelect",

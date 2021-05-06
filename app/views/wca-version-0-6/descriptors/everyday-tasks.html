@@ -25,6 +25,19 @@
 
               <form action="mental-capabilities" method="post">
 
+                {{ govukTextarea({
+                  name: "everydaytasksNotes",
+                  id: "everydaytasksNotes",
+                  rows: "8",
+                  classes: "govuk-!-margin-bottom-9",
+                  label: {
+                    text: "Notes on planning, starting and finishing everyday tasks",
+                    classes: "govuk-label--m",
+                    isPageHeading: false
+                  },
+                  value: data['everydaytasksNotes']
+                }) }}  
+
                 {{ govukRadios({
                   idPrefix: "everydaytasksSelect",
                   name: "everydaytasksSelect",

@@ -25,6 +25,20 @@
 
               <form action="physical-functions" method="post">
 
+                {{ govukTextarea({
+                  name: "continenceNotes",
+                  id: "continenceNotes",
+                  rows: "8",
+                  classes: "govuk-!-margin-bottom-9",
+                  label: {
+                    text: "Notes on continence",
+                    classes: "govuk-label--m",
+                    isPageHeading: false
+                  },
+                  value: data['continenceNotes']
+                }) }}  
+
+
                 {{ govukRadios({
                   idPrefix: "continenceSelect",
                   name: "continenceSelect",

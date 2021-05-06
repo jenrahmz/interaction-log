@@ -25,6 +25,19 @@
 
             <form action="physical-functions" method="post">
 
+              {{ govukTextarea({
+                name: "standingsittingNotes",
+                id: "standingsittingNotes",
+                rows: "8",
+                classes: "govuk-!-margin-bottom-9",
+                label: {
+                  text: "Notes on standing and sitting",
+                  classes: "govuk-label--m",
+                  isPageHeading: false
+                },
+                value: data['standingsittingNotes']
+              }) }}  
+
                 {{ govukRadios({
                   idPrefix: "standingsittingSelect",
                   name: "standingsittingSelect",

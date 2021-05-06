@@ -25,6 +25,19 @@
 
             <form action="physical-functions" method="post">
 
+              {{ govukTextarea({
+                name: "understandingcommunicationNotes",
+                id: "understandingcommunicationNotes",
+                rows: "8",
+                classes: "govuk-!-margin-bottom-9",
+                label: {
+                  text: "Notes on understanding communication",
+                  classes: "govuk-label--m",
+                  isPageHeading: false
+                },
+                value: data['understandingcommunicationNotes']
+              }) }}  
+
                 {{ govukRadios({
                   idPrefix: "understandingcommunicationSelect",
                   name: "understandingcommunicationSelect",

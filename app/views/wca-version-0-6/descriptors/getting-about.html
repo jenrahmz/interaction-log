@@ -25,6 +25,19 @@
 
               <form action="mental-capabilities" method="post">
 
+                {{ govukTextarea({
+                  name: "gettingaboutNotes",
+                  id: "gettingaboutNotes",
+                  rows: "8",
+                  classes: "govuk-!-margin-bottom-9",
+                  label: {
+                    text: "Notes on getting about",
+                    classes: "govuk-label--m",
+                    isPageHeading: false
+                  },
+                  value: data['gettingaboutNotes']
+                }) }}  
+
                 {{ govukRadios({
                   idPrefix: "gettingaboutSelect",
                   name: "gettingaboutSelect",
