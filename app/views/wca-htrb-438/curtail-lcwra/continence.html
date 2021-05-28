@@ -13,7 +13,7 @@
 
       {{ govukBackLink({
         text: "Back",
-        href: "physical-functions"
+        href: "#"
       }) }}
 
     <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
@@ -21,55 +21,19 @@
 
             <div class="govuk-grid-column-two-thirds">
 
-              <h1 class="govuk-heading-xl">Continence</h1>
+              <h1 class="govuk-heading-xl">Functional limited capability for work-related activity (LCWRA)</h1>
 
-              <form action="physical-functions" method="post">
+              <p class="govuk-body-l">The criteria for functional LCWRA has been met because at least once a week the claimant needs to wash or change their clothes because of difficulty controlling their bladder, bowels or collecting device.</h2>
 
-                {{ govukTextarea({
-                  name: "continenceNotes",
-                  id: "continenceNotes",
-                  rows: "8",
-                  classes: "govuk-!-margin-bottom-9",
-                  label: {
-                    text: "Notes on continence",
-                    classes: "govuk-label--m",
-                    isPageHeading: false
-                  },
-                  value: data['continenceNotes']
-                }) }}  
+                {% if data['continenceNotes'] %}
+              <h2 class="govuk-heading-s">Your notes about continence</h2> 
 
+              <p>{{ data['continenceNotes'] }}</p>
+              {% endif %}
 
-                {{ govukRadios({
-                  idPrefix: "continenceSelect",
-                  name: "continenceSelect",
-                  fieldset: {
-                    legend: {
-                      text: "Which of these options describes how well the claimant can control their bladder and bowels?",
-                      isPageHeading: false,
-                      classes: "govuk-fieldset__legend--s"
-                    }
-                  },
-                  items: [
-                    {
-                      value: "At least once a week the claimant needs to wash or change their clothes because of difficulty controlling their bladder, bowels or collecting device",
-                      text: "At least once a week the claimant needs to wash or change their clothes because of difficulty controlling their bladder, bowels or collecting device"
-                    },
-                    {
-                      value: "At least once a month the claimant needs to wash or change their clothes because of difficulty controlling their bladder, bowels or collecting device",
-                      text: "At least once a month the claimant needs to wash or change their clothes because of difficulty controlling their bladder, bowels or collecting device"
-                    },
-                    {
-                      value: "Most of the time there is a risk that the claimant cannot control their bowels, and would need to get changed if they cannot reach a toilet quickly",
-                      text: "Most of the time there is a risk that the claimant cannot control their bowels, and would need to get changed if they cannot reach a toilet quickly"
-                    },
-                    {
-                      value: "None of the above",
-                      text: "None of the above"
-                    }
-                  ]
-                }) }}
+                    <form class="govuk-!-margin-top-6"  action="../time-review" method="post">
 
-                    {{ govukTextarea({
+                      {{ govukTextarea({
                         name: "continencedetails",
                         id: "continencedetails",
                         label: {
@@ -81,10 +45,11 @@
                       }) }}
 
                       {{ govukButton({
-                        text: "Save"
+                        text: "Save and continue"
                       }) }}
 
             </form>
+
 
 
             </div>

@@ -23,7 +23,7 @@
 
               <h1 class="govuk-heading-xl">Continence</h1>
 
-              <form action="physical-functions" method="post">
+              <form id="question-form" action="physical-functions" method="post">
 
                 {{ govukTextarea({
                   name: "continenceNotes",
@@ -92,4 +92,28 @@
 
     </main>
   </div>
+
+  <script type="text/javascript">
+    document.getElementById("continenceSelect").onclick = function() {
+          var link = "../curtail-lcwra/continence";
+      document.getElementById("question-form").action=link;
+    }
+  
+    document.getElementById("continenceSelect-2").onclick = function() {
+          var link = "physical-functions";
+      document.getElementById("question-form").action=link;
+    }
+  
+    document.getElementById("continenceSelect-3").onclick = function() {
+          var link = "physical-functions";
+      document.getElementById("question-form").action=link;
+    }
+  
+    document.getElementById("continenceSelect-4").onclick = function() {
+          var link = "physical-functions";
+      document.getElementById("question-form").action=link;
+    }
+
+  </script>
+
 {% endblock %}

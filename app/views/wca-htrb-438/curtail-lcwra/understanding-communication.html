@@ -13,7 +13,7 @@
 
       {{ govukBackLink({
         text: "Back",
-        href: "physical-functions"
+        href: "#"
       }) }}
 
     <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
@@ -21,54 +21,19 @@
 
             <div class="govuk-grid-column-two-thirds">
 
-              <h1 class="govuk-heading-xl">Understanding communication</h1>
+              <h1 class="govuk-heading-xl">Functional limited capability for work-related activity (LCWRA)</h1>
 
-            <form action="physical-functions" method="post">
+              <p class="govuk-body-l">The criteria for functional LCWRA has been met because the claimant cannot understand simple messages due to sensory impairment.</h2>
 
-              {{ govukTextarea({
-                name: "understandingcommunicationNotes",
-                id: "understandingcommunicationNotes",
-                rows: "8",
-                classes: "govuk-!-margin-bottom-9",
-                label: {
-                  text: "Notes on understanding communication",
-                  classes: "govuk-label--m",
-                  isPageHeading: false
-                },
-                value: data['understandingcommunicationNotes']
-              }) }}  
+                {% if data['understandingcommunicationNotes'] %}
+              <h2 class="govuk-heading-s">Your notes about understanding communication</h2> 
 
-                {{ govukRadios({
-                  idPrefix: "understandingcommunicationSelect",
-                  name: "understandingcommunicationSelect",
-                  fieldset: {
-                    legend: {
-                      text: "Which of these options describes how the claimant can understand simple messages from other people by hearing or lip-reading?",
-                      isPageHeading: false,
-                      classes: "govuk-fieldset__legend--s"
-                    }
-                  },
-                  items: [
-                    {
-                      value: "Cannot understand simple messages due to sensory impairment",
-                      text: "Cannot understand simple messages due to sensory impairment"
-                    },
-                    {
-                      value: "Has significant difficulty understanding simple messages from a stranger due to sensory impairment",
-                      text: "Has significant difficulty understanding simple messages from a stranger due to sensory impairment"
-                    },
-                    {
-                      value: "Has some difficulty understanding simple messages from a stranger due to sensory impairment",
-                      text: "Has some difficulty understanding simple messages from a stranger due to sensory impairment"
-                    },
-                    {
-                      value: "None of the above",
-                      text: "None of the above"
-                    }
-                  ]
-                }) }}
+              <p>{{ data['understandingcommunicationNotes'] }}</p>
+              {% endif %}
 
-                    {{ govukTextarea({
+                    <form class="govuk-!-margin-top-6"  action="../time-review" method="post">
+
+                      {{ govukTextarea({
                         name: "understandingcommunicationdetails",
                         id: "understandingcommunicationdetails",
                         label: {
@@ -80,7 +45,7 @@
                       }) }}
 
                       {{ govukButton({
-                        text: "Save"
+                        text: "Save and continue"
                       }) }}
 
             </form>

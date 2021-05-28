@@ -23,7 +23,7 @@
 
               <h1 class="govuk-heading-xl">Learning to do new tasks</h1>
 
-              <form action="mental-capabilities" method="post">
+              <form id="question-form" action="mental-capabilities" method="post">
 
                 {{ govukTextarea({
                   name: "learningtasksNotes",
@@ -91,4 +91,27 @@
 
     </main>
   </div>
+
+  <script type="text/javascript">
+    document.getElementById("learningtasksSelect").onclick = function() {
+          var link = "../curtail-lcwra/learning-tasks";
+      document.getElementById("question-form").action=link;
+    }
+  
+    document.getElementById("learningtasksSelect-2").onclick = function() {
+          var link = "mental-capabilities";
+      document.getElementById("question-form").action=link;
+    }
+  
+    document.getElementById("learningtasksSelect-3").onclick = function() {
+          var link = "mental-capabilities";
+      document.getElementById("question-form").action=link;
+    }
+  
+    document.getElementById("learningtasksSelect-4").onclick = function() {
+          var link = "mental-capabilities";
+      document.getElementById("question-form").action=link;
+    }
+  </script>
+
 {% endblock %}

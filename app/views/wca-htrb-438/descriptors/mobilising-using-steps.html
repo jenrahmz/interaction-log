@@ -23,7 +23,7 @@
 
               <h1 class="govuk-heading-xl">Mobilising and using steps</h1>
 
-            <form action="physical-functions" method="post">
+            <form id="question-form" action="physical-functions" method="post">
 
               {{ govukTextarea({
                 name: "mobilisingNotes",
@@ -95,4 +95,32 @@
 
     </main>
   </div>
+
+  <script type="text/javascript">
+    document.getElementById("mobilisingSelect").onclick = function() {
+          var link = "../curtail-lcwra/mobilising-using-steps";
+      document.getElementById("question-form").action=link;
+    }
+  
+    document.getElementById("mobilisingSelect-2").onclick = function() {
+          var link = "physical-functions";
+      document.getElementById("question-form").action=link;
+    }
+  
+    document.getElementById("mobilisingSelect-3").onclick = function() {
+          var link = "physical-functions";
+      document.getElementById("question-form").action=link;
+    }
+  
+    document.getElementById("mobilisingSelect-4").onclick = function() {
+          var link = "physical-functions";
+      document.getElementById("question-form").action=link;
+    }
+
+    document.getElementById("mobilisingSelect-5").onclick = function() {
+          var link = "physical-functions";
+      document.getElementById("question-form").action=link;
+    }
+  </script>
+
 {% endblock %}

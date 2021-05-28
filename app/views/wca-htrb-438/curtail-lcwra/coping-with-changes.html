@@ -13,7 +13,7 @@
 
       {{ govukBackLink({
         text: "Back",
-        href: "mental-capabilities"
+        href: "#"
       }) }}
 
     <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
@@ -21,55 +21,22 @@
 
             <div class="govuk-grid-column-two-thirds">
 
-              <h1 class="govuk-heading-xl">Coping with changes</h1>
-
-              <form action="mental-capabilities" method="post">
-
-                {{ govukTextarea({
-                  name: "copingNotes",
-                  id: "copingNotes",
-                  rows: "8",
-                  classes: "govuk-!-margin-bottom-9",
-                  label: {
-                    text: "Notes on coping with changes",
-                    classes: "govuk-label--m",
-                    isPageHeading: false
-                  },
-                  value: data['copingNotes']
-                }) }}  
 
 
-                {{ govukRadios({
-                  idPrefix: "copingSelect",
-                  name: "copingSelect",
-                  fieldset: {
-                    legend: {
-                      text: "How well can the claimant cope with changes to their routine?",
-                      isPageHeading: false,
-                      classes: "govuk-fieldset__legend--s"
-                    }
-                  },
-                  items: [
-                    {
-                      value: "Cannot cope with any change to their routine, to the extent that they can’t manage day to day",
-                      text: "Cannot cope with any change to their routine, to the extent that they can’t manage day to day"
-                    },
-                    {
-                      value: "If there were a small planned change to the claimant’s routine, they would find it significantly more difficult to manage",
-                      text: "If there were a small planned change to the claimant’s routine, they would find it significantly more difficult to manage"
-                    },
-                    {
-                      value: "If there were a small unplanned change to the claimant’s routine, they would find it significantly more difficult to manage",
-                      text: "If there were a small unplanned change to the claimant’s routine, they would find it significantly more difficult to manage"
-                    },
-                    {
-                      value: "None of the above",
-                      text: "None of the above"
-                    }
-                  ]
-                }) }}
 
-                    {{ govukTextarea({
+              <h1 class="govuk-heading-xl">Functional limited capability for work-related activity (LCWRA)</h1>
+
+              <p class="govuk-body-l">The criteria for functional LCWRA has been met because the claimant cannot cope with any change to their routine, to the extent that they can’t manage day to day.</h2>
+
+                {% if data['copingNotes'] %}
+              <h2 class="govuk-heading-s">Your notes about coping with changes</h2> 
+
+              <p>{{ data['copingNotes'] }}</p>
+              {% endif %}
+
+                    <form class="govuk-!-margin-top-6"  action="../time-review" method="post">
+
+                      {{ govukTextarea({
                         name: "copingdetails",
                         id: "copingdetails",
                         label: {
@@ -81,11 +48,16 @@
                       }) }}
 
                       {{ govukButton({
-                        text: "Save"
+                        text: "Save and continue"
                       }) }}
 
             </form>
 
+            
+
+              <form action="mental-capabilities" method="post">
+
+  
 
             </div>
         </div>

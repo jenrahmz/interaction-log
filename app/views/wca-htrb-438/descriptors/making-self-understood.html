@@ -23,7 +23,7 @@
 
               <h1 class="govuk-heading-xl">Making self understood</h1>
 
-            <form action="physical-functions" method="post">
+            <form id="question-form" action="physical-functions" method="post">
 
               {{ govukTextarea({
                 name: "makingselfunderstoodNotes",
@@ -91,4 +91,27 @@
 
     </main>
   </div>
+
+  <script type="text/javascript">
+    document.getElementById("makingselfunderstoodSelect").onclick = function() {
+          var link = "../curtail-lcwra/making-self-understood";
+      document.getElementById("question-form").action=link;
+    }
+  
+    document.getElementById("makingselfunderstoodSelect-2").onclick = function() {
+          var link = "mental-capabilities";
+      document.getElementById("question-form").action=link;
+    }
+  
+    document.getElementById("makingselfunderstoodSelect-3").onclick = function() {
+          var link = "mental-capabilities";
+      document.getElementById("question-form").action=link;
+    }
+  
+    document.getElementById("makingselfunderstoodSelect-4").onclick = function() {
+          var link = "mental-capabilities";
+      document.getElementById("question-form").action=link;
+    }
+  </script>
+
 {% endblock %}

@@ -13,7 +13,7 @@
 
       {{ govukBackLink({
         text: "Back",
-        href: "physical-functions"
+        href: "#"
       }) }}
 
     <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
@@ -31,7 +31,7 @@
               <p>{{ data['mobilisingNotes'] }}</p>
               {% endif %}
 
-            <form class="govuk-!-margin-top-6" action="physical-functions" method="post">
+            <form class="govuk-!-margin-top-6"  action="../time-review" method="post">
 
                     {{ govukTextarea({
                         name: "mobilisingdetails",

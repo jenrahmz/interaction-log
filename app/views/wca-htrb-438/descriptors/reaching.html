@@ -23,7 +23,7 @@
 
               <h1 class="govuk-heading-xl">Reaching</h1>
 
-            <form action="physical-functions" method="post">
+            <form id="question-form" action="physical-functions" method="post">
 
               {{ govukTextarea({
                 name: "reachingNotes",
@@ -91,4 +91,27 @@
 
     </main>
   </div>
+
+  <script type="text/javascript">
+    document.getElementById("reachingSelect").onclick = function() {
+          var link = "../curtail-lcwra/reaching";
+      document.getElementById("question-form").action=link;
+    }
+  
+    document.getElementById("reachingSelect-2").onclick = function() {
+          var link = "physical-functions";
+      document.getElementById("question-form").action=link;
+    }
+  
+    document.getElementById("reachingSelect-3").onclick = function() {
+          var link = "physical-functions";
+      document.getElementById("question-form").action=link;
+    }
+  
+    document.getElementById("reachingSelect-4").onclick = function() {
+          var link = "physical-functions";
+      document.getElementById("question-form").action=link;
+    }
+  </script>
+
 {% endblock %}

@@ -23,7 +23,7 @@
 
               <h1 class="govuk-heading-xl">Eating and drinking</h1>
 
-              <form action="../assessment-overview" method="post">
+              <form id="question-form" action="../assessment-overview" method="post">
 
                 {{ govukTextarea({
                   name: "eatingNotes",
@@ -88,4 +88,24 @@
 
     </main>
   </div>
+
+
+  <script type="text/javascript">
+    document.getElementById("eatingSelect").onclick = function() {
+          var link = "../curtail-lcwra/eating-convey";
+      document.getElementById("question-form").action=link;
+    }
+  
+    document.getElementById("eatingSelect-2").onclick = function() {
+          var link = "../curtail-lcwra/eating-swallow";
+      document.getElementById("question-form").action=link;
+    }
+  
+    document.getElementById("eatingSelect-3").onclick = function() {
+          var link = "../assessment-overview";
+      document.getElementById("question-form").action=link;
+    }
+
+  </script>
+
 {% endblock %}

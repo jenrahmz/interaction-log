@@ -13,7 +13,7 @@
 
       {{ govukBackLink({
         text: "Back",
-        href: "mental-capabilities"
+        href: "#"
       }) }}
 
     <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
@@ -21,54 +21,20 @@
 
             <div class="govuk-grid-column-two-thirds">
 
-              <h1 class="govuk-heading-xl">Coping with social situations</h1>
 
-              <form action="mental-capabilities" method="post">
+              <h1 class="govuk-heading-xl">Functional limited capability for work-related activity (LCWRA)</h1>
 
-                {{ govukTextarea({
-                  name: "socialsituNotes",
-                  id: "socialsituNotes",
-                  rows: "8",
-                  classes: "govuk-!-margin-bottom-9",
-                  label: {
-                    text: "Notes on coping with social situations",
-                    classes: "govuk-label--m",
-                    isPageHeading: false
-                  },
-                  value: data['socialsituNotes']
-                }) }}  
+              <p class="govuk-body-l">The criteria for functional LCWRA has been met because the claimant cannot meet and be with people without feeling significantly anxious or scared.</h2>
 
-                {{ govukRadios({
-                  idPrefix: "socialsituSelect",
-                  name: "socialsituSelect",
-                  fieldset: {
-                    legend: {
-                      text: "How does the claimant cope with meeting and being with people?",
-                      isPageHeading: false,
-                      classes: "govuk-fieldset__legend--s"
-                    }
-                  },
-                  items: [
-                    {
-                      value: "Cannot meet and be with people without feeling significantly anxious or scared",
-                      text: "Cannot meet and be with people without feeling significantly anxious or scared"
-                    },
-                    {
-                      value: "Can only meet and be with people they know without feeling significantly anxious or scared",
-                      text: "Can only meet and be with people they know without feeling significantly anxious or scared"
-                    },
-                    {
-                      value: "Most of the time the claimant can only meet and be with people they know without feeling significantly anxious or scared",
-                      text: "Most of the time the claimant can only meet and be with people they know without feeling significantly anxious or scared"
-                    },
-                    {
-                      value: "None of the above",
-                      text: "None of the above"
-                    }
-                  ]
-                }) }}
+                {% if data['socialsituNotes'] %}
+              <h2 class="govuk-heading-s">Your notes about coping with social situations</h2> 
 
-                    {{ govukTextarea({
+              <p>{{ data['socialsituNotes'] }}</p>
+              {% endif %}
+
+                    <form class="govuk-!-margin-top-6"  action="../time-review" method="post">
+
+                      {{ govukTextarea({
                         name: "socialsitudetails",
                         id: "socialsitudetails",
                         label: {
@@ -80,7 +46,7 @@
                       }) }}
 
                       {{ govukButton({
-                        text: "Save"
+                        text: "Save and continue"
                       }) }}
 
             </form>

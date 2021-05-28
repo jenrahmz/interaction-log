@@ -13,7 +13,7 @@
 
       {{ govukBackLink({
         text: "Back",
-        href: "mental-capabilities"
+        href: "#"
       }) }}
 
     <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
@@ -21,54 +21,21 @@
 
             <div class="govuk-grid-column-two-thirds">
 
-              <h1 class="govuk-heading-xl">Awareness of hazards and danger</h1>
+              
 
-              <form action="mental-capabilities" method="post">
+              <h1 class="govuk-heading-xl">Functional limited capability for work-related activity (LCWRA)</h1>
 
-                {{ govukTextarea({
-                  name: "hazardsdangerNotes",
-                  id: "hazardsdangerNotes",
-                  rows: "8",
-                  classes: "govuk-!-margin-bottom-9",
-                  label: {
-                    text: "Notes on awareness of hazards and danger",
-                    classes: "govuk-label--m",
-                    isPageHeading: false
-                  },
-                  value: data['hazardsdangerNotes']
-                }) }}  
+              <p class="govuk-body-l">The criteria for functional LCWRA has been met because the claimant needs someone with them most of the time to stay safe.</h2>
 
-                {{ govukRadios({
-                  idPrefix: "hazardsdangerSelect",
-                  name: "hazardsdangerSelect",
-                  fieldset: {
-                    legend: {
-                      text: "How often does the claimant need someone with them to help them stay safe?",
-                      isPageHeading: false,
-                      classes: "govuk-fieldset__legend--s"
-                    }
-                  },
-                  items: [
-                    {
-                      value: "Needs someone with them most of the time to stay safe",
-                      text: "Needs someone with them most of the time to stay safe"
-                    },
-                    {
-                      value: "Often needs someone with them to stay safe",
-                      text: "Often needs someone with them to stay safe"
-                    },
-                    {
-                      value: "Occasionally needs someone with them to stay safe",
-                      text: "Occasionally needs someone with them to stay safe"
-                    },
-                    {
-                      value: "None of the above",
-                      text: "None of the above"
-                    }
-                  ]
-                }) }}
+                {% if data['hazardsdangerNotes'] %}
+              <h2 class="govuk-heading-s">Your notes about awareness of hazards and danger</h2> 
 
-                    {{ govukTextarea({
+              <p>{{ data['hazardsdangerNotes'] }}</p>
+              {% endif %}
+
+                    <form class="govuk-!-margin-top-6"  action="../time-review" method="post">
+
+                      {{ govukTextarea({
                         name: "hazardsdangerdetails",
                         id: "hazardsdangerdetails",
                         label: {
@@ -80,10 +47,11 @@
                       }) }}
 
                       {{ govukButton({
-                        text: "Save"
+                        text: "Save and continue"
                       }) }}
 
             </form>
+
 
 
             </div>

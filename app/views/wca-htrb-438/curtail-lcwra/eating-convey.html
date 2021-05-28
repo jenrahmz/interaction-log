@@ -23,25 +23,25 @@
 
               <h1 class="govuk-heading-xl">Functional limited capability for work-related activity (LCWRA)</h1>
 
-              <p class="govuk-body-l">The criteria for functional LCWRA has been met because the claimant cannot plan, start and finish everyday tasks.</h2>
+              <p class="govuk-body-l">The criteria for functional LCWRA has been met because the claimant cannot convey food or drink to their mouth.</h2>
 
-                {% if data['everydaytasksNotes'] %}
-              <h2 class="govuk-heading-s">Your notes about planning, starting and finishing everyday tasks</h2> 
+                {% if data['eatingNotes'] %}
+              <h2 class="govuk-heading-s">Your notes about eating and drinking</h2> 
 
-              <p>{{ data['everydaytasksNotes'] }}</p>
+              <p>{{ data['eatingNotes'] }}</p>
               {% endif %}
 
                     <form class="govuk-!-margin-top-6"  action="../time-review" method="post">
 
                       {{ govukTextarea({
-                        name: "everydaytasksdetails",
-                        id: "everydaytasksdetails",
+                        name: "eatingdetails",
+                        id: "eatingdetails",
                         label: {
                           text: "Give details",
                           classes: "govuk-label--s",
                           isPageHeading: true
                         },
-                        value: data['everydaytasksdetails']
+                        value: data['eatingdetails']
                       }) }}
 
                       {{ govukButton({
@@ -49,7 +49,6 @@
                       }) }}
 
             </form>
-
 
 
             </div>

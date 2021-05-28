@@ -23,7 +23,7 @@
 
               <h1 class="govuk-heading-xl">Picking up and moving things</h1>
 
-            <form action="physical-functions" method="post">
+            <form id="question-form" action="physical-functions" method="post">
 
               {{ govukTextarea({
                 name: "pickingupNotes",
@@ -92,4 +92,27 @@
 
     </main>
   </div>
+
+  <script type="text/javascript">
+    document.getElementById("pickingupSelect").onclick = function() {
+          var link = "../curtail-lcwra/pickingup";
+      document.getElementById("question-form").action=link;
+    }
+  
+    document.getElementById("pickingupSelect-2").onclick = function() {
+          var link = "physical-functions";
+      document.getElementById("question-form").action=link;
+    }
+  
+    document.getElementById("pickingupSelect-3").onclick = function() {
+          var link = "physical-functions";
+      document.getElementById("question-form").action=link;
+    }
+  
+    document.getElementById("pickingupSelect-4").onclick = function() {
+          var link = "physical-functions";
+      document.getElementById("question-form").action=link;
+    }
+  </script>
+
 {% endblock %}

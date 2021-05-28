@@ -13,7 +13,7 @@
 
       {{ govukBackLink({
         text: "Back",
-        href: "physical-functions"
+        href: "#"
       }) }}
 
     <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
@@ -21,55 +21,19 @@
 
             <div class="govuk-grid-column-two-thirds">
 
-              <h1 class="govuk-heading-xl">Picking up and moving things</h1>
+              <h1 class="govuk-heading-xl">Functional limited capability for work-related activity (LCWRA)</h1>
 
-            <form action="physical-functions" method="post">
+              <p class="govuk-body-l">The criteria for functional LCWRA has been met because the claimant cannot pick up and move a 0.5L carton full of liquid.</h2>
 
-              {{ govukTextarea({
-                name: "pickingupNotes",
-                id: "pickingupNotes",
-                rows: "8",
-                classes: "govuk-!-margin-bottom-9",
-                label: {
-                  text: "Notes on picking up and moving things",
-                  classes: "govuk-label--m",
-                  isPageHeading: false
-                },
-                value: data['pickingupNotes']
-              }) }}  
+                {% if data['pickingupNotes'] %}
+              <h2 class="govuk-heading-s">Your notes about picking up and moving things</h2> 
 
+              <p>{{ data['pickingupNotes'] }}</p>
+              {% endif %}
 
-                {{ govukRadios({
-                  idPrefix: "pickingupSelect",
-                  name: "pickingupSelect",
-                  fieldset: {
-                    legend: {
-                      text: "Which of these options describes how the claimant can pick things up and move them?",
-                      isPageHeading: false,
-                      classes: "govuk-fieldset__legend--s"
-                    }
-                  },
-                  items: [
-                    {
-                      value: "Cannot pick up and move a 0.5L carton full of liquid",
-                      text: "Cannot pick up and move a 0.5L carton full of liquid"
-                    },
-                    {
-                      value: "Cannot pick up and move a 1L carton full of liquid",
-                      text: "Cannot pick up and move a 1L carton full of liquid"
-                    },
-                    {
-                      value: "Cannot pick up and move a large, light object like an empty cardboard box",
-                      text: "Cannot pick up and move a large, light object like an empty cardboard box"
-                    },
-                    {
-                      value: "None of the above",
-                      text: "None of the above"
-                    }
-                  ]
-                }) }}
+                    <form class="govuk-!-margin-top-6"  action="../time-review" method="post">
 
-                    {{ govukTextarea({
+                      {{ govukTextarea({
                         name: "pickingupdetails",
                         id: "pickingupdetails",
                         label: {
@@ -81,10 +45,12 @@
                       }) }}
 
                       {{ govukButton({
-                        text: "Save"
+                        text: "Save and continue"
                       }) }}
 
             </form>
+
+  
 
 
             </div>

@@ -23,7 +23,7 @@
 
               <h1 class="govuk-heading-xl">Manual dexterity</h1>
 
-            <form action="physical-functions" method="post">
+            <form id="question-form" action="physical-functions" method="post">
 
               {{ govukTextarea({
                 name: "dexterityNotes",
@@ -99,4 +99,38 @@
 
     </main>
   </div>
+
+
+  <script type="text/javascript">
+    document.getElementById("dexteritySelect").onclick = function() {
+          var link = "../curtail-lcwra/manual-dexterity";
+      document.getElementById("question-form").action=link;
+    }
+  
+    document.getElementById("dexteritySelect-2").onclick = function() {
+          var link = "physical-functions";
+      document.getElementById("question-form").action=link;
+    }
+  
+    document.getElementById("dexteritySelect-3").onclick = function() {
+          var link = "physical-functions";
+      document.getElementById("question-form").action=link;
+    }
+  
+    document.getElementById("dexteritySelect-4").onclick = function() {
+          var link = "physical-functions";
+      document.getElementById("question-form").action=link;
+    }
+
+    document.getElementById("dexteritySelect-5").onclick = function() {
+          var link = "physical-functions";
+      document.getElementById("question-form").action=link;
+    }
+
+    document.getElementById("dexteritySelect-6").onclick = function() {
+          var link = "physical-functions";
+      document.getElementById("question-form").action=link;
+    }
+  </script>
+
 {% endblock %}

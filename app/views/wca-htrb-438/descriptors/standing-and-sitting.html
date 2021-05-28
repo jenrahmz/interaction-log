@@ -23,7 +23,7 @@
 
               <h1 class="govuk-heading-xl">Standing and sitting</h1>
 
-            <form action="physical-functions" method="post">
+            <form id="question-form" action="physical-functions" method="post">
 
               {{ govukTextarea({
                 name: "standingsittingNotes",
@@ -92,4 +92,28 @@
 
     </main>
   </div>
+
+
+  <script type="text/javascript">
+    document.getElementById("standingsittingSelect").onclick = function() {
+          var link = "../curtail-lcwra/standing-and-sitting";
+      document.getElementById("question-form").action=link;
+    }
+  
+    document.getElementById("standingsittingSelect-2").onclick = function() {
+          var link = "physical-functions";
+      document.getElementById("question-form").action=link;
+    }
+  
+    document.getElementById("standingsittingSelect-3").onclick = function() {
+          var link = "physical-functions";
+      document.getElementById("question-form").action=link;
+    }
+  
+    document.getElementById("standingsittingSelect-4").onclick = function() {
+          var link = "physical-functions";
+      document.getElementById("question-form").action=link;
+    }
+  </script>
+
 {% endblock %}
