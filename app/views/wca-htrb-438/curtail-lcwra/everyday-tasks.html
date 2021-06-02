@@ -32,17 +32,9 @@
               {% endif %}
 
                     <form class="govuk-!-margin-top-6"  action="../time-review" method="post">
-
-                      {{ govukTextarea({
-                        name: "everydaytasksdetails",
-                        id: "everydaytasksdetails",
-                        label: {
-                          text: "Give details",
-                          classes: "govuk-label--s",
-                          isPageHeading: true
-                        },
-                        value: data['everydaytasksdetails']
-                      }) }}
+                      
+                      <h2 class="govuk-heading-s">Detailed justification</h2> 
+                      <p>{{ data['everydaydetails'] }}</p>
 
                       {{ govukButton({
                         text: "Save and continue"

@@ -32,19 +32,11 @@
               <p>{{ data['behaviourNotes'] }}</p>
               {% endif %}
 
-                    <form class="govuk-!-margin-top-6"  action="../time-review" method="post">
+               <form class="govuk-!-margin-top-6"  action="../time-review" method="post">
 
-                      {{ govukTextarea({
-                        name: "behaviourdetails",
-                        id: "behaviourdetails",
-                        label: {
-                          text: "Give details",
-                          classes: "govuk-label--s",
-                          isPageHeading: true
-                        },
-                        value: data['behaviourdetails']
-                      }) }}
+                <h2 class="govuk-heading-s">Detailed justification</h2> 
 
+              <p>{{ data['behaviourdetails'] }}</p>
 
                       {{ govukButton({
                         text: "Save and continue"

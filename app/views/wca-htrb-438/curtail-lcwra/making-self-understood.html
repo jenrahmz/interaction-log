@@ -25,24 +25,18 @@
 
               <p class="govuk-body-l">The criteria for functional LCWRA has been met because the claimant cannot communicate a simple message.</h2>
 
-                {% if data['standingsittingNotes'] %}
+                {% if data['makingselfunderstoodNotes'] %}
               <h2 class="govuk-heading-s">Your notes about making self understood</h2> 
 
-              <p>{{ data['standingsittingNotes'] }}</p>
+              <p>{{ data['makingselfunderstoodNotes'] }}</p>
               {% endif %}
+
+              <h2 class="govuk-heading-s">Detailed justification</h2> 
+                      <p>{{ data['makingselfunderstooddetails'] }}</p>
 
                     <form class="govuk-!-margin-top-6"  action="../time-review" method="post">
 
-                      {{ govukTextarea({
-                        name: "makingselfunderstooddetails",
-                        id: "makingselfunderstooddetails",
-                        label: {
-                          text: "Give details",
-                          classes: "govuk-label--s",
-                          isPageHeading: true
-                        },
-                        value: data['makingselfunderstooddetails']
-                      }) }}
+  
 
                       {{ govukButton({
                         text: "Save and continue"

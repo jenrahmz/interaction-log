@@ -33,16 +33,8 @@
 
                     <form class="govuk-!-margin-top-6"  action="../time-review" method="post">
 
-                      {{ govukTextarea({
-                        name: "pickingupdetails",
-                        id: "pickingupdetails",
-                        label: {
-                          text: "Give details",
-                          classes: "govuk-label--s",
-                          isPageHeading: true
-                        },
-                        value: data['pickingupdetails']
-                      }) }}
+                      <h2 class="govuk-heading-s">Detailed justification</h2> 
+                      <p>{{ data['pickingupdetails'] }}</p>
 
                       {{ govukButton({
                         text: "Save and continue"
