@@ -28,7 +28,7 @@
       id: "part-not-met",
       name: "part-not-met",
       label: {
-        text: "Which part has not been met?"
+        text: "Give details"
       }
     }) }}
     {% endset -%}
@@ -38,23 +38,23 @@
         name: "qp",
         fieldset: {
           legend: {
-            text: "Have both the qualifying period and prospective test been met for mobility activities?",
+            text: "How long has the mobility restriction lasted?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--xl",
             hint: "Hint"
           }
         },
         hint: {
-          text: "They must have had it for at least 3 months and be likely to have it for a further 9 months."
+          text: ""
         },
         items: [
           {
-            value: "Yes",
-            text: "Yes"
+            value: "At least 3 months and is likely to last a further 9 months",
+            text: "At least 3 months and is likely to last a further 9 months"
           },
           {
-            value: "No",
-            text: "No",
+            value: "Other",
+            text: "Other",
             conditional: {
               html: reasonHtml
             }
