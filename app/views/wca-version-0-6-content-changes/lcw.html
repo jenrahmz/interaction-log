@@ -13,7 +13,7 @@
 
       {{ govukBackLink({
         text: "Back",
-        href: "check"
+        href: "assessment-overview"
       }) }}
 
     <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
@@ -21,46 +21,42 @@
 
             <div class="govuk-grid-column-two-thirds">
 
-  <form action="dailyliving" method="post" id="question-form" novalidate>
+              <h1 class="govuk-heading-xl">Limited capability for work (LCW)</h1>
 
-    {% set reasonHtml %}
-    {{ govukTextarea({
-      id: "part-not-met",
-      name: "part-not-met",
-      label: {
-        text: "Give details"
-      }
-    }) }}
-    {% endset -%}
+  <form action="time-review" method="post" id="question-form" novalidate>
 
       {{ govukRadios({
-        idPrefix: "qp",
-        name: "qp",
+        idPrefix: "lcw",
+        name: "lcw",
         fieldset: {
           legend: {
-            text: "How long have the mobility restrictions lasted?",
+            text: "What is your recommendation?",
             isPageHeading: true,
-            classes: "govuk-fieldset__legend--xl",
-            hint: "Hint"
+            classes: "govuk-fieldset__legend--s"
           }
-        },
-        hint: {
-          text: ""
         },
         items: [
-          {
-            value: "At least 3 months and are likely to last for 9 months more",
-            text: "At least 3 months and are likely to last for 9 months more"
-          },
-          {
-            value: "Other",
-            text: "Other",
-            conditional: {
-              html: reasonHtml
-            }
-          }
+        {
+          value: "Functional LCW",
+          text: "Functional LCW"
+        },
+        {
+          value: "Treat as LCW",
+          text: "Treat as LCW"
+        }
         ]
       }) }}
+
+      {{ govukTextarea({
+        name: "treataslcwrareasons",
+        id: "treataslcwrareasons",
+        label: {
+          text: "Why is this your recommendation?",
+          classes: "govuk-label--s",
+          isPageHeading: false
+        }
+      }) }}
+
 
 </div>
 </div>
