@@ -21,12 +21,12 @@
 
             <div class="govuk-grid-column-two-thirds">
 
-  <form action="review" method="post" id="question-form" novalidate>
+  <form action="dailyliving" method="post" id="question-form" novalidate>
 
     {% set reasonHtml %}
     {{ govukTextarea({
-      id: "part-not-met-dl",
-      name: "part-not-met-dl",
+      id: "part-not-met",
+      name: "part-not-met",
       label: {
         text: "Which part has not been met?"
       }
@@ -34,11 +34,11 @@
     {% endset -%}
 
       {{ govukRadios({
-        idPrefix: "dl",
-        name: "dl",
+        idPrefix: "qp",
+        name: "qp",
         fieldset: {
           legend: {
-            text: "Have both the qualifying period and prospective test been met for daily living activities?",
+            text: "Have both the qualifying period and prospective test been met for mobility activities?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--xl",
             hint: "Hint"
@@ -58,10 +58,6 @@
             conditional: {
               html: reasonHtml
             }
-          },
-          {
-            value: "No daily living restrictions found",
-            text: "No daily living restrictions found"
           }
         ]
       }) }}

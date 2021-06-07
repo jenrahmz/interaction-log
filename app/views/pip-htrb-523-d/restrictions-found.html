@@ -21,47 +21,31 @@
 
             <div class="govuk-grid-column-two-thirds">
 
-  <form action="review" method="post" id="question-form" novalidate>
-
-    {% set reasonHtml %}
-    {{ govukTextarea({
-      id: "part-not-met-dl",
-      name: "part-not-met-dl",
-      label: {
-        text: "Which part has not been met?"
-      }
-    }) }}
-    {% endset -%}
+  <form action="assessment-status" method="post" id="question-form" novalidate>
 
       {{ govukRadios({
-        idPrefix: "dl",
-        name: "dl",
+        idPrefix: "qp",
+        name: "qp",
         fieldset: {
           legend: {
-            text: "Have both the qualifying period and prospective test been met for daily living activities?",
+            text: "What functiona; restrictions have you found?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--xl",
             hint: "Hint"
           }
         },
-        hint: {
-          text: "They must have had it for at least 3 months and be likely to have it for a further 9 months."
-        },
         items: [
           {
-            value: "Yes",
-            text: "Yes"
+            value: "Daily living",
+            text: "Daily living"
           },
           {
-            value: "No",
-            text: "No",
-            conditional: {
-              html: reasonHtml
-            }
+            value: "Mobility",
+            text: "Mobility"
           },
           {
-            value: "No daily living restrictions found",
-            text: "No daily living restrictions found"
+            value: "No restrictions found",
+            text: "No restrictions found"
           }
         ]
       }) }}
@@ -75,6 +59,24 @@
 
 </main>
 </div>
+
+<script type="text/javascript">
+  document.getElementById("qp").onclick = function() {
+        var link = "mobility";
+    document.getElementById("question-form").action=link;
+  }
+
+  document.getElementById("qp-2").onclick = function() {
+        var link = "dailyliving";
+    document.getElementById("question-form").action=link;
+  }
+
+  document.getElementById("qp-3").onclick = function() {
+        var link = "submit";
+    document.getElementById("question-form").action=link;
+  }
+
+</script>
 
 
 
