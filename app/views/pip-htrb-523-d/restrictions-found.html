@@ -28,7 +28,7 @@
         name: "qp",
         fieldset: {
           legend: {
-            text: "What functiona; restrictions have you found?",
+            text: "What restrictions have you found?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--xl",
             hint: "Hint"
@@ -36,12 +36,16 @@
         },
         items: [
           {
-            value: "Daily living",
-            text: "Daily living"
+            value: "Daily living only",
+            text: "Daily living only"
           },
           {
-            value: "Mobility",
-            text: "Mobility"
+            value: "Mobility only",
+            text: "Mobility only"
+          },
+          {
+            value: "Daily living and mobility",
+            text: "Daily living and mobility"
           },
           {
             value: "No restrictions found",
@@ -62,16 +66,21 @@
 
 <script type="text/javascript">
   document.getElementById("qp").onclick = function() {
-        var link = "mobility";
-    document.getElementById("question-form").action=link;
-  }
-
-  document.getElementById("qp-2").onclick = function() {
         var link = "dailyliving";
     document.getElementById("question-form").action=link;
   }
 
+  document.getElementById("qp-2").onclick = function() {
+        var link = "mobility";
+    document.getElementById("question-form").action=link;
+  }
+
   document.getElementById("qp-3").onclick = function() {
+        var link = "mobility";
+    document.getElementById("question-form").action=link;
+  }
+
+  document.getElementById("qp-4").onclick = function() {
         var link = "submit";
     document.getElementById("question-form").action=link;
   }
