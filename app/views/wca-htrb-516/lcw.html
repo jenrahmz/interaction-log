@@ -13,7 +13,7 @@
 
       {{ govukBackLink({
         text: "Back",
-        href: "check"
+        href: "assessment-overview"
       }) }}
 
     <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
@@ -21,32 +21,44 @@
 
             <div class="govuk-grid-column-two-thirds">
 
-  <form action="review" method="post" id="question-form" novalidate>
+              <h1 class="govuk-heading-xl">Limited capability for work (LCW)</h1>
+
+  <form action="time-review" method="post" id="question-form" novalidate>
 
       {{ govukRadios({
-        idPrefix: "prospective",
-        name: "prospective",
+        idPrefix: "lcw",
+        name: "lcw",
         fieldset: {
           legend: {
-            text: "Is the claimant likely to have functional restriction for at least 9 months?",
+            text: "What is your recommendation?",
             isPageHeading: true,
-            classes: "govuk-fieldset__legend--xl"
+            classes: "govuk-fieldset__legend--s"
           }
         },
         items: [
-          {
-            value: "Yes",
-            text: "Yes"
-          },
-          {
-            value: "No",
-            text: "No"
-          },
-          {
-            value: "No functional restriction",
-            text: "No functional restriction"
-          }
+        {
+          value: "Functional LCW",
+          text: "Functional LCW"
+        },
+        {
+          value: "Treat as LCW",
+          text: "Treat as LCW"
+        },
+        {
+          value: "Risk",
+          text: "Risk"
+        }
         ]
+      }) }}
+
+      {{ govukTextarea({
+        name: "treataslcwrareasons",
+        id: "treataslcwrareasons",
+        label: {
+          text: "Why is this your recommendation?",
+          classes: "govuk-label--s",
+          isPageHeading: false
+        }
       }) }}
 
 
