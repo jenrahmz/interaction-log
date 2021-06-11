@@ -42,7 +42,7 @@
                   isPageHeading: false
                 },
                 value: data['facetofaceNotes']
-              }) }}  
+              }) }}
 
 
               <div class="govuk-form-group">
@@ -54,15 +54,9 @@
                   </legend>
                   <div class="govuk-radios">
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="facetofaceSelect" name="facetofaceSelect" type="radio" value="Can engage with other people unaided">
-                      <label class="govuk-label govuk-radios__label" for="facetofaceSelect">
-                        Can engage with other people unaided
-                      </label>
-                    </div>
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="facetofaceSelect-2" name="facetofaceSelect" type="radio" value="Needs prompting to be able to engage with other people">
-                      <label class="govuk-label govuk-radios__label" for="facetofaceSelect-2">
-                        Needs prompting to be able to engage with other people
+                      <input class="govuk-radios__input" id="facetofaceSelect-4" name="facetofaceSelect" type="radio" value="Cannot engage with other people due to such engagement causing either – overwhelming psychological distress to the claimant; or the claimant to exhibit behaviour which would result in a substantial risk of harm to the claimant or another person">
+                      <label class="govuk-label govuk-radios__label" for="facetofaceSelect-4">
+                        Cannot engage with other people due to such engagement, causing either overwhelming psychological distress to the claimant or leading the claimant to exhibit behaviour which would result in a substantial risk of harm to the claimant or another person
                       </label>
                     </div>
                     <div class="govuk-radios__item">
@@ -72,18 +66,22 @@
                       </label>
                     </div>
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="facetofaceSelect-4" name="facetofaceSelect" type="radio" value="Cannot engage with other people due to such engagement causing either – overwhelming psychological distress to the claimant; or the claimant to exhibit behaviour which would result in a substantial risk of harm to the claimant or another person">
-                      <label class="govuk-label govuk-radios__label" for="facetofaceSelect-4">
-                        Cannot engage with other people due to such engagement, causing either overwhelming psychological distress to the claimant or leading the claimant to exhibit behaviour which would result in a substantial risk of harm to the claimant or another person
+                      <input class="govuk-radios__input" id="facetofaceSelect-2" name="facetofaceSelect" type="radio" value="Needs prompting to be able to engage with other people">
+                      <label class="govuk-label govuk-radios__label" for="facetofaceSelect-2">
+                        Needs prompting to be able to engage with other people
                       </label>
                     </div>
-
-
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="facetofaceSelect" name="facetofaceSelect" type="radio" value="Can engage with other people unaided">
+                      <label class="govuk-label govuk-radios__label" for="facetofaceSelect">
+                        Can engage with other people unaided
+                      </label>
+                    </div>
                   </div>
 
                 </fieldset>
               </div>
-              
+
 
                     {{ govukTextarea({
                       name: "facetofaceReason",
@@ -94,18 +92,18 @@
                         isPageHeading: false
                       },
                       value: data['facetofaceReason']
-                    }) }}  
+                    }) }}
 
                     {{ govukButton({
                       text: "Save"
                     }) }}
                 </ul>
-    
+
 
 
             </form>
 
-              
+
 
             </div>
 

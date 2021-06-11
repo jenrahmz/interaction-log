@@ -30,7 +30,7 @@
             <div class="govuk-grid-column-two-thirds">
 
               <form action="assessment-status" method="post">
-                
+
 
               {{ govukTextarea({
                 name: "takingnutritionNotes",
@@ -43,7 +43,7 @@
                   isPageHeading: false
                 },
                 value: data['takingnutritionNotes']
-              }) }}  
+              }) }}
 
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset">
@@ -54,27 +54,9 @@
                   </legend>
                   <div class="govuk-radios">
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="takingnutritionSelect" name="takingnutritionSelect" type="radio" value="Can take nutrition unaided">
-                      <label class="govuk-label govuk-radios__label" for="takingnutritionSelect">
-                        Can take nutrition unaided
-                      </label>
-                    </div>
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="takingnutritionSelect-2" name="takingnutritionSelect" type="radio" value="Needs - to use an aid or appliance to be able to take nutrition; or supervision to be able to take nutrition; or assistance to be able to cut up food.">
-                      <label class="govuk-label govuk-radios__label" for="takingnutritionSelect-2">
-                        Needs to use an aid or appliance to be able to take nutrition, or supervision to be able to take nutrition, or assistance to be able to cut up food
-                      </label>
-                    </div>
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="takingnutritionSelect-3" name="takingnutritionSelect" type="radio" value="Needs a therapeutic source to be able to take nutrition">
-                      <label class="govuk-label govuk-radios__label" for="takingnutritionSelect-3">
-                        Needs a therapeutic source to be able to take nutrition
-                      </label>
-                    </div>
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="takingnutritionSelect-4" name="takingnutritionSelect" type="radio" value="Needs prompting to be able to take nutrition">
-                      <label class="govuk-label govuk-radios__label" for="takingnutritionSelect-4">
-                        Needs prompting to be able to take nutrition
+                      <input class="govuk-radios__input" id="takingnutritionSelect-6" name="takingnutritionSelect" type="radio" value="Cannot convey food and drink to their mouth and needs another person to do so">
+                      <label class="govuk-label govuk-radios__label" for="takingnutritionSelect-6">
+                        Cannot convey food and drink to their mouth and needs another person to do so
                       </label>
                     </div>
                     <div class="govuk-radios__item">
@@ -84,16 +66,39 @@
                       </label>
                     </div>
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="takingnutritionSelect-6" name="takingnutritionSelect" type="radio" value="Cannot convey food and drink to their mouth and needs another person to do so">
-                      <label class="govuk-label govuk-radios__label" for="takingnutritionSelect-6">
-                        Cannot convey food and drink to their mouth and needs another person to do so
+                      <input class="govuk-radios__input" id="takingnutritionSelect-4" name="takingnutritionSelect" type="radio" value="Needs prompting to be able to take nutrition">
+                      <label class="govuk-label govuk-radios__label" for="takingnutritionSelect-4">
+                        Needs prompting to be able to take nutrition
                       </label>
                     </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="takingnutritionSelect-3" name="takingnutritionSelect" type="radio" value="Needs a therapeutic source to be able to take nutrition">
+                      <label class="govuk-label govuk-radios__label" for="takingnutritionSelect-3">
+                        Needs a therapeutic source to be able to take nutrition
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="takingnutritionSelect-2" name="takingnutritionSelect" type="radio" value="Needs - to use an aid or appliance to be able to take nutrition; or supervision to be able to take nutrition; or assistance to be able to cut up food.">
+                      <label class="govuk-label govuk-radios__label" for="takingnutritionSelect-2">
+                        Needs to use an aid or appliance to be able to take nutrition, or supervision to be able to take nutrition, or assistance to be able to cut up food
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="takingnutritionSelect" name="takingnutritionSelect" type="radio" value="Can take nutrition unaided">
+                      <label class="govuk-label govuk-radios__label" for="takingnutritionSelect">
+                        Can take nutrition unaided
+                      </label>
+                    </div>
+
+
+
+
+
                   </div>
 
                 </fieldset>
               </div>
-              
+
 
                     {{ govukTextarea({
                       name: "takingnutritionReason",
@@ -104,18 +109,18 @@
                         isPageHeading: false
                       },
                       value: data['takingnutritionReason']
-                    }) }}  
+                    }) }}
 
                     {{ govukButton({
                       text: "Save"
                     }) }}
                 </ul>
-    
+
 
 
             </form>
 
-              
+
 
             </div>
 

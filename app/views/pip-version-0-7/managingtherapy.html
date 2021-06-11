@@ -29,7 +29,7 @@
 
             <div class="govuk-grid-column-two-thirds">
               <form action="assessment-status" method="post">
-              
+
               {{ govukTextarea({
                 name: "managingtherapyNotes",
                 id: "managingtherapyNotes",
@@ -41,7 +41,7 @@
                   isPageHeading: false
                 },
                 value: data['managingtherapyNotes']
-              }) }}  
+              }) }}
 
               <div class="govuk-form-group">
 
@@ -53,27 +53,9 @@
                   </legend>
                   <div class="govuk-radios">
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="managingtherapySelect" name="managingtherapySelect" type="radio" value="Either – (i) does not receive medication or therapy or need to monitor a health condition; or can manage medication or therapy or monitor a health condition unaided.">
-                      <label class="govuk-label govuk-radios__label" for="managingtherapySelect">
-                        Either does not receive medication or therapy or need to monitor a health condition, or can manage medication or therapy or monitor a health condition unaided
-                      </label>
-                    </div>
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="managingtherapySelect-2" name="managingtherapySelect" type="radio" value="Needs any one or more of the following - to use an aid or appliance to be able to manage medication; supervision, prompting or assistance to be able to manage medication supervision, prompting or assistance to be able to monitor a health condition.">
-                      <label class="govuk-label govuk-radios__label" for="managingtherapySelect-2">
-                        Needs to use an aid or appliance to be able to manage medication, or needs supervision, prompting or assistance to be able to manage medication, or needs supervision, prompting or assistance to be able to monitor a health condition
-                      </label>
-                    </div>
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="managingtherapySelect-3" name="managingtherapySelect" type="radio" value="Needs supervision, prompting or assistance to be able to manage therapy that takes no more than 3.5 hours a week">
-                      <label class="govuk-label govuk-radios__label" for="managingtherapySelect-3">
-                        Needs supervision, prompting or assistance to be able to manage therapy that takes no more than 3.5 hours a week
-                      </label>
-                    </div>
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="managingtherapySelect-4" name="managingtherapySelect" type="radio" value=" Needs supervision, prompting or assistance to be able to manage therapy that takes more than 3.5 but no more than 7 hours a week.">
-                      <label class="govuk-label govuk-radios__label" for="managingtherapySelect-4">
-                        Needs supervision, prompting or assistance to be able to manage therapy that takes more than 3.5 but no more than 7 hours a week
+                      <input class="govuk-radios__input" id="managingtherapySelect-6" name="managingtherapySelect" type="radio" value="Needs supervision, prompting or assistance to be able to manage therapy that takes more than 14 hours a week">
+                      <label class="govuk-label govuk-radios__label" for="managingtherapySelect-6">
+                        Needs supervision, prompting or assistance to be able to manage therapy that takes more than 14 hours a week
                       </label>
                     </div>
                     <div class="govuk-radios__item">
@@ -81,18 +63,34 @@
                       <label class="govuk-label govuk-radios__label" for="managingtherapySelect-5">
                         Needs supervision, prompting or assistance to be able to manage therapy that takes more than 7 but no more than 14 hours a week
                       </label>
-                    </div>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="managingtherapySelect-4" name="managingtherapySelect" type="radio" value=" Needs supervision, prompting or assistance to be able to manage therapy that takes more than 3.5 but no more than 7 hours a week.">
+                        <label class="govuk-label govuk-radios__label" for="managingtherapySelect-4">
+                          Needs supervision, prompting or assistance to be able to manage therapy that takes more than 3.5 but no more than 7 hours a week
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="managingtherapySelect-3" name="managingtherapySelect" type="radio" value="Needs supervision, prompting or assistance to be able to manage therapy that takes no more than 3.5 hours a week">
+                        <label class="govuk-label govuk-radios__label" for="managingtherapySelect-3">
+                          Needs supervision, prompting or assistance to be able to manage therapy that takes no more than 3.5 hours a week
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="managingtherapySelect-2" name="managingtherapySelect" type="radio" value="Needs any one or more of the following - to use an aid or appliance to be able to manage medication; supervision, prompting or assistance to be able to manage medication supervision, prompting or assistance to be able to monitor a health condition.">
+                        <label class="govuk-label govuk-radios__label" for="managingtherapySelect-2">
+                          Needs to use an aid or appliance to be able to manage medication, or needs supervision, prompting or assistance to be able to manage medication, or needs supervision, prompting or assistance to be able to monitor a health condition
+                        </label>
+                      </div>
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="managingtherapySelect-6" name="managingtherapySelect" type="radio" value="Needs supervision, prompting or assistance to be able to manage therapy that takes more than 14 hours a week">
-                      <label class="govuk-label govuk-radios__label" for="managingtherapySelect-6">
-                        Needs supervision, prompting or assistance to be able to manage therapy that takes more than 14 hours a week
+                      <input class="govuk-radios__input" id="managingtherapySelect" name="managingtherapySelect" type="radio" value="Either – (i) does not receive medication or therapy or need to monitor a health condition; or can manage medication or therapy or monitor a health condition unaided.">
+                      <label class="govuk-label govuk-radios__label" for="managingtherapySelect">
+                        Either does not receive medication or therapy or need to monitor a health condition, or can manage medication or therapy or monitor a health condition unaided
                       </label>
                     </div>
-                  </div>
-
                 </fieldset>
               </div>
-              
+
 
                     {{ govukTextarea({
                       name: "managingtherapyReason",
@@ -103,18 +101,18 @@
                         isPageHeading: false
                       },
                       value: data['managingtherapyReason']
-                    }) }}  
+                    }) }}
 
                     {{ govukButton({
                       text: "Save"
                     }) }}
-                
-    
+
+
 
 
             </form>
 
-              
+
 
             </div>
 

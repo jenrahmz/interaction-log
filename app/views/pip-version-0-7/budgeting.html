@@ -42,7 +42,7 @@
                   isPageHeading: false
                 },
                 value: data['budgetingNotes']
-              }) }}  
+              }) }}
 
 
               <div class="govuk-form-group">
@@ -54,15 +54,9 @@
                   </legend>
                   <div class="govuk-radios">
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="budgetingSelect" name="budgetingSelect" type="radio" value="Can manage complex budgeting decisions unaided">
-                      <label class="govuk-label govuk-radios__label" for="budgetingSelect">
-                        Can manage complex budgeting decisions unaided
-                      </label>
-                    </div>
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="budgetingSelect-2" name="budgetingSelect" type="radio" value="Needs prompting or assistance to be able to make complex budgeting decisions">
-                      <label class="govuk-label govuk-radios__label" for="budgetingSelect-2">
-                        Needs prompting or assistance to be able to make complex budgeting decisions
+                      <input class="govuk-radios__input" id="budgetingSelect-4" name="budgetingSelect" type="radio" value="Cannot make any budgeting decisions at all">
+                      <label class="govuk-label govuk-radios__label" for="budgetingSelect-4">
+                        Cannot make any budgeting decisions at all
                       </label>
                     </div>
                     <div class="govuk-radios__item">
@@ -72,18 +66,22 @@
                       </label>
                     </div>
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="budgetingSelect-4" name="budgetingSelect" type="radio" value="Cannot make any budgeting decisions at all">
-                      <label class="govuk-label govuk-radios__label" for="budgetingSelect-4">
-                        Cannot make any budgeting decisions at all
+                      <input class="govuk-radios__input" id="budgetingSelect-2" name="budgetingSelect" type="radio" value="Needs prompting or assistance to be able to make complex budgeting decisions">
+                      <label class="govuk-label govuk-radios__label" for="budgetingSelect-2">
+                        Needs prompting or assistance to be able to make complex budgeting decisions
                       </label>
                     </div>
-                
-                   
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="budgetingSelect" name="budgetingSelect" type="radio" value="Can manage complex budgeting decisions unaided">
+                      <label class="govuk-label govuk-radios__label" for="budgetingSelect">
+                        Can manage complex budgeting decisions unaided
+                      </label>
+                    </div>
                   </div>
-              
+
                 </fieldset>
               </div>
-              
+
 
                     {{ govukTextarea({
                       name: "budgetingReason",
@@ -94,26 +92,26 @@
                         isPageHeading: false
                       },
                       value: data['budgetingReason']
-                    }) }}  
+                    }) }}
 
                     {{ govukButton({
                       text: "Save"
                     }) }}
                 </ul>
-    
+
 
 
             </form>
 
-            
 
-              
+
+
 
             </div>
 
             <div class="govuk-grid-column-one-third">
 
-              
+
 
             </div>
 
