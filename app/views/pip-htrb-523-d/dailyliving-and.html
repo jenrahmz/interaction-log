@@ -21,12 +21,12 @@
 
             <div class="govuk-grid-column-two-thirds">
 
-  <form action="dailyliving" method="post" id="question-form" novalidate>
+  <form action="mobility" method="post" id="question-form" novalidate>
 
     {% set reasonHtml %}
     {{ govukTextarea({
-      id: "part-not-met",
-      name: "part-not-met",
+      id: "part-not-met-dl",
+      name: "part-not-met-dl",
       label: {
         text: "Give details"
       }
@@ -34,11 +34,11 @@
     {% endset -%}
 
       {{ govukRadios({
-        idPrefix: "qp",
-        name: "qp",
+        idPrefix: "dl",
+        name: "dl",
         fieldset: {
           legend: {
-            text: "How long have the mobility restrictions lasted?",
+            text: "How long has the daily living restriction lasted?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--xl",
             hint: "Hint"
@@ -49,11 +49,11 @@
         },
         items: [
           {
-            value: "At least 3 months and are likely to last for 9 months more",
-            text: "At least 3 months and are likely to last for 9 months more"
+            value: "Yes",
+            text: "At least 3 months and is likely to last for 9 months more"
           },
           {
-            value: "Other",
+            value: "No",
             text: "Other",
             conditional: {
               html: reasonHtml
