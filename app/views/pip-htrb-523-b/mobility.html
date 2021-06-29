@@ -13,7 +13,7 @@
 
       {{ govukBackLink({
         text: "Back",
-        href: "check"
+        href: "dailyliving"
       }) }}
 
     <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
@@ -21,7 +21,7 @@
 
             <div class="govuk-grid-column-two-thirds">
 
-  <form action="dailyliving" method="post" id="question-form" novalidate>
+  <form action="review" method="post" id="question-form" novalidate>
 
     {% set reasonHtml %}
     {{ govukTextarea({
