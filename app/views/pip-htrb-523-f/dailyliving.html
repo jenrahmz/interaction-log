@@ -13,7 +13,7 @@
 
       {{ govukBackLink({
         text: "Back",
-        href: "check"
+        href: "assessment-status"
       }) }}
 
     <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
@@ -21,14 +21,14 @@
 
             <div class="govuk-grid-column-two-thirds">
 
-  <form action="review" method="post" id="question-form" novalidate>
+  <form action="mobility" method="post" id="question-form" novalidate>
 
     {% set reasonHtml %}
     {{ govukTextarea({
       id: "part-not-met-dl",
       name: "part-not-met-dl",
       label: {
-        text: "Which part has not been met?"
+        text: "Give details"
       }
     }) }}
     {% endset -%}
@@ -38,14 +38,14 @@
         name: "dl",
         fieldset: {
           legend: {
-            text: "Has the qualifying period and prospective test been met for daily living restrictions?",
+            text: "Is the claimant's daily living prognosis long enough for PIP?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--xl",
             hint: "Hint"
           }
         },
         hint: {
-          text: "The claimant must have had the functional restriction for at least 3 months and be likely to have it for a further 9 months to qualify for PIP."
+          text: "They must have had the functional restriction for at least 3 months and be likely to have it for a further 9 months."
         },
         items: [
           {
@@ -60,8 +60,8 @@
             }
           },
           {
-            value: "No daily living restrictions found",
-            text: "No daily living restrictions found"
+            value: "No daily living restriction found",
+            text: "No daily living restriction found"
           }
         ]
       }) }}
