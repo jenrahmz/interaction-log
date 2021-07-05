@@ -23,7 +23,7 @@
 
               <h1 class="govuk-heading-xl">Limited capability for work (LCW)</h1>
 
-  <form action="time-review" method="post" id="question-form" novalidate>
+  <form action="lcw-why" method="post" id="question-form" novalidate>
 
       {{ govukRadios({
         idPrefix: "lcw",
@@ -51,15 +51,7 @@
         ]
       }) }}
 
-      {{ govukTextarea({
-        name: "treataslcwrareasons",
-        id: "treataslcwrareasons",
-        label: {
-          text: "Why is this your recommendation?",
-          classes: "govuk-label--s",
-          isPageHeading: false
-        }
-      }) }}
+      
 
 
 </div>

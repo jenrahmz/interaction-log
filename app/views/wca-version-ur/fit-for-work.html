@@ -26,43 +26,19 @@
 
 <h1 class="govuk-heading-xl">Fit for work</h1>
 
-  <form action="submit" method="post" id="question-form" novalidate>
+  <form action="harmful-information" method="post" id="question-form" novalidate>
 
 
-    {% set reasonHtml %}
     {{ govukTextarea({
-      id: "harmfulinfotext",
-      name: "harmfulinfotext",
+      name: "whynotlcwrareasons",
+      id: "whynotlcwrareasons",
+      rows: "12",
       label: {
-        text: "Give details"
+        text: "Why did you not recommend LCW or LCWRA?",
+        classes: "govuk-label--s",
+        isPageHeading: false
       }
     }) }}
-    {% endset -%}
-
-      {{ govukRadios({
-        idPrefix: "harmfulinfo",
-        name: "harmfulinfo",
-        fieldset: {
-          legend: {
-            text: "Was any harmful information found?",
-            isPageHeading: false,
-            classes: "govuk-fieldset__legend--s"
-          }
-        },
-        items: [
-          {
-            value: "Yes",
-            text: "Yes",
-            conditional: {
-              html: reasonHtml
-            }
-          },
-          {
-            value: "No",
-            text: "No"
-          }
-        ]
-      }) }}
 
 
 <button class="govuk-button" data-module="govuk-button">
