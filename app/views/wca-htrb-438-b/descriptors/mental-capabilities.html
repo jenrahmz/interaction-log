@@ -27,7 +27,7 @@
                                             </span>
                                             {% if data['learningtasksdetails'] and data['learningtasksSelect'] %}
                                               <strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-                                            {% elseif data['learningtasksNotes'] %}
+                                            {% elseif data['learningtasksNotes'] or data['learningtasksSelect'] %}
                                             <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="eligibility-status">In Progress</strong>
                                             {% else %}
                                             <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Optional</strong>
@@ -41,7 +41,7 @@
                                               </span>
                                               {% if data['hazardsdangerdetails'] and data['hazardsdangerSelect'] %}
                                               <strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-                                            {% elseif data['hazardsdangerNotes'] %}
+                                            {% elseif data['hazardsdangerNotes'] or data['hazardsdangerSelect'] %}
                                             <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="eligibility-status">In Progress</strong>
                                             {% else %}
                                             <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Optional</strong>
@@ -56,7 +56,7 @@
                                                 </span>
                                                 {% if data['everydaytasksdetails'] and data['everydaytasksSelect'] %}
                                               <strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-                                            {% elseif data['everydaytasksNotes'] %}
+                                            {% elseif data['everydaytasksNotes'] or data['everydaytasksSelect'] %}
                                             <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="eligibility-status">In Progress</strong>
                                             {% else %}
                                             <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Optional</strong>
@@ -71,7 +71,7 @@
                                                   </span>
                                                   {% if data['copingdetails'] and data['copingSelect'] %}
                                               <strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-                                            {% elseif data['copingNotes'] %}
+                                            {% elseif data['copingNotes'] or data['copingSelect'] %}
                                             <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="eligibility-status">In Progress</strong>
                                             {% else %}
                                             <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Optional</strong>
@@ -86,7 +86,7 @@
                                                     </span>
                                                     {% if data['gettingaboutdetails'] and data['gettingaboutSelect'] %}
                                               <strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-                                            {% elseif data['gettingaboutNotes'] %}
+                                            {% elseif data['gettingaboutNotes'] or data['gettingaboutSelect'] %}
                                             <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="eligibility-status">In Progress</strong>
                                             {% else %}
                                             <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Optional</strong>
@@ -101,7 +101,7 @@
                                                       </span>
                                                       {% if data['socialsitudetails'] and data['socialsituSelect'] %}
                                               <strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-                                            {% elseif data['socialsituNotes'] %}
+                                            {% elseif data['socialsituNotes'] or data['socialsituSelect'] %}
                                             <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="eligibility-status">In Progress</strong>
                                             {% else %}
                                             <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Optional</strong>
@@ -116,7 +116,7 @@
                                                         </span>
                                                         {% if data['behaviourdetails'] and data['behaviourSelect'] %}
                                               <strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-                                            {% elseif data['behaviourNotes'] %}
+                                            {% elseif data['behaviourNotes'] or data['behaviourSelect'] %}
                                             <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="eligibility-status">In Progress</strong>
                                             {% else %}
                                             <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Optional</strong>

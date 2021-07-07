@@ -194,7 +194,7 @@
                         </span>
                         {% if data['eatingdetails'] and data['eatingSelect'] %}
                         <strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-                      {% elseif data['eatingNotes'] %}
+                      {% elseif data['eatingNotes'] or data['eatingSelect'] %}
                       <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="eligibility-status">In Progress</strong>
                       {% else %}
                       <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Optional</strong>

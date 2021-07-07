@@ -29,7 +29,7 @@
                           </span>
                             {% if data['mobilisingdetails'] and data['mobilisingSelect'] %}
                               <strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-                            {% elseif data['mobilisingNotes'] %}
+                            {% elseif data['mobilisingNotes'] or data['mobilisingSelect'] %}
                              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="eligibility-status">In Progress</strong>
                              {% else %}
                              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Optional</strong>
@@ -43,7 +43,7 @@
                             </span>
                               {% if data['standingsittingdetails'] and data['standingsittingSelect'] %}
                               <strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-                            {% elseif data['standingsittingNotes'] %}
+                            {% elseif data['standingsittingNotes'] or data['standingsittingSelect'] %}
                              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="eligibility-status">In Progress</strong>
                              {% else %}
                              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Optional</strong>
@@ -57,7 +57,7 @@
                           </span>
                           {% if data['reachingdetails'] and data['reachingSelect'] %}
                               <strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-                            {% elseif data['reachingNotes'] %}
+                            {% elseif data['reachingNotes'] or data['reachingSelect'] %}
                              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="eligibility-status">In Progress</strong>
                              {% else %}
                              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Optional</strong>
@@ -71,7 +71,7 @@
                             </span>
                             {% if data['pickingupdetails'] and data['pickingupSelect'] %}
                               <strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-                            {% elseif data['pickingupNotes'] %}
+                            {% elseif data['pickingupNotes'] or data['pickingupSelect'] %}
                              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="eligibility-status">In Progress</strong>
                              {% else %}
                              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Optional</strong>
@@ -85,7 +85,7 @@
                               </span>
                               {% if data['dexteritydetails'] and data['dexteritySelect'] %}
                               <strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-                            {% elseif data['dexterityNotes'] %}
+                            {% elseif data['dexterityNotes'] or data['dexteritySelect'] %}
                              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="eligibility-status">In Progress</strong>
                              {% else %}
                              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Optional</strong>
@@ -100,7 +100,7 @@
                           
                               {% if data['makingselfunderstooddetails'] and data['makingselfunderstoodSelect'] %}
                               <strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-                            {% elseif data['makingselfunderstoodNotes'] %}
+                            {% elseif data['makingselfunderstoodNotes'] or data['makingselfunderstoodNotes'] %}
                              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="eligibility-status">In Progress</strong>
                              {% else %}
                              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Optional</strong>
@@ -114,7 +114,7 @@
                                   </span> 
                             {% if data['understandingcommunicationdetails'] and data['understandingcommunicationSelect'] %}
                               <strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-                            {% elseif data['understandingcommunicationNotes'] %}
+                            {% elseif data['understandingcommunicationNotes'] or data['understandingcommunicationSelect'] %}
                              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="eligibility-status">In Progress</strong>
                              {% else %}
                              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Optional</strong>
@@ -128,7 +128,7 @@
                                     </span>
                                     {% if data['navigationdetails'] and data['navigationSelect'] %}
                               <strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-                            {% elseif data['navigationNotes'] %}
+                            {% elseif data['navigationNotes'] or data['navigationSelect'] %}
                              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="eligibility-status">In Progress</strong>
                              {% else %}
                              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Optional</strong>
@@ -142,7 +142,7 @@
                                       </span>
                                       {% if data['continencedetails'] and data['continenceSelect'] %}
                                         <strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-                                      {% elseif data['continenceNotes'] %}
+                                      {% elseif data['continenceNotes'] or data['continenceSelect'] %}
                                       <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="eligibility-status">In Progress</strong>
                                       {% else %}
                                       <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Optional</strong>
@@ -157,7 +157,7 @@
                                        
                                       {% if data['stayingconsciousdetails'] and data['stayingconsciousSelect'] %}
                                         <strong class="govuk-tag govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-                                      {% elseif data['stayingconsciousNotes'] %}
+                                      {% elseif data['stayingconsciousNotes'] or data['stayingconsciousSelect'] %}
                                       <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="eligibility-status">In Progress</strong>
                                       {% else %}
                                       <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Optional</strong>
