@@ -13,7 +13,7 @@
 
       {{ govukBackLink({
         text: "Back",
-        href: "assessment-overview"
+        href: "lcwra"
       }) }}
 
 
@@ -25,35 +25,18 @@
 
               <h1 class="govuk-heading-xl">Limited capability for work-related activity (LCWRA)</h1>
 
-  <form action="lcwra-why" method="post" id="question-form" novalidate>
+  <form action="time-review" method="post" id="question-form" novalidate>
 
-    {{ govukRadios({
-      idPrefix: "lcwra",
-      name: "lcwra",
-      fieldset: {
-        legend: {
-          text: "What is your recommendation?",
-          isPageHeading: true,
-          classes: "govuk-fieldset__legend--s"
-        }
-      },
-      items: [
-      {
-        value: "Functional LCWRA",
-        text: "Functional LCWRA"
-      },
-      {
-        value: "Treat as LCWRA",
-        text: "Treat as LCWRA"
-      },
-      {
-        value: "Risk to mental or physical health",
-        text: "Risk to mental or physical health"
+    {{ govukTextarea({
+      name: "lcwrareasons",
+      rows: "12",
+      id: "lcwrareasons",
+      label: {
+        text: "Why is this your recommendation?",
+        classes: "govuk-label--s",
+        isPageHeading: false
       }
-      ]
     }) }}
-
-
 
 </div>
 </div>

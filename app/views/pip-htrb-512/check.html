@@ -7,57 +7,94 @@
 
 {% block main %}
 
+{% include "includes/assessment-status-neutral.html" %}
+
   <div class="govuk-width-container {{ containerClasses }}">
     <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
         <div class="govuk-grid-row">
 
             <div class="govuk-grid-column-full">
 
-              <h1 class="govuk-heading-xl">Report content</h1>
+              {{ govukBackLink({
+                text: "Back",
+                href: "review"
+              }) }}
+
+            <h1 class="govuk-heading-xl">Check and complete the assessment</h1>
+
+            {% if data['assessmenttype' or 'attendeename' or 'attendeerelationship' or 'evidenceused'] %}
+            <h2 class="govuk-heading-m">Assessment administration</h2>
+            {% endif %}
 
               <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+                {% if data['assessmenttype'] %}
                   <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">Assessment type</dt>
                     <dd class="govuk-summary-list__value">{{ data['assessmenttype'] }}</dd>
+                    <dd class="govuk-summary-list__actions"><a class="govuk-link" href="assessment-type">Change<span class="govuk-visually-hidden"> name</span></a></dd>
                   </div> 
+                  {% endif %}
 
+                  {% if data['attendeename'] %}
                   <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">Additional attendee name</dt>
                     <dd class="govuk-summary-list__value">{{ data['attendeename'] }}</dd>
-                  </div> 
+                    <dd class="govuk-summary-list__actions"><a class="govuk-link" href="add-attendees#attendeename">Change<span class="govuk-visually-hidden"> name</span></a></dd>
+                  </div>
+                  {% endif %}
 
+                  {% if data['attendeerelationship'] %}
                   <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">Additional attendee relationship</dt>
                     <dd class="govuk-summary-list__value">{{ data['attendeerelationship'] }}</dd>
+                    <dd class="govuk-summary-list__actions"><a class="govuk-link" href="add-attendees#attendeerelationship">Change<span class="govuk-visually-hidden"> name</span></a></dd>
+                  </div>
+                  {% endif %}
+
+                  {% if data['evidenceused'] %}
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">Evidence</dt>
+                    <dd class="govuk-summary-list__value">{{ data['evidenceused'] }}</dd>
+                    <dd class="govuk-summary-list__actions"><a class="govuk-link" href="evidence-used">Change<span class="govuk-visually-hidden"> name</span></a></dd>
                   </div> 
+                  {% endif %}
                 </dl>
 
+                {% if data['historyofcondition' or 'currentmedication' or 'socialoccupational'] %}
               <h2 class="govuk-heading-m">History</h2>
+              {% endif %}
               <dl class="govuk-summary-list govuk-!-margin-bottom-9">
 
+                {% if data['historyofcondition'] %}
                   <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">History of condition</dt>
                     <dd class="govuk-summary-list__value">{{ data['historyofcondition'] }}</dd>
                   </div> 
+                  {% endif %}
 
+                  {% if data['currentmedication'] %}
                   <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">Current medication or treatment</dt>
                     <dd class="govuk-summary-list__value">{{ data['currentmedication'] }}</dd>
                  </div> 
+                  {% endif %}
 
+                  {% if data['socialoccupational'] %}
                   <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">Social and occupational history</dt>
                     <dd class="govuk-summary-list__value">{{ data['socialoccupational'] }}</dd>
                  </div> 
+                 {% endif %}
                  
                </dl>
 
-
-          <h2 class="govuk-heading-m">Day to day life</h2>
+               
+                 <h2 class="govuk-heading-m">Day to day life</h2>
+                 
                 <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-
-
                   
+                  {% if data['historyofcondition' or 'currentmedication' or 'socialoccupational'] %}
                   <div class="govuk-summary-list__row">
                       <dt class="govuk-summary-list__key no-bottom-border">Preparing food</dt>
                       <dd class="govuk-summary-list__value no-bottom-border"></dd>
@@ -74,6 +111,7 @@
                       <dt class="govuk-summary-list__key">What is the reason for this answer</dt>
                       <dd class="govuk-summary-list__value">{{ data['preparingfoodReason'] }}</dd>
                   </div>
+                  {% endif %}
 
 
                   <div class="govuk-summary-list__row">
@@ -336,6 +374,7 @@
                   </div> 
                     </dl>
          
+                    <a href="submit" class="govuk-button">Continue</a>
 
         </div>
 </div>

@@ -21,11 +21,11 @@
 
             <div class="govuk-grid-column-two-thirds">
 
-  <form action="submit" method="post" id="question-form" novalidate>
+  <form action="check" method="post" id="question-form" novalidate>
 
       {{ govukRadios({
-        idPrefix: "when-review",
-        name: "when-review",
+        idPrefix: "whenreview",
+        name: "whenreview",
         fieldset: {
           legend: {
             text: "When should this claim be reviewed?",
@@ -69,8 +69,8 @@
       }) }}
 
       {{ govukTextarea({
-        name: "review-time-reasons",
-        id: "review-time-reasons",
+        name: "reviewtimereasons",
+        id: "reviewtimereasons",
         label: {
           text: "Why should the claim be reviewed then?",
           classes: "govuk-label--s",
