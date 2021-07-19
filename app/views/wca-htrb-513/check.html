@@ -48,7 +48,7 @@
                   {% if data['conditionhistory'] %}
                   <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">Condition history</dt>
-                    <dd class="govuk-summary-list__value">{{ data['conditionhistory'] | safe }}</dd>
+                    <dd class="govuk-summary-list__value">{{ data['conditionhistory'] | striptags(true) | escape | nl2br }}</dd>
                     <dd class="govuk-summary-list__actions"><a class="govuk-link" href="condition-history">Change<span class="govuk-visually-hidden"> name</span></a></dd>
                   </div> 
                   {% endif %}
@@ -56,7 +56,7 @@
                   {% if data['medication'] %}
                   <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">Medication and side effects</dt>
-                    <dd class="govuk-summary-list__value">{{ data['medication'] | safe }}</dd>
+                    <dd class="govuk-summary-list__value">{{ data['medication'] | striptags(true) | escape | nl2br }}</dd>
                     <dd class="govuk-summary-list__actions"><a class="govuk-link" href="medication">Change<span class="govuk-visually-hidden"> name</span></a></dd>
                   </div> 
                   {% endif %}
@@ -64,7 +64,7 @@
                   {% if data['socialandwork'] %}
                   <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">Social and work history</dt>
-                    <dd class="govuk-summary-list__value">{{ data['socialandwork'] }}</dd>
+                    <dd class="govuk-summary-list__value">{{ data['socialandwork'] | striptags(true) | escape | nl2br }}</dd>
                     <dd class="govuk-summary-list__actions"><a class="govuk-link" href="social-and-work">Change<span class="govuk-visually-hidden"> name</span></a></dd>
                   </div> 
                   {% endif %}
@@ -72,7 +72,7 @@
                   {% if data['typicalday'] %}
                   <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">Typical day</dt>
-                    <dd class="govuk-summary-list__value">{{ data['typicalday'] }}</dd>
+                    <dd class="govuk-summary-list__value">{{ data['typicalday'] | striptags(true) | escape | nl2br }}</dd>
                     <dd class="govuk-summary-list__actions"><a class="govuk-link" href="typical-day">Change<span class="govuk-visually-hidden"> name</span></a></dd>
                   </div> 
                   {% endif %}
@@ -80,7 +80,7 @@
                   {% if data['evidenceused'] %}
                   <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">Evidence</dt>
-                    <dd class="govuk-summary-list__value">{{ data['evidenceused'] }}</dd>
+                    <dd class="govuk-summary-list__value">{{ data['evidenceused'] | striptags(true) | escape | nl2br }}</dd>
                     <dd class="govuk-summary-list__actions"><a class="govuk-link" href="evidence-used">Change<span class="govuk-visually-hidden"> name</span></a></dd>
                   </div> 
                   {% endif %}
@@ -100,7 +100,7 @@
                       </div>
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key no-bottom-border">Notes on mobilising and using steps</dt>
-                        <dd class="govuk-summary-list__value no-bottom-border">{{ data['mobilisingNotes'] }}</dd>
+                        <dd class="govuk-summary-list__value no-bottom-border">{{ data['mobilisingNotes'] | striptags(true) | escape | nl2br  }}</dd>
                     </div>
                     <div class="govuk-summary-list__row">
                       <dt class="govuk-summary-list__key no-bottom-border">Choose the descriptor that's most appropriate to the claimant</dt>
@@ -108,7 +108,7 @@
                     </div>
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key">Give details</dt>
-                        <dd class="govuk-summary-list__value">{{ data['mobilisingdetails'] }}</dd>
+                        <dd class="govuk-summary-list__value">{{ data['mobilisingdetails'] | striptags(true) | escape | nl2br  }}</dd>
                         <dd class="govuk-summary-list__actions"></dd>
                     </div>
                     {% endif %}
@@ -121,7 +121,7 @@
                       </div>
                       <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key no-bottom-border">Notes on standing and sitting</dt>
-                        <dd class="govuk-summary-list__value no-bottom-border">{{ data['standingsittingNotes'] }}</dd>
+                        <dd class="govuk-summary-list__value no-bottom-border">{{ data['standingsittingNotes'] | striptags(true) | escape | nl2br  }}</dd>
                       </div>
                     <div class="govuk-summary-list__row">
                       <dt class="govuk-summary-list__key no-bottom-border">Choose the descriptor that's most appropriate to the claimant</dt>
@@ -129,7 +129,7 @@
                     </div>
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key">Give details</dt>
-                        <dd class="govuk-summary-list__value">{{ data['standingsittingdetails'] }}</dd>
+                        <dd class="govuk-summary-list__value">{{ data['standingsittingdetails'] | striptags(true) | escape | nl2br }}</dd>
                         <dd class="govuk-summary-list__actions"></dd>
                     </div>
                     {% endif %}
@@ -142,7 +142,7 @@
                       </div>
                       <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key no-bottom-border">Notes on reaching</dt>
-                        <dd class="govuk-summary-list__value no-bottom-border">{{ data['reachingNotes'] }}</dd>
+                        <dd class="govuk-summary-list__value no-bottom-border">{{ data['reachingNotes'] | striptags(true) | escape | nl2br }}</dd>
                       </div>
                     <div class="govuk-summary-list__row">
                       <dt class="govuk-summary-list__key no-bottom-border">Which of these options describes how the claimant can reach for things?</dt>
@@ -150,7 +150,7 @@
                     </div>
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key">Give details</dt>
-                        <dd class="govuk-summary-list__value">{{ data['reachingdetails'] }}</dd>
+                        <dd class="govuk-summary-list__value">{{ data['reachingdetails'] | striptags(true) | escape | nl2br }}</dd>
                         <dd class="govuk-summary-list__actions"></dd>
                     </div>
                     {% endif %}
@@ -163,7 +163,7 @@
                       </div>
                       <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key no-bottom-border">Notes on picking up and moving things</dt>
-                        <dd class="govuk-summary-list__value no-bottom-border">{{ data['pickingupNotes'] }}</dd>
+                        <dd class="govuk-summary-list__value no-bottom-border">{{ data['pickingupNotes'] | striptags(true) | escape | nl2br }}</dd>
                       </div>
                     <div class="govuk-summary-list__row">
                       <dt class="govuk-summary-list__key no-bottom-border">Which of these options describes how the claimant can pick things up and move them?</dt>
@@ -171,7 +171,7 @@
                     </div>
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key">Give details</dt>
-                        <dd class="govuk-summary-list__value">{{ data['pickingupdetails'] }}</dd>
+                        <dd class="govuk-summary-list__value">{{ data['pickingupdetails'] | striptags(true) | escape | nl2br }}</dd>
                         <dd class="govuk-summary-list__actions"></dd>
                     </div>
                     {% endif %}
@@ -184,7 +184,7 @@
                       </div>
                       <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key no-bottom-border">Notes on manual dexterity</dt>
-                        <dd class="govuk-summary-list__value no-bottom-border">{{ data['dexterityNotes'] }}</dd>
+                        <dd class="govuk-summary-list__value no-bottom-border">{{ data['dexterityNotes'] | striptags(true) | escape | nl2br }}</dd>
                       </div>
                     <div class="govuk-summary-list__row">
                       <dt class="govuk-summary-list__key no-bottom-border">Select the highest scoring task that the claimant cannot do with either hand</dt>
@@ -192,7 +192,7 @@
                     </div>
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key">Give details</dt>
-                        <dd class="govuk-summary-list__value">{{ data['dexteritydetails'] }}</dd>
+                        <dd class="govuk-summary-list__value">{{ data['dexteritydetails'] | striptags(true) | escape | nl2br }}</dd>
                         <dd class="govuk-summary-list__actions"></dd>
                     </div>
                     {% endif %}
@@ -205,7 +205,7 @@
                       </div>
                     <div class="govuk-summary-list__row">
                       <dt class="govuk-summary-list__key no-bottom-border">Notes on making self understood</dt>
-                      <dd class="govuk-summary-list__value no-bottom-border">{{ data['makingselfunderstoodNotes'] }}</dd>
+                      <dd class="govuk-summary-list__value no-bottom-border">{{ data['makingselfunderstoodNotes'] | striptags(true) | escape | nl2br }}</dd>
                     </div>
                     <div class="govuk-summary-list__row">
                       <dt class="govuk-summary-list__key no-bottom-border">Which of these options describes how the claimant can communicate simple messages to people by speaking, writing or typing?</dt>
@@ -213,7 +213,7 @@
                     </div>
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key">Give details</dt>
-                        <dd class="govuk-summary-list__value">{{ data['makingselfunderstooddetails'] }}</dd>
+                        <dd class="govuk-summary-list__value">{{ data['makingselfunderstooddetails'] | striptags(true) | escape | nl2br }}</dd>
                         <dd class="govuk-summary-list__actions"></dd>
                     </div>
                     {% endif %}
@@ -226,7 +226,7 @@
                       </div>
                       <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key no-bottom-border">Notes on understanding communication</dt>
-                        <dd class="govuk-summary-list__value no-bottom-border">{{ data['understandingcommunicationNotes'] }}</dd>
+                        <dd class="govuk-summary-list__value no-bottom-border">{{ data['understandingcommunicationNotes'] | striptags(true) | escape | nl2br }}</dd>
                       </div>
                     <div class="govuk-summary-list__row">
                       <dt class="govuk-summary-list__key no-bottom-border">Which of these options describes how the claimant can understand simple messages from other people by hearing, reading or lip-reading?</dt>
@@ -234,7 +234,7 @@
                     </div>
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key">Give details</dt>
-                        <dd class="govuk-summary-list__value">{{ data['understandingcommunicationdetails'] }}</dd>
+                        <dd class="govuk-summary-list__value">{{ data['understandingcommunicationdetails'] | striptags(true) | escape | nl2br }}</dd>
                         <dd class="govuk-summary-list__actions"></dd>
                     </div>
                     {% endif %}
@@ -247,7 +247,7 @@
                       </div>
                       <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key no-bottom-border">Notes on navigation</dt>
-                        <dd class="govuk-summary-list__value no-bottom-border">{{ data['navigationNotes'] }}</dd>
+                        <dd class="govuk-summary-list__value no-bottom-border">{{ data['navigationNotes'] | striptags(true) | escape | nl2br }}</dd>
                       </div>
                     <div class="govuk-summary-list__row">
                       <dt class="govuk-summary-list__key no-bottom-border">Which of these options describes how well the claimant can get around safely?</dt>
@@ -255,7 +255,7 @@
                     </div>
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key">Give details</dt>
-                        <dd class="govuk-summary-list__value">{{ data['navigationdetails'] }}</dd>
+                        <dd class="govuk-summary-list__value">{{ data['navigationdetails'] | striptags(true) | escape | nl2br }}</dd>
                         <dd class="govuk-summary-list__actions"></dd>
                     </div>
                     {% endif %}
@@ -268,7 +268,7 @@
                       </div>
                       <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key no-bottom-border">Notes on continence</dt>
-                        <dd class="govuk-summary-list__value no-bottom-border">{{ data['continenceNotes'] }}</dd>
+                        <dd class="govuk-summary-list__value no-bottom-border">{{ data['continenceNotes'] | striptags(true) | escape | nl2br }}</dd>
                       </div>
                     <div class="govuk-summary-list__row">
                       <dt class="govuk-summary-list__key no-bottom-border">Which of these options describes how well the claimant can control their bladder and bowels?</dt>
@@ -276,7 +276,7 @@
                     </div>
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key">Give details</dt>
-                        <dd class="govuk-summary-list__value">{{ data['continencedetails'] }}</dd>
+                        <dd class="govuk-summary-list__value">{{ data['continencedetails'] | striptags(true) | escape | nl2br }}</dd>
                         <dd class="govuk-summary-list__actions"></dd>
                     </div>
                     {% endif %}
@@ -289,7 +289,7 @@
                       </div>
                       <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key no-bottom-border">Notes on staying conscious when awake</dt>
-                        <dd class="govuk-summary-list__value no-bottom-border">{{ data['stayingconsciousNotes'] }}</dd>
+                        <dd class="govuk-summary-list__value no-bottom-border">{{ data['stayingconsciousNotes'] | striptags(true) | escape | nl2br }}</dd>
                       </div>
                     <div class="govuk-summary-list__row">
                       <dt class="govuk-summary-list__key no-bottom-border">How often does the claimant lose consciousness because of fainting, seizures or blackouts?</dt>
@@ -297,7 +297,7 @@
                     </div>
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key">Give details</dt>
-                        <dd class="govuk-summary-list__value">{{ data['stayingconsciousdetails'] }}</dd>
+                        <dd class="govuk-summary-list__value">{{ data['stayingconsciousdetails'] | striptags(true) | escape | nl2br }}</dd>
                         <dd class="govuk-summary-list__actions"></dd>
                     </div>
                     {% endif %}
@@ -316,7 +316,7 @@
                       </div>
                       <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key no-bottom-border">Notes on learning to do new tasks</dt>
-                        <dd class="govuk-summary-list__value no-bottom-border">{{ data['learningtasksNotes'] }}</dd>
+                        <dd class="govuk-summary-list__value no-bottom-border">{{ data['learningtasksNotes'] | striptags(true) | escape | nl2br }}</dd>
                       </div>
                     <div class="govuk-summary-list__row">
                       <dt class="govuk-summary-list__key no-bottom-border">Which of these options describes how well the claimant can learn how to do new tasks?</dt>
@@ -324,7 +324,7 @@
                     </div>
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key">Give details</dt>
-                        <dd class="govuk-summary-list__value">{{ data['learningtasksdetails'] }}</dd>
+                        <dd class="govuk-summary-list__value">{{ data['learningtasksdetails'] | striptags(true) | escape | nl2br }}</dd>
                         <dd class="govuk-summary-list__actions"></dd>
                     </div>
                     {% endif %}
@@ -337,7 +337,7 @@
                       </div>
                       <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key no-bottom-border">Notes on awareness of hazards and danger</dt>
-                        <dd class="govuk-summary-list__value no-bottom-border">{{ data['hazardsdangerNotes'] }}</dd>
+                        <dd class="govuk-summary-list__value no-bottom-border">{{ data['hazardsdangerNotes'] | striptags(true) | escape | nl2br }}</dd>
                       </div>
                     <div class="govuk-summary-list__row">
                       <dt class="govuk-summary-list__key no-bottom-border">How often does the claimant need someone with them to help them stay safe?</dt>
@@ -345,7 +345,7 @@
                     </div>
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key">Give details</dt>
-                        <dd class="govuk-summary-list__value">{{ data['hazardsdangerdetails'] }}</dd>
+                        <dd class="govuk-summary-list__value">{{ data['hazardsdangerdetails'] | striptags(true) | escape | nl2br }}</dd>
                         <dd class="govuk-summary-list__actions"></dd>
                     </div>
                     {% endif %}
@@ -358,7 +358,7 @@
                       </div>
                       <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key no-bottom-border">Notes on planning, starting and finishing everyday tasks</dt>
-                        <dd class="govuk-summary-list__value no-bottom-border">{{ data['everydaytasksNotes'] }}</dd>
+                        <dd class="govuk-summary-list__value no-bottom-border">{{ data['everydaytasksNotes'] | striptags(true) | escape | nl2br }}</dd>
                       </div>
                     <div class="govuk-summary-list__row">
                       <dt class="govuk-summary-list__key no-bottom-border">Can the claimant plan, start and finish everyday tasks without difficulty?</dt>
@@ -366,7 +366,7 @@
                     </div>
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key">Give details</dt>
-                        <dd class="govuk-summary-list__value">{{ data['everydaytasksdetails'] }}</dd>
+                        <dd class="govuk-summary-list__value">{{ data['everydaytasksdetails'] | striptags(true) | escape | nl2br }}</dd>
                         <dd class="govuk-summary-list__actions"></dd>
                     </div>
                     {% endif %}
@@ -379,7 +379,7 @@
                       </div>
                       <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key no-bottom-border">Notes on coping with changes</dt>
-                        <dd class="govuk-summary-list__value no-bottom-border">{{ data['copingNotes'] }}</dd>
+                        <dd class="govuk-summary-list__value no-bottom-border">{{ data['copingNotes'] | striptags(true) | escape | nl2br }}</dd>
                       </div>
                     <div class="govuk-summary-list__row">
                       <dt class="govuk-summary-list__key no-bottom-border">How well can the claimant cope with changes to their routine?</dt>
@@ -387,7 +387,7 @@
                     </div>
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key">Give details</dt>
-                        <dd class="govuk-summary-list__value">{{ data['copingdetails'] }}</dd>
+                        <dd class="govuk-summary-list__value">{{ data['copingdetails'] | striptags(true) | escape | nl2br }}</dd>
                         <dd class="govuk-summary-list__actions"></dd>
                     </div>
                     {% endif %}
@@ -400,7 +400,7 @@
                       </div>
                     <div class="govuk-summary-list__row">
                       <dt class="govuk-summary-list__key no-bottom-border">Notes on getting about</dt>
-                      <dd class="govuk-summary-list__value no-bottom-border">{{ data['gettingaboutNotes'] }}</dd>
+                      <dd class="govuk-summary-list__value no-bottom-border">{{ data['gettingaboutNotes'] | striptags(true) | escape | nl2br }}</dd>
                     </div>
                     <div class="govuk-summary-list__row">
                       <dt class="govuk-summary-list__key no-bottom-border">Choose the descriptor that's most appropriate to the claimant</dt>
@@ -408,7 +408,7 @@
                     </div>
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key">Give details</dt>
-                        <dd class="govuk-summary-list__value">{{ data['gettingaboutdetails'] }}</dd>
+                        <dd class="govuk-summary-list__value">{{ data['gettingaboutdetails'] | striptags(true) | escape | nl2br }}</dd>
                         <dd class="govuk-summary-list__actions"></dd>
                     </div>
                     {% endif %}
@@ -421,7 +421,7 @@
                       </div>
                     <div class="govuk-summary-list__row">
                       <dt class="govuk-summary-list__key no-bottom-border">Notes on coping with social situations</dt>
-                      <dd class="govuk-summary-list__value no-bottom-border">{{ data['socialsituNotes'] }}</dd>
+                      <dd class="govuk-summary-list__value no-bottom-border">{{ data['socialsituNotes'] | striptags(true) | escape | nl2br }}</dd>
                     </div>
                     <div class="govuk-summary-list__row">
                       <dt class="govuk-summary-list__key no-bottom-border">How does the claimant cope with meeting and being with people?</dt>
@@ -429,7 +429,7 @@
                     </div>
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key">Give details</dt>
-                        <dd class="govuk-summary-list__value">{{ data['socialsitudetails'] }}</dd>
+                        <dd class="govuk-summary-list__value">{{ data['socialsitudetails'] | striptags(true) | escape | nl2br }}</dd>
                         <dd class="govuk-summary-list__actions"></dd>
                     </div>
                     {% endif %}
@@ -442,7 +442,7 @@
                       </div>
                     <div class="govuk-summary-list__row">
                       <dt class="govuk-summary-list__key no-bottom-border">Notes on behaving appropriately around other people</dt>
-                      <dd class="govuk-summary-list__value no-bottom-border">{{ data['behaviourNotes'] }}</dd>
+                      <dd class="govuk-summary-list__value no-bottom-border">{{ data['behaviourNotes'] | striptags(true) | escape | nl2br }}</dd>
                     </div>
                     <div class="govuk-summary-list__row">
                       <dt class="govuk-summary-list__key no-bottom-border">How often does the claimant behave in a way which upsets other people?</dt>
@@ -450,7 +450,7 @@
                     </div>
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key">Give details</dt>
-                        <dd class="govuk-summary-list__value">{{ data['behaviourdetails'] }}</dd>
+                        <dd class="govuk-summary-list__value">{{ data['behaviourdetails'] | striptags(true) | escape | nl2br }}</dd>
                         <dd class="govuk-summary-list__actions"></dd>
                     </div>
                     {% endif %}
@@ -466,7 +466,7 @@
                         </div>
                         <div class="govuk-summary-list__row">
                           <dt class="govuk-summary-list__key no-bottom-border">Notes on eating and drinking</dt>
-                          <dd class="govuk-summary-list__value no-bottom-border">{{ data['eatingNotes'] }}</dd>
+                          <dd class="govuk-summary-list__value no-bottom-border">{{ data['eatingNotes'] | striptags(true) | escape | nl2br }}</dd>
                         </div>
                       <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key no-bottom-border">Choose the descriptor that’s most appropriate</dt>
@@ -474,7 +474,7 @@
                       </div>
                       <div class="govuk-summary-list__row">
                           <dt class="govuk-summary-list__key">Give details</dt>
-                          <dd class="govuk-summary-list__value">{{ data['eatingdetails'] }}</dd>
+                          <dd class="govuk-summary-list__value">{{ data['eatingdetails'] | striptags(true) | escape | nl2br }}</dd>
                           <dd class="govuk-summary-list__actions"></dd>
                       </div>
                   </dl>
@@ -494,7 +494,7 @@
                     {% if data['lcwreasons'] %}
                     <div class="govuk-summary-list__row">
                       <dt class="govuk-summary-list__key">Why is this your recommendation?</dt>
-                      <dd class="govuk-summary-list__value">{{ data['lcwreasons'] }}</dd>
+                      <dd class="govuk-summary-list__value">{{ data['lcwreasons'] | striptags(true) | escape | nl2br }}</dd>
                       <dd class="govuk-summary-list__actions"><a class="govuk-link" href="lcw-why">Change<span class="govuk-visually-hidden"> name</span></a></dd>
                     </div> 
                     {% endif %}
@@ -510,7 +510,7 @@
                     {% if data['lcwrareasons'] %}
                     <div class="govuk-summary-list__row">
                       <dt class="govuk-summary-list__key">Why is this your recommendation?</dt>
-                      <dd class="govuk-summary-list__value">{{ data['lcwrareasons'] }}</dd>
+                      <dd class="govuk-summary-list__value">{{ data['lcwrareasons'] | striptags(true) | escape | nl2br }}</dd>
                       <dd class="govuk-summary-list__actions"><a class="govuk-link" href="lcwra-why">Change<span class="govuk-visually-hidden"> name</span></a></dd>
                     </div> 
                     {% endif %}
@@ -528,7 +528,7 @@
                     {% if data['fitforwork'] %}
                     <div class="govuk-summary-list__row">
                       <dt class="govuk-summary-list__key">Why is this your recommendation?</dt>
-                      <dd class="govuk-summary-list__value">{{ data['fitforwork'] }}</dd>
+                      <dd class="govuk-summary-list__value">{{ data['fitforwork'] | striptags(true) | escape | nl2br }}</dd>
                       <dd class="govuk-summary-list__actions"><a class="govuk-link" href="fit-for-work">Change<span class="govuk-visually-hidden"> name</span></a></dd>
                     </div> 
                     {% endif %}
