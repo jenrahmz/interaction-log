@@ -23,18 +23,18 @@
 
             <div class="govuk-grid-column-two-thirds">
 
-              <h1 class="govuk-heading-xl">Limited capability for work-related activity (LCWRA)</h1>
+
 
   <form action="time-review" method="post" id="question-form" novalidate>
 
     {{ govukTextarea({
       name: "treataslcwrareasons",
-      rows: "12",
       id: "treataslcwrareasons",
+      rows: "12",
       label: {
-        text: "Why is this your recommendation?",
-        classes: "govuk-label--s",
-        isPageHeading: false
+        text: "Why are you recommending LCWRA?",
+        classes: "govuk-label--xl",
+        isPageHeading: true
       }
     }) }}
 
