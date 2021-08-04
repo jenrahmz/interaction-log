@@ -31,6 +31,8 @@
 
             <form action="assessment-status" method="post">
 
+              {% if data['assessmenttype'] == "paper" %}  
+
               {{ govukTextarea({
                 name: "movingaroundNotes",
                 id: "movingaroundNotes",
@@ -43,6 +45,8 @@
                 },
                 value: data['movingaroundNotes']
               }) }}
+
+              {% endif %}
 
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset">
@@ -93,6 +97,7 @@
                 </fieldset>
               </div>
 
+              {% if data['assessmenttype'] == "paper" %}  
 
                     {{ govukTextarea({
                       name: "movingaroundReason",
@@ -104,6 +109,8 @@
                       },
                       value: data['movingaroundReason']
                     }) }}
+
+                    {% endif %}
 
                     {{ govukButton({
                       text: "Save"

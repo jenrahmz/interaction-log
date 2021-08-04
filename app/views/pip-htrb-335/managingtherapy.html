@@ -30,6 +30,8 @@
             <div class="govuk-grid-column-two-thirds">
               <form action="assessment-status" method="post">
 
+                {% if data['assessmenttype'] == "paper" %}  
+
               {{ govukTextarea({
                 name: "managingtherapyNotes",
                 id: "managingtherapyNotes",
@@ -42,6 +44,8 @@
                 },
                 value: data['managingtherapyNotes']
               }) }}
+
+              {% endif %}
 
               <div class="govuk-form-group">
 
@@ -91,6 +95,7 @@
                 </fieldset>
               </div>
 
+              {% if data['assessmenttype'] == "paper" %}  
 
                     {{ govukTextarea({
                       name: "managingtherapyReason",
@@ -102,6 +107,8 @@
                       },
                       value: data['managingtherapyReason']
                     }) }}
+
+                    {% endif %}
 
                     {{ govukButton({
                       text: "Save"

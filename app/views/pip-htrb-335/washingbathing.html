@@ -31,6 +31,8 @@
 
             <form action="assessment-status" method="post">
 
+              {% if data['assessmenttype'] == "paper" %}  
+
               {{ govukTextarea({
                 name: "washingbathingNotes",
                 id: "washingbathingNotes",
@@ -43,6 +45,8 @@
                 },
                 value: data['washingbathingNotes']
               }) }}
+
+              {% endif %}
 
 
               <div class="govuk-form-group">
@@ -100,6 +104,7 @@
                 </fieldset>
               </div>
 
+              {% if data['assessmenttype'] == "paper" %}  
 
                     {{ govukTextarea({
                       name: "washingbathingReason",
@@ -111,6 +116,8 @@
                       },
                       value: data['washingbathingReason']
                     }) }}
+
+                    {% endif %}
 
                     {{ govukButton({
                       text: "Save"
