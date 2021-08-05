@@ -31,7 +31,7 @@
 
             <form action="assessment-status" method="post">
 
-              {% if data['assessmenttype'] == "paper" %}  
+              {% if data['assessmenttype'] !== "Paper" %}
 
               {{ govukTextarea({
                 name: "journeysNotes",
@@ -97,7 +97,7 @@
                 </fieldset>
               </div>
 
-              {% if data['assessmenttype'] == "paper" %}  
+              {% if data['assessmenttype'] !== "Paper" %}
 
                     {{ govukTextarea({
                       name: "journeysReason",

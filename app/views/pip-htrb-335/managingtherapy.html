@@ -30,7 +30,7 @@
             <div class="govuk-grid-column-two-thirds">
               <form action="assessment-status" method="post">
 
-                {% if data['assessmenttype'] == "paper" %}  
+                {% if data['assessmenttype'] !== "Paper" %}
 
               {{ govukTextarea({
                 name: "managingtherapyNotes",
@@ -95,7 +95,7 @@
                 </fieldset>
               </div>
 
-              {% if data['assessmenttype'] == "paper" %}  
+              {% if data['assessmenttype'] !== "Paper" %}
 
                     {{ govukTextarea({
                       name: "managingtherapyReason",

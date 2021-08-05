@@ -20,10 +20,10 @@
               <ul class="app-task-list">
                   <li>
                     <h2 class="app-task-list__section">
-                      Assessment administration
+                      Assessment administration 
                     </h2>
                     <ul class="app-task-list__items govuk-!-padding-left-0">
-                      {% if data['assessmenttype'] == "paper" %}  
+                      {% if data['assessmenttype'] !== "Paper" %}  
                       <li class="app-task-list__item">
                             <span class="app-task-list__task-name">
                                 {% if data['attendeename'] %}
@@ -116,7 +116,7 @@
                         </script>
                       </li>
 
-                      {% if data['assessmenttype'] == "paper" %}  
+                      {% if data['assessmenttype'] !== "Paper" %}  
                       <li class="app-task-list__item">
                         <span class="app-task-list__task-name">
                           <a href="current-medication" aria-describedby="eligibility-status">
@@ -393,7 +393,7 @@
                     </ul>
                   </li>
 
-                  {% if data['assessmenttype'] == "paper" %}  
+                  {% if data['assessmenttype'] !== "Paper" %}  
                     <li>
                       <h2 class="app-task-list__section">
                         Current condition
