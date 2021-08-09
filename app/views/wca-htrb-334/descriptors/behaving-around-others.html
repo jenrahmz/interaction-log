@@ -25,6 +25,8 @@
 
               <form action="mental-capabilities" method="post">
 
+                {% if data['assessmenttype'] !== "Paper" %}  
+
                 {{ govukTextarea({
                   name: "behaviourNotes",
                   id: "behaviourNotes",
@@ -37,6 +39,8 @@
                   },
                   value: data['behaviourNotes']
                 }) }}  
+
+                {% endif %}
 
                 {{ govukRadios({
                   idPrefix: "behaviourSelect",
@@ -68,6 +72,9 @@
                   ]
                 }) }}
 
+
+                {% if data['assessmenttype'] !== "Paper" %}  
+
                     {{ govukTextarea({
                         name: "behaviourdetails",
                         id: "behaviourdetails",
@@ -78,6 +85,8 @@
                         },
                         value: data['behaviourdetails']
                       }) }}
+
+                      {% endif %}
 
                       {{ govukButton({
                         text: "Save"

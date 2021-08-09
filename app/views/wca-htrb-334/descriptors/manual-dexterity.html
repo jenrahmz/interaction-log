@@ -25,6 +25,8 @@
 
             <form action="physical-functions" method="post">
 
+              {% if data['assessmenttype'] !== "Paper" %}  
+
               {{ govukTextarea({
                 name: "dexterityNotes",
                 id: "dexterityNotes",
@@ -37,6 +39,8 @@
                 },
                 value: data['dexterityNotes']
               }) }}  
+
+              {% endif %}
 
                 {{ govukRadios({
                   idPrefix: "dexteritySelect",
@@ -76,6 +80,8 @@
                   ]
                 }) }}
 
+                {% if data['assessmenttype'] !== "Paper" %}  
+
                     {{ govukTextarea({
                         name: "dexteritydetails",
                         id: "dexteritydetails",
@@ -86,6 +92,8 @@
                         },
                         value: data['dexteritydetails']
                       }) }}
+
+                      {% endif %}
 
                       {{ govukButton({
                         text: "Save"

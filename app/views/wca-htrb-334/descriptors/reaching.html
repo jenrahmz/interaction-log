@@ -25,6 +25,8 @@
 
             <form action="physical-functions" method="post">
 
+              {% if data['assessmenttype'] !== "Paper" %}  
+
               {{ govukTextarea({
                 name: "reachingNotes",
                 id: "reachingNotes",
@@ -37,6 +39,8 @@
                 },
                 value: data['reachingNotes']
               }) }}  
+
+              {% endif %}
 
                 {{ govukRadios({
                   idPrefix: "reachingSelect",
@@ -68,6 +72,8 @@
                   ]
                 }) }}
 
+                {% if data['assessmenttype'] !== "Paper" %}  
+
                     {{ govukTextarea({
                         name: "reachingdetails",
                         id: "reachingdetails",
@@ -78,6 +84,8 @@
                         },
                         value: data['reachingdetails']
                       }) }}
+
+                      {% endif %}
 
                       {{ govukButton({
                         text: "Save"
