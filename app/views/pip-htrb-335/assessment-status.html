@@ -494,7 +494,11 @@
                   {% endif %}  
                 </ul>
 
-                <a href="review" class="govuk-button">Save and continue</a>
+                {% if data['assessmenttype'] !== "Paper" %}  
+                <a href="dailyliving" class="govuk-button">Save and continue</a>
+                {% else %}
+                <a href="recommend" class="govuk-button">Save and continue</a>
+                {% endif %}
 
             </div>
         </div>
