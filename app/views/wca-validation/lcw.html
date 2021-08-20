@@ -21,6 +21,16 @@
 
             <div class="govuk-grid-column-two-thirds">
 
+              {{ govukErrorSummary({
+                titleText: "There is a problem",
+                errorList: [
+                  {
+                    text: "Select your recommendation",
+                    href: "#lcw"
+                  }
+                ]
+              }) }}
+
               <h1 class="govuk-heading-xl">Limited capability for work (LCW)</h1>
 
   <form action="lcw-why" method="post" id="question-form" novalidate>

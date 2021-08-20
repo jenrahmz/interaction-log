@@ -21,6 +21,16 @@
 
             <div class="govuk-grid-column-two-thirds">
 
+              {{ govukErrorSummary({
+                titleText: "There is a problem",
+                errorList: [
+                  {
+                    text: "Select how you’re conducting this assessment",
+                    href: "#assessmenttype"
+                  }
+                ]
+              }) }}
+
   <form action="assessment-overview" method="post" id="question-form" novalidate>
 
     {{ govukRadios({
