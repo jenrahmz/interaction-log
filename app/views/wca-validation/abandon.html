@@ -25,73 +25,73 @@
 
     <h1 class="govuk-heading-xl">Abandon assessment</h1>
 
+    {% set reasonHtml %}
+    {{ govukTextarea({
+      id: "abandon-reason",
+      name: "abandon-reason",
+      label: {
+        text: "Reason"
+      },
+      errorMessage: {
+        text: "Enter a reason"
+      }
+    }) }}
+    {% endset -%}
 
-    <div class="govuk-form-group">
-      <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
-        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-          <h2 class="govuk-fieldset__heading">
-          Why do you need to abandon the assessment?
-          </h2>
-        </legend>
 
-       <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-         <div class="govuk-radios__item">
-           <input class="govuk-radios__input" id="abandon" name="abandon" type="radio" value="abandon" aria-describedby="sign-in-2-item-hint">
-           <label class="govuk-label govuk-radios__label" for="abandon">
-            Technical problem
-           </label>
-         </div>
-         <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="abandon2" name="abandon" type="radio" value="abandon" aria-describedby="sign-in-2-item-hint">
-            <label class="govuk-label govuk-radios__label" for="abandon">
-              Abusive behaviour
-            </label>
-          </div>
-           <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="abandon2" name="abandon" type="radio" value="abandon" aria-describedby="sign-in-2-item-hint">
-              <label class="govuk-label govuk-radios__label" for="abandon">
-                Affected by alcohol or drugs
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-               <input class="govuk-radios__input" id="abandon2" name="abandon" type="radio" value="abandon" aria-describedby="sign-in-2-item-hint">
-               <label class="govuk-label govuk-radios__label" for="abandon">
-                 No interpreter
-               </label>
-             </div>
-             <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="abandon2" name="abandon" type="radio" value="abandon" aria-describedby="sign-in-2-item-hint">
-                <label class="govuk-label govuk-radios__label" for="abandon">
-                  No appointee
-                </label>
-              </div>
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="noabandon" name="abandon" type="radio" value="noabandon" data-aria-controls="conditional-how-contacted-conditional">
-          <label class="govuk-label govuk-radios__label" for="how-contacted-conditional">
-            Other
-          </label>
-        </div>
-        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional">
-          <div class="govuk-form-group">
-            <label class="govuk-label" for="contact-by-email">
-              Reason
-            </label>
-            <textarea class="govuk-textarea" id="contact-by-email" name="contact-by-email" rows="5" type="email" spellcheck="false"></textarea>
-          </div>
+    {{ govukRadios({
+      idPrefix: "abandon",
+      name: "abandon",
+      fieldset: {
+        legend: {
+          text: "Why do you need to abandon the assessment?",
+          isPageHeading: false,
+          classes: "govuk-fieldset__legend--s"
+        }
+      },
+      errorMessage: {
+        text: "Select why you’re abandoning the assessment"
+      },
+      items: [
+        {
+          value: "Technical problem",
+          text: "Technical problem"
+        },
+        {
+          value: "Abusive behaviour",
+          text: "Abusive behaviour"
+        },
+        {
+          value: "Affected by alcohol or drugs",
+          text: "Affected by alcohol or drugs"
+        },
+        {
+          value: "No interpreter",
+          text: "No interpreter"
+        },
+        {
+          value: "No appointee",
+          text: "No appointee"
+        },
+        {
+          value: "Other",
+          text: "Other",
+          conditional: {
+            html: reasonHtml
+          }
+        }
+      ]
+    }) }}
 
-        </div>
-
-      </div>
     </fieldset>
 
-  </div>
+  <button class="govuk-button" data-module="govuk-button">
+    Save and continue
+  </button>
 
 </div>
 </div>
 
-<button class="govuk-button" data-module="govuk-button">
-  Save and continue
-</button>
 
 </main>
 </div>
