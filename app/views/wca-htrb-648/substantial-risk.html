@@ -33,19 +33,15 @@
       name: "substantialrisk",
       fieldset: {
         legend: {
-          text: "Have you found evidence of substantial risk to the mental or physical health of any person?",
+          text: "Is there substantial risk to anyone's physical or mental health?",
           isPageHeading: true,
           classes: "govuk-fieldset__legend--xl"
         }
       },
       items: [
         {
-          value: "Yes, if found fit for work",
-          text: "Yes, if found fit for work"
-        },
-        {
-          value: "Yes, if found fit for work related activity",
-          text: "Yes, if found fit for work related activity"
+          value: "Yes, if the claimant is found fit for work",
+          text: "Yes, if the claimant is found fit for work"
         },
         {
           value: "No",
@@ -68,16 +64,11 @@
 
 <script type="text/javascript">
     document.getElementById("substantialrisk").onclick = function() {
-          var link = "lcwra-risk";
+          var link = "substantial-risk-size";
       document.getElementById("question-form").action=link;
     }
-  
+
     document.getElementById("substantialrisk-2").onclick = function() {
-          var link = "lcw-risk";
-      document.getElementById("question-form").action=link;
-    }
-  
-    document.getElementById("substantialrisk-3").onclick = function() {
           var link = "life-threatening";
       document.getElementById("question-form").action=link;
     }

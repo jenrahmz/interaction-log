@@ -13,7 +13,7 @@
 
       {{ govukBackLink({
         text: "Back",
-        href: "pregnant"
+        href: "assessment-overview"
       }) }}
 
     <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
@@ -29,23 +29,23 @@
 
 
     {{ govukRadios({
-      idPrefix: "pregnancyrisk",
-      name: "pregnancyrisk",
+      idPrefix: "substantialrisk",
+      name: "substantialrisk",
       fieldset: {
         legend: {
-          text: "Is the claimant or their baby at risk?",
+          text: "What is your recommendation?",
           isPageHeading: true,
           classes: "govuk-fieldset__legend--xl"
         }
       },
       items: [
+      {
+        value: "The claimant has limited capability for work (LCW)",
+        text: "The claimant has limited capability for work (LCW)"
+      },
         {
-          value: "Yes, if the claimant is found fit for work",
-          text: "Yes, if the claimant is found fit for work"
-        },
-        {
-          value: "No",
-          text: "No"
+          value: "The claimant has limited capability for work-related activity (LCWRA)",
+          text: "The claimant has limited capability for work-related activity (LCWRA)"
         }
       ]
     }) }}
@@ -63,18 +63,13 @@
 </div>
 
 <script type="text/javascript">
-    document.getElementById("pregnancyrisk").onclick = function() {
-          var link = "lcwra-treat-as";
+    document.getElementById("substantialrisk").onclick = function() {
+          var link = "lcw-risk";
       document.getElementById("question-form").action=link;
     }
 
-    document.getElementById("pregnancyrisk-2").onclick = function() {
-          var link = "lcw-treat-as";
-      document.getElementById("question-form").action=link;
-    }
-
-    document.getElementById("pregnancyrisk-3").onclick = function() {
-          var link = "why-not-lcw-lcwra";
+    document.getElementById("substantialrisk-2").onclick = function() {
+          var link = "lcwra-risk";
       document.getElementById("question-form").action=link;
     }
 </script>
