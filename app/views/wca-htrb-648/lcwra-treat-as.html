@@ -21,22 +21,20 @@
 
             <div class="govuk-grid-column-two-thirds">
 
-
+              <h1 class="govuk-heading-xl">The claimant should be treated as having limited capability for work-related activity (LCWRA)</h1>
 
   <form action="check" method="post" id="question-form" novalidate>
 
-      {{ govukTextarea({
-        name: "treataslcwra",
-        id: "treataslcwra",
-        rows: "12",
+    {{ govukTextarea({
+      name: "treataslcwra",
+      id: "treataslcwra",
+      rows: "12",
         label: {
-          text: "Treat as LCWRA recommendation",
-          classes: "govuk-label--xl",
+          text: "Why is this your recommendation?",
+          classes: "govuk-label--m",
           isPageHeading: false
-        }
-      }) }}
-
-
+      }
+    }) }}
 </div>
 </div>
 
