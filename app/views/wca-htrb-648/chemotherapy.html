@@ -13,7 +13,7 @@
 
       {{ govukBackLink({
         text: "Back",
-        href: "assessment-overview"
+        href: "life-threatening"
       }) }}
 
     <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
@@ -29,23 +29,23 @@
 
 
     {{ govukRadios({
-      idPrefix: "substantialrisk",
-      name: "substantialrisk",
+      idPrefix: "chemo",
+      name: "chemo",
       fieldset: {
         legend: {
-          text: "What is your recommendation?",
+          text: "Is the claimant getting chemotherapy or radiotherapy?",
           isPageHeading: true,
           classes: "govuk-fieldset__legend--xl"
         }
       },
       items: [
-      {
-        value: "The claimant should be treated as having limited capability for work (LCW)",
-        text: "The claimant should be treated as having limited capability for work (LCW)"
-      },
         {
-          value: "The claimant should be treated as having limited capability for work-related activity (LCWRA)",
-          text: "The claimant should be treated as having limited capability for work-related activity (LCWRA)"
+          value: "Yes",
+          text: "Yes"
+        },
+        {
+          value: "No",
+          text: "No"
         }
       ]
     }) }}
@@ -63,13 +63,13 @@
 </div>
 
 <script type="text/javascript">
-    document.getElementById("substantialrisk").onclick = function() {
-          var link = "time-review";
+    document.getElementById("chemo").onclick = function() {
+          var link = "lcwra-treat-as";
       document.getElementById("question-form").action=link;
     }
 
-    document.getElementById("substantialrisk-2").onclick = function() {
-          var link = "time-review";
+    document.getElementById("chemo-2").onclick = function() {
+            var link = "threshold-not-met";
       document.getElementById("question-form").action=link;
     }
 </script>
