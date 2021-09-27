@@ -20,7 +20,7 @@
                 href: "review"
               }) }}
 
-            <h1 class="govuk-heading-xl">Check and complete the assessment</h1>
+            <h1 class="govuk-heading-xl">Check your answers</h1>
 
             {% if data['assessmenttype' or 'attendeename' or 'attendeerelationship' or 'evidenceused'] %}
             <h2 class="govuk-heading-m">Assessment administration</h2>
@@ -33,7 +33,7 @@
                     <dt class="govuk-summary-list__key">Assessment type</dt>
                     <dd class="govuk-summary-list__value">{{ data['assessmenttype'] }}</dd>
                     <dd class="govuk-summary-list__actions"><a class="govuk-link" href="assessment-type">Change<span class="govuk-visually-hidden"> name</span></a></dd>
-                  </div> 
+                  </div>
                   {% endif %}
 
                   {% if data['attendeename'] %}
@@ -57,7 +57,7 @@
                     <dt class="govuk-summary-list__key">Evidence</dt>
                     <dd class="govuk-summary-list__value">{{ data['evidenceused'] | striptags(true) | escape | nl2br }}</dd>
                     <dd class="govuk-summary-list__actions"><a class="govuk-link" href="evidence-used">Change<span class="govuk-visually-hidden"> name</span></a></dd>
-                  </div> 
+                  </div>
                   {% endif %}
                 </dl>
 
@@ -71,7 +71,7 @@
                     <dt class="govuk-summary-list__key">History of condition</dt>
                     <dd class="govuk-summary-list__value">{{ data['historyofcondition'] | striptags(true) | escape | nl2br }}</dd>
                     <dd class="govuk-summary-list__actions"><a class="govuk-link" href="historyofcondition">Change<span class="govuk-visually-hidden"> name</span></a></dd>
-                  </div> 
+                  </div>
                   {% endif %}
 
                   {% if data['currentmedication'] %}
@@ -79,7 +79,7 @@
                     <dt class="govuk-summary-list__key">Current medication or treatment</dt>
                     <dd class="govuk-summary-list__value">{{ data['currentmedication'] | striptags(true) | escape | nl2br }}</dd>
                     <dd class="govuk-summary-list__actions"><a class="govuk-link" href="current-medication">Change<span class="govuk-visually-hidden"> name</span></a></dd>
-                 </div> 
+                 </div>
                   {% endif %}
 
                   {% if data['socialoccupational'] %}
@@ -87,9 +87,9 @@
                     <dt class="govuk-summary-list__key">Social and occupational history</dt>
                     <dd class="govuk-summary-list__value">{{ data['socialoccupational'] | striptags(true) | escape | nl2br }}</dd>
                     <dd class="govuk-summary-list__actions"><a class="govuk-link" href="socialoccupational">Change<span class="govuk-visually-hidden"> name</span></a></dd>
-                 </div> 
+                 </div>
                  {% endif %}
-                 
+
                </dl>
 
                {% if data['preparingfoodNotes' or 'preparingfoodSelect' or 'preparingfoodReason' or 'takingnutritionNotes' or 'takingnutritionSelect' or 'takingnutritionReason' or 'managingtherapyNotes' or 'managingtherapySelect' or 'managingtherapyReason' or 'washingbathingNotes' or 'washingbathingSelect' or 'washingbathingReason' or 'toiletneedsNotes' or 'toiletneedsSelect' or 'toiletneedsReason' or 'dressingNotes' or 'dressingSelect' or 'dressingReason' or 'communicatingverballyNotes' or 'communicatingverballySelect' or 'communicatingverballyReason' or 'readingunderstandingNotes' or 'readingunderstandingSelect' or 'readingunderstandingReason' or 'facetofaceNotes' or 'facetofaceSelect' or 'facetofaceReason' or 'budgetingNotes' or 'budgetingSelect' or 'budgetingReason'] %}
@@ -119,7 +119,7 @@
                       </div>
                   </dl>
                   {% endif %}
-                  
+
                   {% if data['takingnutritionNotes' or 'takingnutritionSelect' or 'takingnutritionReason'] %}
                   <dl class="govuk-summary-list govuk-!-margin-bottom-9">
                       <div class="govuk-summary-list__row">
@@ -189,7 +189,7 @@
                       </div>
                   </dl>
                   {% endif %}
-               
+
                   {% if data['toiletneedsNotes' or 'toiletneedsSelect' or 'toiletneedsReason'] %}
                   <dl class="govuk-summary-list govuk-!-margin-bottom-9">
                       <div class="govuk-summary-list__row">
@@ -212,7 +212,7 @@
                       </div>
                   </dl>
                   {% endif %}
-                  
+
                   {% if data['dressingNotes' or 'dressingSelect' or 'dressingReason'] %}
                   <dl class="govuk-summary-list govuk-!-margin-bottom-9">
                       <div class="govuk-summary-list__row">
@@ -235,7 +235,7 @@
                       </div>
                   </dl>
                   {% endif %}
-                 
+
                   {% if data['communicatingverballyNotes' or 'communicatingverballySelect' or 'communicatingverballyReason'] %}
                   <dl class="govuk-summary-list govuk-!-margin-bottom-9">
                       <div class="govuk-summary-list__row">
@@ -258,8 +258,8 @@
                       </div>
                   </dl>
                   {% endif %}
-                 
-                
+
+
                   {% if data['readingunderstandingNotes' or 'readingunderstandingSelect' or 'readingunderstandingReason'] %}
                   <dl class="govuk-summary-list govuk-!-margin-bottom-9">
                       <div class="govuk-summary-list__row">
@@ -282,8 +282,8 @@
                       </div>
                   </dl>
                   {% endif %}
-                  
-                 
+
+
                   {% if data['facetofaceNotes' or 'facetofaceSelect' or 'facetofaceReason'] %}
                   <dl class="govuk-summary-list govuk-!-margin-bottom-9">
                       <div class="govuk-summary-list__row">
@@ -306,7 +306,7 @@
                       </div>
                   </dl>
                   {% endif %}
-                  
+
                   {% if data['budgetingNotes' or 'budgetingSelect' or 'budgetingReason'] %}
                   <dl class="govuk-summary-list govuk-!-margin-bottom-9">
                       <div class="govuk-summary-list__row">
@@ -380,7 +380,7 @@
                       </div>
                   </dl>
                   {% endif %}
-     
+
 
                   {% if data['physicalhealth' or 'mentalstate' or 'observations' or 'variability'] %}
                   <h2 class="govuk-heading-m">Current condition</h2>
@@ -393,7 +393,7 @@
                     <dt class="govuk-summary-list__key">Physical health</dt>
                     <dd class="govuk-summary-list__value">{{ data['physicalhealth'] }}</dd>
                     <dd class="govuk-summary-list__actions no-bottom-border"><a class="govuk-link" href="physicalhealth">Change<span class="govuk-visually-hidden"> name</span></a></dd>
-                 </div> 
+                 </div>
                  {% endif %}
 
                  {% if data['mentalstate'] %}
@@ -401,7 +401,7 @@
                     <dt class="govuk-summary-list__key">Mental state</dt>
                     <dd class="govuk-summary-list__value">{{ data['mentalstate'] }}</dd>
                     <dd class="govuk-summary-list__actions no-bottom-border"><a class="govuk-link" href="mentalstate">Change<span class="govuk-visually-hidden"> name</span></a></dd>
-                 </div> 
+                 </div>
                  {% endif %}
 
                  {% if data['observations'] %}
@@ -409,7 +409,7 @@
                     <dt class="govuk-summary-list__key">Observations</dt>
                     <dd class="govuk-summary-list__value">{{ data['observations'] }}</dd>
                     <dd class="govuk-summary-list__actions no-bottom-border"><a class="govuk-link" href="observations">Change<span class="govuk-visually-hidden"> name</span></a></dd>
-                 </div> 
+                 </div>
                  {% endif %}
 
                  {% if data['variability'] %}
@@ -417,9 +417,9 @@
                     <dt class="govuk-summary-list__key">Variability</dt>
                     <dd class="govuk-summary-list__value">{{ data['variability'] }}</dd>
                     <dd class="govuk-summary-list__actions no-bottom-border"><a class="govuk-link" href="variability">Change<span class="govuk-visually-hidden"> name</span></a></dd>
-                 </div> 
+                 </div>
                  {% endif %}
-       
+
                    </dl>
 
                    <h2 class="govuk-heading-m">Prognosis and review</h2>
@@ -448,10 +448,10 @@
                       <p>{{ data['reviewtimereasons'] }}</p>
                     </dd>
                     <dd class="govuk-summary-list__actions"><a class="govuk-link" href="review">Change<span class="govuk-visually-hidden"> name</span></a></dd>
-                  </div> 
+                  </div>
                 </dl>
 
-                
+
 
                    {% if data['abandon'] %}
                    <h2 class="govuk-heading-m">Abandon assessment</h2>
@@ -467,7 +467,7 @@
                   </div>
                 </dl>
 {% endif %}
-         
+
                     <a href="submit" class="govuk-button">Continue</a>
 
         </div>

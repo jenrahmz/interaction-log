@@ -20,7 +20,7 @@
                   href: "time-review"
                 }) }}
 
-              <h1 class="govuk-heading-xl govuk-!-margin-bottom-9">Check your recommendation</h1>
+              <h1 class="govuk-heading-xl govuk-!-margin-bottom-9">Check your answers</h1>
 
               <h2 class="govuk-heading-l">Assessment</h2>
 
@@ -30,7 +30,7 @@
                     <dt class="govuk-summary-list__key">Assessment type</dt>
                     <dd class="govuk-summary-list__value">{{ data['assessmenttype'] }}</dd>
                     <dd class="govuk-summary-list__actions"><a class="govuk-link" href="assessment-type">Change<span class="govuk-visually-hidden"> name</span></a></dd>
-                  </div> 
+                  </div>
                   {% endif %}
 
                   {% if data['attendeename'] %}
@@ -44,13 +44,13 @@
                     <dd class="govuk-summary-list__actions"><a class="govuk-link" href="add-attendees">Change<span class="govuk-visually-hidden"> name</span></a></dd>
                   </div>
                   {% endif %}
-                  
+
                   {% if data['conditionhistory'] %}
                   <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">Condition history</dt>
                     <dd class="govuk-summary-list__value">{{ data['conditionhistory'] | striptags(true) | escape | nl2br }}</dd>
                     <dd class="govuk-summary-list__actions"><a class="govuk-link" href="condition-history">Change<span class="govuk-visually-hidden"> name</span></a></dd>
-                  </div> 
+                  </div>
                   {% endif %}
 
                   {% if data['medication'] %}
@@ -58,7 +58,7 @@
                     <dt class="govuk-summary-list__key">Medication and side effects</dt>
                     <dd class="govuk-summary-list__value">{{ data['medication'] | striptags(true) | escape | nl2br }}</dd>
                     <dd class="govuk-summary-list__actions"><a class="govuk-link" href="medication">Change<span class="govuk-visually-hidden"> name</span></a></dd>
-                  </div> 
+                  </div>
                   {% endif %}
 
                   {% if data['socialandwork'] %}
@@ -66,7 +66,7 @@
                     <dt class="govuk-summary-list__key">Social and work history</dt>
                     <dd class="govuk-summary-list__value">{{ data['socialandwork'] | striptags(true) | escape | nl2br }}</dd>
                     <dd class="govuk-summary-list__actions"><a class="govuk-link" href="social-and-work">Change<span class="govuk-visually-hidden"> name</span></a></dd>
-                  </div> 
+                  </div>
                   {% endif %}
 
                   {% if data['typicalday'] %}
@@ -74,7 +74,7 @@
                     <dt class="govuk-summary-list__key">Typical day</dt>
                     <dd class="govuk-summary-list__value">{{ data['typicalday'] | striptags(true) | escape | nl2br }}</dd>
                     <dd class="govuk-summary-list__actions"><a class="govuk-link" href="typical-day">Change<span class="govuk-visually-hidden"> name</span></a></dd>
-                  </div> 
+                  </div>
                   {% endif %}
 
                   {% if data['evidenceused'] %}
@@ -82,7 +82,7 @@
                     <dt class="govuk-summary-list__key">Evidence</dt>
                     <dd class="govuk-summary-list__value">{{ data['evidenceused'] | striptags(true) | escape | nl2br }}</dd>
                     <dd class="govuk-summary-list__actions"><a class="govuk-link" href="evidence-used">Change<span class="govuk-visually-hidden"> name</span></a></dd>
-                  </div> 
+                  </div>
                   {% endif %}
 
                   </dl>
@@ -112,7 +112,7 @@
                         <dd class="govuk-summary-list__actions"></dd>
                     </div>
                     {% endif %}
-                    
+
                     {% if data['standingsittingSelect'] %}
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__pagehead no-bottom-border"><h3 class="govuk-heading-m">Standing and sitting</h3></dt>
@@ -481,14 +481,14 @@
                   {% endif %}
 
                   <h2 class="govuk-heading-l">Ending the assessment</h2>
-              
+
                   <dl class="govuk-summary-list govuk-!-margin-bottom-9">
                     {% if data['lcw'] %}
                     <div class="govuk-summary-list__row">
                       <dt class="govuk-summary-list__key">What is your recommendation?</dt>
                       <dd class="govuk-summary-list__value">{{ data['lcw'] }}</dd>
                       <dd class="govuk-summary-list__actions"><a class="govuk-link" href="lcw">Change<span class="govuk-visually-hidden"> name</span></a></dd>
-                    </div> 
+                    </div>
                     {% endif %}
 
                     {% if data['lcwreasons'] %}
@@ -496,7 +496,7 @@
                       <dt class="govuk-summary-list__key">Why is this your recommendation?</dt>
                       <dd class="govuk-summary-list__value">{{ data['lcwreasons'] | striptags(true) | escape | nl2br }}</dd>
                       <dd class="govuk-summary-list__actions"><a class="govuk-link" href="lcw-why">Change<span class="govuk-visually-hidden"> name</span></a></dd>
-                    </div> 
+                    </div>
                     {% endif %}
 
                     {% if data['lcwra'] %}
@@ -504,7 +504,7 @@
                       <dt class="govuk-summary-list__key">What is your recommendation?</dt>
                       <dd class="govuk-summary-list__value">{{ data['lcwra'] }}</dd>
                       <dd class="govuk-summary-list__actions"><a class="govuk-link" href="lcwra">Change<span class="govuk-visually-hidden"> name</span></a></dd>
-                    </div> 
+                    </div>
                     {% endif %}
 
                     {% if data['lcwrareasons'] %}
@@ -512,7 +512,7 @@
                       <dt class="govuk-summary-list__key">Why is this your recommendation?</dt>
                       <dd class="govuk-summary-list__value">{{ data['lcwrareasons'] | striptags(true) | escape | nl2br }}</dd>
                       <dd class="govuk-summary-list__actions"><a class="govuk-link" href="lcwra-why">Change<span class="govuk-visually-hidden"> name</span></a></dd>
-                    </div> 
+                    </div>
                     {% endif %}
 
                     {% if data['whenreview'] %}
@@ -522,7 +522,7 @@
                         <p>{{ data['reviewtimereasons'] }}</p>
                       </dd>
                       <dd class="govuk-summary-list__actions"><a class="govuk-link" href="time-review">Change<span class="govuk-visually-hidden"> name</span></a></dd>
-                    </div> 
+                    </div>
                     {% endif %}
 
                     {% if data['fitforwork'] %}
@@ -530,12 +530,12 @@
                       <dt class="govuk-summary-list__key">Why is this your recommendation?</dt>
                       <dd class="govuk-summary-list__value">{{ data['fitforwork'] | striptags(true) | escape | nl2br }}</dd>
                       <dd class="govuk-summary-list__actions"><a class="govuk-link" href="fit-for-work">Change<span class="govuk-visually-hidden"> name</span></a></dd>
-                    </div> 
+                    </div>
                     {% endif %}
 
 
                     </dl>
-                
+
 
                   <a href="complete" class="govuk-button">Make recommendation</a>
 
