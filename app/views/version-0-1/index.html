@@ -1,0 +1,110 @@
+{% extends "layout.html" %}
+{% set bodyAttributes = { id: "assess" } %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block main %}
+
+{% include "includes/assessment-status-neutral.html" %}
+
+  <div class="govuk-width-container {{ containerClasses }}">
+    <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
+        <div class="govuk-grid-row">
+
+            <div class="govuk-grid-column-one-quarter">
+              <ul class="govuk-list govuk-body-s">
+                <li class="govuk-!-margin-bottom-2"><a href="#" class="govuk-link--no-visited-state govuk-link--no-underline">Referrals</a></li>
+                <li class="govuk-!-margin-bottom-2"><a href="#" class="govuk-link--no-visited-state govuk-link--no-underline">Claimant details</a></li>
+                <li class="govuk-!-margin-bottom-2"><a href="#" class="govuk-link--no-visited-state govuk-link--no-underline">Appointments</a></li>
+                <li class="govuk-!-margin-bottom-2"><a href="#" class="govuk-link--no-visited-state govuk-link--no-underline">Evidence</a></li>
+                <li class="govuk-!-margin-bottom-2 leftnav-active"><a href="#archive" class="govuk-link--no-visited-state govuk-link--no-underline">Contact log</a></li>
+              </ul>
+            </div>
+
+            <div class="govuk-grid-column-three-quarters">
+
+              {{ govukTable({
+                caption: "Contact log",
+                captionClasses: "govuk-table__caption--l",
+                firstCellIsHeader: true,
+                head: [
+                  {
+                    text: "Date"
+                  },
+                  {
+                    text: "Contact method"
+                  },
+                  {
+                    text: "Action taken"
+                  },
+                  {
+                    text: "By"
+                  },
+                  {
+                    text: "Notes"
+                  }
+                ],
+                rows: [
+                  [
+                    {
+                      text: "21 October 2021"
+                    },
+                    {
+                      text: "Post"
+                    },
+                    {
+                      text: "Questionaire sent"
+                    },
+                    {
+                      text: "Phillip Scott"
+                    },
+                    {
+                      text: ""
+                    }
+                  ],
+                  [
+                    {
+                      text: "28 October 2021"
+                    },
+                    {
+                      text: "Phonecall to claimant"
+                    },
+                    {
+                      text: "Other - see comments"
+                    },
+                    {
+                      text: "Phillip Scott"
+                    },
+                    {
+                      text: "Called to introduce myself and chase the progress of the form"
+                    }
+                  ],
+                  [
+                    {
+                      text: "8 November 2021"
+                    },
+                    {
+                      text: "Post"
+                    },
+                    {
+                      text: "Questionaire recieved"
+                    },
+                    {
+                      text: "Andy Clarke"
+                    },
+                    {
+                      text: ""
+                    }
+                  ]
+                ]
+              }) }}
+              
+
+            </div>
+        </div>
+
+    </main>
+  </div>
+{% endblock %}
