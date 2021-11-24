@@ -9,93 +9,99 @@
 
 {% include "includes/assessment-status-neutral.html" %}
 
+
   <div class="govuk-width-container {{ containerClasses }}">
+    <div class="navigation-header">
+      <ul class="govuk-list">
+        <li class="govuk-!-margin-bottom-2"><a href="#" class="govuk-link--no-visited-state govuk-link--no-underline">Referrals</a></li>
+        <li class="govuk-!-margin-bottom-2"><a href="#" class="govuk-link--no-visited-state govuk-link--no-underline">Claimant details</a></li>
+        <li class="govuk-!-margin-bottom-2"><a href="#" class="govuk-link--no-visited-state govuk-link--no-underline">Appointments</a></li>
+        <li class="govuk-!-margin-bottom-2"><a href="#" class="govuk-link--no-visited-state govuk-link--no-underline">Evidence</a></li>
+        <li class="govuk-!-margin-bottom-2 active">Contact log</li>
+      </ul>
+    </div>
+
     <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
+
+      
+
         <div class="govuk-grid-row">
 
-            <div class="govuk-grid-column-one-quarter">
-              <ul class="govuk-list govuk-body-s">
-                <li class="govuk-!-margin-bottom-2"><a href="#" class="govuk-link--no-visited-state govuk-link--no-underline">Referrals</a></li>
-                <li class="govuk-!-margin-bottom-2"><a href="#" class="govuk-link--no-visited-state govuk-link--no-underline">Claimant details</a></li>
-                <li class="govuk-!-margin-bottom-2"><a href="#" class="govuk-link--no-visited-state govuk-link--no-underline">Appointments</a></li>
-                <li class="govuk-!-margin-bottom-2"><a href="#" class="govuk-link--no-visited-state govuk-link--no-underline">Evidence</a></li>
-                <li class="govuk-!-margin-bottom-2 leftnav-active"><a href="#archive" class="govuk-link--no-visited-state govuk-link--no-underline">Contact log</a></li>
-              </ul>
-            </div>
+          
 
-            <div class="govuk-grid-column-three-quarters">
+            <div class="govuk-grid-column-full">
+
+              <h1 class="govuk-heading-l">Contact log</h1>
+              <a href="referral" class="govuk-button govuk-button--secondary">Add new entry</a>
 
               {{ govukTable({
-                caption: "Contact log",
-                captionClasses: "govuk-table__caption--l",
-                firstCellIsHeader: true,
                 head: [
                   {
                     text: "Date"
                   },
                   {
-                    text: "Contact method"
+                    text: "Referral"
+                  },
+                  {
+                    text: "Channel"
                   },
                   {
                     text: "Action taken"
                   },
                   {
                     text: "By"
-                  },
-                  {
-                    text: "Notes"
                   }
                 ],
                 rows: [
                   [
                     {
-                      text: "21 October 2021"
+                      text: "21 Oct 2021"
                     },
                     {
-                      text: "Post"
+                      text: "UC"
+                    },
+                    {
+                      text: "Post to claimant"
                     },
                     {
                       text: "Questionaire sent"
                     },
                     {
                       text: "Phillip Scott"
-                    },
-                    {
-                      text: ""
                     }
                   ],
                   [
                     {
-                      text: "28 October 2021"
+                      text: "28 Oct 2021"
+                    },
+                    {
+                      text: "UC"
                     },
                     {
                       text: "Phonecall to claimant"
                     },
                     {
-                      text: "Other - see comments"
+                      text: "Other: Called to introduce myself and chase the progress of the form"
                     },
                     {
                       text: "Phillip Scott"
-                    },
-                    {
-                      text: "Called to introduce myself and chase the progress of the form"
                     }
                   ],
                   [
                     {
-                      text: "8 November 2021"
+                      text: "8 Nov 2021"
                     },
                     {
-                      text: "Post"
+                      text: "UC"
+                    },
+                    {
+                      text: "Post from claimant"
                     },
                     {
                       text: "Questionaire recieved"
                     },
                     {
                       text: "Andy Clarke"
-                    },
-                    {
-                      text: ""
                     }
                   ]
                 ]
