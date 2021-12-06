@@ -283,3 +283,110 @@ hr { height:0px; border-top:1px solid #b1b4b6; border-bottom: 0;}
 .hmrc-timeline__event:last-child {
     padding-bottom: 0;
 }
+
+
+// MOJ Timeline
+
+.moj-timeline {
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.moj-timeline:before {
+    background-color: #1d70b8;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 10px;
+    width: 5px;
+}
+
+.moj-timeline__item {
+    padding-bottom: 30px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.moj-timeline__item:before {
+    background-color: #1d70b8;
+    content: "";
+    height: 5px;
+    left: 0;
+    position: absolute;
+    top: 10px;
+    width: 15px;
+}
+
+.moj-timeline__title {
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+    display: inline;
+}
+
+.moj-timeline__byline {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+    color: #505a5f;
+    display: inline;
+    margin: 0;
+}
+
+.moj-timeline__date {
+    font-family: "GDS Transport",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 14px;
+    font-size: .875rem;
+    line-height: 1.14286;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.moj-timeline__description {
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+    margin-top: 20px;
+}
+
+@media (min-width: 40.0625em) {
+    .moj-timeline__title {
+        font-size: 19px;
+        font-size: 1.1875rem;
+        line-height: 1.31579;
+    }
+
+    .moj-timeline__byline {
+        font-size: 19px;
+        font-size: 1.1875rem;
+        line-height: 1.31579;
+    }
+
+    .moj-timeline__date {
+        font-size: 16px;
+        font-size: 1rem;
+        line-height: 1.25;
+    }
+
+    .moj-timeline__description {
+    font-size: 19px;
+    font-size: 1.1875rem;
+    line-height: 1.31579;
+}
+}
