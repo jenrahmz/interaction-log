@@ -1,0 +1,117 @@
+{% extends "layout.html" %}
+{% set bodyAttributes = { id: "assess" } %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block main %}
+
+{% include "includes/assessment-status-neutral.html" %}
+
+
+  <div class="govuk-width-container {{ containerClasses }}">
+    <div class="navigation-header">
+      <ul class="govuk-list">
+        <li class="govuk-!-margin-bottom-2"><a href="#" class="govuk-link--no-visited-state govuk-link--no-underline">Referrals</a></li>
+        <li class="govuk-!-margin-bottom-2"><a href="#" class="govuk-link--no-visited-state govuk-link--no-underline">Claimant details</a></li>
+        <li class="govuk-!-margin-bottom-2"><a href="#" class="govuk-link--no-visited-state govuk-link--no-underline">Appointments</a></li>
+        <li class="govuk-!-margin-bottom-2"><a href="#" class="govuk-link--no-visited-state govuk-link--no-underline">Evidence</a></li>
+        <li class="govuk-!-margin-bottom-2 active">Claimant log</li>
+      </ul>
+    </div>
+
+    <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
+
+      
+
+        <div class="govuk-grid-row">
+
+          
+
+            <div class="govuk-grid-column-two-thirds">
+
+              <form action="outgoing-channel" method="post">
+
+              {{ govukBackLink({
+                text: "Back",
+                href: "outgoing"
+              }) }}
+
+              <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+  
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                
+                  <h1 class="govuk-fieldset__heading">
+                    Assessment booking details
+                  </h1>
+                
+                </legend>
+
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                      <h1 class="govuk-fieldset__heading">
+                        Assessment type
+                      </h1>
+                    </legend>
+                    <div class="govuk-radios" data-module="govuk-radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="month">
+                        <label class="govuk-label govuk-radios__label" for="changed-name">
+                          Telephone
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="year">
+                        <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                          Face to face
+                        </label>
+                      </div>
+                    </div>
+                
+                  </fieldset>
+                </div>
+
+
+         
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-label--s" for="date">
+                              Date of assessment
+                            </label>
+                          <input class="govuk-input govuk-!-width-one-third" id="date" name="date" type="date">
+                          </div>  
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-label--s" for="time">
+                              Time of assessment
+                            </label>      
+                            <div id="time-hint" class="govuk-hint">
+                              For example 12:30pm
+                            </div>          
+                          <input class="govuk-input govuk-!-width-one-third" id="time" name="time" type="text" aria-describedby="time-hint">
+                          </div>     
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-label--s" for="three-quarters">
+                              Assessor
+                            </label>
+                            <input class="govuk-input govuk-!-width-three-quarters" id="three-quarters" name="three-quarters" type="text">
+                          </div>
+                           
+
+              </fieldset>
+              </div>
+
+              {{ govukButton({
+                text: "Continue"
+              }) }}
+
+            </form>
+
+            </div>
+        </div>
+
+    </main>
+  </div>
+
+{% endblock %}
