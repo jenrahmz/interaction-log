@@ -38,31 +38,31 @@
 
               <form id="question-form" method="post">
 
-              {{ govukRadios({
-                idPrefix: "whattoadd",
-                name: "whattoadd",
-                fieldset: {
-                  legend: {
-                    text: "What are you adding to the log?",
-                    isPageHeading: true,
-                    classes: "govuk-fieldset__legend--l"
-                  }
-                },
-                items: [
-                  {
-                    value: "outgoing",
-                    text: "We contacted the claimant"
+                {{ govukRadios({
+                  idPrefix: "whattoadd",
+                  name: "whattoadd",
+                  fieldset: {
+                    legend: {
+                      text: "Why are you adding to the log?",
+                      isPageHeading: true,
+                      classes: "govuk-fieldset__legend--l"
+                    }
                   },
-                  {
-                    value: "incoming",
-                    text: "The claimant contacted us"
-                  },
-                  {
-                    value: "event",
-                    text: "Something changed with the claimant's claim"
-                  }
-                ]
-              }) }}
+                  items: [
+                    {
+                      value: "outgoing",
+                      text: "We contacted the claimant"
+                    },
+                    {
+                      value: "incoming",
+                      text: "The claimant contacted us"
+                    },
+                    {
+                      value: "event",
+                      text: "The claim has changed"
+                    }
+                  ]
+                }) }}
 
               {{ govukButton({
                 text: "Continue"
