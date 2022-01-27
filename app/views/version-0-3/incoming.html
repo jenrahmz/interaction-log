@@ -31,7 +31,7 @@
 
             <div class="govuk-grid-column-two-thirds">
 
-              <form action="incoming-channel" method="post">
+              <form action="incoming-channel" id="question-form" method="post">
 
               {{ govukBackLink({
                 text: "Back",
@@ -65,6 +65,10 @@
                     text: "Returned questionnaire"
                   },
                   {
+                    value: "Rescheduled an assessment",
+                    text: "Rescheduled an assessment"
+                  },
+                  {
                     value: "Withdrew their claim",
                     text: "Withdrew their claim"
                   },
@@ -93,4 +97,13 @@
 
     </main>
   </div>
+
+
+  <script type="text/javascript">
+    document.getElementById("type-2").onclick = function() {
+          var link = "assessment-booking";
+      document.getElementById("question-form").action=link;
+    }
+  </script>
+
 {% endblock %}
