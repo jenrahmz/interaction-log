@@ -390,3 +390,61 @@ hr { height:0px; border-top:1px solid #b1b4b6; border-bottom: 0;}
     line-height: 1.31579;
 }
 }
+
+// DWP Timeline
+
+.dwp-timeline {
+    font-family: Arial, sans-serif;
+    border-left: 3px solid #1d70b8;
+    list-style-type: none;
+    padding: 0;
+}
+
+.dwp-timeline__entry {
+    margin: 2em 0;
+    padding-left: 1.125em;
+    position: relative;
+
+   // width: 15px;
+    top: -.6em;
+}
+
+
+.dwp-timeline__entry::before {
+    background-color: #1d70b8;
+    content: "";
+    height: 5px;
+    content: '';
+    height: 3px;
+    left: 0;
+    position: absolute;
+    top: 10px;
+    top: .6em;
+    width: 10px;
+    }  
+
+
+.hidden-radio-post{
+    display: none;
+}
+
+.button-link-hack{
+    color: #1d70b8;
+    padding: 0;
+border: none;
+background: none;
+font-size: 19px;
+    font-size: 1.1875rem;
+    line-height: 1.31579;
+    font-family: "GDS Transport", arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-decoration: underline;
+    cursor: pointer;
+    text-decoration: underline;
+    padding-bottom: 7px;
+}
+
+.button-link-hack:hover {
+    text-decoration: underline 3px solid #1d70b8;
+  }

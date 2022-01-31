@@ -1,0 +1,95 @@
+{% extends "layout.html" %}
+{% set bodyAttributes = { id: "assess" } %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block main %}
+
+{% include "includes/assessment-status-neutral.html" %}
+
+
+  <div class="govuk-width-container {{ containerClasses }}">
+    <div class="navigation-header">
+      <ul class="govuk-list">
+        <li class="govuk-!-margin-bottom-2"><a href="#" class="govuk-link--no-visited-state govuk-link--no-underline">Referrals</a></li>
+        <li class="govuk-!-margin-bottom-2"><a href="#" class="govuk-link--no-visited-state govuk-link--no-underline">Claimant details</a></li>
+        <li class="govuk-!-margin-bottom-2"><a href="#" class="govuk-link--no-visited-state govuk-link--no-underline">Appointments</a></li>
+        <li class="govuk-!-margin-bottom-2"><a href="#" class="govuk-link--no-visited-state govuk-link--no-underline">Evidence</a></li>
+        <li class="govuk-!-margin-bottom-2 active">Claimant log</li>
+      </ul>
+    </div>
+
+    <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
+
+      
+
+        <div class="govuk-grid-row">
+
+          
+
+            <div class="govuk-grid-column-two-thirds">
+
+            
+
+              {{ govukBackLink({
+                text: "Back",
+                href: "index"
+              }) }}
+
+              <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+  
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                
+                  <h1 class="govuk-fieldset__heading">
+                    What do you need to edit about this entry?
+                  </h1>
+                
+                </legend>
+
+                <div class="govuk-inset-text" style="margin-top:15px;">
+                  <h2 class="govuk-heading-s govuk-!-margin-bottom-1">{{ data['action'] }}   {{ data['action-details'] }} </h2>  
+                  <p class="govuk-caption-m govuk-!-margin-bottom-1">by Phillip Smith</p>
+                  <p class="govuk-caption-m">
+                    28 January 2022 at {{ data['date'] }} {{ data['time'] }} {{ data['time2'] }} 
+                  </p>
+              
+                  <div class="moj-timeline__description">  {{ data['claim'] }} {{ data['contact-method'] }}</div>
+                </div>
+                
+              
+                <form action="/version-0-3-1/edit-page" method="post" class="form">
+
+                <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="entry-edit" name="entry" type="radio" value="edit" {{ checked("entry", "edit") }}>
+                    <label class="govuk-label govuk-radios__label" for="entry-edit">
+                      Edit this entry
+                    </label>
+                  </div>
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="entry-delete" name="entry" type="radio" value="delete" {{ checked("entry", "delete") }}>
+                    <label class="govuk-label govuk-radios__label" for="entry-delete">
+                     Delete this entry
+                    </label>
+                  </div>
+                 
+              
+                 
+          </div><br>
+          
+              <button class="govuk-button" data-module="govuk-button">Continue</button>
+      
+            </form>
+
+          </fieldset>
+
+            </div>
+        </div>
+
+    </main>
+  </div>
+{% endblock %}
