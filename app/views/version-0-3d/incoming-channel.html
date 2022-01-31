@@ -33,10 +33,9 @@
 
               <form action="incoming-date" method="post">
 
-              {{ govukBackLink({
-                text: "Back",
-                href: "incoming"
-              }) }}
+           
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
 
               {{ govukRadios({
                 idPrefix: "type",
