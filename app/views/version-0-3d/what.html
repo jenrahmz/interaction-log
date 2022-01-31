@@ -31,67 +31,60 @@
 
             <div class="govuk-grid-column-two-thirds">
 
-              {{ govukBackLink({
-                text: "Back",
-                href: "referral"
-              }) }}
+              <form action="what-contact-type" method="post" class="form">
 
-              <form id="question-form" method="post">
+                <h1 class="govuk-heading-l">
+                  Why are you adding a new entry?
 
-                {{ govukRadios({
-                  idPrefix: "whattoadd",
-                  name: "whattoadd",
-                  fieldset: {
-                    legend: {
-                      text: "Why are you adding a new entry?",
-                      isPageHeading: true,
-                      classes: "govuk-fieldset__legend--l"
-                    }
-                  },
-                  items: [
-                    {
-                      value: "outgoing",
-                      text: "We contacted the claimant"
-                    },
-                    {
-                      value: "incoming",
-                      text: "The claimant contacted us"
-                    },
-                    {
-                      value: "event",
-                      text: "The claim has changed"
-                    }
-                  ]
-                }) }}
-
-              {{ govukButton({
-                text: "Continue"
-              }) }}
-
-            </form>
-
-            </div>
+  
+                </h1>
+        
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                 
+                  <div class="govuk-radios govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="what-outgoing" name="what" type="radio" value="outgoing" {{ checked("what", "outgoing") }}>
+                      <label class="govuk-label govuk-radios__label" for="what-outgoing">
+                        We contacted the claimant
+                      </label>
+                    </div>
+  
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="what-incoming" name="what" type="radio" value="incoming" {{ checked("what", "incoming") }}>
+                      <label class="govuk-label govuk-radios__label" for="what-incoming">
+                        The claimant contacted us
+                      </label>
+                    </div>
+  
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="what-event" name="what" type="radio" value="event" {{ checked("what", "event") }}>
+                      <label class="govuk-label govuk-radios__label" for="what-event">
+                        The claim has changed
+                      </label>
+                    </div>
+  
+                   
+                    </div>
+                  </fieldset>
+  
+        <br>
+                <button class="govuk-button" >Save and continue</button>
+        
+              </form>
+  
+                   
+                   
+              
+                    </div>
+                  </div>
+              
+               
+              </div>
         </div>
 
     </main>
   </div>
 
-  <script type="text/javascript">
-    document.getElementById("whattoadd").onclick = function() {
-          var link = "outgoing";
-      document.getElementById("question-form").action=link;
-    }
-  
-    document.getElementById("whattoadd-2").onclick = function() {
-          var link = "incoming";
-      document.getElementById("question-form").action=link;
-    }
-  
-    document.getElementById("whattoadd-3").onclick = function() {
-          var link = "event";
-      document.getElementById("question-form").action=link;
-    }
-
-  </script>
 
 {% endblock %}
