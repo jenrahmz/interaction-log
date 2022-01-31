@@ -41,5 +41,28 @@ module.exports = function (env) {
   /* ------------------------------------------------------------------
     keep the following line to return your filters to the app
   ------------------------------------------------------------------ */
+
   return filters
+  
+  // main.js
+
+  const app = express();
+  const nunjucks = require('nunjucks');
+  const dateFilter = require('nunjucks-date-filter');
+  
+  function setUpNunjucks(expressApp) {
+  
+    let env = nunjucks.configure('views', {
+        autoescape: true,
+        express: app
+    });
+  
+    // note that 'date' is the function name you'll use in the template. As shown in nunjucks-date-filter's readme
+    env.addFilter('date', dateFilter);
+  
+  }
+  
+  setUpNunjucks();
+
 }
+
