@@ -1,0 +1,110 @@
+{% extends "layout.html" %}
+{% set bodyAttributes = { id: "assess" } %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block main %}
+
+{% include "includes/assessment-status-neutral.html" %}
+
+
+  <div class="govuk-width-container {{ containerClasses }}">
+    <div class="navigation-header">
+      <ul class="govuk-list">
+        <li class="govuk-!-margin-bottom-2"><a href="#" class="govuk-link--no-visited-state govuk-link--no-underline">Referrals</a></li>
+        <li class="govuk-!-margin-bottom-2"><a href="#" class="govuk-link--no-visited-state govuk-link--no-underline">Claimant details</a></li>
+        <li class="govuk-!-margin-bottom-2"><a href="#" class="govuk-link--no-visited-state govuk-link--no-underline">Appointments</a></li>
+        <li class="govuk-!-margin-bottom-2"><a href="#" class="govuk-link--no-visited-state govuk-link--no-underline">Evidence</a></li>
+        <li class="govuk-!-margin-bottom-2 active">Claimant log</li>
+      </ul>
+    </div>
+
+    <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
+
+      
+
+        <div class="govuk-grid-row">
+
+          
+
+            <div class="govuk-grid-column-two-thirds">
+
+              <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+              <form action="outgoing" method="post" class="form">
+
+                <h1 class="govuk-heading-l">
+                  Who did we contact about this claim?
+  
+                </h1>
+        
+                <div class="govuk-form-group">
+                  
+
+
+
+                    <fieldset class="govuk-fieldset">
+           
+                      <div class="govuk-radios govuk-radios">
+                       
+          
+                        <div class="govuk-radios__item" data-module="govuk-radios">
+                          <input class="govuk-radios__input" id="who-1" name="who" type="radio"  aria-controls="conditional-who-1" aria-expanded="false" value="the claimant" {{ checked("who", "the claimant") }}>
+                          <label class="govuk-label govuk-radios__label" for="who-1">
+                            The claimant
+                      </label>                      
+                    </div>
+                  
+                   
+          
+                    
+          
+                       
+                   
+                      <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="who-2" name="who" type="radio" value="" aria-controls="conditional-who-2" aria-expanded="false" value="Other"  {{ checked("who", "Other") }}>
+                          <label class="govuk-label govuk-radios__label" for="who-2">
+                        Other
+                      </label>
+                          
+                        </div>
+                        
+                          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-who-2">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label" for="who-2">
+                                Add brief details on who contacted us about this claim
+                              </label>      
+                                   
+                            <input class="govuk-input govuk-!-width-full-width" id="who-2" name="who-details" type="text" value="{{ data['who-details'] }}" autocomplete="off">
+                            </div>
+          
+                          </div>
+                      
+                      
+                </div>
+
+                  </fieldset>
+  
+        <br>
+                <button class="govuk-button" >Save and continue</button>
+        
+              </form>
+  
+                   
+                   
+              
+                    </div>
+                  </div>
+              
+               
+              </div>
+        </div>
+
+    </main>
+  </div>
+
+
+{% endblock %}

@@ -64,10 +64,10 @@ router.post('/version-0-3d/contact-claimant', function (req, res) {
           const what = req.session.data['what']
         
           if (what == 'outgoing') {
-              res.redirect('/version-0-3d/outgoing')
+              res.redirect('/version-0-3d/who-outgoing')
             } 
             else if (what == 'incoming') {
-              res.redirect('/version-0-3d/incoming')
+              res.redirect('/version-0-3d/who-incoming')
             }
             else {
               res.redirect('/version-0-3d/event')

@@ -44,7 +44,9 @@
 
                     <h2 class="govuk-heading-s govuk-!-margin-bottom-1">  {{ data['claim'] }}  {{ data['action'] }}   {{ data['action-details'] }} </h2>
                
-                     <p class="govuk-caption-m govuk-!-margin-bottom-1"> {{ data['contact-method'] }}   {% if  data['what'] === 'outgoing' %} by Phillip Smith  {% endif %} </p>
+                     <p class="govuk-caption-m govuk-!-margin-bottom-1"> {{ data['contact-method'] }}  {% if  data['who'] === 'the claimant' %} {{ data['who'] }}  {% else %}   {{ data['who-details'] }}  {% endif %} 
+                       
+                      {% if  data['what'] === 'outgoing' %} by Phillip Smith  {% endif %} </p>
                       
                      <p class="govuk-caption-m">
                       28 January 2022 at {{ data['time'] }} {{ data['time2'] }} 
