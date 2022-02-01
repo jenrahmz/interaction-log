@@ -33,10 +33,10 @@
 
               <a href="javascript:history.back()" class="govuk-back-link">Back</a>
 
-              <form action="incoming" method="post" class="form">
+              <form action="outgoing" method="post" class="form">
 
                 <h1 class="govuk-heading-l">
-                  Who contacted us about this claim?
+                  Who did we contact about this claim?
   
                 </h1>
         
@@ -67,24 +67,30 @@
                         <div class="govuk-radios__item">
                           <input class="govuk-radios__input" id="who-2" name="who" type="radio" value="" aria-controls="conditional-who-2" aria-expanded="false" value="Other"  {{ checked("who", "Other") }}>
                           <label class="govuk-label govuk-radios__label" for="who-2">
-                        Other
+                       Another person or organisation 
                       </label>
+                      <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                       For example the cliamants carer or GP
+                      </div>
                           
                         </div>
                         
                           <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-who-2">
                             <div class="govuk-form-group">
                               <label class="govuk-label" for="who-2">
-                                Add brief details on who contacted us about this claim
+                                Add brief details on who we contacted about this claim
                               </label>      
                                    
-                            <input class="govuk-input govuk-!-width-full-width" id="who-10" name="who-details" type="text" value="{{ data['who-details'] }}" autocomplete="off">
+                            <input class="govuk-input govuk-!-width-full-width" id="who-2" name="who-details" type="text" value="{{ data['who-details'] }}" autocomplete="off">
                             </div>
           
                           </div>
                       
                       
                 </div>
+
+
+
 
                   </fieldset>
   

@@ -207,14 +207,14 @@ app.post('/prototype-admin/clear-data', function (req, res) {
 
 
 // Clear stored data in session if you add new entry on v4 index 
-app.post('/version-0-3d/add-new-entry', function (req, res) {
-  req.session.data = {}
-  res.render('version-0-3d/referral')
-})
-
 app.post('/version-0-3-1/add-new-entry', function (req, res) {
   req.session.data = {}
   res.render('version-0-3-1/referral')
+})
+
+app.post('/version-0-3-2/add-new-entry', function (req, res) {
+  req.session.data = {}
+  res.render('version-0-3-2/referral')
 })
 
 // Redirect root to /docs when in promo mode.

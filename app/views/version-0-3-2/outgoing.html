@@ -33,60 +33,73 @@
 
 
 
-            
-
-            <form action="/version-0-3-1/contact-claimant" method="post" class="form">
+              <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+            <form action="/version-0-3-2/contact-claimant" method="post" class="form">
 
               <h1 class="govuk-heading-l">
-                Why did we contact the claimant?
+                Contacting the claimant
 
               </h1>
+
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                <h1 class="govuk-fieldset__heading">
+                Why did we contact the claimant?
+                </h1>
+              </legend>
       
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset">
                
                 <div class="govuk-radios govuk-radios">
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="action-sent-questionaire" name="action" type="radio" value="Sent questionnaire" {{ checked("action", "Sent questionnaire") }}>
+                 
+
+                  <div class="govuk-radios__item" data-module="govuk-radios">
+                    <input class="govuk-radios__input" id="action-1" name="action" type="radio"  aria-controls="conditional-action-1" aria-expanded="false" value="Sent questionnaire" {{ checked("action", "Sent questionnaire") }}>
                     <label class="govuk-label govuk-radios__label" for="action-1">
                       Sent questionnaire
-                    </label>
-                  </div>
+                </label>                      
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-action-2" style=display:none;>
+                <div class="govuk-form-group"></div></div>
 
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="action-remind" name="action" type="radio" value="Reminded them to return questionnaire" {{ checked("action", "Reminded them to return questionnaire") }}>
-                    <label class="govuk-label govuk-radios__label" for="action-remind">
+                  <div class="govuk-radios__item" data-module="govuk-radios">
+                    <input class="govuk-radios__input" id="action-2" name="action" type="radio"  aria-controls="conditional-action-2" aria-expanded="false" value="Reminded them to return questionnaire" {{ checked("action", "Reminded them to return questionnaire") }}>
+                    <label class="govuk-label govuk-radios__label" for="action-2">
                       Reminded them to return questionnaire
-                    </label>
-                  </div>
+                </label>                      
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-action-2" style=display:none;>
+                <div class="govuk-form-group"></div></div>
 
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="action-request-further" name="action" type="radio" value="Requested further evidence" {{ checked("action", "Requested further evidence") }}>
-                    <label class="govuk-label govuk-radios__label" for="action-request-further">
+                  <div class="govuk-radios__item" data-module="govuk-radios">
+                    <input class="govuk-radios__input" id="action-3" name="action" type="radio"  aria-controls="conditional-action-3" aria-expanded="false" value="Requested further evidence" {{ checked("action", "Requested further evidence") }}>
+                    <label class="govuk-label govuk-radios__label" for="action-3">
                       Requested further evidence
-                    </label>
-                  </div>
+                </label>                      
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-action-3" style=display:none;>
+                <div class="govuk-form-group"></div></div>
 
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="action-remind-evidence" name="action" type="radio" value=" Reminded them to send evidence" {{ checked("action", " Reminded them to send evidence") }}>
-                    <label class="govuk-label govuk-radios__label" for="action-remind-evidence">
+               
+                  <div class="govuk-radios__item" data-module="govuk-radios">
+                    <input class="govuk-radios__input" id="action-4" name="action" type="radio"  aria-controls="conditional-action-4" aria-expanded="false" value="Reminded them to send evidence" {{ checked("action", "Reminded them to send evidence") }}>
+                    <label class="govuk-label govuk-radios__label" for="action-4">
                       Reminded them to send evidence
-                    </label>
-                  </div>
+                </label>                      
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-action-4" style=display:none;>
+                <div class="govuk-form-group"></div></div>
 
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="action-booked-assessment" name="action" type="radio" value="Booked an assessment" {{ checked("action", "Booked an assessment") }}>
-                    <label class="govuk-label govuk-radios__label" for="action-booked-assessment">
+                  <div class="govuk-radios__item" data-module="govuk-radios">
+                    <input class="govuk-radios__input" id="action-5" name="action" type="radio"  aria-controls="conditional-action-5" aria-expanded="false" value="Booked an assessment" {{ checked("action", "Booked an assessment") }}>
+                    <label class="govuk-label govuk-radios__label" for="action-5">
                       Booked an assessment
-                    </label>
-                  </div>
+                </label>                      
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-action-5" style=display:none;>
+                <div class="govuk-form-group"></div></div>
 
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="action-rescheduled-assessment" name="action" type="radio" value="Rescheduled an assessment" {{ checked("action", "Rescheduled an assessment") }}>
-                    <label class="govuk-label govuk-radios__label" for="action-rescheduled-assessment">
-                      Rescheduled an assessment
-                    </label>
-                  </div>
+                  
 
                   <div class="govuk-radios__item" data-module="govuk-radios">
                     <input class="govuk-radios__input" id="action-6" name="action" type="radio"  aria-controls="conditional-action-6" aria-expanded="false" value="Rescheduled an assessment" {{ checked("action", "Rescheduled an assessment") }}>
@@ -130,7 +143,7 @@
                   
                 <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="action-10" name="action" type="radio" value="" aria-controls="conditional-action-10" aria-expanded="false" {{ checked("action", " ") }}>
+                    <input class="govuk-radios__input" id="action-10" name="action" type="radio" value="" aria-controls="conditional-action-10" aria-expanded="false" value="Other"  {{ checked("action", "Other") }}>
                     <label class="govuk-label govuk-radios__label" for="action-10">
                   Other
                 </label>
@@ -140,21 +153,61 @@
                     <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-action-10">
                       <div class="govuk-form-group">
                         <label class="govuk-label" for="action-10">
-                         Details
+                          Add brief details explaining why we contacted the claimant
                         </label>      
                              
-                      <input class="govuk-input govuk-!-width-full-width" id="action-10" name="action" type="text" value="{{ data['action'] }}">
+                      <input class="govuk-input govuk-!-width-full-width" id="action-10" name="action-details" type="text" value="{{ data['action-details'] }}" autocomplete="off">
                       </div>
   
                     </div>
                 
                 
           </div>
+
+          
                   
                   
             </div>
                   
+<br>
 
+            {{ govukRadios({
+              idPrefix: "type",
+              name: "contact-method",
+              fieldset: {
+                legend: {
+                  text: "How did we contact the claimant? ",
+                  isPageHeading: true,
+                  classes: "govuk-fieldset__legend--m"
+                }
+              },
+              items: [
+                {
+                  value: "Telephone call to the claimant",
+                  text: "Telephone call",
+                  id: "contact-method-phonecall-to-claimant",
+                  checked: checked("contact-method", "Telephone call to the claimant")
+                },
+                {
+                  value: "Email to the claimant",
+                  text: "Email",
+                  id: "contact-method-email-to-claimant",
+                  checked: checked("contact-method", "Email to the claimant")
+                },
+                {
+                  value: "Text message (SMS) to the claimant",
+                  text: "Text message (SMS)",
+                  id: "contact-method-text-to-claimant",
+                  checked: checked("contact-method", "Text message (SMS) to the claimant")
+                },
+                {
+                  value: "Posted to the claimant",
+                  text: "Post",
+                  id: "contact-method-post-to-claimant",
+                  checked: checked("contact-method", "Posted to the claimant")
+                }
+              ]
+            }) }}
 
                   </div>
 

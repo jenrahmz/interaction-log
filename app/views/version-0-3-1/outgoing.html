@@ -34,18 +34,13 @@
 
 
               <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
             <form action="/version-0-3-1/contact-claimant" method="post" class="form">
 
               <h1 class="govuk-heading-l">
-                Contacting the claimant
+                Why did we contact the claimant?
 
               </h1>
-
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                <h1 class="govuk-fieldset__heading">
-                Why did we contact the claimant?
-                </h1>
-              </legend>
       
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset">
@@ -169,45 +164,7 @@
                   
             </div>
                   
-<br>
 
-            {{ govukRadios({
-              idPrefix: "type",
-              name: "contact-method",
-              fieldset: {
-                legend: {
-                  text: "How did we contact the claimant? ",
-                  isPageHeading: true,
-                  classes: "govuk-fieldset__legend--m"
-                }
-              },
-              items: [
-                {
-                  value: "Telephone call to the claimant",
-                  text: "Telephone call",
-                  id: "contact-method-phonecall-to-claimant",
-                  checked: checked("contact-method", "Telephone call to the claimant")
-                },
-                {
-                  value: "Email to the claimant",
-                  text: "Email",
-                  id: "contact-method-email-to-claimant",
-                  checked: checked("contact-method", "Email to the claimant")
-                },
-                {
-                  value: "Text message (SMS) to the claimant",
-                  text: "Text message (SMS)",
-                  id: "contact-method-text-to-claimant",
-                  checked: checked("contact-method", "Text message (SMS) to the claimant")
-                },
-                {
-                  value: "Posted to the claimant",
-                  text: "Post",
-                  id: "contact-method-post-to-claimant",
-                  checked: checked("contact-method", "Posted to the claimant")
-                }
-              ]
-            }) }}
 
                   </div>
 
