@@ -38,7 +38,7 @@
             <form action="/version-0-3-1/contact-claimant" method="post" class="form">
 
               <h1 class="govuk-heading-l">
-                Why did we contact the claimant?
+                Why did we contact the claimant?   
 
               </h1>
       
@@ -46,7 +46,9 @@
                 <fieldset class="govuk-fieldset">
                
                 <div class="govuk-radios govuk-radios">
+           
 
+                  {% if  (data['claim'] != 'PIP') and (data['claim']  != 'UC') %}
                   <div class="govuk-radios__item" data-module="govuk-radios">
                     <input class="govuk-radios__input" id="action-1" name="action" type="radio"   aria-controls="conditional-action-1" aria-expanded="false" value="Made introductory contact" {{ checked("action", "Made introductory contact") }}>
                     <label class="govuk-label govuk-radios__label" for="action-1">
@@ -54,10 +56,10 @@
                 </label>                      
               </div>
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-action-1" style=display:none;>
-                </div>
+                </div>       {% endif %}
               
                  
-
+                {% if  data['claim']   != 'PIP' %}
                   <div class="govuk-radios__item" data-module="govuk-radios">
                     <input class="govuk-radios__input" id="action-2" name="action" type="radio"  aria-controls="conditional-action-2" aria-expanded="false" value="Sent questionnaire" {{ checked("action", "Sent questionnaire") }}>
                     <label class="govuk-label govuk-radios__label" for="action-2">
@@ -66,7 +68,9 @@
               </div>
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-action-2" style=display:none;>
                 <div class="govuk-form-group"></div></div>
+                {% endif %}
 
+                {% if  data['claim']   != 'PIP' %}
                   <div class="govuk-radios__item" data-module="govuk-radios">
                     <input class="govuk-radios__input" id="action-3" name="action" type="radio"  aria-controls="conditional-action-3" aria-expanded="false" value="Reminded them to return questionnaire" {{ checked("action", "Reminded them to return questionnaire") }}>
                     <label class="govuk-label govuk-radios__label" for="action-3">
@@ -75,6 +79,7 @@
               </div>
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-action-3" style=display:none;>
                 <div class="govuk-form-group"></div></div>
+                {% endif %}
 
                   <div class="govuk-radios__item" data-module="govuk-radios">
                     <input class="govuk-radios__input" id="action-4" name="action" type="radio"  aria-controls="conditional-action-4" aria-expanded="false" value="Requested further evidence" {{ checked("action", "Requested further evidence") }}>
@@ -116,7 +121,7 @@
                 <div class="govuk-form-group"></div></div>
 
                
-
+                {% if  (data['claim'] != 'PIP') and (data['claim']  != 'UC') %}
                   <div class="govuk-radios__item" data-module="govuk-radios">
                     <input class="govuk-radios__input" id="action-8" name="action" type="radio"  aria-controls="conditional-action-8" aria-expanded="false" value="Told them about a decision" {{ checked("action", "Told them about a decision") }}>
                     <label class="govuk-label govuk-radios__label" for="action-8">
@@ -125,7 +130,7 @@
               </div>
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-action-8" style=display:none;>
                 <div class="govuk-form-group"></div></div>
-
+                {% endif %}
 
                
 
@@ -184,17 +189,6 @@
     </main>
   </div>
 
-  <script type="text/javascript">
-    document.getElementById("type-5").onclick = function() {
-          var link = "assessment-booking";
-      document.getElementById("question-form").action=link;
-    }
   
-    document.getElementById("type-6").onclick = function() {
-          var link = "assessment-booking";
-      document.getElementById("question-form").action=link;
-    }
-
-  </script>
 
 {% endblock %}

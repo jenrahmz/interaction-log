@@ -48,6 +48,7 @@
                    
                     <div class="govuk-radios govuk-radios">
 
+                     
                       <div class="govuk-radios__item" data-module="govuk-radios">
                         <input class="govuk-radios__input" id="action-1" name="action" type="radio"  aria-controls="conditional-action-1" aria-expanded="false" value="Evidence reviewed" {{ checked("action", "Evidence reviewed") }}>
                         <label class="govuk-label govuk-radios__label" for="action-1">
@@ -56,8 +57,9 @@
                   </div>
                   <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-action-1" style=display:none;>
                     <div class="govuk-form-group"></div></div>
+              
 
-
+                  
                     <div class="govuk-radios__item" data-module="govuk-radios">
                       <input class="govuk-radios__input" id="action-2" name="action" type="radio"  aria-controls="conditional-action-2" aria-expanded="false" value="Paper based review booked" {{ checked("action", "Paper based review booked") }}>
                       <label class="govuk-label govuk-radios__label" for="action-2">
@@ -66,6 +68,7 @@
                 </div>
                 <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-action-2" style=display:none;>
                   <div class="govuk-form-group"></div></div>
+                
 
 
                   <div class="govuk-radios__item" data-module="govuk-radios">
@@ -91,7 +94,7 @@
   
 
                      
-    
+              {% if  (data['claim']   != 'PIP' and (data['claim'])   != 'UC') %}
                       <div class="govuk-radios__item" data-module="govuk-radios">
                         <input class="govuk-radios__input" id="action-5" name="action" type="radio"  aria-controls="conditional-action-5" aria-expanded="false" value="  HCP advice complete" {{ checked("action", "  HCP advice complete") }}>
                         <label class="govuk-label govuk-radios__label" for="action-5">
@@ -100,7 +103,8 @@
                   </div>
                   <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-action-5" style=display:none;>
                     <div class="govuk-form-group"></div></div>
-    
+                    {% endif %} 
+
 
     
     
@@ -127,7 +131,7 @@
     
                    
                     
-    
+                {% if  (data['claim']   != 'PIP' and (data['claim'])   != 'UC') %}
                       <div class="govuk-radios__item" data-module="govuk-radios">
                         <input class="govuk-radios__input" id="action-8" name="action" type="radio"  aria-controls="conditional-action-8" aria-expanded="false" value="Summary decision made" {{ checked("action", "Summary decision made") }}>
                         <label class="govuk-label govuk-radios__label" for="action-8">
@@ -136,9 +140,9 @@
                   </div>
                   <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-action-8" style=display:none;>
                     <div class="govuk-form-group"></div></div>
-    
+                    {% endif %} 
                       
-    
+                    {% if  (data['claim']   != 'PIP' and (data['claim'])   != 'UC') %}
                     <div class="govuk-radios__item" data-module="govuk-radios">
                       <input class="govuk-radios__input" id="action-9" name="action" type="radio"  aria-controls="conditional-action-9" aria-expanded="false" value="Decision made" {{ checked("action", " Decision made") }}>
                       <label class="govuk-label govuk-radios__label" for="action-9">
@@ -147,25 +151,27 @@
                 </div>
                 <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-action-9" style=display:none;>
                   <div class="govuk-form-group"></div></div>
-                   
+                  {% endif %} 
     
-    
+                  {% if  (data['claim']   != 'PIP' and (data['claim'])   != 'UC') %}
                   <div class="govuk-radios__item" data-module="govuk-radios">
                     <input class="govuk-radios__input" id="action-10" name="action" type="radio"   aria-controls="conditional-action-10" aria-expanded="false" value="PIPCS Updated" {{ checked("action", "PIPCS Updated") }}>
                     <label class="govuk-label govuk-radios__label" for="action-10">
                       PIPCS Updated
                 </label>                      
               </div>
+              {% endif %} 
     
+              {% if  data['claim']   != 'PIP' %}
               <div class="govuk-radios__item" data-module="govuk-radios">
                 <input class="govuk-radios__input" id="action-11" name="action" type="radio"   aria-controls="conditional-action-11" aria-expanded="false" value="File returned to BAU" {{ checked("action", "File returned to BAU") }}>
                 <label class="govuk-label govuk-radios__label" for="action-11">
                   File returned to BAU
             </label>                      
           </div>
-    
-                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-action-9" style=display:none;>
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-action-11" style=display:none;>
                     </div>
+                    {% endif %} 
                   
                       
                     <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
