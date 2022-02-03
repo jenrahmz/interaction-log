@@ -131,12 +131,12 @@ router.post('/version-0-3-1/contact-claimant', function (req, res) {
         // The name between the quotes is the same as the 'name' attribute on the input elements
         // However in JavaScript we can't use hyphens in variable names
       
-        const claimant = req.session.data['claimant']
+        const what = req.session.data['what']
       
-        if (claimant == 'outgoing') {
+        if (what == 'outgoing') {
             res.redirect('/version-0-3-2/outgoing')
           } 
-          else if (claimant == 'incoming') {
+          else if (what == 'incoming') {
             res.redirect('/version-0-3-2/incoming')
           }
           else {

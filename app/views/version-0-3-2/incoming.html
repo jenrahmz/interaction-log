@@ -44,18 +44,109 @@
               </h1>
 
 
-          
+              <div class="govuk-form-group">
+                  
 
+                <h2 class="govuk-heading-m">
+                  Who contacted us about this claim?
+  
+                </h2>
+
+                <fieldset class="govuk-fieldset">
+       
+                  <div class="govuk-radios govuk-radios">
+                   
+      
+                    <div class="govuk-radios__item" data-module="govuk-radios">
+                      <input class="govuk-radios__input" id="who-1" name="who" type="radio"  aria-controls="conditional-who-1" aria-expanded="false" value="the claimant" {{ checked("who", "the claimant") }}>
+                      <label class="govuk-label govuk-radios__label" for="who-1">
+                        The claimant
+                  </label>                      
+                </div>
+              
+               
+      
+                
+      
+                <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="who-2" name="who" type="radio" value="" aria-controls="conditional-who-2" aria-expanded="false" value="Other"  {{ checked("who", "Other") }}>
+                    <label class="govuk-label govuk-radios__label" for="who-2">
+                 Another person or organisation 
+                </label>
+                <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                 For example the cliamants carer or GP
+                </div>
+                    
+                  </div>
+                  
+                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-who-2">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label" for="who-2">
+                          Add brief details on who contacted us about this claim
+                        </label>      
+                             
+                      <input class="govuk-input govuk-!-width-full-width" id="who-2" name="who-details" type="text" value="{{ data['who-details'] }}" autocomplete="off">
+                      </div>
+    
+                    </div>
+                
+                
+          </div>   
+               
+                 
+
+              </fieldset>
+              </div>
+
+             
+           
+
+              {{ govukRadios({
+                idPrefix: "type",
+                name: "contact-method",
+                fieldset: {
+                  legend: {
+                    text: "How did they contact us? ",
+                    isPageHeading: true,
+                    classes: "govuk-fieldset__legend--m"
+                  }
+                },
+                items: [
+                  {
+                    value: "Telephone call from ",
+                    text: "Telephone call",
+                    id: "contact-method-phonecall-from-claimant",
+                    checked: checked("contact-method", "Telephone call from ")
+                  },
+                  {
+                    value: "Email from ",
+                    text: "Email",
+                    id: "contact-method-email-from-claimant",
+                    checked: checked("contact-method", "Email from ")
+                  },
+                  {
+                    value: "Text message (SMS) from ",
+                    text: "Text message (SMS)",
+                    id: "contact-method-text-from-claimant",
+                    checked: checked("contact-method", "Text message (SMS) from ")
+                  },
+                  {
+                    value: "Post from ",
+                    text: "Post",
+                    id: "contact-method-post-from-claimant",
+                    checked: checked("contact-method", "Post from ")
+                  }
+                ]
+              }) }}
+
+
+            
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                 <h1 class="govuk-fieldset__heading">
                 Why did the claimant contact us?
                 </h1>
               </legend>
-           
-
-
-            
-
               <div class="govuk-radios govuk-radios">
              
 
@@ -124,44 +215,7 @@
                 
           </div> <br>
 
-              {{ govukRadios({
-                idPrefix: "type",
-                name: "contact-method",
-                fieldset: {
-                  legend: {
-                    text: "How did the claimant contact us? ",
-                    isPageHeading: true,
-                    classes: "govuk-fieldset__legend--m"
-                  }
-                },
-                items: [
-                  {
-                    value: "Telephone call from the claimant",
-                    text: "Telephone call",
-                    id: "contact-method-phonecall-from-claimant",
-                    checked: checked("contact-method", "Telephone call from the claimant")
-                  },
-                  {
-                    value: "Email from the claimant",
-                    text: "Email",
-                    id: "contact-method-email-from-claimant",
-                    checked: checked("contact-method", "Email from the claimant")
-                  },
-                  {
-                    value: "Text message (SMS) from the claimant",
-                    text: "Text message (SMS)",
-                    id: "contact-method-text-from-claimant",
-                    checked: checked("contact-method", "Text message (SMS) from the claimant")
-                  },
-                  {
-                    value: "Post from the claimant",
-                    text: "Post",
-                    id: "contact-method-post-from-claimant",
-                    checked: checked("contact-method", "Post from the claimant")
-                  }
-                ]
-              }) }}
-
+           
 
 
               {{ govukButton({

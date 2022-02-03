@@ -41,7 +41,7 @@
                 <fieldset class="govuk-fieldset">
                   <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                     <h1 class="govuk-fieldset__heading">
-                      What are you adding to the log?
+                      Why are you adding a new entry?
                     </h1>
                   </legend>
 
@@ -51,28 +51,33 @@
                     </h1>
                   </legend>
                  
-                <div class="govuk-radios">
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="claimant-outgoing" name="claimant" type="radio" value="outgoing" {{ checked("claimant", "outgoing") }}>
-                    <label class="govuk-label govuk-radios__label" for="claimant-outgoing">
-                      We contacted the claimant
-                    </label>
-                  </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="claimant-incoming" name="claimant" type="radio" value="incoming" {{ checked("claimant", "incoming") }}>
-                    <label class="govuk-label govuk-radios__label" for="claimant-incoming">
-                      The claimant contacted us
-                    </label>
-                  </div>
-
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="claimant-event" name="claimant" type="radio" value="event" {{ checked("claimant", "event") }}>
-                    <label class="govuk-label govuk-radios__label" for="claimant-event">
-                      The claim has changed
-                    </label>
-                  </div>
+                  <fieldset class="govuk-fieldset">
                  
-                </div>
+                    <div class="govuk-radios govuk-radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="what-outgoing" name="what" type="radio" value="outgoing" {{ checked("what", "outgoing") }}>
+                        <label class="govuk-label govuk-radios__label" for="what-outgoing">
+                          Contacting someone about the claim
+                        </label>
+                      </div>
+    
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="what-incoming" name="what" type="radio" value="incoming" {{ checked("what", "incoming") }}>
+                        <label class="govuk-label govuk-radios__label" for="what-incoming">
+                          Someone contacting us about the claim
+                        </label>
+                      </div>
+    
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="what-event" name="what" type="radio" value="event" {{ checked("what", "event") }}>
+                        <label class="govuk-label govuk-radios__label" for="what-event">
+                          The claim has changed
+                        </label>
+                      </div>
+    
+                     
+                      </div>
+                    </fieldset>
                
                
                 </fieldset>
