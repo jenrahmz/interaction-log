@@ -103,44 +103,6 @@
 
               </div>
 
-              {{ govukRadios({
-                idPrefix: "type",
-                name: "contact-method",
-                fieldset: {
-                  legend: {
-                    text: "How did we contact them? ",
-                    isPageHeading: true,
-                    classes: "govuk-fieldset__legend--m"
-                  }
-                },
-                items: [
-                  {
-                    value: "Telephone call to ",
-                    text: "Telephone call",
-                    id: "contact-method-phonecall-to-claimant",
-                    checked: checked("contact-method", "Telephone call to ")
-                  },
-                  {
-                    value: "Email to ",
-                    text: "Email",
-                    id: "contact-method-email-to-claimant",
-                    checked: checked("contact-method", "Email to ")
-                  },
-                  {
-                    value: "Text message (SMS) to ",
-                    text: "Text message (SMS)",
-                    id: "contact-method-text-to-claimant",
-                    checked: checked("contact-method", "Text message (SMS) to ")
-                  },
-                  {
-                    value: "Posted to t",
-                    text: "Post",
-                    id: "contact-method-post-to-claimant",
-                    checked: checked("contact-method", "Posted to ")
-                  }
-                ]
-              }) }}
-  
 
       
 
@@ -267,6 +229,46 @@
           </div>
 
           
+<br>
+
+          {{ govukRadios({
+            idPrefix: "type",
+            name: "contact-method",
+            fieldset: {
+              legend: {
+                text: "How did we contact them? ",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--m"
+              }
+            },
+            items: [
+              {
+                value: "Telephone call to ",
+                text: "Telephone call",
+                id: "contact-method-phonecall-to-claimant",
+                checked: checked("contact-method", "Telephone call to ")
+              },
+              {
+                value: "Email to ",
+                text: "Email",
+                id: "contact-method-email-to-claimant",
+                checked: checked("contact-method", "Email to ")
+              },
+              {
+                value: "Text message (SMS) to ",
+                text: "Text message (SMS)",
+                id: "contact-method-text-to-claimant",
+                checked: checked("contact-method", "Text message (SMS) to ")
+              },
+              {
+                value: "Posted to t",
+                text: "Post",
+                id: "contact-method-post-to-claimant",
+                checked: checked("contact-method", "Posted to ")
+              }
+            ]
+          }) }}
+
                   
                   
             </div>

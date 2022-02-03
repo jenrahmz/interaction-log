@@ -102,43 +102,6 @@
              
            
 
-              {{ govukRadios({
-                idPrefix: "type",
-                name: "contact-method",
-                fieldset: {
-                  legend: {
-                    text: "How did they contact us? ",
-                    isPageHeading: true,
-                    classes: "govuk-fieldset__legend--m"
-                  }
-                },
-                items: [
-                  {
-                    value: "Telephone call from ",
-                    text: "Telephone call",
-                    id: "contact-method-phonecall-from-claimant",
-                    checked: checked("contact-method", "Telephone call from ")
-                  },
-                  {
-                    value: "Email from ",
-                    text: "Email",
-                    id: "contact-method-email-from-claimant",
-                    checked: checked("contact-method", "Email from ")
-                  },
-                  {
-                    value: "Text message (SMS) from ",
-                    text: "Text message (SMS)",
-                    id: "contact-method-text-from-claimant",
-                    checked: checked("contact-method", "Text message (SMS) from ")
-                  },
-                  {
-                    value: "Post from ",
-                    text: "Post",
-                    id: "contact-method-post-from-claimant",
-                    checked: checked("contact-method", "Post from ")
-                  }
-                ]
-              }) }}
 
 
             
@@ -215,8 +178,47 @@
         
                 
                 
-          </div> <br>
-
+          </div><br>
+          
+          
+          {{ govukRadios({
+            idPrefix: "type",
+            name: "contact-method",
+            fieldset: {
+              legend: {
+                text: "How did they contact us? ",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--m"
+              }
+            },
+            items: [
+              {
+                value: "Telephone call from ",
+                text: "Telephone call",
+                id: "contact-method-phonecall-from-claimant",
+                checked: checked("contact-method", "Telephone call from ")
+              },
+              {
+                value: "Email from ",
+                text: "Email",
+                id: "contact-method-email-from-claimant",
+                checked: checked("contact-method", "Email from ")
+              },
+              {
+                value: "Text message (SMS) from ",
+                text: "Text message (SMS)",
+                id: "contact-method-text-from-claimant",
+                checked: checked("contact-method", "Text message (SMS) from ")
+              },
+              {
+                value: "Post from ",
+                text: "Post",
+                id: "contact-method-post-from-claimant",
+                checked: checked("contact-method", "Post from ")
+              }
+            ]
+          }) }}
+        
            
 
 
