@@ -89,6 +89,22 @@ router.post('/version-0-3-1/contact-claimant', function (req, res) {
               res.redirect('/version-0-3-1/event')
             }
           })
+
+          router.post('/version-0-3-1/telephone-check', function (req, res) {
+            // Get the answer from session data
+            // The name between the quotes is the same as the 'name' attribute on the input elements
+            // However in JavaScript we can't use hyphens in variable names
+          
+            const contact = req.session.data['contact-method']
+          
+            if (contact == 'Telephone call to ') {
+                res.redirect('/version-0-3-1/phone-answer')
+              } 
+              
+              else {
+                res.redirect('/version-0-3-1/outgoing-date')
+              }
+            })
     
 
     router.post('/version-0-3-2/contact-claimant', function (req, res) {

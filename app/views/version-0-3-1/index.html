@@ -46,10 +46,17 @@
                
                      <p class="govuk-caption-m govuk-!-margin-bottom-1"> {{ data['contact-method'] }}  {% if  data['who'] === 'the claimant' %} {{ data['who'] }}  {% else %}   {{ data['who-details'] }}  {% endif %} 
                        
-                      {% if  data['what'] === 'outgoing' %} by Phillip Smith  {% endif %} </p>
+                      {% if  data['what'] === 'outgoing' %} by Phillip Smith  
+                      
+                      {% if  data['follow-up-details'] %}
+                      <p class="govuk-caption-m govuk-!-margin-bottom-1">  
+                      {{ data['follow-up-details'] }} </p>
+                     {% endif %}
+                      
+                      {% endif %} </p>
                       
                      <p class="govuk-caption-m">
-                      28 January 2022 at {{ data['time'] }} {{ data['time2'] }} 
+                      28 January 2022 at {{ data['time'] }} {{ data['time2'] }} {{ data['phone-time'] }}{{ data['phone-time2'] }} 
                     </p>
                 
                  <!--   <div class="moj-timeline__description">  {{ data['claim'] }} {{ data['contact-method'] }}     </div>--> 
