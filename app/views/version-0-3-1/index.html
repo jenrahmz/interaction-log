@@ -23,153 +23,145 @@
 
     <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
 
-      <div class="govuk-grid-row">
+      
+
+        <div class="govuk-grid-row">
 
           
 
-        <div class="govuk-grid-column-full">
+            <div class="govuk-grid-column-full">
 
-          <h1 class="govuk-heading-l">Claimant log</h1>
-          </div>
+              <h1 class="govuk-heading-l">Claimant log</h1>
+              </div>
 
+              <div class="govuk-grid-column-two-thirds">
 
-      <div class="govuk-grid-column-two-thirds">
+                <ol class="dwp-timeline">
 
-        <ol class="dwp-timeline">
+                  {% if  data['log'] %}
+                  <li class="dwp-timeline__entry">
+           
 
-          {% if  data['log'] %}
-          <li class="dwp-timeline__entry">
-   
-
-            <h2 class="govuk-heading-s govuk-!-margin-bottom-1">  {{ data['claim'] }}  {{ data['action'] }}   {{ data['action-details'] }} </h2>
-       
-             <p class="govuk-caption-m govuk-!-margin-bottom-1"> {{ data['contact-method'] }}   {% if  data['what'] === 'outgoing' %} by Phillip Smith  {% endif %} </p>
-              
-             <p class="govuk-caption-m">
-              28 January 2022 at {{ data['time'] }} {{ data['time2'] }} 
-            </p>
-        
-            <div class="moj-timeline__description" style="margin-top: 10px; padding-bottom: 10px;">  <a href="edit-entry">Edit this entry</a> </div>
-
-         <!--   <div class="moj-timeline__description">  {{ data['claim'] }} {{ data['contact-method'] }}     </div>--> 
-
-
-        {% if  (data['action']   == 'Booked an assessment') or (data['action']   == 'Rescheduled an assessment') %}
-     
-          
-          <details class="govuk-details" data-module="govuk-details" style="margin-left: 7px; margin-top:10px; margin-bottom:0px;">
-            <summary class="govuk-details__summary">
-              <span class="govuk-details__summary-text">
-                Assessment details
-              </span>
-            </summary>
-
-            <div class="govuk-details__text">
-              
-              <span class="govuk-body govuk-!-font-weight-bold"> Assessment type:</span> {{ data['assessment-type'] }} <br>
-              <span class="govuk-body govuk-!-font-weight-bold">Date and time of assessment:</span> 27 February 2022 at {{ data['assessment-time'] }} <br>
-              
-                <span class="govuk-body govuk-!-font-weight-bold">Assessor name:</span> {{ data['assessor-name'] }} </div>
-          
-          </details>
-
-          {% endif %} 
-
-
-          {% if  data['action']   == 'Paper based review booked' %}
-     
-          
-          <details class="govuk-details" data-module="govuk-details" style="margin-left: 7px; margin-top:10px; margin-bottom:0px;">
-            <summary class="govuk-details__summary">
-              <span class="govuk-details__summary-text">
-                Assessment details
-              </span>
-            </summary>
-
-            <div class="govuk-details__text">
-              
-           <!--   <span class="govuk-body govuk-!-font-weight-bold"> Assessment type:</span> {{ data['assessment-type'] }} <br>--> 
-              <span class="govuk-body govuk-!-font-weight-bold">Date and time of assessment:</span> 27 February 2022 at {{ data['assessment-time'] }} <br>
-              
-                <span class="govuk-body govuk-!-font-weight-bold">Assessor name:</span> {{ data['assessor-name'] }} </div>
-          
-          </details>
-
-          {% endif %} 
-
-          {% endif %} 
-
-
-
-          <li class="dwp-timeline__entry">
-            <h2 class="govuk-heading-s govuk-!-margin-bottom-1">Paper based review booked</h2>
-            <p class="govuk-caption-m govuk-!-margin-bottom-1">Booked by Angela Tait</p>
-            <p class="govuk-caption-m">
-                25 January 2022
-            </p>
-
-            <div class="moj-timeline__description" style="margin-top: 10px; padding-bottom: 10px;">  <a href="#">Edit this entry</a> </div>
-        </li>
-
-          <li class="dwp-timeline__entry">
-            <h2 class="govuk-heading-s govuk-!-margin-bottom-1">Returned questionnaire</h2>
-            <p class="govuk-caption-m govuk-!-margin-bottom-1">Post from claimant</p>
-            <p class="govuk-caption-m">
-                23 January 2022
-            </p>
-
-            <div class="moj-timeline__description" style="margin-top: 10px; padding-bottom: 10px;">  <a href="#">Edit this entry</a> </div>
-        </li>
-
-          <li class="dwp-timeline__entry">
-              <h2 class="govuk-heading-s govuk-!-margin-bottom-1">Reminded them to return questionnaire</h2>
-              <p class="govuk-caption-m govuk-!-margin-bottom-1">Phonecall to claimant by Phil Smith</p>
-              <p class="govuk-caption-m">
-                 20 January 2022
-              </p>
-
-              <div class="moj-timeline__description" style="margin-top: 10px; padding-bottom: 10px;">  <a href="#">Edit this entry</a> </div>
-          </li>
-
-          <li class="dwp-timeline__entry">
-              <h2 class="govuk-heading-s govuk-!-margin-bottom-1">Sent questionnaire</h2>
-              <p class="govuk-caption-m govuk-!-margin-bottom-1">Posted to claimant by Phil Smith</p>
-              <p class="govuk-caption-m">
-                  6 January 2022
-              </p>
-
-              <div class="moj-timeline__description" style="margin-top: 10px; padding-bottom: 10px;">  <a href="#">Edit this entry</a> </div>
-          </li>
-
-      </ol>
-
-
-
-
+                    <h2 class="govuk-heading-s govuk-!-margin-bottom-1">  {{ data['claim'] }}  {{ data['action'] }}   {{ data['action-details'] }} </h2>
                
+                     <p class="govuk-caption-m govuk-!-margin-bottom-1"> {{ data['contact-method'] }}  {% if  data['who'] === 'the claimant' %} {{ data['who'] }}  {% else %}   {{ data['who-details'] }}  {% endif %} 
+                       
+                      {% if  data['what'] === 'outgoing' %} by Phillip Smith  {% endif %} </p>
+                      
+                     <p class="govuk-caption-m">
+                      28 January 2022 at {{ data['time'] }} {{ data['time2'] }} 
+                    </p>
+                
+                 <!--   <div class="moj-timeline__description">  {{ data['claim'] }} {{ data['contact-method'] }}     </div>--> 
+
+
+                {% if  (data['action']   == 'Booked an assessment') or (data['action']   == 'Rescheduled an assessment') %}
              
-              
+                  
+                  <details class="govuk-details" data-module="govuk-details" style="margin-left: 7px; margin-top:10px; margin-bottom:0px;">
+                    <summary class="govuk-details__summary">
+                      <span class="govuk-details__summary-text">
+                        Assessment details
+                      </span>
+                    </summary>
+
+                    <div class="govuk-details__text">
+                      
+                      <span class="govuk-body govuk-!-font-weight-bold"> Assessment type:</span> {{ data['assessment-type'] }} <br>
+                      <span class="govuk-body govuk-!-font-weight-bold">Date and time of assessment:</span> 27 February 2022 at {{ data['assessment-time'] }} <br>
+                      
+                        <span class="govuk-body govuk-!-font-weight-bold">Assessor name:</span> {{ data['assessor-name'] }} </div>
+                  
+                  </details>
+
+                  {% endif %} 
+
+
+                  {% if  data['action']   == 'Paper based review booked' %}
              
+                  
+                  <details class="govuk-details" data-module="govuk-details" style="margin-left: 7px; margin-top:10px; margin-bottom:0px;">
+                    <summary class="govuk-details__summary">
+                      <span class="govuk-details__summary-text">
+                        Assessment details
+                      </span>
+                    </summary>
+
+                    <div class="govuk-details__text">
+                      
+                   <!--   <span class="govuk-body govuk-!-font-weight-bold"> Assessment type:</span> {{ data['assessment-type'] }} <br>--> 
+                      <span class="govuk-body govuk-!-font-weight-bold">Date and time of assessment:</span> 27 February 2022 at {{ data['assessment-time'] }} <br>
+                      
+                        <span class="govuk-body govuk-!-font-weight-bold">Assessor name:</span> {{ data['assessor-name'] }} </div>
+                  
+                  </details>
+
+                  {% endif %} 
+
+                  {% endif %} 
+
+
+
+                  <li class="dwp-timeline__entry">
+                    <h2 class="govuk-heading-s govuk-!-margin-bottom-1">Paper based review booked</h2>
+                    <p class="govuk-caption-m govuk-!-margin-bottom-1">Booked by Angela Tait</p>
+                    <p class="govuk-caption-m">
+                        25 January 2022
+                    </p>
+                </li>
+
+                  <li class="dwp-timeline__entry">
+                    <h2 class="govuk-heading-s govuk-!-margin-bottom-1">Returned questionnaire</h2>
+                    <p class="govuk-caption-m govuk-!-margin-bottom-1">Post from claimant</p>
+                    <p class="govuk-caption-m">
+                        23 January 2022
+                    </p>
+                </li>
+
+                  <li class="dwp-timeline__entry">
+                      <h2 class="govuk-heading-s govuk-!-margin-bottom-1">Reminded them to return questionnaire</h2>
+                      <p class="govuk-caption-m govuk-!-margin-bottom-1">Phonecall to claimant by Phil Smith</p>
+                      <p class="govuk-caption-m">
+                         20 January 2022
+                      </p>
+                  </li>
+
+                  <li class="dwp-timeline__entry">
+                      <h2 class="govuk-heading-s govuk-!-margin-bottom-1">Sent questionnaire</h2>
+                      <p class="govuk-caption-m govuk-!-margin-bottom-1">Posted to claimant by Phil Smith</p>
+                      <p class="govuk-caption-m">
+                          6 January 2022
+                      </p>
+                  </li>
+
+              </ol>
+
+
+
+
+                       
+                     
+                      
+                     
 </div>
 
                 <div class="govuk-grid-column-one-third">
                 
                   <h3 class="govuk-heading-m">What you can do next</h3>
-             <ul class="govuk-list"> 
+                <ul class="govuk-list">
                   <!--clears previous entry and overwrites it, button styled as a link
-                  See server.js for code on this clearing 
+                  See server.js for code on this clearing -->
                 <form action="/version-0-3-1/add-new-entry" method="post" class="form">
-                  <button class="button-link-hack" data-module="govuk-button">Add new entry</button>
+               <!-- hiding the link version    <button class="button-link-hack" data-module="govuk-button">Add new entry</button> -->
 
+                <button class="govuk-button" data-module="govuk-button">Add new entry</button>
                   </form>
 
-                End of button hack -->
+                  <!-- End of button hack -->
 
-               <!--   <li class="govuk-!-margin-bottom-2"><a href="referral">Add new entry</a></li> 
-                 
-                </ul>-->
-
-                <a href="referral" class="govuk-button">Add a new entry </a>
+                 <!-- <li class="govuk-!-margin-bottom-2"><a href="referral">Add new entry</a></li> -->
+                 <!-- <li><a href="#">Edit an entry</a></li>--> 
+                </ul>
 
               
               

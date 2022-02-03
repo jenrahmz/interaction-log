@@ -33,10 +33,9 @@
 
               <form action="incoming-date" method="post">
 
-              {{ govukBackLink({
-                text: "Back",
-                href: "incoming"
-              }) }}
+           
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
 
               {{ govukRadios({
                 idPrefix: "type",
@@ -50,28 +49,28 @@
                 },
                 items: [
                   {
-                    value: "Phonecall from the claimant",
-                    text: "Phonecall",
+                    value: "Telephone call from ",
+                    text: "Telephone call",
                     id: "contact-method-phonecall-from-claimant",
-                    checked: checked("contact-method", "Phonecall from the claimant")
+                    checked: checked("contact-method", "Telephone call from ")
                   },
                   {
-                    value: "Email from the claimant",
+                    value: "Email from ",
                     text: "Email",
                     id: "contact-method-email-from-claimant",
                     checked: checked("contact-method", "Email from the claimant")
                   },
                   {
-                    value: "Text message (SMS) from the claimant",
+                    value: "Text message (SMS) from ",
                     text: "Text message (SMS)",
                     id: "contact-method-text-from-claimant",
-                    checked: checked("contact-method", "Text message (SMS) from the claimant")
+                    checked: checked("contact-method", "Text message (SMS) from ")
                   },
                   {
-                    value: "Post from the claimant",
+                    value: "Post from ",
                     text: "Post",
                     id: "contact-method-post-from-claimant",
-                    checked: checked("contact-method", "Post from the claimant")
+                    checked: checked("contact-method", "Post from ")
                   }
                 ]
               }) }}

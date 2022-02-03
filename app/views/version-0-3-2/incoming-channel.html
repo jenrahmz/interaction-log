@@ -33,9 +33,10 @@
 
               <form action="incoming-date" method="post">
 
-           
-<a href="javascript:history.back()" class="govuk-back-link">Back</a>
-
+              {{ govukBackLink({
+                text: "Back",
+                href: "incoming"
+              }) }}
 
               {{ govukRadios({
                 idPrefix: "type",
@@ -49,10 +50,10 @@
                 },
                 items: [
                   {
-                    value: "Telephone call from the claimant",
-                    text: "Telephone call",
+                    value: "Phonecall from the claimant",
+                    text: "Phonecall",
                     id: "contact-method-phonecall-from-claimant",
-                    checked: checked("contact-method", "Telephone call from the claimant")
+                    checked: checked("contact-method", "Phonecall from the claimant")
                   },
                   {
                     value: "Email from the claimant",

@@ -31,11 +31,12 @@
 
             <div class="govuk-grid-column-two-thirds">
 
-              <form action="outgoing-channel" method="post">
+              <form action="index" method="post">
 
-           
-<a href="javascript:history.back()" class="govuk-back-link">Back</a>
-
+              {{ govukBackLink({
+                text: "Back",
+                href: "outgoing"
+              }) }}
 
               <div class="govuk-form-group">
               <fieldset class="govuk-fieldset">
