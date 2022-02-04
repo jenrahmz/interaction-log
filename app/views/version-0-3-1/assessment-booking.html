@@ -31,7 +31,7 @@
 
             <div class="govuk-grid-column-two-thirds">
 
-              <form action="outgoing-channel" method="post">
+              <form action="index" method="post">
 
            
 <a href="javascript:history.back()" class="govuk-back-link">Back</a>
@@ -98,6 +98,17 @@
                             <input class="govuk-input govuk-!-width-three-quarters" id="assessor-name" name="assessor-name" type="text" value="{{ data['assessor-name'] }}" autocomplete="off">
                           </div>
                            
+
+                          <div class="hidden-radio-post">
+                            <div class="govuk-radios">
+                              <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="log-show" name="log" type="radio" value="log" {{ checked("log", "show") }}checked>
+                                <label class="govuk-label govuk-radios__label" for="log-show">
+                               Hidden radio = show on interaction log
+                                </label>
+                              </div>
+                            </div>
+                      </div>
 
               </fieldset>
               </div>

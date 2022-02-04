@@ -42,27 +42,31 @@
                   <li class="dwp-timeline__entry">
            
 
-                    <h2 class="govuk-heading-s govuk-!-margin-bottom-1">  {{ data['claim'] }}  {{ data['action'] }}   {{ data['action-details'] }} </h2>
+                    <h2 class="govuk-heading-s govuk-!-margin-bottom-1">{{ data['claim'] }}  {{ data['action'] }}   {{ data['action-details'] }} </h2>
                
                      <p class="govuk-caption-m govuk-!-margin-bottom-1"> {{ data['contact-method'] }}  {% if  data['who'] === 'the claimant' %} {{ data['who'] }}  {% else %}   {{ data['who-details'] }}  {% endif %} 
                        
                       {% if  data['what'] === 'outgoing' %} by Phillip Smith  
                       
-                      {% if  data['follow-up-details'] %}
+                      {% if  data['phone-answer-details'] %}
                       <p class="govuk-caption-m govuk-!-margin-bottom-1">  
-                      {{ data['follow-up-details'] }} </p>
+                     No answer: {{ data['phone-answer-details'] }} </p>
                      {% endif %}
                       
                       {% endif %} </p>
+
+                 
                       
                      <p class="govuk-caption-m">
-                      28 January 2022 at {{ data['time'] }} {{ data['time2'] }} {{ data['phone-time'] }}{{ data['phone-time2'] }} 
+                     28 January 2022 at {{ data['time'] }} {{ data['time2'] }} {{ data['phone-time'] }}{{ data['phone-time2'] }} {{ data['phone-time3'] }} 
                     </p>
                 
                  <!--   <div class="moj-timeline__description">  {{ data['claim'] }} {{ data['contact-method'] }}     </div>--> 
 
+               
 
-                {% if  (data['action']   == 'Booked an assessment') or (data['action']   == 'Rescheduled an assessment') %}
+
+                {% if  data['phone-answer']  == 'yes-assessment' %}
              
                   
                   <details class="govuk-details" data-module="govuk-details" style="margin-left: 7px; margin-top:10px; margin-bottom:0px;">
