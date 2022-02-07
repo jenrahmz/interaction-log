@@ -23,15 +23,16 @@ convertDate("2001-9-11")//"11-9-2001"
 </head>
 
   <div class="govuk-width-container {{ containerClasses }}">
-    <div class="navigation-header">
-      <ul class="govuk-list">
-        <li class="govuk-!-margin-bottom-2"><a href="#" class="govuk-link--no-visited-state govuk-link--no-underline">Referrals</a></li>
-        <li class="govuk-!-margin-bottom-2"><a href="#" class="govuk-link--no-visited-state govuk-link--no-underline">Claimant details</a></li>
-        <li class="govuk-!-margin-bottom-2"><a href="#" class="govuk-link--no-visited-state govuk-link--no-underline">Appointments</a></li>
-        <li class="govuk-!-margin-bottom-2"><a href="#" class="govuk-link--no-visited-state govuk-link--no-underline">Evidence</a></li>
-        <li class="govuk-!-margin-bottom-2 active">Claimant log</li>
-      </ul>
-    </div>
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+    <!-- <div class="navigation-header">
+        <ul class="govuk-list">
+          <li class="govuk-!-margin-bottom-2"><a href="#" class="govuk-link--no-visited-state govuk-link--no-underline">Referrals</a></li>
+          <li class="govuk-!-margin-bottom-2"><a href="#" class="govuk-link--no-visited-state govuk-link--no-underline">Claimant details</a></li>
+          <li class="govuk-!-margin-bottom-2"><a href="#" class="govuk-link--no-visited-state govuk-link--no-underline">Appointments</a></li>
+          <li class="govuk-!-margin-bottom-2"><a href="#" class="govuk-link--no-visited-state govuk-link--no-underline">Evidence</a></li>
+          <li class="govuk-!-margin-bottom-2 active">Claimant log</li>
+        </ul>
+      </div>--> 
 
     <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
 
@@ -45,11 +46,7 @@ convertDate("2001-9-11")//"11-9-2001"
 
               <form action="index" method="post">
 
-              {{ govukBackLink({
-                text: "Back",
-                href: "event"
-              }) }}
-
+           
               <div class="govuk-form-group">
               <fieldset class="govuk-fieldset">
   
