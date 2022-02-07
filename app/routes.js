@@ -66,7 +66,7 @@ router.post('/version-0-3-1/contact-claimant', function (req, res) {
             res.redirect('/version-0-3-2/pbr-assessment-booking')
           }
           else {
-            res.redirect('/version-0-3-2/index')
+            res.redirect('/version-0-3-2/event-date')
           }
         })
 
@@ -106,6 +106,23 @@ router.post('/version-0-3-1/contact-claimant', function (req, res) {
               }
             })
 
+
+            router.post('/version-0-3-2/telephone-check', function (req, res) {
+              // Get the answer from session data
+              // The name between the quotes is the same as the 'name' attribute on the input elements
+              // However in JavaScript we can't use hyphens in variable names
+            
+              const contact = req.session.data['contact-method']
+            
+              if (contact == 'Telephone call to ') {
+                  res.redirect('/version-0-3-2/phone-answer')
+                } 
+                
+                else {
+                  res.redirect('/version-0-3-2/outgoing-date')
+                }
+              })
+
             router.post('/version-0-3-1/telephone-check-assessment-booking', function (req, res) {
               // Get the answer from session data
               // The name between the quotes is the same as the 'name' attribute on the input elements
@@ -123,6 +140,25 @@ router.post('/version-0-3-1/contact-claimant', function (req, res) {
                   res.redirect('/version-0-3-1/index')
                 }
               })
+
+
+              router.post('/version-0-3-2/telephone-check-assessment-booking', function (req, res) {
+                // Get the answer from session data
+                // The name between the quotes is the same as the 'name' attribute on the input elements
+                // However in JavaScript we can't use hyphens in variable names
+              
+                const answer = req.session.data['phone-answer']
+              
+                if (answer == 'yes-assessment') {
+                    res.redirect('/version-0-3-2/assessment-booking')
+                  } 
+                  else if (answer == 'yes-other') {
+                    res.redirect('/version-0-3-2/index')
+                  }
+                  else {
+                    res.redirect('/version-0-3-2/index')
+                  }
+                })
     
 
     router.post('/version-0-3-2/contact-claimant', function (req, res) {
@@ -148,13 +184,13 @@ router.post('/version-0-3-1/contact-claimant', function (req, res) {
         // The name between the quotes is the same as the 'name' attribute on the input elements
         // However in JavaScript we can't use hyphens in variable names
       
-        const action = req.session.data['action']
+        const inaction = req.session.data['inc-action']
       
-        if (action == 'Rescheduled an assessment') {
+        if (inaction == 'Rescheduled an assessment') {
             res.redirect('/version-0-3-2/assessment-booking-incoming')
           }
           else {
-            res.redirect('/version-0-3-2/index')
+            res.redirect('/version-0-3-2/incoming-date')
           }
         })
   
