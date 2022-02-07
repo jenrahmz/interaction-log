@@ -60,8 +60,8 @@
                     
                   </div>
                   
-                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-phone-answer-1">
-                      <div class="govuk-form-group">
+                   <!--  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-phone-answer-1">
+                    <div class="govuk-form-group">
                         <label class="govuk-label" for="date">
                           Date of contact
                         </label>
@@ -76,12 +76,12 @@
                           For example 12:30pm
                         </div>          
                       <input class="govuk-input govuk-!-width-one-third" id="phone-time" name="phone-time" type="text" aria-describedby="time-hint" value="{{ data['phone-time'] }}" autocomplete="off">
-                      </div>        
+                      </div>         
   
                     </div>
                 
                 
-          </div>
+          </div>--> 
 
           {% else %}
 
@@ -94,8 +94,8 @@
               
             </div>
             
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-phone-answer-2">
-                <div class="govuk-form-group">
+            <!--  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-phone-answer-2">
+               <div class="govuk-form-group">
                   <label class="govuk-label" for="date">
                     Date of contact
                   </label>
@@ -112,10 +112,10 @@
                 <input class="govuk-input govuk-!-width-one-third" id="phone-time2" name="phone-time2" type="text" aria-describedby="time-hint" value="{{ data['phone-time2'] }}" autocomplete="off">
                 </div>        
 
-              </div>
+              </div> 
           
           
-    </div>
+    </div>-->
 
           {% endif %} 
 
@@ -131,7 +131,7 @@
             
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-phone-answer-3">
 
-                <div class="govuk-form-group">
+               <!-- <div class="govuk-form-group">
                   <label class="govuk-label" for="phone-date2">
                     Date of contact
                   </label>
@@ -146,11 +146,11 @@
                     For example 12:30pm
                   </div>          
                 <input class="govuk-input govuk-!-width-one-third" id="phone-time3" name="phone-time3" type="text" aria-describedby="time-hint" value="{{ data['phone-time3'] }}" autocomplete="off">
-                </div>       
+                </div>    -->   
 
                 <div class="govuk-form-group">
                   <label class="govuk-label" for="phone-answer-3">
-                    Add any brief details 
+                    Add any brief details for follow up
                   </label>      
                        
                 <input class="govuk-input govuk-!-width-full-width" id="phone-answer-9" name="phone-answer-details" type="text" value="{{ data['phone-answer-details'] }}" autocomplete="off">

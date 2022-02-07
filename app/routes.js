@@ -66,7 +66,7 @@ router.post('/version-0-3-1/contact-claimant', function (req, res) {
             res.redirect('/version-0-3-2/pbr-assessment-booking')
           }
           else {
-            res.redirect('/version-0-3-2/event-date')
+            res.redirect('/version-0-3-2/index')
           }
         })
 
@@ -119,7 +119,7 @@ router.post('/version-0-3-1/contact-claimant', function (req, res) {
                 } 
                 
                 else {
-                  res.redirect('/version-0-3-2/outgoing-date')
+                  res.redirect('/version-0-3-2/index')
                 }
               })
 
@@ -190,7 +190,7 @@ router.post('/version-0-3-1/contact-claimant', function (req, res) {
             res.redirect('/version-0-3-2/assessment-booking-incoming')
           }
           else {
-            res.redirect('/version-0-3-2/incoming-date')
+            res.redirect('/version-0-3-2/index')
           }
         })
   
