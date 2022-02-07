@@ -1,3 +1,5 @@
+
+
 {% extends "layout.html" %}
 {% set bodyAttributes = { id: "assess" } %}
 
@@ -30,60 +32,76 @@
           
 
             <div class="govuk-grid-column-two-thirds">
-
-              <form action="outgoing-date" method="post">
-
-                <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+              <a href="javascript:history.back()" class="govuk-back-link">Back</a>
 
 
-              {{ govukRadios({
-                idPrefix: "type",
-                name: "contact-method",
-                fieldset: {
-                  legend: {
-                    text: "How did we contact the claimant? ",
-                    isPageHeading: true,
-                    classes: "govuk-fieldset__legend--l"
-                  }
-                },
-                items: [
-                  {
-                    value: "Telephone call to ",
-                    text: "Telephone call",
-                    id: "contact-method-phonecall-to-claimant",
-                    checked: checked("contact-method", "Telephone call to")
-                  },
-                  {
-                    value: "Email to ",
-                    text: "Email",
-                    id: "contact-method-email-to-claimant",
-                    checked: checked("contact-method", "Email to")
-                  },
-                  {
-                    value: "Text message (SMS) to ",
-                    text: "Text message (SMS)",
-                    id: "contact-method-text-to-claimant",
-                    checked: checked("contact-method", "Text message (SMS) to")
-                  },
-                  {
-                    value: "Posted to ",
-                    text: "Post",
-                    id: "contact-method-post-to-claimant",
-                    checked: checked("contact-method", "Posted to")
-                  }
-                ]
-              }) }}
 
 
-              {{ govukButton({
-                text: "Continue"
-              }) }}
+            <form action="telephone-check" method="post" class="form">
 
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                    <h1 class="govuk-fieldset__heading">
+                      How did we contact the claimant?
+
+                    </h1>
+                  </legend>
+
+              
+                 
+                  <fieldset class="govuk-fieldset">
+                 
+                    <div class="govuk-radios govuk-radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="contact-method-telephone" name="contact-method" type="radio" value="Telephone call to " {{ checked("contact-method", "Telephone call to ") }}>
+                        <label class="govuk-label govuk-radios__label" for="contact-method-telephone">
+                          Telephone call
+                        </label>
+                      </div>
+    
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="contact-method-email" name="contact-method" type="radio" value="Email to " {{ checked("contact-method", "Email to ") }}>
+                        <label class="govuk-label govuk-radios__label" for="contact-method-email">
+                          Email
+                        </label>
+                      </div>
+    
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="contact-method-text" name="contact-method" type="radio" value="Text message (SMS) to " {{ checked("contact-method", "Text message (SMS) to ") }}>
+                        <label class="govuk-label govuk-radios__label" for="contact-method-text">
+                          Text message (SMS)
+                        </label>
+                      </div>
+
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="contact-method-post" name="contact-method" type="radio" value="Posted to " {{ checked("contact-method", "Posted to ") }}>
+                        <label class="govuk-label govuk-radios__label" for="contact-method-post">
+                          Post
+                        </label>
+                      </div>
+    
+                     
+                      </div>
+                    </fieldset>
+               
+               
+                </fieldset>
+                </legend>
+
+       </div>
+      
+              <button class="govuk-button" data-module="govuk-button">Continue</button>
+      
             </form>
+
+
 
             </div>
         </div>
 
     </main>
   </div>
+
+
 {% endblock %}
