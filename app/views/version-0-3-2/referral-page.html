@@ -1,0 +1,152 @@
+{% extends "layout.html" %}
+{% set bodyAttributes = { id: "assess" } %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block main %}
+
+{% include "includes/assessment-status-neutral.html" %}
+
+
+  <div class="govuk-width-container {{ containerClasses }}">
+
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+  <!--  <div class="navigation-header">
+      <ul class="govuk-list">
+        <li class="govuk-!-margin-bottom-2"><a href="#" class="govuk-link--no-visited-state govuk-link--no-underline">Referrals</a></li>
+        <li class="govuk-!-margin-bottom-2"><a href="#" class="govuk-link--no-visited-state govuk-link--no-underline">Claimant details</a></li>
+        <li class="govuk-!-margin-bottom-2"><a href="#" class="govuk-link--no-visited-state govuk-link--no-underline">Appointments</a></li>
+        <li class="govuk-!-margin-bottom-2"><a href="#" class="govuk-link--no-visited-state govuk-link--no-underline">Evidence</a></li>
+        <li class="govuk-!-margin-bottom-2 active">Claimant log</li>
+      </ul>
+    </div>--> 
+
+    <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
+
+      <div class="govuk-grid-row">
+
+          
+
+        <div class="govuk-grid-column-full">
+
+          <h1 class="govuk-heading-m">Personal details</h1>
+          </div>
+
+
+      <div class="govuk-grid-column-two-thirds">
+
+        
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Preferred name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              None
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Phone number
+            </dt>
+            <dd class="govuk-summary-list__value">
+              07799 000000
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Postcode
+            </dt>
+            <dd class="govuk-summary-list__value">
+              N2 1XX
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              SRTI
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No
+            </dd>
+          </div>
+        </dl>
+
+
+
+        
+        <h2 class="govuk-heading-m">Referral details</h2>
+
+             <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Referral date
+          </dt>
+          <dd class="govuk-summary-list__value">
+            2 February 2021
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Referral type
+          </dt>
+          <dd class="govuk-summary-list__value">
+            New referral
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Benefit type
+          </dt>
+          <dd class="govuk-summary-list__value">
+            UC
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Assessment centre
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Tresco House
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Case manager
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Zoe Hall
+          </dd>
+        </div>
+      </dl>
+              
+             
+</div>
+
+                <div class="govuk-grid-column-one-third">
+                
+                  <h3 class="govuk-heading-m">What you can do next</h3>
+             <ul class="govuk-list"> 
+                
+              <li class="govuk-!-margin-bottom-2"><a href="#">Update status</a></li> 
+              <li class="govuk-!-margin-bottom-2"><a href="#">Move to another caseload</a></li> 
+
+              <li class="govuk-!-margin-bottom-2"><a href="index">View claimant record</a></li> 
+                 
+               <li class="govuk-!-margin-bottom-2"><a href="referral">Add entry to claimant record</a></li> 
+                 
+                </ul>
+
+             
+              
+              
+              
+
+            </div>
+        </div>
+
+    </main>
+  </div>
+{% endblock %}
