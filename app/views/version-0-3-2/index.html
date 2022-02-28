@@ -46,7 +46,17 @@
 
                     <h2 class="govuk-heading-s govuk-!-margin-bottom-1">{{ data['claim'] }}  {{ data['action'] }}  {{ data['inc-action'] }} {{ data['action-details'] }} {{ data['inc-action-details'] }} </h2>
                
-                     <p class="govuk-caption-m govuk-!-margin-bottom-1"> {{ data['contact-method'] }}  {% if  data['who'] === 'the claimant' %} {{ data['who'] }}  {% else %}   {{ data['who-details'] }}  {% endif %} 
+                     <p class="govuk-caption-m govuk-!-margin-bottom-1"> 
+                      {% if  data['booking-box-details'] %} {{ data['booking-box-details'] }}
+                      <br><br>   {% endif %}
+
+                      {% if  data['rebooking-box-details'] %} {{ data['rebooking-box-details'] }}
+                      <br><br>   {% endif %}
+
+                      {% if  data['pbr-booking-box-details'] %} {{ data['pbr-booking-box-details'] }}
+                      <br><br>   {% endif %}
+
+                      {{ data['contact-method'] }}  {% if  data['who'] === 'the claimant' %} {{ data['who'] }}  {% else %}   {{ data['who-details'] }}  {% endif %} 
                       {% if  data['what'] === 'event' %} By Phillip Smith   {% endif %} 
                       {% if  data['what'] === 'outgoing' %} by Phillip Smith  
                       
@@ -67,8 +77,8 @@
 
                
 
-
-                {% if  data['phone-answer']  == 'yes-assessment' %}
+    <!-- hide for no assessment details in MVP to line 137
+             {% if  data['phone-answer']  == 'yes-assessment' %}
              
                   
                   <details class="govuk-details" data-module="govuk-details" style="margin-left: 7px; margin-top:10px; margin-bottom:0px;">
@@ -123,14 +133,15 @@
 
                     <div class="govuk-details__text">
                       
-                   <!--   <span class="govuk-body govuk-!-font-weight-bold"> Assessment type:</span> {{ data['assessment-type'] }} <br>--> 
+                    <span class="govuk-body govuk-!-font-weight-bold"> Assessment type:</span> {{ data['assessment-type'] }} <br>
                       <span class="govuk-body govuk-!-font-weight-bold">Date and time of assessment:</span> 27 February 2022 at {{ data['assessment-time'] }} <br>
                       
                         <span class="govuk-body govuk-!-font-weight-bold">Assessor name:</span> {{ data['assessor-name'] }} </div>
                   
                   </details>
 
-                  {% endif %} 
+                  {% endif %}  
+                end of mvp no assessment details --> 
 
                   <!--   <div class="moj-timeline__description" style="margin-top: 10px; padding-bottom: 10px;">  <a href="edit-entry">Edit this entry</a> </div>--> 
           {% endif %} 

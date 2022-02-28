@@ -177,8 +177,18 @@
                         Booked an assessment
                   </label>                      
                 </div>
-                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-action-6" style=display:none;>
-                  <div class="govuk-form-group"></div></div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-action-6">
+                
+
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="action-6">
+                        Add any additional details
+                      </label>      
+                           
+                    <input class="govuk-input govuk-!-width-full-width" id="action-6" name="booking-box-details" type="text" value="{{ data['booking-box-details'] }}" autocomplete="off">
+                  
+
+                  </div></div>
   
                     
   
@@ -188,8 +198,18 @@
                         Rescheduled an assessment
                   </label>                      
                 </div>
-                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-action-7" style=display:none;>
-                  <div class="govuk-form-group"></div></div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-action-7" >
+                  
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="action-7">
+                        Add any additional details
+                      </label>      
+                           
+                    <input class="govuk-input govuk-!-width-full-width" id="action-7" name="rebooking-box-details" type="text" value="{{ data['rebooking-box-details'] }}" autocomplete="off">
+                    </div>
+
+
+                  </div>
   
                  
                   {% if  (data['claim'] != 'PIP') and (data['claim']  != 'UC') %}
