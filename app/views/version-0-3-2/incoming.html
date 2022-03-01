@@ -31,8 +31,9 @@
           
 
             <div class="govuk-grid-column-two-thirds">
-
-              <form action="/version-0-3-2/contact-claimant-incoming" method="post" class="form">
+  <!-- hidden for mvp no assessment details 
+              <form action="/version-0-3-2/contact-claimant-incoming" method="post" class="form"> -->
+                <form action="/version-0-3-2/index" method="post" class="form"> 
 
              
 
@@ -127,8 +128,16 @@
                     Rescheduled an assessment
               </label>                      
             </div>
-            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-inc-action-6" style=display:none;>
-              <div class="govuk-form-group"></div></div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-inc-action-6" >
+              
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="action-7">
+                  Add any additional details
+                </label>      
+                     
+              <input class="govuk-input govuk-!-width-full-width" id="action-6" name="rebooking-box-details" type="text" value="{{ data['rebooking-box-details'] }}" autocomplete="off">
+              </div>
+            </div>
   
              
   
