@@ -159,8 +159,16 @@
                         Requested further evidence
                   </label>                      
                 </div>
-                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-action-4" style=display:none;>
-                  <div class="govuk-form-group"></div></div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-action-4">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="action-4">
+                      Add brief details 
+                    </label>      
+                         
+                  <input class="govuk-input govuk-!-width-full-width" id="action-4" name="fme-box-details" type="text" value="{{ data['fme-box-details'] }}" autocomplete="off">
+              
+                  
+                  </div></div>
   
                  
                     <div class="govuk-radios__item" data-module="govuk-radios">
@@ -263,34 +271,39 @@
     </legend>
 
 
+    <div class="govuk-form-group">
+      
+        <div class="govuk-hint">
+          Select all that apply.
+        </div>
+       
    
-    <fieldset class="govuk-fieldset">
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
    
-      <div class="govuk-radios govuk-radios">
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="contact-method-telephone" name="contact-method" type="radio" value="Telephone call to " {{ checked("contact-method", "Telephone call to ") }}>
-          <label class="govuk-label govuk-radios__label" for="contact-method-telephone">
+      <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="contact-method-telephone" name="contact-method" type="checkbox" value="Telephone call" {{ checked("contact-method", "Telephone call to ") }}>
+          <label class="govuk-label govuk-checkboxes__label" for="contact-method-telephone">
             Telephone call
           </label>
         </div>
 
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="contact-method-email" name="contact-method" type="radio" value="Email to " {{ checked("contact-method", "Email to ") }}>
-          <label class="govuk-label govuk-radios__label" for="contact-method-email">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input"  id="contact-method-email" name="contact-method" type="checkbox" value="Email" {{ checked("contact-method", "Email to ") }}>
+          <label class="govuk-label govuk-checkboxes__label" for="contact-method-email">
             Email
           </label>
         </div>
 
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="contact-method-text" name="contact-method" type="radio" value="Text message (SMS) to " {{ checked("contact-method", "Text message (SMS) to ") }}>
-          <label class="govuk-label govuk-radios__label" for="contact-method-text">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input"  id="contact-method-text" name="contact-method" type="checkbox" value="Text message (SMS)" {{ checked("contact-method", "Text message (SMS) to ") }}>
+          <label class="govuk-label govuk-checkboxes__label" for="contact-method-text">
             Text message (SMS)
           </label>
         </div>
 
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="contact-method-post" name="contact-method" type="radio" value="Posted to " {{ checked("contact-method", "Posted to ") }}>
-          <label class="govuk-label govuk-radios__label" for="contact-method-post">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input"  id="contact-method-post" name="contact-method" type="checkbox" value="Post" {{ checked("contact-method", "Posted to ") }}>
+          <label class="govuk-label govuk-checkboxes__label" for="contact-method-post">
             Post
           </label>
         </div>

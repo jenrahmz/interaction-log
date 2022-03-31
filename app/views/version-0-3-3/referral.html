@@ -88,49 +88,53 @@
               <!-- commenting out to accomodate unanswered call journey -->  
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                   <h1 class="govuk-fieldset__heading">
-                    Was this today?
+                    When did this happen?
                   </h1>
                 </legend>
               
-                <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="Yes" aria-controls="conditional-contact" aria-expanded="false">
-                        <label class="govuk-label govuk-radios__label" for="contact">
-                      Yes
-                    </label>
-                        
-                      </div>
-                      
-                        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
-                          <div class="govuk-form-group">
-                            <label class="govuk-label" for="time">
-                              Time of contact
-                            </label>      
-                            <div id="time-hint" class="govuk-hint">
-                              For example, 12:30pm
-                            </div>          
-                          <input class="govuk-input govuk-!-width-one-third" id="time" name="time" type="text" aria-describedby="time-hint" value="{{ data['time'] }}" autocomplete="off">
-                          </div>
-      
-                        </div>
+                
                     
-                          <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="No" aria-controls="conditional-contact-2" aria-expanded="false">
-                            <label class="govuk-label govuk-radios__label" for="contact-2">
-                          No
-                        </label>                      
-                      </div>
-                      
-                        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
-              
-                          <div class="govuk-form-group">
-                            <label class="govuk-label" for="date">
-                              Date of contact
-                            </label>
                           
-                          <input class="govuk-input govuk-!-width-one-third" id="date" name="date" type="date" value="{{ data['date'] }}">
-                          </div>  
-                          <div class="govuk-form-group">
+                      
+                      
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+               
+                    <div id="passport-issued-hint" class="govuk-hint">
+                      For example, 15 3 2022
+                    </div>
+                    <div class="govuk-date-input" >
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="day">
+                            Day
+                          </label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="day" name="day" value="{{ data['day'] }}" type="text" pattern="[0-9]*" inputmode="numeric">
+                        </div>
+                      </div>
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="month">
+                            Month
+                          </label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="month" name="month" value="{{ data['month'] }}" type="text" pattern="[0-9]*" inputmode="numeric">
+                        </div>
+                      </div>
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="year">
+                            Year
+                          </label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="year" name="year" value="{{ data['year'] }}" type="text" pattern="[0-9]*" inputmode="numeric">
+                        </div>
+                      </div>
+                    </div>
+                
+                  </fieldset>
+           
+
+
+                        <br><br>
                             <label class="govuk-label" for="time2">
                               Time of contact
                             </label>      
@@ -138,11 +142,10 @@
                               For example, 12:30pm
                             </div>          
                           <input class="govuk-input govuk-!-width-one-third" id="time2" name="time2" type="text" aria-describedby="time-hint" value="{{ data['time2'] }}" autocomplete="off">
-                          </div>        
-                      </div>
+                              
+                    
                 </div> 
 
-<br>
              <!-- - Hidden due to referral being fed through from chaffinch  <h1 class="govuk-heading-m">Which claim is this for?</h1>
 
                 <div class="govuk-radios">

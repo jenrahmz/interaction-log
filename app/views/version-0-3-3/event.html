@@ -56,8 +56,14 @@
                       Evidence reviewed
                 </label>                      
               </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-action-1" style=display:none;>
-                <div class="govuk-form-group"></div></div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-action-1" >
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="action-1">
+                    Add brief details about the review
+                  </label>      
+                       
+                <input class="govuk-input govuk-!-width-full-width" id="action-1" name="review-box-details" type="text" value="{{ data['review-box-details'] }}" autocomplete="off">
+                </div></div>
           
 
               
@@ -85,8 +91,17 @@
                   Failed to attend assessment
             </label>                      
           </div>
-          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-action-3" style=display:none;>
-            <div class="govuk-form-group"></div></div>
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-action-3">
+            <div class="govuk-form-group">
+
+              <label class="govuk-label" for="action-3">
+                Add brief details 
+              </label>      
+                   
+            <input class="govuk-input govuk-!-width-full-width" id="action-3" name="failed-box-details" type="text" value="{{ data['failed-box-details'] }}" autocomplete="off">
+            
+
+            </div></div>
 
 
 

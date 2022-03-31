@@ -47,6 +47,16 @@
                     <h2 class="govuk-heading-s govuk-!-margin-bottom-1">{{ data['claim'] }}  {{ data['action'] }}  {{ data['inc-action'] }} {{ data['action-details'] }} {{ data['inc-action-details'] }} </h2>
                
                      <p class="govuk-caption-m govuk-!-margin-bottom-1"> 
+
+                      {% if  data['fme-box-details'] %} {{ data['fme-box-details'] }}
+                      <br><br>   {% endif %}
+
+                      {% if  data['review-box-details'] %} {{ data['review-box-details'] }}
+                      <br><br>   {% endif %}
+                    
+                      {% if  data['failed-box-details'] %} {{ data['failed-box-details'] }}
+                      <br><br>   {% endif %}
+
                       {% if  data['booking-box-details'] %} {{ data['booking-box-details'] }}
                       <br><br>   {% endif %}
 
@@ -56,7 +66,13 @@
                       {% if  data['pbr-booking-box-details'] %} {{ data['pbr-booking-box-details'] }}
                       <br><br>   {% endif %}
 
-                      {{ data['contact-method'] }}  {% if  data['who'] === 'the claimant' %} {{ data['who'] }}  {% else %}   {{ data['who-details'] }}  {% endif %} 
+                      {% if  data['contact-method'] != 'Telephone call' %}
+                      Text message (SMS) and post
+                      {% else %} 
+                      
+                      {{ data['contact-method'] }} 
+                      {% endif %}
+                      to {% if  data['who'] === 'the claimant' %} {{ data['who'] }}  {% else %}   {{ data['who-details'] }}  {% endif %} 
                       {% if  data['what'] === 'event' %} By Phillip Smith   {% endif %} 
                       {% if  data['what'] === 'outgoing' %} by Phillip Smith  
                       
@@ -70,7 +86,17 @@
                  
                       
                      <p class="govuk-caption-m">
-                     28 January 2022 at {{ data['time'] }} {{ data['time2'] }} {{ data['phone-time'] }}{{ data['phone-time2'] }} {{ data['phone-time3'] }} 
+
+                      {% if  data['year'] %} 
+                      {{ data['day']}}  {{ data['month'] | toMonth }}  {{ data['year']}} 
+                      {% else %} 
+                      15 March 2022
+                      {% endif %}
+                      at  {% if  data['time2'] %}
+                     {{ data['time2'] }} 
+                     {% else %} 
+                     3:15pm
+                     {% endif %}
                     </p>
                 
                  <!--   <div class="moj-timeline__description">  {{ data['claim'] }} {{ data['contact-method'] }}     </div>--> 
