@@ -159,7 +159,7 @@
                         Requested further evidence
                   </label>                      
                 </div>
-                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-action-4">
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-action-4" style=display:none;>
                   <div class="govuk-form-group">
                     <label class="govuk-label" for="action-4">
                       Add brief details 
@@ -186,7 +186,7 @@
                         Booked an assessment
                   </label>                      
                 </div>
-                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-action-6">
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-action-6" style=display:none;>
                 
 
                     <div class="govuk-form-group">
@@ -207,7 +207,7 @@
                         Rescheduled an assessment
                   </label>                      
                 </div>
-                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-action-7" >
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-action-7" style=display:none;>
                   
                     <div class="govuk-form-group">
                       <label class="govuk-label" for="action-7">
@@ -244,21 +244,28 @@
                       
                     </div>
                     
-                      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-action-9">
-                        <div class="govuk-form-group">
-                          <label class="govuk-label" for="action-9">
-                            Add brief details explaining why we contacted the claimant
-                          </label>      
-                               
-                        <input class="govuk-input govuk-!-width-full-width" id="action-9" name="action-details" type="text" value="{{ data['action-details'] }}" autocomplete="off">
-                        </div>
-  
-                    </div>
+                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-action-9">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label" for="action-9">
+                          Add a title of what happened
+                        </label>   
+                         
+                  <input class="govuk-input govuk-!-width-one-half" id="action-9" name="action-details" type="text" value="{{ data['action-details'] }}" autocomplete="off">
+                  </div>
+                </div>
+
+                <div class="govuk-form-group">
+                  <label class="govuk-label"> 
+                    Add brief details of any additional information (optional)
+                  </label>      
+                       
+                <input class="govuk-input govuk-!-width-full-width" id="action-1" name="additional-details" type="text" value="{{ data['additional-details'] }}" autocomplete="off">
+                </div>
                 
                 
           </div>
 
-          
+          <br>
 <br>
 
 <div class="govuk-form-group">

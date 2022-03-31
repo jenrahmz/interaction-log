@@ -48,6 +48,10 @@
                
                      <p class="govuk-caption-m govuk-!-margin-bottom-1"> 
 
+
+                      {% if  data['additional-details'] %} {{ data['additional-details'] }}
+                      <br><br>   {% endif %}
+
                       {% if  data['fme-box-details'] %} {{ data['fme-box-details'] }}
                       <br><br>   {% endif %}
 

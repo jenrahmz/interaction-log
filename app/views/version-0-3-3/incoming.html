@@ -128,7 +128,7 @@
                     Rescheduled an assessment
               </label>                      
             </div>
-            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-inc-action-6" >
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-inc-action-6"  style=display:none;>
               
               <div class="govuk-form-group">
                 <label class="govuk-label" for="action-7">
@@ -170,20 +170,32 @@
                 
                   <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-inc-action-10">
                     <div class="govuk-form-group">
-                      <label class="govuk-label" for="inc-action-10">
-                        Add brief details explaining why the claimant contacted us
-                      </label>      
-                           
-                    <input class="govuk-input govuk-!-width-full-width" id="inc-action-10" name="inc-action-details" type="text" value="{{ data['inc-action-details'] }}" autocomplete="off">
-                    </div>
+                      <div class="govuk-form-group">
+                        <label class="govuk-label" for="action-10">
+                          Add a title of what happened
+                        </label>   
+                         
+                  <input class="govuk-input govuk-!-width-one-half" id="action-10" name="action-details" type="text" value="{{ data['action-details'] }}" autocomplete="off">
+                  </div>
+
+                  
   
                   </div>
               
               
+                  
         </div>
   
         
                 
+        <div class="govuk-form-group">
+          <label class="govuk-label"> 
+            Add brief details of any additional information (optional)
+          </label>      
+               
+        <input class="govuk-input govuk-!-width-full-width" id="action-1" name="additional-details" type="text" value="{{ data['additional-details'] }}" autocomplete="off">
+        </div>
+        
                 
           </div><br>
           

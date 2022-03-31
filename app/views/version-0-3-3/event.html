@@ -56,7 +56,7 @@
                       Evidence reviewed
                 </label>                      
               </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-action-1" >
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-action-1" style=display:none;>
                 <div class="govuk-form-group">
                   <label class="govuk-label" for="action-1">
                     Add brief details about the review
@@ -73,7 +73,7 @@
                     Paper based review booked
               </label>                      
             </div>
-            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-action-2">
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-action-2" style=display:none;>
               <div class="govuk-form-group">
                 <label class="govuk-label" for="action-2">
                   Add brief details about the assessment
@@ -81,7 +81,7 @@
                      
               <input class="govuk-input govuk-!-width-full-width" id="action-2" name="pbr-booking-box-details" type="text" value="{{ data['pbr-booking-box-details'] }}" autocomplete="off">
               </div>
-            </div>
+            </div> 
             
 
 
@@ -91,7 +91,7 @@
                   Failed to attend assessment
             </label>                      
           </div>
-          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-action-3">
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-action-3" style=display:none;>
             <div class="govuk-form-group">
 
               <label class="govuk-label" for="action-3">
@@ -209,13 +209,21 @@
                       <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-action-12">
                         <div class="govuk-form-group">
                           <label class="govuk-label" for="action-12">
-                            Add brief details explaining what has been updated
+                            Add a title of what happened
                           </label>   
                            
-                    <input class="govuk-input govuk-!-width-full-width" id="action-12" name="action-details" type="text" value="{{ data['action-details'] }}" autocomplete="off">
+                    <input class="govuk-input govuk-!-width-one-half" id="action-12" name="action-details" type="text" value="{{ data['action-details'] }}" autocomplete="off">
                     </div>
                   </div>
 
+                </div>
+
+                <div class="govuk-form-group">
+                  <label class="govuk-label"> 
+                    Add brief details of any additional information (optional)
+                  </label>      
+                       
+                <input class="govuk-input govuk-!-width-full-width" id="action-1" name="additional-details" type="text" value="{{ data['additional-details'] }}" autocomplete="off">
                 </div>
                
             
