@@ -70,13 +70,13 @@
                       {% if  data['pbr-booking-box-details'] %} {{ data['pbr-booking-box-details'] }}
                       <br><br>   {% endif %}
 
-                      {% if  data['contact-method'] != 'Telephone call' %}
-                      Text message (SMS) and post
+                      {% if  data['what'] === 'outgoing' %}
+                      Text message (SMS) and post to
                       {% else %} 
                       
                       {{ data['contact-method'] }} 
                       {% endif %}
-                      to {% if  data['who'] === 'the claimant' %} {{ data['who'] }}  {% else %}   {{ data['who-details'] }}  {% endif %} 
+                      {% if  data['who'] === 'the claimant' %} the claimant   {% else %}  {{ data['who-details'] }} {% endif %} 
                       {% if  data['what'] === 'event' %} By Phillip Smith   {% endif %} 
                       {% if  data['what'] === 'outgoing' %} by Phillip Smith  
                       
