@@ -44,9 +44,17 @@
                   <li class="dwp-timeline__entry">
            
 
-                    <h2 class="govuk-heading-s govuk-!-margin-bottom-1">{{ data['claim'] }}  {{ data['action'] }}  {{ data['inc-action'] }} {{ data['action-details'] }} {{ data['inc-action-details'] }} </h2>
+                    <h2 class="govuk-heading-s govuk-!-margin-bottom-1">{{ data['claim'] }}  {{ data['action'] }}  {{ data['inc-action'] }}  </h2>
                
                      <p class="govuk-caption-m govuk-!-margin-bottom-1"> 
+
+                      {% if  data['inc-action'] === 'Other' %}  {{ data['inc-action-details'] }}
+                      <br><br>   {% endif %}
+
+                      {% if  data['action'] === 'Other' %} {{ data['action-details'] }} 
+                      <br><br>   {% endif %}
+
+
                       {% if  data['booking-box-details'] %} {{ data['booking-box-details'] }}
                       <br><br>   {% endif %}
 
