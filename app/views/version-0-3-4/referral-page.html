@@ -134,7 +134,23 @@
               <li class="govuk-!-margin-bottom-2"><a href="#">Update status</a></li> 
               <li class="govuk-!-margin-bottom-2"><a href="#">Move to another caseload</a></li> 
 
-              <li class="govuk-!-margin-bottom-2"><a href="index">View timeline</a></li> 
+              <form action="index" method="post" class="form">
+                <div class="hidden-radio-post">
+                <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="claim-pip" name="claim" type="radio" value="PIP" {{ checked("claim", "PIP)") }} checked>
+                    <label class="govuk-label govuk-radios__label" for="claim-pip">
+                      Personal Independence Payment
+                    </label>
+                  </div>
+                    </div>
+                  </div>
+                <button class="button-link-hack" data-module="govuk-button">View timeline</button> 
+      
+                  
+                        </form> 
+
+           <!--  <li class="govuk-!-margin-bottom-2"><a href="index">View timeline</a></li> -->  
                  
               <!-- coded out, link below takes through to adding function with UC set as referral from this page --> 
               <!-- <li class="govuk-!-margin-bottom-2"><a href="referral">Add entry to claimant record</a></li> -->
