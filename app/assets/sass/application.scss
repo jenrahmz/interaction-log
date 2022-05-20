@@ -26,7 +26,7 @@ $govuk-assets-path: '/govuk/assets/';
 // Key details Bar
 
 .key-details-bar {
-    background-color: #005ea5;
+    background-color: #1D70B8;
 }
 
 .key-details-bar .key-details-bar__key-details {
@@ -59,7 +59,7 @@ $govuk-assets-path: '/govuk/assets/';
     font-weight: 700;
     line-height: 1.25;
     padding: 5px 8px 0;
-    color: #005ea5;
+    color: #1D70B8;
     background-color: #fff;
     letter-spacing: 1px;
     text-decoration: none;
@@ -122,11 +122,11 @@ $govuk-assets-path: '/govuk/assets/';
 }
 
 .navigation-secondary a:visited {
-    color: #005ea5;
+    color: #1D70B8;
 }
 
 .navigation-secondary .active {
-    box-shadow: inset 0px -5px 0px 0px #005ea5;
+    box-shadow: inset 0px -5px 0px 0px #1D70B8;
     color: #0b0c0c;
     text-decoration: none;
 }
@@ -147,7 +147,7 @@ $govuk-assets-path: '/govuk/assets/';
   }
 
   .navigation-secondary a:visited {
-    color: #005ea5;
+    color: #1D70B8;
   }
   
   .navigation-secondary a:hover {
@@ -155,7 +155,7 @@ $govuk-assets-path: '/govuk/assets/';
   }
   
   .navigation-secondary .active {
-    box-shadow: inset 0px -5px 0px 0px #005ea5;
+    box-shadow: inset 0px -5px 0px 0px #1D70B8;
     color: #0b0c0c;
     text-decoration: none;
   }
@@ -196,7 +196,7 @@ hr { height:0px; border-top:1px solid #b1b4b6; border-bottom: 0;}
 
 // Left Nav
 
-.leftnav-active { border-left:#005ea5 3px solid; margin-left:-10px; padding-left:7px; font-weight:bold; }
+.leftnav-active { border-left:#1D70B8 3px solid; margin-left:-10px; padding-left:7px; font-weight:bold; }
 
 // Navigation Header
 
@@ -205,7 +205,7 @@ hr { height:0px; border-top:1px solid #b1b4b6; border-bottom: 0;}
 .navigation-header ul { }
 .navigation-header li { float:left; margin-right:20px; margin-bottom:0 !important; padding-bottom:6px; }
 .navigation-header li a, .navigation-header li a:hover, .navigation-header li a:visited { text-decoration: none; }
-.navigation-header .active { border-bottom:4px #005ea5 solid;}
+.navigation-header .active { border-bottom:4px #1D70B8 solid;}
 
 // DWP Timeline
 
