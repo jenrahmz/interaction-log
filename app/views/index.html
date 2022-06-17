@@ -13,14 +13,14 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-one-quarter">
       <ul class="govuk-list">
-        <li><a href="#current-prototype" class="govuk-link--no-visited-state govuk-link--no-underline">Current prototype</a></li>
-        <li><a href="#mvp-prototype" class="govuk-link--no-visited-state govuk-link--no-underline">MVP prototype</a></li>
+        <li><a href="#current-prototype" class="govuk-link--no-visited-state govuk-link--no-underline">Current + MVP prototype</a></li>
+       
         <li><a href="#archive" class="govuk-link--no-visited-state govuk-link--no-underline">Archive</a></li>
       </ul>
     </div>
     <div class="govuk-grid-column-three-quarters">
 
-      <h2 class="govuk-heading-l" id="current-prototype">Current prototype</h2>
+      <h2 class="govuk-heading-l" id="current-prototype">Current + MVP prototype</h2>
       <p class="govuk-body-l">These prototypes represent the current thinking on the HAS Interaction Log </p>
 
 
@@ -71,93 +71,7 @@
         
       
      
-      
-      <h2 class="govuk-heading-l" id="mvp-prototype">MVP prototype</h2>
-          <h3 class="govuk-heading-m" style="margin-top: -10px;">Version 0.3.2</h3>
-
-          <p>Condensed / alternate journey MVP</p>
-
-          <form action="version-0-3-2/referral" method="post" class="form">
-
-            <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset">
-        
-          <h1 class="govuk-heading-s">Select a referral to see relevant actions: </h1>
-
-          <div class="govuk-radios">
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="claim-uc" name="claim" type="radio" value="UC" {{ checked("claim", "UC") }}>
-              <label class="govuk-label govuk-radios__label" for="claim-uc">
-                Universal Credit / Employee Support Allowance
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="claim-pip" name="claim" type="radio" value="PIP" {{ checked("claim", "PIP)") }}>
-              <label class="govuk-label govuk-radios__label" for="claim-pip">
-                Personal Independence Payment
-              </label>
-            </div>
-           
-          </div>
-            
-          <br>
-
-          <button class="govuk-button" data-module="govuk-button">
-           Start journey
-          </button>
-
-        
-          <p><a href="version-0-3-2/referral-page">Chaffinch referral page</a>  (Link to interaction log)</li> </p>
-         
-
-          
-            </form>
-            </div>
-          </fieldset>
-
-
-            <details class="govuk-details" data-module="govuk-details">
-              <summary class="govuk-details__summary">
-                <span class="govuk-details__summary-text">
-                 Additional pages
-                </span>
-              </summary>
-              <div class="govuk-details__text">
-                
-                <ul class="govuk-list govuk-list--bullet">
-                
-                    <a href="version-0-3-2/validation-01">Flat validation: Date in the future</a>  (Why are you adding a new entry)</li>
-
-                    <br>
-                    <li><a href="version-0-3-2/assessment-booking">Assessment booking details</a> (removed for MVP)</li>
-
-
-                    <li><a href="version-0-3-2/pbr-assessment-booking">Paper based review booking details
-                    </a> (removed for MVP)</li>
-
-                    <li><a href="version-0-3-2/phone-answer">Did they answer the phone?
-                    </a> (removed for MVP)</li>
-
-
-                    </ul>
-
-              </div>
-            </details>
-           
-           
-  
-    
-      
-      <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Tickets:</h4>
-      <ul class="govuk-list govuk-list--bullet">
-        <li><a href="https://dwpdigital.atlassian.net/browse/HTRB-994" target="_blank">HTRB-994</a>, Iteration of prototype</li>
-      </ul>
-
-      <h3 class="govuk-heading-s"></h3>
-
      
-
-
     
        
      
@@ -260,6 +174,93 @@
       </ul>
         
     
+       
+      <h2 class="govuk-heading-m" id="mvp-prototype">Previous MVP prototype (archived) </h2>
+          <h3 class="govuk-heading-m" style="margin-top: -10px;">Version 0.3.2</h3>
+
+          <p>Condensed / alternate journey MVP</p>
+
+          <form action="version-0-3-2/referral" method="post" class="form">
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+        
+          <h1 class="govuk-heading-s">Select a referral to see relevant actions: </h1>
+
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="claim-uc" name="claim" type="radio" value="UC" {{ checked("claim", "UC") }}>
+              <label class="govuk-label govuk-radios__label" for="claim-uc">
+                Universal Credit / Employee Support Allowance
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="claim-pip" name="claim" type="radio" value="PIP" {{ checked("claim", "PIP)") }}>
+              <label class="govuk-label govuk-radios__label" for="claim-pip">
+                Personal Independence Payment
+              </label>
+            </div>
+           
+          </div>
+            
+          <br>
+
+          <button class="govuk-button" data-module="govuk-button">
+           Start journey
+          </button>
+
+        
+          <p><a href="version-0-3-2/referral-page">Chaffinch referral page</a>  (Link to interaction log)</li> </p>
+         
+
+          
+            </form>
+            </div>
+          </fieldset>
+
+
+            <details class="govuk-details" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                 Additional pages
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                
+                <ul class="govuk-list govuk-list--bullet">
+                
+                    <a href="version-0-3-2/validation-01">Flat validation: Date in the future</a>  (Why are you adding a new entry)</li>
+
+                    <br>
+                    <li><a href="version-0-3-2/assessment-booking">Assessment booking details</a> (removed for MVP)</li>
+
+
+                    <li><a href="version-0-3-2/pbr-assessment-booking">Paper based review booking details
+                    </a> (removed for MVP)</li>
+
+                    <li><a href="version-0-3-2/phone-answer">Did they answer the phone?
+                    </a> (removed for MVP)</li>
+
+
+                    </ul>
+
+              </div>
+            </details>
+           
+           
+  
+    
+      
+      <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Tickets:</h4>
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="https://dwpdigital.atlassian.net/browse/HTRB-994" target="_blank">HTRB-994</a>, Iteration of prototype</li>
+      </ul>
+
+      <h3 class="govuk-heading-s"></h3>
+
+     
+
+
 
 
 
