@@ -1,4 +1,7 @@
 // global styles for <a> and <p> tags
+
+$govuk-font-family: Arial, sans-serif;
+
 $govuk-global-styles: true;
 $govuk-new-link-styles: true;
 
@@ -34,7 +37,7 @@ $govuk-assets-path: '/govuk/assets/';
     max-width: 960px;
     padding: 20px 30px 20px 30px;
     position: relative;
-    font-family: "GDS Transport";
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 .key-details-bar .key-details-bar__key-details * {
