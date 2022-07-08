@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+{% set bodyAttributes = { id: "assess" } %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block main %}
+
+
+
+  <div class="govuk-width-container {{ containerClasses }}">
+
+<!-- 
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>  -->
+
+
+
+
+    <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
+
+      <div class="govuk-grid-row">
+
+          
+
+        <div class="govuk-grid-column-full">
+
+         
+          </div>
+
+
+      <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-l">Sorry, the service is unavailable</h1>
+
+<p>This claimant has no National insurance number so no timeline entries can be made.</p>
+
+               <p><a href="referral-page">Go back to the referral</a></p>
+             
+              
+             
+</div>
+
+             <div class="govuk-grid-column-one-third">
+                
+               
+
+                 
+              
+
+            </div>
+        </div>
+
+    </main>
+  </div>
+{% endblock %}
