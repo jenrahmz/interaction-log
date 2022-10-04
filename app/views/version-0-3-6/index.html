@@ -72,7 +72,7 @@
                       <br><br>   {% endif %}
 
                       {% if  data['what'] === 'outgoing' %}
-                      Text message (SMS) and post to
+                 {{ data['contact-method'] }} to
                       {% else %} 
                       
                       {{ data['contact-method'] }} 
