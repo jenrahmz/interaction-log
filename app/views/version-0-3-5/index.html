@@ -45,7 +45,7 @@
                   <li class="dwp-timeline__entry">
            
 
-                    <h2 class="govuk-heading-s govuk-!-margin-bottom-1">{{ data['claim'] }}  {{ data['action'] }}  {{ data['inc-action'] }} {{ data['action-details'] }} {{ data['inc-action-details'] }} </h2>
+                    <h2 class="govuk-heading-s govuk-!-margin-bottom-1">{% if  data['claim']   != 'UC' %}PIP  {% else %} UC {% endif %}  {{ data['action'] }}  {{ data['inc-action'] }} {{ data['action-details'] }} {{ data['inc-action-details'] }} </h2>
                
                      <p class="govuk-caption-m govuk-!-margin-bottom-1"> 
 
@@ -181,7 +181,7 @@
 
 
           <li class="dwp-timeline__entry">
-            <h2 class="govuk-heading-s govuk-!-margin-bottom-1">{% if  data['claim']   != 'PIP' %}UC{% endif %}{% if  data['claim']   != 'UC' %}PIP{% endif %} Paper based review booked</h2>
+            <h2 class="govuk-heading-s govuk-!-margin-bottom-1">{% if  data['claim']   != 'UC' %}PIP  {% else %} UC {% endif %} Paper based review booked</h2>
             <p class="govuk-caption-m govuk-!-margin-bottom-1">PBR booked 21/03/2022 2pm, AS needs noted <br> <br>Telephone call to the claimant by Angela Tait</p>
             <p class="govuk-caption-m">
                 25 February 2022 at 1:30pm
@@ -191,7 +191,7 @@
         </li>
 
           <li class="dwp-timeline__entry">
-            <h2 class="govuk-heading-s govuk-!-margin-bottom-1">PIP Returned questionnaire</h2>
+            <h2 class="govuk-heading-s govuk-!-margin-bottom-1"> {% if  data['claim']   != 'UC' %}PIP  {% else %} UC {% endif %} Returned questionnaire</h2>
             <p class="govuk-caption-m govuk-!-margin-bottom-1">Post from claimant</p>
             <p class="govuk-caption-m">
                 23 February 2022
@@ -201,7 +201,7 @@
         </li>
 
         <li class="dwp-timeline__entry">
-          <h2 class="govuk-heading-s govuk-!-margin-bottom-1">UC Progress chasing</h2>
+          <h2 class="govuk-heading-s govuk-!-margin-bottom-1">{% if  data['claim']   != 'UC' %}PIP  {% else %} UC {% endif %} Progress chasing</h2>
           <p class="govuk-caption-m govuk-!-margin-bottom-1">Telephone call from the claimant</p>
           <p class="govuk-caption-m">
              21 February 2022 at 10am
@@ -211,7 +211,7 @@
       </li>
 
           <li class="dwp-timeline__entry">
-              <h2 class="govuk-heading-s govuk-!-margin-bottom-1">PIP Reminded them to return questionnaire</h2>
+              <h2 class="govuk-heading-s govuk-!-margin-bottom-1">{% if  data['claim']   != 'UC' %}PIP  {% else %} UC {% endif %} Reminded them to return questionnaire</h2>
               <p class="govuk-caption-m govuk-!-margin-bottom-1">Telephone call to claimant by Phil Smith</p>
               <p class="govuk-caption-m">
                  20 February 2022 at 10am
@@ -221,7 +221,7 @@
           </li>
 
           <li class="dwp-timeline__entry">
-              <h2 class="govuk-heading-s govuk-!-margin-bottom-1">PIP Sent questionnaire</h2>
+              <h2 class="govuk-heading-s govuk-!-margin-bottom-1">{% if  data['claim']   != 'UC' %}PIP  {% else %} UC {% endif %} Sent questionnaire</h2>
               <p class="govuk-caption-m govuk-!-margin-bottom-1">Posted to claimant by Phil Smith</p>
               <p class="govuk-caption-m">
                   6 February 2022
@@ -254,7 +254,7 @@
 
                 End of button hack -->
 
-             <li class="govuk-!-margin-bottom-2"><a href="referral">Add  {{ data['claim'] }}  entry to timeline</a></li> 
+             <li class="govuk-!-margin-bottom-2"><a href="referral">Add  {% if  data['claim']   != 'UC' %}PIP  {% else %} UC {% endif %} entry to timeline</a></li> 
                  
                 </ul>
 
