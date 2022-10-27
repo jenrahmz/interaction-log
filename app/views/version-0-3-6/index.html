@@ -76,8 +76,9 @@
                       
                       {{ data['contact-method'] }} 
                       {% endif %}
-                      {% if  data['who'] === 'the claimant' %} the claimant   {% else %}  {{ data['who-details'] }} {% endif %} 
+                      {% if  data['who'] === 'the claimant' %} the claimant   {% else %}  {{ data['who-details'] }} {% endif %}  
                       {% if  data['what'] === 'event' %} By <a href="mailto:phil@dwp.com?subject=Timeline entry">Phillip Smith</a>   {% endif %} 
+                      {% if  data['what'] === 'incoming' %} by <a href="mailto:phil@dwp.com?subject=Timeline entry"> Phillip Smith</a>  {% endif %}
                       {% if  data['what'] === 'outgoing' %} by <a href="mailto:phil@dwp.com?subject=Timeline entry"> Phillip Smith</a>  
                       
                       {% if  data['phone-answer-details'] %}
@@ -132,7 +133,7 @@
 
         <li class="dwp-timeline__entry">
           <h2 class="govuk-heading-s govuk-!-margin-bottom-1">ESA Progress chasing</h2>
-          <p class="govuk-caption-m govuk-!-margin-bottom-1">Telephone call from the claimant</p>
+          <p class="govuk-caption-m govuk-!-margin-bottom-1">Telephone call from the claimant by <a href="mailto:phil@dwp.com?subject=Timeline entry">Phil Smith</a></p>
           <p class="govuk-caption-m">
              17 Septmeber 2022 at 9am
           </p>
